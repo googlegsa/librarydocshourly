@@ -154,6 +154,14 @@ Methods for an Adaptor to communicate with the adaptor library.
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/SensitiveValueDecoder.html" title="interface in com.google.enterprise.adaptor">SensitiveValueDecoder</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getSensitiveValueDecoder()">getSensitiveValueDecoder</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieve decoder for sensitive values, like passwords.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AdaptorContext.html#removeStatusSource(com.google.enterprise.adaptor.StatusSource)">removeStatusSource</A></B>(<A HREF="../../../../com/google/enterprise/adaptor/StatusSource.html" title="interface in com.google.enterprise.adaptor">StatusSource</A>&nbsp;source)</CODE>
 
@@ -267,6 +275,22 @@ getGetDocIdsErrorHandler</H3>
 <A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor">GetDocIdsErrorHandler</A> <B>getGetDocIdsErrorHandler</B>()</PRE>
 <DL>
 <DD>Retrieve the current <A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><CODE>GetDocIdsErrorHandler</CODE></A>.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSensitiveValueDecoder()"><!-- --></A><H3>
+getSensitiveValueDecoder</H3>
+<PRE>
+<A HREF="../../../../com/google/enterprise/adaptor/SensitiveValueDecoder.html" title="interface in com.google.enterprise.adaptor">SensitiveValueDecoder</A> <B>getSensitiveValueDecoder</B>()</PRE>
+<DL>
+<DD>Retrieve decoder for sensitive values, like passwords. To protect sensitive
+ values, the user should have previously encoded them using the Dashboard.
+ However, a user is still allowed to choose to keep sensitive values in
+ plain text.
 <P>
 <DD><DL>
 </DL>

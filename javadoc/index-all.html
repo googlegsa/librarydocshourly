@@ -212,6 +212,9 @@ Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterp
  content onto a GSA.<DT><A HREF="./com/google/enterprise/adaptor/examples/DbAdaptorTemplate.html#DbAdaptorTemplate()"><B>DbAdaptorTemplate()</B></A> - 
 Constructor for class com.google.enterprise.adaptor.examples.<A HREF="./com/google/enterprise/adaptor/examples/DbAdaptorTemplate.html" title="class in com.google.enterprise.adaptor.examples">DbAdaptorTemplate</A>
 <DD>&nbsp;
+<DT><A HREF="./com/google/enterprise/adaptor/SensitiveValueDecoder.html#decodeValue(java.lang.String)"><B>decodeValue(String)</B></A> - 
+Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/SensitiveValueDecoder.html" title="interface in com.google.enterprise.adaptor">SensitiveValueDecoder</A>
+<DD>Decode an encoded sensitive string into its original string.
 <DT><A HREF="./com/google/enterprise/adaptor/Config.html#DEFAULT_CONFIG_FILE"><B>DEFAULT_CONFIG_FILE</B></A> - 
 Static variable in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>
 <DD>&nbsp;
@@ -495,6 +498,9 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/Command.html#getReturnCode()"><B>getReturnCode()</B></A> - 
 Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/Command.html" title="class in com.google.enterprise.adaptor.prebuilt">Command</A>
 <DD>&nbsp;
+<DT><A HREF="./com/google/enterprise/adaptor/AdaptorContext.html#getSensitiveValueDecoder()"><B>getSensitiveValueDecoder()</B></A> - 
+Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</A>
+<DD>Retrieve decoder for sensitive values, like passwords.
 <DT><A HREF="./com/google/enterprise/adaptor/Config.html#getServerBaseUri()"><B>getServerBaseUri()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>
 <DD>Optional: Returns this host's base URI which other paths will be resolved
@@ -927,7 +933,8 @@ Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterpri
 <A NAME="_S_"><!-- --></A><H2>
 <B>S</B></H2>
 <DL>
-<DT><A HREF="./com/google/enterprise/adaptor/Response.html#setAcl(com.google.enterprise.adaptor.Acl)"><B>setAcl(Acl)</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/SensitiveValueDecoder.html" title="interface in com.google.enterprise.adaptor"><B>SensitiveValueDecoder</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Provides parsing of sensitive values that can be plain text, obfuscated, or
+ encrypted.<DT><A HREF="./com/google/enterprise/adaptor/Response.html#setAcl(com.google.enterprise.adaptor.Acl)"><B>setAcl(Acl)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</A>
 <DD>Provide the document's ACLs for early-binding security on the GSA.
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#setCommandAcceptsParameters(boolean)"><B>setCommandAcceptsParameters(boolean)</B></A> - 

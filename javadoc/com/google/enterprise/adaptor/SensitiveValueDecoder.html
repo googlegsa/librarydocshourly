@@ -3,7 +3,7 @@
 <HTML>
 <HEAD>
 <TITLE>
-Status
+SensitiveValueDecoder
 </TITLE>
 
 
@@ -13,7 +13,7 @@ Status
 function windowTitle()
 {
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="Status";
+        parent.document.title="SensitiveValueDecoder";
     }
 }
 </SCRIPT>
@@ -52,11 +52,11 @@ function windowTitle()
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/SensitiveValueDecoder.html" title="interface in com.google.enterprise.adaptor"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/Status.Code.html" title="enum in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/Status.html" title="interface in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-  <A HREF="../../../../index.html?com/google/enterprise/adaptor/Status.html" target="_top"><B>FRAMES</B></A>  &nbsp;
-&nbsp;<A HREF="Status.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+  <A HREF="../../../../index.html?com/google/enterprise/adaptor/SensitiveValueDecoder.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="SensitiveValueDecoder.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
 &nbsp;<SCRIPT type="text/javascript">
   <!--
   if(window==top) {
@@ -73,7 +73,7 @@ function windowTitle()
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
 DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
 </TR>
@@ -87,41 +87,22 @@ DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHO
 <FONT SIZE="-1">
 com.google.enterprise.adaptor</FONT>
 <BR>
-Interface Status</H2>
+Interface SensitiveValueDecoder</H2>
 <HR>
 <DL>
-<DT><PRE>public interface <B>Status</B></DL>
+<DT><PRE>public interface <B>SensitiveValueDecoder</B></DL>
 </PRE>
 
 <P>
-Multi-state indicator providing the user with a notification of broken parts
- of the system. A <code>Status</code> instance should not change its results over
- time; instead a <A HREF="../../../../com/google/enterprise/adaptor/StatusSource.html" title="interface in com.google.enterprise.adaptor"><CODE>StatusSource</CODE></A> should return different instances as the
- status changes.
+Provides parsing of sensitive values that can be plain text, obfuscated, or
+ encrypted.
 <P>
 
 <P>
 <HR>
 
 <P>
-<!-- ======== NESTED CLASS SUMMARY ======== -->
 
-<A NAME="nested_class_summary"><!-- --></A>
-<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
-<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
-<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
-<B>Nested Class Summary</B></FONT></TH>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>static&nbsp;class</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Status.Code.html" title="enum in com.google.enterprise.adaptor">Status.Code</A></B></CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Available statuses for displaying state indicators on the dashboard.</TD>
-</TR>
-</TABLE>
-&nbsp;
 <!-- ========== METHOD SUMMARY =========== -->
 
 <A NAME="method_summary"><!-- --></A>
@@ -132,20 +113,11 @@ Multi-state indicator providing the user with a notification of broken parts
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/Status.Code.html" title="enum in com.google.enterprise.adaptor">Status.Code</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Status.html#getCode()">getCode</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The code to represent the state of the status.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Status.html#getMessage(java.util.Locale)">getMessage</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util">Locale</A>&nbsp;locale)</CODE>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/SensitiveValueDecoder.html#decodeValue(java.lang.String)">decodeValue</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;nonReadable)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A message appropriate for displaying to an end-user concerning the state of
- the status.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Decode an encoded sensitive string into its original string.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -161,34 +133,18 @@ Multi-state indicator providing the user with a notification of broken parts
 </TR>
 </TABLE>
 
-<A NAME="getCode()"><!-- --></A><H3>
-getCode</H3>
+<A NAME="decodeValue(java.lang.String)"><!-- --></A><H3>
+decodeValue</H3>
 <PRE>
-<A HREF="../../../../com/google/enterprise/adaptor/Status.Code.html" title="enum in com.google.enterprise.adaptor">Status.Code</A> <B>getCode</B>()</PRE>
+<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>decodeValue</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;nonReadable)</PRE>
 <DL>
-<DD>The code to represent the state of the status. Will not return <code>null</code>.
+<DD>Decode an encoded sensitive string into its original string.
 <P>
 <DD><DL>
 
-<DT><B>Returns:</B><DD>the state of the status, but never <code>null</code>.</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getMessage(java.util.Locale)"><!-- --></A><H3>
-getMessage</H3>
-<PRE>
-<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getMessage</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util">Locale</A>&nbsp;locale)</PRE>
-<DL>
-<DD>A message appropriate for displaying to an end-user concerning the state of
- the status. A message is not required and is only encouraged if it provides
- helpful information. For example, if <A HREF="../../../../com/google/enterprise/adaptor/Status.html#getCode()"><CODE>getCode()</CODE></A> returns <A HREF="../../../../com/google/enterprise/adaptor/Status.Code.html#NORMAL"><CODE>Status.Code.NORMAL</CODE></A>, then a message is typically discouraged, unless it provides
- statistics or additional information not obvious when provided <A HREF="../../../../com/google/enterprise/adaptor/StatusSource.html#getName(java.util.Locale)"><CODE>StatusSource.getName(java.util.Locale)</CODE></A> and <A HREF="../../../../com/google/enterprise/adaptor/Status.html#getCode()"><CODE>getCode()</CODE></A>.
-<P>
-<DD><DL>
-<DT><B>Parameters:</B><DD><CODE>locale</CODE> - non-<code>null</code> locale for localization.
-<DT><B>Returns:</B><DD>a localized message for the end-user, or <code>null</code> if one is not
-     necessary.</DL>
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - if <code>nonReadable</code> is unable to be
+     decoded</DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->
@@ -221,11 +177,11 @@ getMessage</H3>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/SensitiveValueDecoder.html" title="interface in com.google.enterprise.adaptor"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/Status.Code.html" title="enum in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/Status.html" title="interface in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-  <A HREF="../../../../index.html?com/google/enterprise/adaptor/Status.html" target="_top"><B>FRAMES</B></A>  &nbsp;
-&nbsp;<A HREF="Status.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+  <A HREF="../../../../index.html?com/google/enterprise/adaptor/SensitiveValueDecoder.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="SensitiveValueDecoder.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
 &nbsp;<SCRIPT type="text/javascript">
   <!--
   if(window==top) {
@@ -242,7 +198,7 @@ getMessage</H3>
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
 DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
 </TR>
