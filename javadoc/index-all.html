@@ -104,6 +104,9 @@ Constructor for class com.google.enterprise.adaptor.examples.<A HREF="./com/goog
  content onto a GSA.<DT><A HREF="./com/google/enterprise/adaptor/examples/AdaptorWithCrawlTimeMetadataTemplate.html#AdaptorWithCrawlTimeMetadataTemplate()"><B>AdaptorWithCrawlTimeMetadataTemplate()</B></A> - 
 Constructor for class com.google.enterprise.adaptor.examples.<A HREF="./com/google/enterprise/adaptor/examples/AdaptorWithCrawlTimeMetadataTemplate.html" title="class in com.google.enterprise.adaptor.examples">AdaptorWithCrawlTimeMetadataTemplate</A>
 <DD>&nbsp;
+<DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#add(java.lang.String, java.lang.String)"><B>add(String, String)</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
+<DD>Increases values mapped to k with v.
 <DT><A HREF="./com/google/enterprise/adaptor/Response.html#addAnchor(java.net.URI, java.lang.String)"><B>addAnchor(URI, String)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</A>
 <DD>Add a hyperlink for the GSA to follow without modifying the document
@@ -114,6 +117,9 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/Config.html#addKey(java.lang.String, java.lang.String)"><B>addKey(String, String)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>
 <DD>Add configuration key.
+<DT><A HREF="./com/google/enterprise/adaptor/Response.html#addMetadata(java.lang.String, java.lang.String)"><B>addMetadata(String, String)</B></A> - 
+Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</A>
+<DD>Add metadata element that applies to the document.
 <DT><A HREF="./com/google/enterprise/adaptor/AdaptorContext.html#addStatusSource(com.google.enterprise.adaptor.StatusSource)"><B>addStatusSource(StatusSource)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</A>
 <DD>Add a status source to the dashboard.
@@ -277,6 +283,9 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.html#equals(java.lang.Object)"><B>equals(Object)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</A>
 <DD>&nbsp;
+<DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#equals(java.lang.Object)"><B>equals(Object)</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
+<DD>True if exactly the same key-values are represented.
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/Command.html#exec(java.lang.String[])"><B>exec(String[])</B></A> - 
 Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/Command.html" title="class in com.google.enterprise.adaptor.prebuilt">Command</A>
 <DD>Same as <code>exec(command, null, new byte[0])</code>.
@@ -329,6 +338,9 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/Config.html#getAllKeys()"><B>getAllKeys()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>
 <DD>&nbsp;
+<DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#getAllValues(java.lang.String)"><B>getAllValues(String)</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
+<DD>Gives unmodifiable reference to inserted values for key, empty if none.
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/RecursiveFileIterator.WrappedIOException.html#getCause()"><B>getCause()</B></A> - 
 Method in exception com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/RecursiveFileIterator.WrappedIOException.html" title="class in com.google.enterprise.adaptor.prebuilt">RecursiveFileIterator.WrappedIOException</A>
 <DD>&nbsp;
@@ -440,6 +452,9 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/Acl.html#getInheritFrom()"><B>getInheritFrom()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</A>
 <DD>Returns <code>DocId</code> these ACLs are inherited from.
+<DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#getKeys()"><B>getKeys()</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
+<DD>Get modifiable set of all keys with at least one value.
 <DT><A HREF="./com/google/enterprise/adaptor/Request.html#getLastAccessTime()"><B>getLastAccessTime()</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Request.html" title="interface in com.google.enterprise.adaptor">Request</A>
 <DD>Returns the last time a GSA or other client retrieved the data, or <code>null</code> if none was provided by the client.
@@ -455,7 +470,7 @@ Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterpri
  the status.
 <DT><A HREF="./com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html#getMetadata()"><B>getMetadata()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html" title="class in com.google.enterprise.adaptor">CommandStreamParser.RetrieverInfo</A>
-<DD>&nbsp;
+<DD>Returns unmodifiable view of Metadata.
 <DT><A HREF="./com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html#getMimeType()"><B>getMimeType()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html" title="class in com.google.enterprise.adaptor">CommandStreamParser.RetrieverInfo</A>
 <DD>&nbsp;
@@ -480,6 +495,9 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/ConfigModificationEvent.html#getOldConfig()"><B>getOldConfig()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/ConfigModificationEvent.html" title="class in com.google.enterprise.adaptor">ConfigModificationEvent</A>
 <DD>&nbsp;
+<DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#getOneValue(java.lang.String)"><B>getOneValue(String)</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
+<DD>One of the inserted values, or null if none.
 <DT><A HREF="./com/google/enterprise/adaptor/Response.html#getOutputStream()"><B>getOutputStream()</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</A>
 <DD>Get stream to write document contents to.
@@ -702,6 +720,9 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>
 <DD>Optional (default false): If your DocIds are already valid URLs you can
  have this method return true and they will be sent to GSA unmodified.
+<DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#isEmpty()"><B>isEmpty()</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
+<DD>True with 0 entries.
 <DT><A HREF="./com/google/enterprise/adaptor/Config.html#isFeedNoRecrawlBitEnabled()"><B>isFeedNoRecrawlBitEnabled()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>
 <DD>Optional (default false): Adds no-recrawl bit with sent records in feed
@@ -752,6 +773,10 @@ Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterpri
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineAdaptor.html#isUserAuthorized(com.google.enterprise.adaptor.AuthnIdentity, java.util.Collection)"><B>isUserAuthorized(AuthnIdentity, Collection&lt;DocId&gt;)</B></A> - 
 Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineAdaptor.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineAdaptor</A>
 <DD>Determines whether the user identified is allowed to access the <code>DocId</code>s.
+<DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#iterator()"><B>iterator()</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
+<DD>Provides every key and value in immutable entries sorted
+ alphabetically, first by key, and secondly by value.
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/RecursiveFileIterator.html#iterator()"><B>iterator()</B></A> - 
 Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/RecursiveFileIterator.html" title="class in com.google.enterprise.adaptor.prebuilt">RecursiveFileIterator</A>
 <DD>Returns <code>this</code> to allow using with foreach loops.
@@ -797,6 +822,12 @@ Static method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/goo
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/FileSystemAdaptor.html#main(java.lang.String[])"><B>main(String[])</B></A> - 
 Static method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/FileSystemAdaptor.html" title="class in com.google.enterprise.adaptor.prebuilt">FileSystemAdaptor</A>
 <DD>Call default main for adaptors.
+<DT><A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor"><B>Metadata</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Allows storing multiple metadata values to a single key.<DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#Metadata()"><B>Metadata()</B></A> - 
+Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
+<DD>Create empty instance.
+<DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#Metadata(java.lang.Iterable)"><B>Metadata(Iterable&lt;Map.Entry&lt;String, String&gt;&gt;)</B></A> - 
+Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
+<DD>Duplicate.
 <DT><A HREF="./com/google/enterprise/adaptor/examples/MetaTaggerTransform.html" title="class in com.google.enterprise.adaptor.examples"><B>MetaTaggerTransform</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/examples/package-summary.html">com.google.enterprise.adaptor.examples</A><DD>The transform examines the document for regex patterns.<DT><A HREF="./com/google/enterprise/adaptor/examples/MetaTaggerTransform.html#MetaTaggerTransform()"><B>MetaTaggerTransform()</B></A> - 
 Constructor for class com.google.enterprise.adaptor.examples.<A HREF="./com/google/enterprise/adaptor/examples/MetaTaggerTransform.html" title="class in com.google.enterprise.adaptor.examples">MetaTaggerTransform</A>
 <DD>&nbsp;
@@ -934,7 +965,16 @@ Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterpri
 <B>S</B></H2>
 <DL>
 <DT><A HREF="./com/google/enterprise/adaptor/SensitiveValueDecoder.html" title="interface in com.google.enterprise.adaptor"><B>SensitiveValueDecoder</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Provides parsing of sensitive values that can be plain text, obfuscated, or
- encrypted.<DT><A HREF="./com/google/enterprise/adaptor/Response.html#setAcl(com.google.enterprise.adaptor.Acl)"><B>setAcl(Acl)</B></A> - 
+ encrypted.<DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#set(java.lang.String, java.lang.String)"><B>set(String, String)</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
+<DD>Make v be only value associated with key.
+<DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#set(java.lang.String, java.util.Set)"><B>set(String, Set&lt;String&gt;)</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
+<DD>Make copy of v be the values associated with key.
+<DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#set(java.lang.Iterable)"><B>set(Iterable&lt;Map.Entry&lt;String, String&gt;&gt;)</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
+<DD>Replaces entries inside of this metadata with provided ones.
+<DT><A HREF="./com/google/enterprise/adaptor/Response.html#setAcl(com.google.enterprise.adaptor.Acl)"><B>setAcl(Acl)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</A>
 <DD>Provide the document's ACLs for early-binding security on the GSA.
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#setCommandAcceptsParameters(boolean)"><B>setCommandAcceptsParameters(boolean)</B></A> - 
@@ -981,9 +1021,6 @@ Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/ent
 <DT><A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html#setLock(boolean)"><B>setLock(boolean)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record.Builder</A>
 <DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/Response.html#setMetadata(java.util.Map)"><B>setMetadata(Map&lt;String, String&gt;)</B></A> - 
-Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</A>
-<DD>Provide metadata that applies to the document.
 <DT><A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html#setName(java.lang.String)"><B>setName(String)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html" title="class in com.google.enterprise.adaptor">AbstractDocumentTransform</A>
 <DD>&nbsp;
@@ -1075,25 +1112,28 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.html#toString()"><B>toString()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</A>
 <DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/DocumentTransform.html#transform(java.io.ByteArrayOutputStream, java.io.OutputStream, java.util.Map, java.util.Map)"><B>transform(ByteArrayOutputStream, OutputStream, Map&lt;String, String&gt;, Map&lt;String, String&gt;)</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#toString()"><B>toString()</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
+<DD>Contains every key and value pair; useful for debugging.
+<DT><A HREF="./com/google/enterprise/adaptor/DocumentTransform.html#transform(java.io.ByteArrayOutputStream, java.io.OutputStream, com.google.enterprise.adaptor.Metadata, java.util.Map)"><B>transform(ByteArrayOutputStream, OutputStream, Metadata, Map&lt;String, String&gt;)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor">DocumentTransform</A>
 <DD>Read data from <code>contentIn</code>, transform it, and write it to <code>contentOut</code>.
-<DT><A HREF="./com/google/enterprise/adaptor/examples/CalaisNERTransform.html#transform(java.io.ByteArrayOutputStream, java.io.OutputStream, java.util.Map, java.util.Map)"><B>transform(ByteArrayOutputStream, OutputStream, Map&lt;String, String&gt;, Map&lt;String, String&gt;)</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/examples/CalaisNERTransform.html#transform(java.io.ByteArrayOutputStream, java.io.OutputStream, com.google.enterprise.adaptor.Metadata, java.util.Map)"><B>transform(ByteArrayOutputStream, OutputStream, Metadata, Map&lt;String, String&gt;)</B></A> - 
 Method in class com.google.enterprise.adaptor.examples.<A HREF="./com/google/enterprise/adaptor/examples/CalaisNERTransform.html" title="class in com.google.enterprise.adaptor.examples">CalaisNERTransform</A>
 <DD>This transform must take in a parameter of the form:
  <code>(OpenCalaisAPIKey, key)</code>
 
  Optionally, extra parameters can be passed in to set which entity types to detect.
-<DT><A HREF="./com/google/enterprise/adaptor/examples/MetaTaggerTransform.html#transform(java.io.ByteArrayOutputStream, java.io.OutputStream, java.util.Map, java.util.Map)"><B>transform(ByteArrayOutputStream, OutputStream, Map&lt;String, String&gt;, Map&lt;String, String&gt;)</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/examples/MetaTaggerTransform.html#transform(java.io.ByteArrayOutputStream, java.io.OutputStream, com.google.enterprise.adaptor.Metadata, java.util.Map)"><B>transform(ByteArrayOutputStream, OutputStream, Metadata, Map&lt;String, String&gt;)</B></A> - 
 Method in class com.google.enterprise.adaptor.examples.<A HREF="./com/google/enterprise/adaptor/examples/MetaTaggerTransform.html" title="class in com.google.enterprise.adaptor.examples">MetaTaggerTransform</A>
 <DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/examples/TableGeneratorTransform.html#transform(java.io.ByteArrayOutputStream, java.io.OutputStream, java.util.Map, java.util.Map)"><B>transform(ByteArrayOutputStream, OutputStream, Map&lt;String, String&gt;, Map&lt;String, String&gt;)</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/examples/TableGeneratorTransform.html#transform(java.io.ByteArrayOutputStream, java.io.OutputStream, com.google.enterprise.adaptor.Metadata, java.util.Map)"><B>transform(ByteArrayOutputStream, OutputStream, Metadata, Map&lt;String, String&gt;)</B></A> - 
 Method in class com.google.enterprise.adaptor.examples.<A HREF="./com/google/enterprise/adaptor/examples/TableGeneratorTransform.html" title="class in com.google.enterprise.adaptor.examples">TableGeneratorTransform</A>
 <DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#transform(java.io.ByteArrayOutputStream, java.io.OutputStream, java.util.Map, java.util.Map)"><B>transform(ByteArrayOutputStream, OutputStream, Map&lt;String, String&gt;, Map&lt;String, String&gt;)</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#transform(java.io.ByteArrayOutputStream, java.io.OutputStream, com.google.enterprise.adaptor.Metadata, java.util.Map)"><B>transform(ByteArrayOutputStream, OutputStream, Metadata, Map&lt;String, String&gt;)</B></A> - 
 Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineTransform</A>
 <DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/TransformPipeline.html#transform(byte[], java.io.OutputStream, java.util.Map, java.util.Map)"><B>transform(byte[], OutputStream, Map&lt;String, String&gt;, Map&lt;String, String&gt;)</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/TransformPipeline.html#transform(byte[], java.io.OutputStream, com.google.enterprise.adaptor.Metadata, java.util.Map)"><B>transform(byte[], OutputStream, Metadata, Map&lt;String, String&gt;)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/TransformPipeline.html" title="class in com.google.enterprise.adaptor">TransformPipeline</A>
 <DD>Transform <code>contentIn</code> and <code>metadata</code>.
 <DT><A HREF="./com/google/enterprise/adaptor/TransformException.html" title="class in com.google.enterprise.adaptor"><B>TransformException</B></A> - Exception in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>&nbsp;<DT><A HREF="./com/google/enterprise/adaptor/TransformException.html#TransformException(java.lang.Exception)"><B>TransformException(Exception)</B></A> - 
@@ -1110,6 +1150,9 @@ Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterp
 <A NAME="_U_"><!-- --></A><H2>
 <B>U</B></H2>
 <DL>
+<DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#unmodifiableView()"><B>unmodifiableView()</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
+<DD>Get a reference to an unmodifiable view of this object.
 <DT><A HREF="./com/google/enterprise/adaptor/Config.html#useAdaptorAutoUnzip()"><B>useAdaptorAutoUnzip()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>
 <DD>Automatically unzips and <code>DocId</code>s ending in <code>.zip</code> and provides
