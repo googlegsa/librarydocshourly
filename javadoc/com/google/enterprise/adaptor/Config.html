@@ -53,7 +53,7 @@ function windowTitle()
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html" title="class in com.google.enterprise.adaptor"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/ConfigModificationEvent.html" title="class in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/CustomFormatter.html" title="class in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../index.html?com/google/enterprise/adaptor/Config.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="Config.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
@@ -73,9 +73,9 @@ function windowTitle()
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
 </TR>
 </TABLE>
 <A NAME="skip-navbar_top"></A>
@@ -106,80 +106,7 @@ Configuration values for this program like the GSA's hostname. Also several
 <HR>
 
 <P>
-<!-- =========== FIELD SUMMARY =========== -->
 
-<A NAME="field_summary"><!-- --></A>
-<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
-<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
-<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
-<B>Field Summary</B></FONT></TH>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected &nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Properties.html?is-external=true" title="class or interface in java.util">Properties</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#config">config</A></B></CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Overriding configuration values loaded from command line.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected &nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#configFile">configFile</A></B></CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The actual config file in use, or <code>null</code> if none have been loaded.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected &nbsp;long</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#configFileLastModified">configFileLastModified</A></B></CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected static&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#DEFAULT_CONFIG_FILE">DEFAULT_CONFIG_FILE</A></B></CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected &nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Properties.html?is-external=true" title="class or interface in java.util">Properties</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#defaultConfig">defaultConfig</A></B></CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default configuration values.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected &nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#defaultConfigFile">defaultConfigFile</A></B></CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default configuration to use in <A HREF="../../../../com/google/enterprise/adaptor/Config.html#loadDefaultConfigFile()"><CODE>loadDefaultConfigFile()</CODE></A>.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected &nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="../../../../com/google/enterprise/adaptor/ConfigModificationListener.html" title="interface in com.google.enterprise.adaptor">ConfigModificationListener</A>&gt;</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#modificationListeners">modificationListeners</A></B></CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected &nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#noDefaultConfig">noDefaultConfig</A></B></CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Configuration keys whose default value is <code>null</code>.</TD>
-</TR>
-</TABLE>
-&nbsp;
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 
 <A NAME="constructor_summary"><!-- --></A>
@@ -203,14 +130,6 @@ Configuration values for this program like the GSA's hostname. Also several
 <TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
 <TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
 <B>Method Summary</B></FONT></TH>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#addConfigModificationListener(com.google.enterprise.adaptor.ConfigModificationListener)">addConfigModificationListener</A></B>(<A HREF="../../../../com/google/enterprise/adaptor/ConfigModificationListener.html" title="interface in com.google.enterprise.adaptor">ConfigModificationListener</A>&nbsp;listener)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -471,6 +390,14 @@ Configuration values for this program like the GSA's hostname. Also several
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#isGsa614FeedWorkaroundEnabled()">isGsa614FeedWorkaroundEnabled</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#isJournalReducedMem()">isJournalReducedMem</A></B>()</CODE>
 
 <BR>
@@ -536,14 +463,6 @@ Configuration values for this program like the GSA's hostname. Also several
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#removeConfigModificationListener(com.google.enterprise.adaptor.ConfigModificationListener)">removeConfigModificationListener</A></B>(<A HREF="../../../../com/google/enterprise/adaptor/ConfigModificationListener.html" title="interface in com.google.enterprise.adaptor">ConfigModificationListener</A>&nbsp;listener)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;boolean</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#useAdaptorAutoUnzip()">useAdaptorAutoUnzip</A></B>()</CODE>
 
@@ -571,105 +490,6 @@ Configuration values for this program like the GSA's hostname. Also several
 </TABLE>
 &nbsp;
 <P>
-
-<!-- ============ FIELD DETAIL =========== -->
-
-<A NAME="field_detail"><!-- --></A>
-<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
-<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
-<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
-<B>Field Detail</B></FONT></TH>
-</TR>
-</TABLE>
-
-<A NAME="DEFAULT_CONFIG_FILE"><!-- --></A><H3>
-DEFAULT_CONFIG_FILE</H3>
-<PRE>
-protected static final <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>DEFAULT_CONFIG_FILE</B></PRE>
-<DL>
-<DL>
-<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.google.enterprise.adaptor.Config.DEFAULT_CONFIG_FILE">Constant Field Values</A></DL>
-</DL>
-<HR>
-
-<A NAME="noDefaultConfig"><!-- --></A><H3>
-noDefaultConfig</H3>
-<PRE>
-protected final <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt; <B>noDefaultConfig</B></PRE>
-<DL>
-<DD>Configuration keys whose default value is <code>null</code>.
-<P>
-<DL>
-</DL>
-</DL>
-<HR>
-
-<A NAME="defaultConfig"><!-- --></A><H3>
-defaultConfig</H3>
-<PRE>
-protected final <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Properties.html?is-external=true" title="class or interface in java.util">Properties</A> <B>defaultConfig</B></PRE>
-<DL>
-<DD>Default configuration values.
-<P>
-<DL>
-</DL>
-</DL>
-<HR>
-
-<A NAME="config"><!-- --></A><H3>
-config</H3>
-<PRE>
-protected volatile <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Properties.html?is-external=true" title="class or interface in java.util">Properties</A> <B>config</B></PRE>
-<DL>
-<DD>Overriding configuration values loaded from command line.
-<P>
-<DL>
-</DL>
-</DL>
-<HR>
-
-<A NAME="defaultConfigFile"><!-- --></A><H3>
-defaultConfigFile</H3>
-<PRE>
-protected <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</A> <B>defaultConfigFile</B></PRE>
-<DL>
-<DD>Default configuration to use in <A HREF="../../../../com/google/enterprise/adaptor/Config.html#loadDefaultConfigFile()"><CODE>loadDefaultConfigFile()</CODE></A>.
-<P>
-<DL>
-</DL>
-</DL>
-<HR>
-
-<A NAME="configFile"><!-- --></A><H3>
-configFile</H3>
-<PRE>
-protected <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</A> <B>configFile</B></PRE>
-<DL>
-<DD>The actual config file in use, or <code>null</code> if none have been loaded.
-<P>
-<DL>
-</DL>
-</DL>
-<HR>
-
-<A NAME="configFileLastModified"><!-- --></A><H3>
-configFileLastModified</H3>
-<PRE>
-protected long <B>configFileLastModified</B></PRE>
-<DL>
-<DL>
-</DL>
-</DL>
-<HR>
-
-<A NAME="modificationListeners"><!-- --></A><H3>
-modificationListeners</H3>
-<PRE>
-protected <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="../../../../com/google/enterprise/adaptor/ConfigModificationListener.html" title="interface in com.google.enterprise.adaptor">ConfigModificationListener</A>&gt; <B>modificationListeners</B></PRE>
-<DL>
-<DL>
-</DL>
-</DL>
 
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 
@@ -1133,6 +953,17 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/nio/charset/Ch
 </DL>
 <HR>
 
+<A NAME="isGsa614FeedWorkaroundEnabled()"><!-- --></A><H3>
+isGsa614FeedWorkaroundEnabled</H3>
+<PRE>
+public boolean <B>isGsa614FeedWorkaroundEnabled</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="getFeedMaxUrls()"><!-- --></A><H3>
 getFeedMaxUrls</H3>
 <PRE>
@@ -1293,28 +1124,6 @@ public void <B>overrideKey</B>(<A HREF="http://download.oracle.com/javase/6/docs
 </DL>
 </DD>
 </DL>
-<HR>
-
-<A NAME="addConfigModificationListener(com.google.enterprise.adaptor.ConfigModificationListener)"><!-- --></A><H3>
-addConfigModificationListener</H3>
-<PRE>
-public void <B>addConfigModificationListener</B>(<A HREF="../../../../com/google/enterprise/adaptor/ConfigModificationListener.html" title="interface in com.google.enterprise.adaptor">ConfigModificationListener</A>&nbsp;listener)</PRE>
-<DL>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="removeConfigModificationListener(com.google.enterprise.adaptor.ConfigModificationListener)"><!-- --></A><H3>
-removeConfigModificationListener</H3>
-<PRE>
-public void <B>removeConfigModificationListener</B>(<A HREF="../../../../com/google/enterprise/adaptor/ConfigModificationListener.html" title="interface in com.google.enterprise.adaptor">ConfigModificationListener</A>&nbsp;listener)</PRE>
-<DL>
-<DD><DL>
-</DL>
-</DD>
-</DL>
 <!-- ========= END OF CLASS DATA ========= -->
 <HR>
 
@@ -1346,7 +1155,7 @@ public void <B>removeConfigModificationListener</B>(<A HREF="../../../../com/goo
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html" title="class in com.google.enterprise.adaptor"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/ConfigModificationEvent.html" title="class in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/CustomFormatter.html" title="class in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../index.html?com/google/enterprise/adaptor/Config.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="Config.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
@@ -1366,9 +1175,9 @@ public void <B>removeConfigModificationListener</B>(<A HREF="../../../../com/goo
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
 </TR>
 </TABLE>
 <A NAME="skip-navbar_bottom"></A>
