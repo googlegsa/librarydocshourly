@@ -103,6 +103,10 @@ Class TransformException</H2>
 </PRE>
 
 <P>
+Exception produced by <A HREF="../../../../com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor"><CODE>DocumentTransform</CODE></A>s and <A HREF="../../../../com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor"><CODE>DocumentTransform</CODE></A> in the case of a fatal error.
+<P>
+
+<P>
 <DL>
 <DT><B>See Also:</B><DD><A HREF="../../../../serialized-form.html#com.google.enterprise.adaptor.TransformException">Serialized Form</A></DL>
 <HR>
@@ -118,16 +122,25 @@ Class TransformException</H2>
 <B>Constructor Summary</B></FONT></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/TransformException.html#TransformException(java.lang.Exception)">TransformException</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A>&nbsp;e)</CODE>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/TransformException.html#TransformException(java.lang.String)">TransformException</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;message)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a new exception with a detailed message.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/TransformException.html#TransformException(java.lang.String)">TransformException</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;s)</CODE>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/TransformException.html#TransformException(java.lang.String, java.lang.Throwable)">TransformException</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;message,
+                   <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A>&nbsp;cause)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a new exception with a detailed message and a cause initialized
+ to <code>cause</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/TransformException.html#TransformException(java.lang.Throwable)">TransformException</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A>&nbsp;cause)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a new exception with a <code>null</code> message and a cause
+ initalized to <code>cause</code>.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -171,19 +184,37 @@ Class TransformException</H2>
 </TR>
 </TABLE>
 
-<A NAME="TransformException(java.lang.Exception)"><!-- --></A><H3>
-TransformException</H3>
-<PRE>
-public <B>TransformException</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A>&nbsp;e)</PRE>
-<DL>
-</DL>
-<HR>
-
 <A NAME="TransformException(java.lang.String)"><!-- --></A><H3>
 TransformException</H3>
 <PRE>
-public <B>TransformException</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;s)</PRE>
+public <B>TransformException</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;message)</PRE>
 <DL>
+<DD>Constructs a new exception with a detailed message. The exception's cause
+ is left uninitialized.
+<P>
+</DL>
+<HR>
+
+<A NAME="TransformException(java.lang.String, java.lang.Throwable)"><!-- --></A><H3>
+TransformException</H3>
+<PRE>
+public <B>TransformException</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;message,
+                          <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A>&nbsp;cause)</PRE>
+<DL>
+<DD>Constructs a new exception with a detailed message and a cause initialized
+ to <code>cause</code>.
+<P>
+</DL>
+<HR>
+
+<A NAME="TransformException(java.lang.Throwable)"><!-- --></A><H3>
+TransformException</H3>
+<PRE>
+public <B>TransformException</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A>&nbsp;cause)</PRE>
+<DL>
+<DD>Constructs a new exception with a <code>null</code> message and a cause
+ initalized to <code>cause</code>.
+<P>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->
 <HR>

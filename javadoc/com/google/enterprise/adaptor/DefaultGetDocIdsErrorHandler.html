@@ -101,7 +101,7 @@ Class DefaultGetDocIdsErrorHandler</H2>
 </PRE>
 
 <P>
-Default handler of errors during <A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)"><CODE>Adaptor.getDocIds(com.google.enterprise.adaptor.DocIdPusher)</CODE></A>.
+Default handler of errors during <A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)"><CODE>Adaptor.getDocIds(DocIdPusher)</CODE></A>.
 <P>
 
 <P>
@@ -148,8 +148,7 @@ Default handler of errors during <A HREF="../../../../com/google/enterprise/adap
                         int&nbsp;ntries)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CODE>AbstractDocIdPusher.pushDocIds(java.lang.Iterable<com.google.enterprise.adaptor.DocId>)</CODE> had a failure reading from this Adaptor's
- <A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)"><CODE>Adaptor.getDocIds(com.google.enterprise.adaptor.DocIdPusher)</CODE></A>.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There was a failure running <A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)"><CODE>Adaptor.getDocIds(com.google.enterprise.adaptor.DocIdPusher)</CODE></A>.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -223,9 +222,9 @@ public boolean <B>handleFailedToGetDocIds</B>(<A HREF="http://download.oracle.co
                                        int&nbsp;ntries)
                                 throws <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</A></PRE>
 <DL>
-<DD><CODE>AbstractDocIdPusher.pushDocIds(java.lang.Iterable<com.google.enterprise.adaptor.DocId>)</CODE> had a failure reading from this Adaptor's
- <A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)"><CODE>Adaptor.getDocIds(com.google.enterprise.adaptor.DocIdPusher)</CODE></A>. The thrown exception is provided as well as the
- number of times that this batch was attempted to be sent. Return <code>true</code> to retry, perhaps after a Thread.sleep() of some time.
+<DD>There was a failure running <A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)"><CODE>Adaptor.getDocIds(com.google.enterprise.adaptor.DocIdPusher)</CODE></A>. The thrown exception
+ is provided as well as the number of times the call has been attempted. It
+ is fine to call <code>Thread.sleep()</code> before returning.
 
  <p>By default, calls <A HREF="../../../../com/google/enterprise/adaptor/DefaultGetDocIdsErrorHandler.html#handleGeneric(java.lang.Exception, int)"><CODE>handleGeneric(java.lang.Exception, int)</CODE></A>.
 <P>
@@ -234,6 +233,8 @@ public boolean <B>handleFailedToGetDocIds</B>(<A HREF="http://download.oracle.co
 </DD>
 <DD><DL>
 
+<DT><B>Returns:</B><DD><code>true</code> for immediate retry, <code>false</code> to abort this
+   scheduled execution
 <DT><B>Throws:</B>
 <DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</A></CODE></DL>
 </DD>

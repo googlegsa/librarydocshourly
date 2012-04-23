@@ -115,7 +115,7 @@ Interface that allows at-will pushing of <code>DocId</code>s to the GSA.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</A></B></CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contains DocId and other feed file record attributes.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Immutable feed attributes for a document identified by its <code>DocId</code>.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -209,7 +209,7 @@ pushDocIds</H3>
  while in error conditions, but is not something that generally needs to be
  avoided.
 
- <p>Equivalent to <code>pushDocIds(docIds, null)</code> and <A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushRecords(java.lang.Iterable)"><CODE>pushRecords(Iterable)</CODE></A> with empty metadata for each <code>Record</code>.
+ <p>Equivalent to <code>pushDocIds(docIds, null)</code> and <A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushRecords(java.lang.Iterable)"><CODE>pushRecords(Iterable)</CODE></A> with default values for each <code>Record</code>.
 <P>
 <DD><DL>
 
@@ -235,7 +235,7 @@ pushDocIds</H3>
  <p>If handler is <code>null</code>, then a default error handler is used.
 
  <p>Equivalent to <A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushRecords(java.lang.Iterable, com.google.enterprise.adaptor.PushErrorHandler)"><CODE>pushRecords(Iterable, PushErrorHandler)</CODE></A>
- with empty metadata for each <code>Record</code>.
+ with default values for each <code>Record</code>.
 <P>
 <DD><DL>
 

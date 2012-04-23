@@ -101,8 +101,7 @@ Class DocIdPusher.Record.Builder</H2>
 </PRE>
 
 <P>
-Used to create instances of Record, which are immutable.
- DocId is required.
+Builder to create instances of Record.
 <P>
 
 <P>
@@ -122,13 +121,13 @@ Used to create instances of Record, which are immutable.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html#DocIdPusher.Record.Builder(com.google.enterprise.adaptor.DocId)">DocIdPusher.Record.Builder</A></B>(<A HREF="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</A>&nbsp;id)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create mutable builder for building <A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor"><CODE>DocIdPusher.Record</CODE></A> instances.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html#DocIdPusher.Record.Builder(com.google.enterprise.adaptor.DocIdPusher.Record)">DocIdPusher.Record.Builder</A></B>(<A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</A>&nbsp;startPoint)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Makes Builder that can duplicate a record.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create mutable builder initialized to values provided by <code>startPoint</code>.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -154,7 +153,8 @@ Used to create instances of Record, which are immutable.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html#setCrawlImmediately(boolean)">setCrawlImmediately</A></B>(boolean&nbsp;crawlImmediately)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inform the GSA that the document has been modified, and that the GSA
+ should give high priority to recrawling the document.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -162,7 +162,8 @@ Used to create instances of Record, which are immutable.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html#setCrawlOnce(boolean)">setCrawlOnce</A></B>(boolean&nbsp;crawlOnce)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instruct the GSA to not recrawl the document after the initial
+ retrieval.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -170,7 +171,7 @@ Used to create instances of Record, which are immutable.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html#setDeleteFromIndex(boolean)">setDeleteFromIndex</A></B>(boolean&nbsp;b)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set whether the GSA is being informed the document has been deleted.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -178,7 +179,8 @@ Used to create instances of Record, which are immutable.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html#setDocId(com.google.enterprise.adaptor.DocId)">setDocId</A></B>(<A HREF="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</A>&nbsp;id)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the identifier for the document this record is providing
+ information for.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -186,7 +188,7 @@ Used to create instances of Record, which are immutable.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html#setLastModified(java.util.Date)">setLastModified</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</A>&nbsp;lastModified)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provides the last-modified date of the document.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -194,7 +196,7 @@ Used to create instances of Record, which are immutable.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html#setLock(boolean)">setLock</A></B>(boolean&nbsp;lock)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instruct the GSA to "lock" the document into its index.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -202,7 +204,7 @@ Used to create instances of Record, which are immutable.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html#setResultLink(java.net.URI)">setResultLink</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;link)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the URI to be displayed to the user in search results.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -232,6 +234,10 @@ DocIdPusher.Record.Builder</H3>
 <PRE>
 public <B>DocIdPusher.Record.Builder</B>(<A HREF="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</A>&nbsp;id)</PRE>
 <DL>
+<DD>Create mutable builder for building <A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor"><CODE>DocIdPusher.Record</CODE></A> instances.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - non-<code>null</code> identifier for the document being described</DL>
 </DL>
 <HR>
 
@@ -240,7 +246,7 @@ DocIdPusher.Record.Builder</H3>
 <PRE>
 public <B>DocIdPusher.Record.Builder</B>(<A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</A>&nbsp;startPoint)</PRE>
 <DL>
-<DD>Makes Builder that can duplicate a record.
+<DD>Create mutable builder initialized to values provided by <code>startPoint</code>. This is useful for making changes to an existing <code>Record</code>.
 <P>
 </DL>
 
@@ -259,8 +265,12 @@ setDocId</H3>
 <PRE>
 public <A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record.Builder</A> <B>setDocId</B>(<A HREF="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</A>&nbsp;id)</PRE>
 <DL>
+<DD>Set the identifier for the document this record is providing
+ information for. This replaces the value provided to the constructor.
+<P>
 <DD><DL>
-</DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - non-<code>null</code> identifier for the document
+<DT><B>Returns:</B><DD>the same instance of the builder, for chaining calls</DL>
 </DD>
 </DL>
 <HR>
@@ -270,8 +280,13 @@ setDeleteFromIndex</H3>
 <PRE>
 public <A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record.Builder</A> <B>setDeleteFromIndex</B>(boolean&nbsp;b)</PRE>
 <DL>
+<DD>Set whether the GSA is being informed the document has been deleted.
+ When <code>false</code>, the GSA is being informed the document exists. The
+ default is <code>false</code>.
+<P>
 <DD><DL>
-</DL>
+
+<DT><B>Returns:</B><DD>the same instance of the builder, for chaining calls</DL>
 </DD>
 </DL>
 <HR>
@@ -281,8 +296,15 @@ setLastModified</H3>
 <PRE>
 public <A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record.Builder</A> <B>setLastModified</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</A>&nbsp;lastModified)</PRE>
 <DL>
+<DD>Provides the last-modified date of the document. This is used by the
+ GSA to learn that the document has been modified since the GSA last
+ retrieved the document's contents. When <code>null</code>, the GSA must use
+ its natural crawling of content to discover changes. The default is
+ <code>null</code>.
+<P>
 <DD><DL>
-</DL>
+
+<DT><B>Returns:</B><DD>the same instance of the builder, for chaining calls</DL>
 </DD>
 </DL>
 <HR>
@@ -292,8 +314,12 @@ setResultLink</H3>
 <PRE>
 public <A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record.Builder</A> <B>setResultLink</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;link)</PRE>
 <DL>
+<DD>Set the URI to be displayed to the user in search results. If <code>null</code>, then the crawl URI representing the <code>DocId</code> is used. The
+ default is <code>null</code>.
+<P>
 <DD><DL>
-</DL>
+
+<DT><B>Returns:</B><DD>the same instance of the builder, for chaining calls</DL>
 </DD>
 </DL>
 <HR>
@@ -303,8 +329,13 @@ setCrawlImmediately</H3>
 <PRE>
 public <A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record.Builder</A> <B>setCrawlImmediately</B>(boolean&nbsp;crawlImmediately)</PRE>
 <DL>
+<DD>Inform the GSA that the document has been modified, and that the GSA
+ should give high priority to recrawling the document. The default is
+ <code>false</code>.
+<P>
 <DD><DL>
-</DL>
+
+<DT><B>Returns:</B><DD>the same instance of the builder, for chaining calls</DL>
 </DD>
 </DL>
 <HR>
@@ -314,8 +345,12 @@ setCrawlOnce</H3>
 <PRE>
 public <A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record.Builder</A> <B>setCrawlOnce</B>(boolean&nbsp;crawlOnce)</PRE>
 <DL>
+<DD>Instruct the GSA to not recrawl the document after the initial
+ retrieval. The default is <code>false</code>.
+<P>
 <DD><DL>
-</DL>
+
+<DT><B>Returns:</B><DD>the same instance of the builder, for chaining calls</DL>
 </DD>
 </DL>
 <HR>
@@ -325,8 +360,13 @@ setLock</H3>
 <PRE>
 public <A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record.Builder</A> <B>setLock</B>(boolean&nbsp;lock)</PRE>
 <DL>
+<DD>Instruct the GSA to "lock" the document into its index. This causes
+ other documents to be evicted from the index when the document license
+ limit is reached. The default is <code>false</code>.
+<P>
 <DD><DL>
-</DL>
+
+<DT><B>Returns:</B><DD>the same instance of the builder, for chaining calls</DL>
 </DD>
 </DL>
 <HR>

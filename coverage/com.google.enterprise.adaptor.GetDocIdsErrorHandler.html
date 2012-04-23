@@ -52,7 +52,7 @@
 <tr>  <td class="numLine">&nbsp;17</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="comment">/**</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;18</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment"> * Interface for handling error encountered during scheduled pushing of {@code</span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment"> * Interface for handling errors encountered during scheduled pushing of {@code</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;19</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="comment"> * DocId}s.</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;20</td>  <td class="nbHits">&nbsp;</td>
@@ -62,20 +62,24 @@
 <tr>  <td class="numLine">&nbsp;22</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  <span class="comment">/**</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;23</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * {@link DocIdSender#pushDocIds} had a failure reading from this Adaptor's</span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * There was a failure running {@link Adaptor#getDocIds}. The thrown exception</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;24</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * {@link Adaptor#getDocIds}. The thrown exception is provided as well as the</span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * is provided as well as the number of times the call has been attempted. It</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;25</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * number of times that this batch was attempted to be sent. Return {@code</span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * is fine to call {@code Thread.sleep()} before returning.</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;26</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * true} to retry, perhaps after a Thread.sleep() of some time.</span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   *</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;27</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * @return {@code true} for immediate retry, {@code false} to abort this</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;28</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> <span class="keyword">boolean</span> handleFailedToGetDocIds(Exception ex, <span class="keyword">int</span> ntries)</pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   *   scheduled execution</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;29</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;      <span class="keyword">throws</span> InterruptedException;</pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;30</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> <span class="keyword">boolean</span> handleFailedToGetDocIds(Exception ex, <span class="keyword">int</span> ntries)</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;31</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;      <span class="keyword">throws</span> InterruptedException;</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;32</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;}</pre></td></tr>
 </table>
 

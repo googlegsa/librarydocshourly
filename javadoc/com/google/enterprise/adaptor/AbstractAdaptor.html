@@ -255,6 +255,9 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?
  cached copy will be provided to the user but the user may be informed the
  document doesn't exist. Highly sensitive repositories may return <code>DENY</code>.
 
+ <p>If you experience a fatal error, feel free to throw an <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io"><CODE>IOException</CODE></A> or <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang"><CODE>RuntimeException</CODE></A>. In the case of an error, the
+ users will be denied access to the resources.
+
  <p>This implementation provides <A HREF="../../../../com/google/enterprise/adaptor/AuthzStatus.html#PERMIT"><CODE>AuthzStatus.PERMIT</CODE></A> for all <code>DocId</code>s in an unmodifiable map.
 <P>
 <DD><DL>
@@ -306,6 +309,9 @@ public void <B>init</B>(<A HREF="../../../../com/google/enterprise/adaptor/Adapt
  time.
 
  <p>The method is called at the end of <A HREF="../../../../com/google/enterprise/adaptor/GsaCommunicationHandler.html#start()"><CODE>GsaCommunicationHandler.start()</CODE></A>.
+
+ <p>If you experience a fatal error during initialization, feel free to
+ throw an <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang"><CODE>Exception</CODE></A> to cancel the startup process.
 
  <p>This implementation does nothing.
 <P>

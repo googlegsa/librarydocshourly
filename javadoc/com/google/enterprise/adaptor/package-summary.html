@@ -123,7 +123,7 @@ Adaptor interfaces and implementation.
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor">GetDocIdsErrorHandler</A></B></TD>
-<TD>Interface for handling error encountered during scheduled pushing of <code>DocId</code>s.</TD>
+<TD>Interface for handling errors encountered during scheduled pushing of <code>DocId</code>s.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/PollingIncrementalAdaptor.html" title="interface in com.google.enterprise.adaptor">PollingIncrementalAdaptor</A></B></TD>
@@ -136,13 +136,13 @@ Adaptor interfaces and implementation.
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/Request.html" title="interface in com.google.enterprise.adaptor">Request</A></B></TD>
-<TD>Interface provided to <A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)"><CODE>Adaptor.getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)</CODE></A> for describing the action
- that should be taken.</TD>
+<TD>Interface provided to <A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)"><CODE>Adaptor.getDocContent(Request, Response)</CODE></A> for describing the action that
+ should be taken.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</A></B></TD>
-<TD>Interface provided to <A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)"><CODE>Adaptor.getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)</CODE></A> for performing the
- actions needed to satisfy a request.</TD>
+<TD>Interface provided to <A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)"><CODE>Adaptor.getDocContent(Request, Response)</CODE></A> for performing the actions needed
+ to satisfy a request.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/SensitiveValueDecoder.html" title="interface in com.google.enterprise.adaptor">SensitiveValueDecoder</A></B></TD>
@@ -203,7 +203,7 @@ Adaptor interfaces and implementation.
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/DefaultGetDocIdsErrorHandler.html" title="class in com.google.enterprise.adaptor">DefaultGetDocIdsErrorHandler</A></B></TD>
-<TD>Default handler of errors during <A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)"><CODE>Adaptor.getDocIds(com.google.enterprise.adaptor.DocIdPusher)</CODE></A>.</TD>
+<TD>Default handler of errors during <A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)"><CODE>Adaptor.getDocIds(DocIdPusher)</CODE></A>.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/DefaultPushErrorHandler.html" title="class in com.google.enterprise.adaptor">DefaultPushErrorHandler</A></B></TD>
@@ -211,15 +211,15 @@ Adaptor interfaces and implementation.
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</A></B></TD>
-<TD>DocId refers to a unique document in repository.</TD>
+<TD>Refers to a unique document in repository.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</A></B></TD>
-<TD>Contains DocId and other feed file record attributes.</TD>
+<TD>Immutable feed attributes for a document identified by its <code>DocId</code>.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record.Builder</A></B></TD>
-<TD>Used to create instances of Record, which are immutable.</TD>
+<TD>Builder to create instances of Record.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/GsaCommunicationHandler.html" title="class in com.google.enterprise.adaptor">GsaCommunicationHandler</A></B></TD>
@@ -254,7 +254,7 @@ Adaptor interfaces and implementation.
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/AuthzStatus.html" title="enum in com.google.enterprise.adaptor">AuthzStatus</A></B></TD>
-<TD>Authorization Status codes.</TD>
+<TD>Authorization status codes.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/Status.Code.html" title="enum in com.google.enterprise.adaptor">Status.Code</A></B></TD>
@@ -272,7 +272,7 @@ Adaptor interfaces and implementation.
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/TransformException.html" title="class in com.google.enterprise.adaptor">TransformException</A></B></TD>
-<TD>&nbsp;</TD>
+<TD>Exception produced by <A HREF="../../../../com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor"><CODE>DocumentTransform</CODE></A>s and <A HREF="../../../../com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor"><CODE>DocumentTransform</CODE></A> in the case of a fatal error.</TD>
 </TR>
 </TABLE>
 &nbsp;

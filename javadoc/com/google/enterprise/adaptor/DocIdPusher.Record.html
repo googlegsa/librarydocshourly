@@ -101,7 +101,7 @@ Class DocIdPusher.Record</H2>
 </PRE>
 
 <P>
-Contains DocId and other feed file record attributes.
+Immutable feed attributes for a document identified by its <code>DocId</code>.
 <P>
 
 <P>
@@ -122,7 +122,7 @@ Contains DocId and other feed file record attributes.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record.Builder</A></B></CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Used to create instances of Record, which are immutable.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Builder to create instances of Record.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -140,7 +140,7 @@ Contains DocId and other feed file record attributes.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html#equals(java.lang.Object)">equals</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;o)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Checks for equality based on all visible fields.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -148,7 +148,7 @@ Contains DocId and other feed file record attributes.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html#getDocId()">getDocId</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The identifier for the document this record is providing information for.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -156,7 +156,7 @@ Contains DocId and other feed file record attributes.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html#getLastModified()">getLastModified</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The last modified date of the document.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -164,7 +164,7 @@ Contains DocId and other feed file record attributes.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html#getResultLink()">getResultLink</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The URI that should be displayed to the user in search results.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -172,7 +172,7 @@ Contains DocId and other feed file record attributes.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html#hashCode()">hashCode</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generates hash code based on all visible fields.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -180,7 +180,8 @@ Contains DocId and other feed file record attributes.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html#isToBeCrawledImmediately()">isToBeCrawledImmediately</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Informs the GSA that the document has been modified, and the GSA should
+ give high priority to recrawling the document.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -188,7 +189,7 @@ Contains DocId and other feed file record attributes.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html#isToBeCrawledOnce()">isToBeCrawledOnce</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Informs the GSA that it should only crawl the document once.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -196,7 +197,7 @@ Contains DocId and other feed file record attributes.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html#isToBeDeleted()">isToBeDeleted</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether the GSA is being informed the document has been deleted.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -204,7 +205,7 @@ Contains DocId and other feed file record attributes.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html#isToBeLocked()">isToBeLocked</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Locks the document into the GSA's index.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -212,7 +213,8 @@ Contains DocId and other feed file record attributes.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html#toString()">toString</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generates a string representation of this instance useful for debugging
+ that contains all visible fields.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -242,11 +244,14 @@ getDocId</H3>
 <PRE>
 public <A HREF="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</A> <B>getDocId</B>()</PRE>
 <DL>
+<DD>The identifier for the document this record is providing information for.
+<P>
 <DD><DL>
 </DL>
 </DD>
 <DD><DL>
-</DL>
+
+<DT><B>Returns:</B><DD>non-<code>null</code> identifier for the document</DL>
 </DD>
 </DL>
 <HR>
@@ -256,6 +261,8 @@ isToBeDeleted</H3>
 <PRE>
 public boolean <B>isToBeDeleted</B>()</PRE>
 <DL>
+<DD>Whether the GSA is being informed the document has been deleted.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -270,6 +277,11 @@ getLastModified</H3>
 <PRE>
 public <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</A> <B>getLastModified</B>()</PRE>
 <DL>
+<DD>The last modified date of the document. This is used for determining that
+ the GSA's version is older and that the GSA should recrawl soon (instead
+ of natually discovering the modification). If <code>null</code>, then natural
+ crawling is the primary method of detecting modifications.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -284,6 +296,8 @@ getResultLink</H3>
 <PRE>
 public <A HREF="http://download.oracle.com/javase/6/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A> <B>getResultLink</B>()</PRE>
 <DL>
+<DD>The URI that should be displayed to the user in search results. If <code>null</code>, then the crawl URI representing the <code>DocId</code> is used.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -298,6 +312,9 @@ isToBeCrawledImmediately</H3>
 <PRE>
 public boolean <B>isToBeCrawledImmediately</B>()</PRE>
 <DL>
+<DD>Informs the GSA that the document has been modified, and the GSA should
+ give high priority to recrawling the document.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -312,6 +329,10 @@ isToBeCrawledOnce</H3>
 <PRE>
 public boolean <B>isToBeCrawledOnce</B>()</PRE>
 <DL>
+<DD>Informs the GSA that it should only crawl the document once. This
+ disables automatic detection of modifications by the GSA for this
+ document.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -326,6 +347,10 @@ isToBeLocked</H3>
 <PRE>
 public boolean <B>isToBeLocked</B>()</PRE>
 <DL>
+<DD>Locks the document into the GSA's index. This informs the GSA that it
+ should choose to evict other documents from its index when the document
+ license limit is reached.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -340,6 +365,8 @@ equals</H3>
 <PRE>
 public boolean <B>equals</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;o)</PRE>
 <DL>
+<DD>Checks for equality based on all visible fields.
+<P>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A></CODE> in class <CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
 </DD>
@@ -354,6 +381,8 @@ hashCode</H3>
 <PRE>
 public int <B>hashCode</B>()</PRE>
 <DL>
+<DD>Generates hash code based on all visible fields.
+<P>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A></CODE> in class <CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
 </DD>
@@ -368,6 +397,9 @@ toString</H3>
 <PRE>
 public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>toString</B>()</PRE>
 <DL>
+<DD>Generates a string representation of this instance useful for debugging
+ that contains all visible fields.
+<P>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A></CODE> in class <CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
 </DD>

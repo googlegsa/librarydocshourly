@@ -102,14 +102,7 @@ Enum AuthzStatus</H2>
 </PRE>
 
 <P>
-Authorization Status codes.
- <ul>
- <li><code>PERMIT</code> means that authorization is granted.</li>
- <li><code>DENY</code> means that authorization is explicitly denied.</li>
- <li><code>INDETERMINATE</code> means that permission is neither granted nor
- denied. If a consumer receives this code, it may decide to try other means
- to get an explicit decision (i.e. <code>PERMIT</code> or <code>DENY</code>).</li>
- </ul>
+Authorization status codes.
 <P>
 
 <P>
@@ -128,19 +121,19 @@ Authorization Status codes.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AuthzStatus.html#DENY">DENY</A></B></CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The authorization is explicitly forbidden.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AuthzStatus.html#INDETERMINATE">INDETERMINATE</A></B></CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Permission is neither granted nor forbidden.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AuthzStatus.html#PERMIT">PERMIT</A></B></CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The authorization is granted.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -158,7 +151,7 @@ Authorization Status codes.
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AuthzStatus.html#getDescription()">getDescription</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a short description of the status.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -214,6 +207,8 @@ PERMIT</H3>
 <PRE>
 public static final <A HREF="../../../../com/google/enterprise/adaptor/AuthzStatus.html" title="enum in com.google.enterprise.adaptor">AuthzStatus</A> <B>PERMIT</B></PRE>
 <DL>
+<DD>The authorization is granted.
+<P>
 <DL>
 </DL>
 </DL>
@@ -224,6 +219,8 @@ DENY</H3>
 <PRE>
 public static final <A HREF="../../../../com/google/enterprise/adaptor/AuthzStatus.html" title="enum in com.google.enterprise.adaptor">AuthzStatus</A> <B>DENY</B></PRE>
 <DL>
+<DD>The authorization is explicitly forbidden.
+<P>
 <DL>
 </DL>
 </DL>
@@ -234,6 +231,10 @@ INDETERMINATE</H3>
 <PRE>
 public static final <A HREF="../../../../com/google/enterprise/adaptor/AuthzStatus.html" title="enum in com.google.enterprise.adaptor">AuthzStatus</A> <B>INDETERMINATE</B></PRE>
 <DL>
+<DD>Permission is neither granted nor forbidden. If a consumer recieves this
+ code it may decide to try other means to get an explicit decision (i.e.,
+ <code>PERMIT</code> or <code>DENY</code>.
+<P>
 <DL>
 </DL>
 </DL>
@@ -295,6 +296,8 @@ getDescription</H3>
 <PRE>
 public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getDescription</B>()</PRE>
 <DL>
+<DD>Get a short description of the status.
+<P>
 <DD><DL>
 </DL>
 </DD>

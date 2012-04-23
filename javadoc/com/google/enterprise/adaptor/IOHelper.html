@@ -167,7 +167,7 @@ Utility class for providing useful methods when handling streams or other
                 <A HREF="http://download.oracle.com/javase/6/docs/api/java/nio/charset/Charset.html?is-external=true" title="class or interface in java.nio.charset">Charset</A>&nbsp;charset)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Write contents of <code>string</code> to a temporary file, encoded using <code>charset</code>.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -266,6 +266,8 @@ public static <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/File
                                    <A HREF="http://download.oracle.com/javase/6/docs/api/java/nio/charset/Charset.html?is-external=true" title="class or interface in java.nio.charset">Charset</A>&nbsp;charset)
                             throws <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
 <DL>
+<DD>Write contents of <code>string</code> to a temporary file, encoded using <code>charset</code>. Caller is responsible for deleting the temporary file after use.
+<P>
 <DD><DL>
 
 <DT><B>Throws:</B>

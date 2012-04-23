@@ -94,8 +94,8 @@ Interface Response</H2>
 </PRE>
 
 <P>
-Interface provided to <A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)"><CODE>Adaptor.getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)</CODE></A> for performing the
- actions needed to satisfy a request.
+Interface provided to <A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)"><CODE>Adaptor.getDocContent(Request, Response)</CODE></A> for performing the actions needed
+ to satisfy a request.
 
  <p>There are several ways that a request can be processed. In the simplest
  case an Adaptor always sets different pieces of metadata, calls <A HREF="../../../../com/google/enterprise/adaptor/Response.html#getOutputStream()"><CODE>getOutputStream()</CODE></A>, and writes the document contents. If the document does not
@@ -305,7 +305,9 @@ addMetadata</H3>
 void <B>addMetadata</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;key,
                  <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value)</PRE>
 <DL>
-<DD>Add metadata element that applies to the document.
+<DD>Add metadata element that applies to the document. Providing multiple
+ values for the same key is supported; simply repeat the call once for each
+ value.
 <P>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>key</CODE> - the key of metadata element<DD><CODE>value</CODE> - the value of metadata element
