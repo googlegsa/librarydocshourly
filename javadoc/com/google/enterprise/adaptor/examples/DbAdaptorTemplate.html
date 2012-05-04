@@ -104,6 +104,15 @@ Class DbAdaptorTemplate</H2>
 <P>
 Demonstrates what code is necessary for putting DB
  content onto a GSA.
+ <p> Note: this code does not pool DB connections.
+ <p> Example command line:
+ <p>
+
+ /java/bin/java \
+     -cp adaptor-withlib.jar:adaptor-examples.jar:mysql-5.1.10.jar \
+     com.google.enterprise.adaptor.examples.DbAdaptorTemplate \
+     -Dgsa.hostname=myGSA -Ddb.name=podata -Ddb.tablename=itinerary \
+     -Djournal.reducedMem=true
 <P>
 
 <P>
@@ -162,11 +171,20 @@ Demonstrates what code is necessary for putting DB
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/enterprise/adaptor/examples/DbAdaptorTemplate.html#initConfig(com.google.enterprise.adaptor.Config)">initConfig</A></B>(<A HREF="../../../../../com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>&nbsp;config)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provides the opportunity for the Adaptor to create new configuration values
+ or override default values.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../com/google/enterprise/adaptor/examples/DbAdaptorTemplate.html#main(java.lang.String[])">main</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[]&nbsp;args)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Call default main for adaptors.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_com.google.enterprise.adaptor.AbstractAdaptor"><!-- --></A>
@@ -175,7 +193,7 @@ Demonstrates what code is necessary for putting DB
 <TH ALIGN="left"><B>Methods inherited from class com.google.enterprise.adaptor.<A HREF="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html" title="class in com.google.enterprise.adaptor">AbstractAdaptor</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#destroy()">destroy</A>, <A HREF="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#initConfig(com.google.enterprise.adaptor.Config)">initConfig</A>, <A HREF="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#isUserAuthorized(com.google.enterprise.adaptor.AuthnIdentity, java.util.Collection)">isUserAuthorized</A>, <A HREF="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#main(com.google.enterprise.adaptor.Adaptor, java.lang.String[])">main</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#destroy()">destroy</A>, <A HREF="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#isUserAuthorized(com.google.enterprise.adaptor.AuthnIdentity, java.util.Collection)">isUserAuthorized</A>, <A HREF="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#main(com.google.enterprise.adaptor.Adaptor, java.lang.String[])">main</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -216,6 +234,29 @@ public <B>DbAdaptorTemplate</B>()</PRE>
 <B>Method Detail</B></FONT></TH>
 </TR>
 </TABLE>
+
+<A NAME="initConfig(com.google.enterprise.adaptor.Config)"><!-- --></A><H3>
+initConfig</H3>
+<PRE>
+public void <B>initConfig</B>(<A HREF="../../../../../com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>&nbsp;config)</PRE>
+<DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#initConfig(com.google.enterprise.adaptor.Config)">AbstractAdaptor</A></CODE></B></DD>
+<DD>Provides the opportunity for the Adaptor to create new configuration values
+ or override default values. Only <A HREF="../../../../../com/google/enterprise/adaptor/Config.html#addKey(java.lang.String, java.lang.String)"><CODE>Config.addKey(java.lang.String, java.lang.String)</CODE></A> should likely be
+ called. The user's configuration will override any values set in this way.
+ This method is called by <A HREF="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#main(com.google.enterprise.adaptor.Adaptor, java.lang.String[])"><CODE>AbstractAdaptor.main(com.google.enterprise.adaptor.Adaptor, java.lang.String[])</CODE></A> before <A HREF="../../../../../com/google/enterprise/adaptor/Adaptor.html#init(com.google.enterprise.adaptor.AdaptorContext)"><CODE>Adaptor.init(com.google.enterprise.adaptor.AdaptorContext)</CODE></A>
+ is called.
+
+ <p>This implementation does nothing.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/enterprise/adaptor/Adaptor.html#initConfig(com.google.enterprise.adaptor.Config)">initConfig</A></CODE> in interface <CODE><A HREF="../../../../../com/google/enterprise/adaptor/Adaptor.html" title="interface in com.google.enterprise.adaptor">Adaptor</A></CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#initConfig(com.google.enterprise.adaptor.Config)">initConfig</A></CODE> in class <CODE><A HREF="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html" title="class in com.google.enterprise.adaptor">AbstractAdaptor</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
 
 <A NAME="init(com.google.enterprise.adaptor.AdaptorContext)"><!-- --></A><H3>
 init</H3>
@@ -289,8 +330,6 @@ main</H3>
 <PRE>
 public static void <B>main</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[]&nbsp;args)</PRE>
 <DL>
-<DD>Call default main for adaptors.
-<P>
 <DD><DL>
 </DL>
 </DD>
