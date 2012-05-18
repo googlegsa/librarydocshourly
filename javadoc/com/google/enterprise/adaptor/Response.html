@@ -206,6 +206,14 @@ Interface provided to <A HREF="../../../../com/google/enterprise/adaptor/Adaptor
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether the GSA should index the content for searching.</TD>
 </TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Response.html#setSecure(boolean)">setSecure</A></B>(boolean&nbsp;secure)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark the document as secure, for use with late-binding security.</TD>
+</TR>
 </TABLE>
 &nbsp;
 <P>
@@ -324,6 +332,23 @@ setAcl</H3>
 void <B>setAcl</B>(<A HREF="../../../../com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</A>&nbsp;acl)</PRE>
 <DL>
 <DD>Provide the document's ACLs for early-binding security on the GSA.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setSecure(boolean)"><!-- --></A><H3>
+setSecure</H3>
+<PRE>
+void <B>setSecure</B>(boolean&nbsp;secure)</PRE>
+<DL>
+<DD>Mark the document as secure, for use with late-binding security. By
+ default, the secure setting will be <code>false</code>, which means the document
+ is public if there are no ACLs. ACLs should be used, if possible, instead
+ of setting this option to <code>true</code>. When <code>true</code>, the GSA needs to
+ be correctly configured to issue a SAML request to the Adaptor.
 <P>
 <DD><DL>
 </DL>
