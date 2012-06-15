@@ -331,7 +331,9 @@ setAcl</H3>
 <PRE>
 void <B>setAcl</B>(<A HREF="../../../../com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</A>&nbsp;acl)</PRE>
 <DL>
-<DD>Provide the document's ACLs for early-binding security on the GSA.
+<DD>Provide the document's ACLs for early-binding security on the GSA. By
+ default, the document's ACL will be <code>null</code>, which means the document
+ is public if the document isn't marked as secure via <A HREF="../../../../com/google/enterprise/adaptor/Response.html#setSecure(boolean)"><CODE>setSecure(boolean)</CODE></A>.
 <P>
 <DD><DL>
 </DL>

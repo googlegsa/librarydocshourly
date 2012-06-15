@@ -100,13 +100,9 @@ Class Acl</H2>
 <P>
 Immutable access control list. For description of the semantics of the
  various fields, see <A HREF="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorizedLocal(java.lang.String, java.util.Collection)"><CODE>isAuthorizedLocal</CODE></A> and
- <A HREF="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorized(java.lang.String, java.util.Collection, java.util.List, boolean)"><CODE>isAuthorized</CODE></A>. Users and groups must not be <code>null</code>, <code>""</code>, or have surrounding whitespace. These values are
+ <A HREF="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorized(java.lang.String, java.util.Collection, java.util.List)"><CODE>isAuthorized</CODE></A>. Users and groups must not be <code>null</code>, <code>""</code>, or have surrounding whitespace. These values are
  disallowed to prevent confusion since <code>null</code> doesn't make sense, <code>""</code> would be ignored by the GSA, and surrounding whitespace is automatically
  trimmed by the GSA.
-
- <p>It is very important to note that a completely empty ACL (one that has all
- defaults) is equivalent to having no ACLs on the GSA, which is typically
- treated as "public."
 <P>
 
 <P>
@@ -242,10 +238,9 @@ Immutable access control list. For description of the semantics of the
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/AuthzStatus.html" title="enum in com.google.enterprise.adaptor">AuthzStatus</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorized(java.lang.String, java.util.Collection, java.util.List, boolean)">isAuthorized</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;userIdentifier,
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorized(java.lang.String, java.util.Collection, java.util.List)">isAuthorized</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;userIdentifier,
              <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;groups,
-             <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="../../../../com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</A>&gt;&nbsp;aclChain,
-             boolean&nbsp;emptyImpliesPublic)</CODE>
+             <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="../../../../com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</A>&gt;&nbsp;aclChain)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determine if the provided <code>userIdentifier</code> belonging to <code>groups</code> is authorized for the provided <code>aclChain</code>.</TD>
@@ -253,11 +248,10 @@ Immutable access control list. For description of the semantics of the
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&lt;<A HREF="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</A>,<A HREF="../../../../com/google/enterprise/adaptor/AuthzStatus.html" title="enum in com.google.enterprise.adaptor">AuthzStatus</A>&gt;</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorizedBatch(java.lang.String, java.util.Collection, java.util.Collection, com.google.enterprise.adaptor.Acl.BatchRetriever, boolean)">isAuthorizedBatch</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;userIdentifier,
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorizedBatch(java.lang.String, java.util.Collection, java.util.Collection, com.google.enterprise.adaptor.Acl.BatchRetriever)">isAuthorizedBatch</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;userIdentifier,
                   <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;groups,
                   <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</A>&lt;<A HREF="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</A>&gt;&nbsp;ids,
-                  <A HREF="../../../../com/google/enterprise/adaptor/Acl.BatchRetriever.html" title="interface in com.google.enterprise.adaptor">Acl.BatchRetriever</A>&nbsp;retriever,
-                  boolean&nbsp;emptyImpliesPublic)</CODE>
+                  <A HREF="../../../../com/google/enterprise/adaptor/Acl.BatchRetriever.html" title="interface in com.google.enterprise.adaptor">Acl.BatchRetriever</A>&nbsp;retriever)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check authz for many DocIds at once.</TD>
@@ -299,8 +293,7 @@ EMPTY</H3>
 <PRE>
 public static final <A HREF="../../../../com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</A> <B>EMPTY</B></PRE>
 <DL>
-<DD>Empty convenience instance with all defaults used. This is equivalent to
- having no ACLs on the GSA, which is typically treated as "public."
+<DD>Empty convenience instance with all defaults used.
 <P>
 <DL>
 <DT><B>See Also:</B><DD><A HREF="../../../../com/google/enterprise/adaptor/Acl.Builder.html#Acl.Builder()"><CODE>Acl.Builder.Acl.Builder()</CODE></A></DL>
@@ -416,13 +409,12 @@ public <A HREF="../../../../com/google/enterprise/adaptor/AuthzStatus.html" titl
 </DL>
 <HR>
 
-<A NAME="isAuthorized(java.lang.String, java.util.Collection, java.util.List, boolean)"><!-- --></A><H3>
+<A NAME="isAuthorized(java.lang.String, java.util.Collection, java.util.List)"><!-- --></A><H3>
 isAuthorized</H3>
 <PRE>
 public static <A HREF="../../../../com/google/enterprise/adaptor/AuthzStatus.html" title="enum in com.google.enterprise.adaptor">AuthzStatus</A> <B>isAuthorized</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;userIdentifier,
                                        <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;groups,
-                                       <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="../../../../com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</A>&gt;&nbsp;aclChain,
-                                       boolean&nbsp;emptyImpliesPublic)</PRE>
+                                       <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="../../../../com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</A>&gt;&nbsp;aclChain)</PRE>
 <DL>
 <DD>Determine if the provided <code>userIdentifier</code> belonging to <code>groups</code> is authorized for the provided <code>aclChain</code>. The chain should
  be in order of root to leaf; that means that the particular file or folder
@@ -431,7 +423,7 @@ public static <A HREF="../../../../com/google/enterprise/adaptor/AuthzStatus.htm
  <p>If you have an ACL and wish to determine if a user is authorized, you
  should manually generate an aclChain by recursively retrieving the ACLs of
  the <code>inheritFrom</code> <A HREF="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor"><CODE>DocId</CODE></A>. The ACL you started with should be
- at the end of the chain. Alternatively, you can use <A HREF="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorizedBatch(java.lang.String, java.util.Collection, java.util.Collection, com.google.enterprise.adaptor.Acl.BatchRetriever, boolean)"><CODE>isAuthorizedBatch()</CODE></A>.
+ at the end of the chain. Alternatively, you can use <A HREF="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorizedBatch(java.lang.String, java.util.Collection, java.util.Collection, com.google.enterprise.adaptor.Acl.BatchRetriever)"><CODE>isAuthorizedBatch()</CODE></A>.
 
  <p>If the entire chain has empty permit/deny sets, then the result is
  <A HREF="../../../../com/google/enterprise/adaptor/AuthzStatus.html#INDETERMINATE"><CODE>AuthzStatus.INDETERMINATE</CODE></A>.
@@ -458,15 +450,9 @@ public static <A HREF="../../../../com/google/enterprise/adaptor/AuthzStatus.htm
  non-Adaptor situations, you can get a document to be private and have no
  ACLs. In these situations the ACLs are checked, but the result is
  INDETERMINATE and different authz checks must be made.
-
- <p>In order to get perceived-equivalent behavior to the GSA, use
- <code>true</code> for <code>emptyImpliesPublic</code>; in order to get identical ACL
- authorization behavior (even though it would most commonly not be
- computed), use <code>false</code> for <code>emptyImpliesPublic</code>.
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>userIdentifier</CODE> - the username of the user<DD><CODE>groups</CODE> - all the groups the user belongs to<DD><CODE>aclChain</CODE> - ordered list of ACLs from root to leaf<DD><CODE>emptyImpliesPublic</CODE> - whether an empty ACL implies that the document is
-     public (if in question, use <code>true</code>).
+<DT><B>Parameters:</B><DD><CODE>userIdentifier</CODE> - the username of the user<DD><CODE>groups</CODE> - all the groups the user belongs to<DD><CODE>aclChain</CODE> - ordered list of ACLs from root to leaf
 <DT><B>Throws:</B>
 <DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - if the chain is empty, the first element
      of the chain's <code>getInheritFrom() != null</code>, or if any element but
@@ -476,21 +462,18 @@ public static <A HREF="../../../../com/google/enterprise/adaptor/AuthzStatus.htm
 </DL>
 <HR>
 
-<A NAME="isAuthorizedBatch(java.lang.String, java.util.Collection, java.util.Collection, com.google.enterprise.adaptor.Acl.BatchRetriever, boolean)"><!-- --></A><H3>
+<A NAME="isAuthorizedBatch(java.lang.String, java.util.Collection, java.util.Collection, com.google.enterprise.adaptor.Acl.BatchRetriever)"><!-- --></A><H3>
 isAuthorizedBatch</H3>
 <PRE>
 public static <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&lt;<A HREF="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</A>,<A HREF="../../../../com/google/enterprise/adaptor/AuthzStatus.html" title="enum in com.google.enterprise.adaptor">AuthzStatus</A>&gt; <B>isAuthorizedBatch</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;userIdentifier,
                                                        <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;groups,
                                                        <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</A>&lt;<A HREF="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</A>&gt;&nbsp;ids,
-                                                       <A HREF="../../../../com/google/enterprise/adaptor/Acl.BatchRetriever.html" title="interface in com.google.enterprise.adaptor">Acl.BatchRetriever</A>&nbsp;retriever,
-                                                       boolean&nbsp;emptyImpliesPublic)
+                                                       <A HREF="../../../../com/google/enterprise/adaptor/Acl.BatchRetriever.html" title="interface in com.google.enterprise.adaptor">Acl.BatchRetriever</A>&nbsp;retriever)
                                                 throws <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
 <DL>
 <DD>Check authz for many DocIds at once. This will only fetch ACL information
  for a DocId once, even when considering inheritFrom. It will then create
- the appropriate chains and call <A HREF="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorized(java.lang.String, java.util.Collection, java.util.List, boolean)"><CODE>isAuthorized()</CODE></A>.
-
- <p>For information concerning <code>emptyImpliesPublic</code>, please see <A HREF="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorized(java.lang.String, java.util.Collection, java.util.List, boolean)"><CODE>isAuthorized</CODE></A> for the reasoning and behavior of the option.
+ the appropriate chains and call <A HREF="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorized(java.lang.String, java.util.Collection, java.util.List)"><CODE>isAuthorized()</CODE></A>.
 
  <p>If there is an inheritance cycle, an ACL for a DocId in <code>ids</code> was
  not returned by <code>retriever</code> when requested, or an inherited ACL was
@@ -498,8 +481,7 @@ public static <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Ma
  <A HREF="../../../../com/google/enterprise/adaptor/AuthzStatus.html#INDETERMINATE"><CODE>AuthzStatus.INDETERMINATE</CODE></A> for that DocId.
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>userIdentifier</CODE> - the username of the user<DD><CODE>groups</CODE> - all the groups the user belongs to<DD><CODE>ids</CODE> - collection of DocIds that need authz performed<DD><CODE>retriever</CODE> - object to use to obtain an ACL for a given DocId<DD><CODE>emptyImpliesPublic</CODE> - whether an empty ACL implies that the document is
-     public (if in question, use <code>true</code>).
+<DT><B>Parameters:</B><DD><CODE>userIdentifier</CODE> - the username of the user<DD><CODE>groups</CODE> - all the groups the user belongs to<DD><CODE>ids</CODE> - collection of DocIds that need authz performed<DD><CODE>retriever</CODE> - object to use to obtain an ACL for a given DocId
 <DT><B>Throws:</B>
 <DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if the retriever throws an IOException</DL>
 </DD>
