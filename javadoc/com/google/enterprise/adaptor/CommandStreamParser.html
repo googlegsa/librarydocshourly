@@ -53,7 +53,7 @@ function windowTitle()
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../com/google/enterprise/adaptor/AuthzStatus.html" title="enum in com.google.enterprise.adaptor"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html" title="class in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../index.html?com/google/enterprise/adaptor/CommandStreamParser.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="CommandStreamParser.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
@@ -73,7 +73,7 @@ function windowTitle()
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
 DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
 </TR>
@@ -273,24 +273,7 @@ Parses the adaptor data format into individual commands with associated data.
 <HR>
 
 <P>
-<!-- ======== NESTED CLASS SUMMARY ======== -->
 
-<A NAME="nested_class_summary"><!-- --></A>
-<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
-<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
-<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
-<B>Nested Class Summary</B></FONT></TH>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>static&nbsp;class</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html" title="class in com.google.enterprise.adaptor">CommandStreamParser.RetrieverInfo</A></B></CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-</TABLE>
-&nbsp;
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 
 <A NAME="constructor_summary"><!-- --></A>
@@ -333,16 +316,18 @@ Parses the adaptor data format into individual commands with associated data.
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</A>&lt;<A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</A>&gt;</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/CommandStreamParser.html#readFromLister()">readFromLister</A></B>()</CODE>
+<CODE>&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/CommandStreamParser.html#readFromLister(com.google.enterprise.adaptor.DocIdPusher, com.google.enterprise.adaptor.PushErrorHandler)">readFromLister</A></B>(<A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</A>&nbsp;pusher,
+               <A HREF="../../../../com/google/enterprise/adaptor/PushErrorHandler.html" title="interface in com.google.enterprise.adaptor">PushErrorHandler</A>&nbsp;handler)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parse a listing response, sending results to <code>pusher</code>.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html" title="class in com.google.enterprise.adaptor">CommandStreamParser.RetrieverInfo</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/CommandStreamParser.html#readFromRetriever()">readFromRetriever</A></B>()</CODE>
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/CommandStreamParser.html#readFromRetriever(com.google.enterprise.adaptor.DocId, com.google.enterprise.adaptor.Response)">readFromRetriever</A></B>(<A HREF="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</A>&nbsp;docId,
+                  <A HREF="../../../../com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</A>&nbsp;response)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -415,11 +400,12 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?
 </DL>
 <HR>
 
-<A NAME="readFromRetriever()"><!-- --></A><H3>
+<A NAME="readFromRetriever(com.google.enterprise.adaptor.DocId, com.google.enterprise.adaptor.Response)"><!-- --></A><H3>
 readFromRetriever</H3>
 <PRE>
-public <A HREF="../../../../com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html" title="class in com.google.enterprise.adaptor">CommandStreamParser.RetrieverInfo</A> <B>readFromRetriever</B>()
-                                                    throws <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+public void <B>readFromRetriever</B>(<A HREF="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</A>&nbsp;docId,
+                              <A HREF="../../../../com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</A>&nbsp;response)
+                       throws <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
 <DL>
 <DD><DL>
 
@@ -429,16 +415,23 @@ public <A HREF="../../../../com/google/enterprise/adaptor/CommandStreamParser.Re
 </DL>
 <HR>
 
-<A NAME="readFromLister()"><!-- --></A><H3>
+<A NAME="readFromLister(com.google.enterprise.adaptor.DocIdPusher, com.google.enterprise.adaptor.PushErrorHandler)"><!-- --></A><H3>
 readFromLister</H3>
 <PRE>
-public <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</A>&lt;<A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</A>&gt; <B>readFromLister</B>()
-                                             throws <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+public <A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</A> <B>readFromLister</B>(<A HREF="../../../../com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</A>&nbsp;pusher,
+                                         <A HREF="../../../../com/google/enterprise/adaptor/PushErrorHandler.html" title="interface in com.google.enterprise.adaptor">PushErrorHandler</A>&nbsp;handler)
+                                  throws <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A>,
+                                         <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</A></PRE>
 <DL>
+<DD>Parse a listing response, sending results to <code>pusher</code>. If <code>handler</code> is <code>null</code>, then <code>pusher</code>'s default handler will be used. In case of failure sending in
+ <code>pusher</code>, the rest of the input stream may not be read.
+<P>
 <DD><DL>
 
+<DT><B>Returns:</B><DD><code>null</code> on success, otherwise the first Record to fail
 <DT><B>Throws:</B>
-<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</A></CODE></DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->
@@ -472,7 +465,7 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/ArrayList
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../com/google/enterprise/adaptor/AuthzStatus.html" title="enum in com.google.enterprise.adaptor"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html" title="class in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../index.html?com/google/enterprise/adaptor/CommandStreamParser.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="CommandStreamParser.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
@@ -492,7 +485,7 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/ArrayList
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
 DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
 </TR>

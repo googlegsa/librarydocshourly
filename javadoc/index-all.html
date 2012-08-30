@@ -160,7 +160,7 @@ Constructor for class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/goog
 <DT><A HREF="./com/google/enterprise/adaptor/CommandStreamParser.html" title="class in com.google.enterprise.adaptor"><B>CommandStreamParser</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Parses the adaptor data format into individual commands with associated data.<DT><A HREF="./com/google/enterprise/adaptor/CommandStreamParser.html#CommandStreamParser(java.io.InputStream)"><B>CommandStreamParser(InputStream)</B></A> - 
 Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/CommandStreamParser.html" title="class in com.google.enterprise.adaptor">CommandStreamParser</A>
 <DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html" title="class in com.google.enterprise.adaptor"><B>CommandStreamParser.RetrieverInfo</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>&nbsp;<DT><A HREF="./com/google/enterprise/adaptor/DocId.html#compareTo(com.google.enterprise.adaptor.DocId)"><B>compareTo(DocId)</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/DocId.html#compareTo(com.google.enterprise.adaptor.DocId)"><B>compareTo(DocId)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</A>
 <DD>Provides comparison for ids based on the unique id string.
 <DT><A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor"><B>Config</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Configuration values for this program, like the GSA's hostname.<DT><A HREF="./com/google/enterprise/adaptor/Config.html#Config()"><B>Config()</B></A> - 
@@ -327,9 +327,6 @@ Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/ent
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</A>
 <DD>Configuration instance for the adaptor and all things within the adaptor
  library.
-<DT><A HREF="./com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html#getContents()"><B>getContents()</B></A> - 
-Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html" title="class in com.google.enterprise.adaptor">CommandStreamParser.RetrieverInfo</A>
-<DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/Acl.html#getDenyGroups()"><B>getDenyGroups()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</A>
 <DD>Returns immutable set of denied groups.
@@ -359,9 +356,6 @@ Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/ent
 <DD>Gives the bytes of a document referenced with id.
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/FileSystemAdaptor.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)"><B>getDocContent(Request, Response)</B></A> - 
 Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/FileSystemAdaptor.html" title="class in com.google.enterprise.adaptor.prebuilt">FileSystemAdaptor</A>
-<DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html#getDocId()"><B>getDocId()</B></A> - 
-Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html" title="class in com.google.enterprise.adaptor">CommandStreamParser.RetrieverInfo</A>
 <DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.html#getDocId()"><B>getDocId()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</A>
@@ -441,12 +435,6 @@ Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/ent
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Status.html" title="interface in com.google.enterprise.adaptor">Status</A>
 <DD>A message appropriate for displaying to an end-user concerning the state of
  the status.
-<DT><A HREF="./com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html#getMetadata()"><B>getMetadata()</B></A> - 
-Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html" title="class in com.google.enterprise.adaptor">CommandStreamParser.RetrieverInfo</A>
-<DD>Returns unmodifiable view of Metadata.
-<DT><A HREF="./com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html#getMimeType()"><B>getMimeType()</B></A> - 
-Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html" title="class in com.google.enterprise.adaptor">CommandStreamParser.RetrieverInfo</A>
-<DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/PollingIncrementalAdaptor.html#getModifiedDocIds(com.google.enterprise.adaptor.DocIdPusher)"><B>getModifiedDocIds(DocIdPusher)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/PollingIncrementalAdaptor.html" title="interface in com.google.enterprise.adaptor">PollingIncrementalAdaptor</A>
 <DD>Check for documents modified since the last call to the method.
@@ -727,9 +715,6 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/Config.html#isTransformRequired()"><B>isTransformRequired()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>
 <DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html#isUpToDate()"><B>isUpToDate()</B></A> - 
-Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html" title="class in com.google.enterprise.adaptor">CommandStreamParser.RetrieverInfo</A>
-<DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/CustomFormatter.html#isUseColor()"><B>isUseColor()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/CustomFormatter.html" title="class in com.google.enterprise.adaptor">CustomFormatter</A>
 <DD>&nbsp;
@@ -820,9 +805,6 @@ Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/ent
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/RecursiveFileIterator.html#next()"><B>next()</B></A> - 
 Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/RecursiveFileIterator.html" title="class in com.google.enterprise.adaptor.prebuilt">RecursiveFileIterator</A>
 <DD>Returns the next file in the iteratior.
-<DT><A HREF="./com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html#notFound()"><B>notFound()</B></A> - 
-Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/CommandStreamParser.RetrieverInfo.html" title="class in com.google.enterprise.adaptor">CommandStreamParser.RetrieverInfo</A>
-<DD>&nbsp;
 </DL>
 <HR>
 <A NAME="_O_"><!-- --></A><H2>
@@ -869,10 +851,10 @@ Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterpri
 <DT><A HREF="./com/google/enterprise/adaptor/CommandStreamParser.html#readFromAuthorizer()"><B>readFromAuthorizer()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/CommandStreamParser.html" title="class in com.google.enterprise.adaptor">CommandStreamParser</A>
 <DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/CommandStreamParser.html#readFromLister()"><B>readFromLister()</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/CommandStreamParser.html#readFromLister(com.google.enterprise.adaptor.DocIdPusher, com.google.enterprise.adaptor.PushErrorHandler)"><B>readFromLister(DocIdPusher, PushErrorHandler)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/CommandStreamParser.html" title="class in com.google.enterprise.adaptor">CommandStreamParser</A>
-<DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/CommandStreamParser.html#readFromRetriever()"><B>readFromRetriever()</B></A> - 
+<DD>Parse a listing response, sending results to <code>pusher</code>.
+<DT><A HREF="./com/google/enterprise/adaptor/CommandStreamParser.html#readFromRetriever(com.google.enterprise.adaptor.DocId, com.google.enterprise.adaptor.Response)"><B>readFromRetriever(DocId, Response)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/CommandStreamParser.html" title="class in com.google.enterprise.adaptor">CommandStreamParser</A>
 <DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/IOHelper.html#readFully(java.io.InputStream, byte[], int, int)"><B>readFully(InputStream, byte[], int, int)</B></A> - 
