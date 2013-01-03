@@ -291,6 +291,14 @@ Configuration values for this program, like the GSA's hostname. Also several
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#getRawValue(java.lang.String)">getRawValue</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a configuration value exactly as provided in configuration.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A></CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#getServerBaseUri()">getServerBaseUri</A></B>()</CODE>
 
@@ -415,7 +423,7 @@ Configuration values for this program, like the GSA's hostname. Also several
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#getValue(java.lang.String)">getValue</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;key)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a configuration value.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a configuration value as computed based on the configuration.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -1161,15 +1169,36 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.ht
 </DL>
 <HR>
 
+<A NAME="getRawValue(java.lang.String)"><!-- --></A><H3>
+getRawValue</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getRawValue</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;key)</PRE>
+<DL>
+<DD>Get a configuration value exactly as provided in configuration. Generally,
+ <A HREF="../../../../com/google/enterprise/adaptor/Config.html#getValue(java.lang.String)"><CODE>getValue(java.lang.String)</CODE></A> should be used instead of this method.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>raw non-<code>null</code> value of <code>key</code>
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</A></CODE> - if <code>key</code> has no value</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="getValue(java.lang.String)"><!-- --></A><H3>
 getValue</H3>
 <PRE>
 public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getValue</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;key)</PRE>
 <DL>
-<DD>Get a configuration value. Never returns <code>null</code>.
+<DD>Get a configuration value as computed based on the configuration. Some
+ configuration values can be generated from other values. This method
+ returns that computed configuration value instead of the raw value provided
+ in configuration. This method should be preferred over <A HREF="../../../../com/google/enterprise/adaptor/Config.html#getRawValue(java.lang.String)"><CODE>getRawValue(java.lang.String)</CODE></A>.
 <P>
 <DD><DL>
 
+<DT><B>Returns:</B><DD>non-<code>null</code> value of <code>key</code>
 <DT><B>Throws:</B>
 <DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</A></CODE> - if <code>key</code> has no value</DL>
 </DD>
