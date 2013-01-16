@@ -112,6 +112,9 @@ Configuration values for this program, like the GSA's hostname. Also several
      hour,  day of month, month, day of week).  Defaults to 0 3 * * *
  <tr><td> </td><td>adaptor.incrementalPollPeriodSecs </td><td> number
      of seconds between invocations of <A HREF="../../../../com/google/enterprise/adaptor/PollingIncrementalAdaptor.html#getModifiedDocIds(com.google.enterprise.adaptor.DocIdPusher)"><CODE>PollingIncrementalAdaptor.getModifiedDocIds</CODE></A>.    Defaults to 900
+ <tr><td> </td><td>adaptor.docContentTimeoutSecs </td><td> number of seconds
+     before a call to get document content times out and is interrupted.
+     Defaults to 30
  <tr><td> </td><td>adaptor.pushDocIdsOnStartup </td><td> whether to invoke
      <A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)"><CODE>Adaptor.getDocIds</CODE></A> on process start
      (in addition to adaptor.fullListingSchedule).   Defaults to true
@@ -227,6 +230,14 @@ Configuration values for this program, like the GSA's hostname. Also several
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;boolean</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#ensureLatestConfigLoaded()">ensureLatestConfigLoaded</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#getAdaptorDocContentTimeoutMillis()">getAdaptorDocContentTimeoutMillis</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -975,6 +986,17 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.ht
 getAdaptorIncrementalPollPeriodMillis</H3>
 <PRE>
 public long <B>getAdaptorIncrementalPollPeriodMillis</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getAdaptorDocContentTimeoutMillis()"><!-- --></A><H3>
+getAdaptorDocContentTimeoutMillis</H3>
+<PRE>
+public long <B>getAdaptorDocContentTimeoutMillis</B>()</PRE>
 <DL>
 <DD><DL>
 </DL>
