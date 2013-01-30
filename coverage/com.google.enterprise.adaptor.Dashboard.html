@@ -122,7 +122,7 @@
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> Dashboard(Config config, GsaCommunicationHandler gsaCommHandler,</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;49</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;                   Journal journal, SessionManager&lt;HttpExchange&gt; sessionManager,</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;50</td>  <td class="nbHitsCovered">&nbsp;7</td>  <td class="src"><pre class="src">&nbsp;                   SensitiveValueCodec secureValueCodec) {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;50</td>  <td class="nbHitsCovered">&nbsp;7</td>  <td class="src"><pre class="src">&nbsp;                   SensitiveValueCodec secureValueCodec, Adaptor adaptor) {</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;51</td>  <td class="nbHitsCovered">&nbsp;7</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">this</span>.config = config;</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;52</td>  <td class="nbHitsCovered">&nbsp;7</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">this</span>.gsaCommHandler = gsaCommHandler;</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;53</td>  <td class="nbHitsCovered">&nbsp;7</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">this</span>.journal = journal;</pre></td></tr>
@@ -136,7 +136,7 @@
 <tr>  <td class="numLineCover">&nbsp;59</td>  <td class="nbHitsCovered">&nbsp;7</td>  <td class="src"><pre class="src">&nbsp;    circularLogRpcMethod = <span class="keyword">new</span> CircularLogRpcMethod();</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;60</td>  <td class="nbHitsCovered">&nbsp;7</td>  <td class="src"><pre class="src">&nbsp;    rpcHandler.registerRpcMethod(<span class="string">"getLog"</span>, circularLogRpcMethod);</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;61</td>  <td class="nbHitsCovered">&nbsp;7</td>  <td class="src"><pre class="src">&nbsp;    rpcHandler.registerRpcMethod(<span class="string">"getConfig"</span>, <span class="keyword">new</span> ConfigRpcMethod(config));</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;62</td>  <td class="nbHitsCovered">&nbsp;7</td>  <td class="src"><pre class="src">&nbsp;    rpcHandler.registerRpcMethod(<span class="string">"getStats"</span>, <span class="keyword">new</span> StatRpcMethod(journal));</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;62</td>  <td class="nbHitsCovered">&nbsp;7</td>  <td class="src"><pre class="src">&nbsp;    rpcHandler.registerRpcMethod(<span class="string">"getStats"</span>, <span class="keyword">new</span> StatRpcMethod(journal, adaptor));</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;63</td>  <td class="nbHitsCovered">&nbsp;7</td>  <td class="src"><pre class="src">&nbsp;    rpcHandler.registerRpcMethod(<span class="string">"getStatuses"</span>, <span class="keyword">new</span> StatusRpcMethod(monitor));</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;64</td>  <td class="nbHitsCovered">&nbsp;7</td>  <td class="src"><pre class="src">&nbsp;    rpcHandler.registerRpcMethod(<span class="string">"checkForUpdatedConfig"</span>,</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;65</td>  <td class="nbHits">&nbsp;</td>
