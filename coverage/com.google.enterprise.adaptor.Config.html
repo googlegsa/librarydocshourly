@@ -517,7 +517,7 @@
   <td class="src"><pre class="src">&nbsp;  <span class="comment">/** Without changes contains InetAddress.getLocalHost().getHostName(). */</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;278</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> String getServerHostname() {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;279</td>  <td class="nbHitsCovered">&nbsp;125</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> getValue(<span class="string">"server.hostname"</span>);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;279</td>  <td class="nbHitsCovered">&nbsp;58</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> getValue(<span class="string">"server.hostname"</span>);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;280</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;281</td>  <td class="nbHits">&nbsp;</td>
@@ -927,7 +927,7 @@
   <td class="src"><pre class="src">&nbsp;  <span class="comment">/** Provides the character encoding the GSA prefers. */</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;500</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> Charset getGsaCharacterEncoding() {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;501</td>  <td class="nbHitsCovered">&nbsp;79</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> Charset.forName(getValue(<span class="string">"gsa.characterEncoding"</span>));</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;501</td>  <td class="nbHitsCovered">&nbsp;12</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> Charset.forName(getValue(<span class="string">"gsa.characterEncoding"</span>));</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;502</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;503</td>  <td class="nbHits">&nbsp;</td>
@@ -1215,14 +1215,14 @@
   <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;686</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> String getRawValue(String key) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;687</td>  <td class="nbHitsCovered">&nbsp;739</td>  <td class="src"><pre class="src">&nbsp;    String value = config.getProperty(key);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;688</td>  <td class="nbHitsUncovered"><a title="Line 688: Conditional coverage 50% (1/2).">&nbsp;739</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 688: Conditional coverage 50% (1/2).">    <span class="keyword">if</span> (value == <span class="keyword">null</span>) {</a></span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;687</td>  <td class="nbHitsCovered">&nbsp;605</td>  <td class="src"><pre class="src">&nbsp;    String value = config.getProperty(key);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;688</td>  <td class="nbHitsUncovered"><a title="Line 688: Conditional coverage 50% (1/2).">&nbsp;605</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 688: Conditional coverage 50% (1/2).">    <span class="keyword">if</span> (value == <span class="keyword">null</span>) {</a></span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;689</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(MessageFormat.format(</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;690</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;          <span class="string">"You must set configuration key ''{0}''."</span>, key));</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;691</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;692</td>  <td class="nbHitsCovered">&nbsp;739</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> value;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;692</td>  <td class="nbHitsCovered">&nbsp;605</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> value;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;693</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;694</td>  <td class="nbHits">&nbsp;</td>
@@ -1249,13 +1249,13 @@
   <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;705</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> String getValue(String key) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;706</td>  <td class="nbHitsCovered">&nbsp;738</td>  <td class="src"><pre class="src">&nbsp;    String value = getRawValue(key);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;707</td>  <td class="nbHitsCovered">&nbsp;738</td>  <td class="src"><pre class="src">&nbsp;    ValueComputer computer = computeMap.get(key);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;708</td>  <td class="nbHitsCovered"><a title="Line 708: Conditional coverage 100% (2/2).">&nbsp;738</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 708: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (computer != <span class="keyword">null</span>) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;706</td>  <td class="nbHitsCovered">&nbsp;604</td>  <td class="src"><pre class="src">&nbsp;    String value = getRawValue(key);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;707</td>  <td class="nbHitsCovered">&nbsp;604</td>  <td class="src"><pre class="src">&nbsp;    ValueComputer computer = computeMap.get(key);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;708</td>  <td class="nbHitsCovered"><a title="Line 708: Conditional coverage 100% (2/2).">&nbsp;604</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 708: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (computer != <span class="keyword">null</span>) {</a></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;709</td>  <td class="nbHitsCovered">&nbsp;97</td>  <td class="src"><pre class="src">&nbsp;      value = computer.compute(value);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;710</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;711</td>  <td class="nbHitsCovered">&nbsp;738</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> value;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;711</td>  <td class="nbHitsCovered">&nbsp;604</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> value;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;712</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;713</td>  <td class="nbHits">&nbsp;</td>

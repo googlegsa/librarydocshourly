@@ -120,7 +120,10 @@ Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterpri
 <DT><A HREF="./com/google/enterprise/adaptor/AdaptorContext.html#addStatusSource(com.google.enterprise.adaptor.StatusSource)"><B>addStatusSource(StatusSource)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</A>
 <DD>Add a status source to the dashboard.
-<DT><A HREF="./com/google/enterprise/adaptor/AuthnIdentity.html" title="interface in com.google.enterprise.adaptor"><B>AuthnIdentity</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>User identification information for understanding who a user is or if they
+<DT><A HREF="./com/google/enterprise/adaptor/AuthnAdaptor.html#authenticateUser(com.sun.net.httpserver.HttpExchange, com.google.enterprise.adaptor.AuthnAdaptor.Callback)"><B>authenticateUser(HttpExchange, AuthnAdaptor.Callback)</B></A> - 
+Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AuthnAdaptor.html" title="interface in com.google.enterprise.adaptor">AuthnAdaptor</A>
+<DD>Authenticate the user connected via <code>ex</code>.
+<DT><A HREF="./com/google/enterprise/adaptor/AuthnAdaptor.html" title="interface in com.google.enterprise.adaptor"><B>AuthnAdaptor</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Interface for adaptors capable of authenticating users.<DT><A HREF="./com/google/enterprise/adaptor/AuthnAdaptor.Callback.html" title="interface in com.google.enterprise.adaptor"><B>AuthnAdaptor.Callback</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Interface for replying to <A HREF="./com/google/enterprise/adaptor/AuthnAdaptor.html#authenticateUser(com.sun.net.httpserver.HttpExchange, com.google.enterprise.adaptor.AuthnAdaptor.Callback)"><CODE>AuthnAdaptor.authenticateUser(HttpExchange, Callback)</CODE></A>.<DT><A HREF="./com/google/enterprise/adaptor/AuthnIdentity.html" title="interface in com.google.enterprise.adaptor"><B>AuthnIdentity</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>User identification information for understanding who a user is or if they
  are allowed to access a resource.<DT><A HREF="./com/google/enterprise/adaptor/AuthzStatus.html" title="enum in com.google.enterprise.adaptor"><B>AuthzStatus</B></A> - Enum in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Authorization status codes.<DT><A HREF="./com/google/enterprise/adaptor/Config.html#autoConfig(java.lang.String[])"><B>autoConfig(String[])</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>
 <DD>Load default configuration file and parse command line options.
@@ -191,6 +194,9 @@ Static method in class com.google.enterprise.adaptor.examples.<A HREF="./com/goo
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#create(java.util.Map)"><B>create(Map&lt;String, String&gt;)</B></A> - 
 Static method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineTransform</A>
 <DD>&nbsp;
+<DT><A HREF="./com/google/enterprise/adaptor/AdaptorContext.html#createHttpContext(java.lang.String, com.sun.net.httpserver.HttpHandler)"><B>createHttpContext(String, HttpHandler)</B></A> - 
+Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</A>
+<DD>Registers a handler with the library's <A HREF="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpServer.html?is-external=true" title="class or interface in com.sun.net.httpserver"><CODE>HttpServer</CODE></A> in similar fashion to <A HREF="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpServer.html?is-external=true#createContext(java.lang.String, com.sun.net.httpserver.HttpHandler)" title="class or interface in com.sun.net.httpserver"><CODE>HttpServer.createContext(java.lang.String, com.sun.net.httpserver.HttpHandler)</CODE></A>.
 <DT><A HREF="./com/google/enterprise/adaptor/CustomFormatter.html" title="class in com.google.enterprise.adaptor"><B>CustomFormatter</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Custom log formatter for ease of development.<DT><A HREF="./com/google/enterprise/adaptor/CustomFormatter.html#CustomFormatter()"><B>CustomFormatter()</B></A> - 
 Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/CustomFormatter.html" title="class in com.google.enterprise.adaptor">CustomFormatter</A>
 <DD>&nbsp;
@@ -199,6 +205,9 @@ Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterp
 <A NAME="_D_"><!-- --></A><H2>
 <B>D</B></H2>
 <DL>
+<DT><A HREF="./com/google/enterprise/adaptor/HttpExchanges.html#dateFormatsRfc2616"><B>dateFormatsRfc2616</B></A> - 
+Static variable in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/HttpExchanges.html" title="class in com.google.enterprise.adaptor">HttpExchanges</A>
+<DD>The various date formats as required by RFC 2616 3.3.1.
 <DT><A HREF="./com/google/enterprise/adaptor/examples/DbAdaptorTemplate.html" title="class in com.google.enterprise.adaptor.examples"><B>DbAdaptorTemplate</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/examples/package-summary.html">com.google.enterprise.adaptor.examples</A><DD>Demonstrates what code is necessary for putting DB
  content onto a GSA.<DT><A HREF="./com/google/enterprise/adaptor/examples/DbAdaptorTemplate.html#DbAdaptorTemplate()"><B>DbAdaptorTemplate()</B></A> - 
 Constructor for class com.google.enterprise.adaptor.examples.<A HREF="./com/google/enterprise/adaptor/examples/DbAdaptorTemplate.html" title="class in com.google.enterprise.adaptor.examples">DbAdaptorTemplate</A>
@@ -243,6 +252,9 @@ Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterp
 <DT><A HREF="./com/google/enterprise/adaptor/Acl.html#EMPTY"><B>EMPTY</B></A> - 
 Static variable in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</A>
 <DD>Empty convenience instance with all defaults used.
+<DT><A HREF="./com/google/enterprise/adaptor/HttpExchanges.html#enableCompressionIfSupported(com.sun.net.httpserver.HttpExchange)"><B>enableCompressionIfSupported(HttpExchange)</B></A> - 
+Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/HttpExchanges.html" title="class in com.google.enterprise.adaptor">HttpExchanges</A>
+<DD>If the client supports it, set the correct headers and make <A HREF="./com/google/enterprise/adaptor/HttpExchanges.html#respond(com.sun.net.httpserver.HttpExchange, int, java.lang.String, byte[])"><CODE>HttpExchanges.respond(com.sun.net.httpserver.HttpExchange, int, java.lang.String, byte[])</CODE></A> provide GZIPed response data to the client.
 <DT><A HREF="./com/google/enterprise/adaptor/DocIdEncoder.html#encodeDocId(com.google.enterprise.adaptor.DocId)"><B>encodeDocId(DocId)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocIdEncoder.html" title="interface in com.google.enterprise.adaptor">DocIdEncoder</A>
 <DD>Encode the provided DocId into a URI.
@@ -317,6 +329,9 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#getAllValues(java.lang.String)"><B>getAllValues(String)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
 <DD>Gives unmodifiable reference to inserted values for key, empty if none.
+<DT><A HREF="./com/google/enterprise/adaptor/Session.html#getAttribute(java.lang.String)"><B>getAttribute(String)</B></A> - 
+Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Session.html" title="interface in com.google.enterprise.adaptor">Session</A>
+<DD>Get attribute value.
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/RecursiveFileIterator.WrappedIOException.html#getCause()"><B>getCause()</B></A> - 
 Method in exception com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/RecursiveFileIterator.WrappedIOException.html" title="class in com.google.enterprise.adaptor.prebuilt">RecursiveFileIterator.WrappedIOException</A>
 <DD>&nbsp;
@@ -415,6 +430,10 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/Config.html#getGsaHostname()"><B>getGsaHostname()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>
 <DD>Required to be set: GSA machine to send document ids to.
+<DT><A HREF="./com/google/enterprise/adaptor/HttpExchanges.html#getIfModifiedSince(com.sun.net.httpserver.HttpExchange)"><B>getIfModifiedSince(HttpExchange)</B></A> - 
+Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/HttpExchanges.html" title="class in com.google.enterprise.adaptor">HttpExchanges</A>
+<DD>Retrieves and parses the If-Modified-Since from the request, returning null
+ if there was no such header or there was an error.
 <DT><A HREF="./com/google/enterprise/adaptor/Acl.html#getInheritanceType()"><B>getInheritanceType()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</A>
 <DD>Returns the inheritance type used to combine authz decisions of these ACLs
@@ -468,6 +487,10 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/Config.html#getRawValue(java.lang.String)"><B>getRawValue(String)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>
 <DD>Get a configuration value exactly as provided in configuration.
+<DT><A HREF="./com/google/enterprise/adaptor/HttpExchanges.html#getRequestUri(com.sun.net.httpserver.HttpExchange)"><B>getRequestUri(HttpExchange)</B></A> - 
+Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/HttpExchanges.html" title="class in com.google.enterprise.adaptor">HttpExchanges</A>
+<DD>Best-effort attempt to reform the identical URI the client used to
+ contact the server.
 <DT><A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.html#getResultLink()"><B>getResultLink()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</A>
 <DD>The URI that should be displayed to the user in search results.
@@ -545,6 +568,9 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/AuthnIdentity.html#getUsername()"><B>getUsername()</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AuthnIdentity.html" title="interface in com.google.enterprise.adaptor">AuthnIdentity</A>
 <DD>Gets the user identifier.
+<DT><A HREF="./com/google/enterprise/adaptor/AdaptorContext.html#getUserSession(com.sun.net.httpserver.HttpExchange, boolean)"><B>getUserSession(HttpExchange, boolean)</B></A> - 
+Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</A>
+<DD>Get the session for the user communicating via <code>ex</code>.
 <DT><A HREF="./com/google/enterprise/adaptor/Config.html#getValue(java.lang.String)"><B>getValue(String)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>
 <DD>Get a configuration value as computed based on the configuration.
@@ -617,7 +643,10 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/RecursiveFileIterator.html#hasNext()"><B>hasNext()</B></A> - 
 Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/RecursiveFileIterator.html" title="class in com.google.enterprise.adaptor.prebuilt">RecursiveFileIterator</A>
 <DD>Returns <code>true</code> if the iteration has more elements.
-</DL>
+<DT><A HREF="./com/google/enterprise/adaptor/HttpExchanges.html#headersSent(com.sun.net.httpserver.HttpExchange)"><B>headersSent(HttpExchange)</B></A> - 
+Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/HttpExchanges.html" title="class in com.google.enterprise.adaptor">HttpExchanges</A>
+<DD>Determines if the headers have already been sent for the exchange.
+<DT><A HREF="./com/google/enterprise/adaptor/HttpExchanges.html" title="class in com.google.enterprise.adaptor"><B>HttpExchanges</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Utility class for working with <A HREF="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpExchange.html?is-external=true" title="class or interface in com.sun.net.httpserver"><CODE>HttpExchange</CODE></A>s.</DL>
 <HR>
 <A NAME="_I_"><!-- --></A><H2>
 <B>I</B></H2>
@@ -830,6 +859,10 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <A NAME="_P_"><!-- --></A><H2>
 <B>P</B></H2>
 <DL>
+<DT><A HREF="./com/google/enterprise/adaptor/HttpExchanges.html#parseQueryParameters(com.sun.net.httpserver.HttpExchange, java.nio.charset.Charset)"><B>parseQueryParameters(HttpExchange, Charset)</B></A> - 
+Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/HttpExchanges.html" title="class in com.google.enterprise.adaptor">HttpExchanges</A>
+<DD>Parse request GET query parameters of <code>ex</code> into its parts, correctly
+ taking into account <code>charset</code>.
 <DT><A HREF="./com/google/enterprise/adaptor/PollingIncrementalAdaptor.html" title="interface in com.google.enterprise.adaptor"><B>PollingIncrementalAdaptor</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Interface for library-assisted polling incremental adaptors.<DT><A HREF="./com/google/enterprise/adaptor/DocIdPusher.html#pushDocIds(java.lang.Iterable)"><B>pushDocIds(Iterable&lt;DocId&gt;)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</A>
 <DD>Push <code>DocId</code>s immediately and block until they are successfully
@@ -888,11 +921,17 @@ Constructor for exception com.google.enterprise.adaptor.prebuilt.<A HREF="./com/
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/RecursiveFileIterator.html#remove()"><B>remove()</B></A> - 
 Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/RecursiveFileIterator.html" title="class in com.google.enterprise.adaptor.prebuilt">RecursiveFileIterator</A>
 <DD>Unsupported.
+<DT><A HREF="./com/google/enterprise/adaptor/Session.html#removeAttribute(java.lang.String)"><B>removeAttribute(String)</B></A> - 
+Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Session.html" title="interface in com.google.enterprise.adaptor">Session</A>
+<DD>Remove attribute value.
 <DT><A HREF="./com/google/enterprise/adaptor/AdaptorContext.html#removeStatusSource(com.google.enterprise.adaptor.StatusSource)"><B>removeStatusSource(StatusSource)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</A>
 <DD>Remove a previously added status source to the dashboard.
 <DT><A HREF="./com/google/enterprise/adaptor/Request.html" title="interface in com.google.enterprise.adaptor"><B>Request</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Interface provided to <A HREF="./com/google/enterprise/adaptor/Adaptor.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)"><CODE>Adaptor.getDocContent(Request, Response)</CODE></A> for describing the action that
- should be taken.<DT><A HREF="./com/google/enterprise/adaptor/Response.html#respondNotFound()"><B>respondNotFound()</B></A> - 
+ should be taken.<DT><A HREF="./com/google/enterprise/adaptor/HttpExchanges.html#respond(com.sun.net.httpserver.HttpExchange, int, java.lang.String, byte[])"><B>respond(HttpExchange, int, String, byte[])</B></A> - 
+Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/HttpExchanges.html" title="class in com.google.enterprise.adaptor">HttpExchanges</A>
+<DD>Sends response to GSA.
+<DT><A HREF="./com/google/enterprise/adaptor/Response.html#respondNotFound()"><B>respondNotFound()</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</A>
 <DD>Respond to the GSA or other client that the request document does not
  exist.
@@ -900,6 +939,9 @@ Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterpri
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</A>
 <DD>Respond to the GSA or other client that it already has the latest version
  of a file and its metadata.
+<DT><A HREF="./com/google/enterprise/adaptor/HttpExchanges.html#respondToHead(com.sun.net.httpserver.HttpExchange, int, java.lang.String)"><B>respondToHead(HttpExchange, int, String)</B></A> - 
+Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/HttpExchanges.html" title="class in com.google.enterprise.adaptor">HttpExchanges</A>
+<DD>Sends response to GSA.
 <DT><A HREF="./com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor"><B>Response</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Interface provided to <A HREF="./com/google/enterprise/adaptor/Adaptor.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)"><CODE>Adaptor.getDocContent(Request, Response)</CODE></A> for performing the actions needed
  to satisfy a request.<DT><A HREF="./com/google/enterprise/adaptor/Acl.BatchRetriever.html#retrieveAcls(java.util.Set)"><B>retrieveAcls(Set&lt;DocId&gt;)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Acl.BatchRetriever.html" title="interface in com.google.enterprise.adaptor">Acl.BatchRetriever</A>
@@ -912,8 +954,11 @@ Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterpri
 <A NAME="_S_"><!-- --></A><H2>
 <B>S</B></H2>
 <DL>
+<DT><A HREF="./com/google/enterprise/adaptor/HttpExchanges.html#sendRedirect(com.sun.net.httpserver.HttpExchange, java.net.URI)"><B>sendRedirect(HttpExchange, URI)</B></A> - 
+Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/HttpExchanges.html" title="class in com.google.enterprise.adaptor">HttpExchanges</A>
+<DD>Redirect client to <code>location</code>.
 <DT><A HREF="./com/google/enterprise/adaptor/SensitiveValueDecoder.html" title="interface in com.google.enterprise.adaptor"><B>SensitiveValueDecoder</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Provides parsing of sensitive values that can be plain text, obfuscated, or
- encrypted.<DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#set(java.lang.String, java.lang.String)"><B>set(String, String)</B></A> - 
+ encrypted.<DT><A HREF="./com/google/enterprise/adaptor/Session.html" title="interface in com.google.enterprise.adaptor"><B>Session</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Generic session-state container, but intended for authn bookkeeping.<DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#set(java.lang.String, java.lang.String)"><B>set(String, String)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
 <DD>Make v be only value associated with key.
 <DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#set(java.lang.String, java.util.Set)"><B>set(String, Set&lt;String&gt;)</B></A> - 
@@ -925,6 +970,9 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/Response.html#setAcl(com.google.enterprise.adaptor.Acl)"><B>setAcl(Acl)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</A>
 <DD>Provide the document's ACLs for early-binding security on the GSA.
+<DT><A HREF="./com/google/enterprise/adaptor/Session.html#setAttribute(java.lang.String, java.lang.Object)"><B>setAttribute(String, Object)</B></A> - 
+Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Session.html" title="interface in com.google.enterprise.adaptor">Session</A>
+<DD>Set attribute value, replacing existing value if it already exists.
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#setCommandAcceptsParameters(boolean)"><B>setCommandAcceptsParameters(boolean)</B></A> - 
 Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineTransform</A>
 <DD>This controls whether the input parameters to the transform call are passed
@@ -966,6 +1014,9 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html#setLastModified(java.util.Date)"><B>setLastModified(Date)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record.Builder</A>
 <DD>Provides the last-modified date of the document.
+<DT><A HREF="./com/google/enterprise/adaptor/HttpExchanges.html#setLastModified(com.sun.net.httpserver.HttpExchange, java.util.Date)"><B>setLastModified(HttpExchange, Date)</B></A> - 
+Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/HttpExchanges.html" title="class in com.google.enterprise.adaptor">HttpExchanges</A>
+<DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/Response.html#setLastModified(java.util.Date)"><B>setLastModified(Date)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</A>
 <DD>Provide the last modification time of the document.
@@ -1037,6 +1088,9 @@ Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/ent
 <DT><A HREF="./com/google/enterprise/adaptor/GsaCommunicationHandler.html#start()"><B>start()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/GsaCommunicationHandler.html" title="class in com.google.enterprise.adaptor">GsaCommunicationHandler</A>
 <DD>Starts listening for communications from GSA.
+<DT><A HREF="./com/google/enterprise/adaptor/HttpExchanges.html#startResponse(com.sun.net.httpserver.HttpExchange, int, java.lang.String, boolean)"><B>startResponse(HttpExchange, int, String, boolean)</B></A> - 
+Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/HttpExchanges.html" title="class in com.google.enterprise.adaptor">HttpExchanges</A>
+<DD>Sends headers and configures <code>ex</code> for (possibly) sending content.
 <DT><A HREF="./com/google/enterprise/adaptor/Status.html" title="interface in com.google.enterprise.adaptor"><B>Status</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Multi-state indicator providing the user with a notification of broken parts
  of the system.<DT><A HREF="./com/google/enterprise/adaptor/Status.Code.html" title="enum in com.google.enterprise.adaptor"><B>Status.Code</B></A> - Enum in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Available statuses for displaying state indicators on the dashboard.<DT><A HREF="./com/google/enterprise/adaptor/StatusSource.html" title="interface in com.google.enterprise.adaptor"><B>StatusSource</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>A source of <A HREF="./com/google/enterprise/adaptor/Status.html" title="interface in com.google.enterprise.adaptor"><CODE>Status</CODE></A> messages.<DT><A HREF="./com/google/enterprise/adaptor/GsaCommunicationHandler.html#stop(int)"><B>stop(int)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/GsaCommunicationHandler.html" title="class in com.google.enterprise.adaptor">GsaCommunicationHandler</A>
@@ -1124,6 +1178,9 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>
 <DD>Automatically unzips and <code>DocId</code>s ending in <code>.zip</code> and provides
  them to the GSA.
+<DT><A HREF="./com/google/enterprise/adaptor/AuthnAdaptor.Callback.html#userAuthenticated(com.sun.net.httpserver.HttpExchange, com.google.enterprise.adaptor.AuthnIdentity)"><B>userAuthenticated(HttpExchange, AuthnIdentity)</B></A> - 
+Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AuthnAdaptor.Callback.html" title="interface in com.google.enterprise.adaptor">AuthnAdaptor.Callback</A>
+<DD>Respond with authentication information discovered during <A HREF="./com/google/enterprise/adaptor/AuthnAdaptor.html#authenticateUser(com.sun.net.httpserver.HttpExchange, com.google.enterprise.adaptor.AuthnAdaptor.Callback)"><CODE>AuthnAdaptor.authenticateUser(HttpExchange, Callback)</CODE></A>.
 </DL>
 <HR>
 <A NAME="_V_"><!-- --></A><H2>

@@ -3,7 +3,7 @@
 <HTML>
 <HEAD>
 <TITLE>
-SensitiveValueDecoder
+Session
 </TITLE>
 
 
@@ -13,7 +13,7 @@ SensitiveValueDecoder
 function windowTitle()
 {
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="SensitiveValueDecoder";
+        parent.document.title="Session";
     }
 }
 </SCRIPT>
@@ -52,11 +52,11 @@ function windowTitle()
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/Session.html" title="interface in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/SensitiveValueDecoder.html" title="interface in com.google.enterprise.adaptor"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/Status.html" title="interface in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-  <A HREF="../../../../index.html?com/google/enterprise/adaptor/SensitiveValueDecoder.html" target="_top"><B>FRAMES</B></A>  &nbsp;
-&nbsp;<A HREF="SensitiveValueDecoder.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+  <A HREF="../../../../index.html?com/google/enterprise/adaptor/Session.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Session.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
 &nbsp;<SCRIPT type="text/javascript">
   <!--
   if(window==top) {
@@ -87,15 +87,14 @@ DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHO
 <FONT SIZE="-1">
 com.google.enterprise.adaptor</FONT>
 <BR>
-Interface SensitiveValueDecoder</H2>
+Interface Session</H2>
 <HR>
 <DL>
-<DT><PRE>public interface <B>SensitiveValueDecoder</B></DL>
+<DT><PRE>public interface <B>Session</B></DL>
 </PRE>
 
 <P>
-Provides parsing of sensitive values that can be plain text, obfuscated, or
- encrypted.
+Generic session-state container, but intended for authn bookkeeping.
 <P>
 
 <P>
@@ -113,11 +112,28 @@ Provides parsing of sensitive values that can be plain text, obfuscated, or
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/SensitiveValueDecoder.html#decodeValue(java.lang.String)">decodeValue</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;nonReadable)</CODE>
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Session.html#getAttribute(java.lang.String)">getAttribute</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;key)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Decode an encoded sensitive string into its original string.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get attribute value.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Session.html#removeAttribute(java.lang.String)">removeAttribute</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove attribute value.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Session.html#setAttribute(java.lang.String, java.lang.Object)">setAttribute</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;key,
+             <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set attribute value, replacing existing value if it already exists.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -133,18 +149,42 @@ Provides parsing of sensitive values that can be plain text, obfuscated, or
 </TR>
 </TABLE>
 
-<A NAME="decodeValue(java.lang.String)"><!-- --></A><H3>
-decodeValue</H3>
+<A NAME="setAttribute(java.lang.String, java.lang.Object)"><!-- --></A><H3>
+setAttribute</H3>
 <PRE>
-<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>decodeValue</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;nonReadable)</PRE>
+void <B>setAttribute</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;key,
+                  <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;value)</PRE>
 <DL>
-<DD>Decode an encoded sensitive string into its original string.
+<DD>Set attribute value, replacing existing value if it already exists.
 <P>
 <DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
 
-<DT><B>Throws:</B>
-<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - if <code>nonReadable</code> is unable to be
-     decoded</DL>
+<A NAME="getAttribute(java.lang.String)"><!-- --></A><H3>
+getAttribute</H3>
+<PRE>
+<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A> <B>getAttribute</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;key)</PRE>
+<DL>
+<DD>Get attribute value.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeAttribute(java.lang.String)"><!-- --></A><H3>
+removeAttribute</H3>
+<PRE>
+<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A> <B>removeAttribute</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;key)</PRE>
+<DL>
+<DD>Remove attribute value.
+<P>
+<DD><DL>
+</DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->
@@ -177,11 +217,11 @@ decodeValue</H3>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/Session.html" title="interface in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/SensitiveValueDecoder.html" title="interface in com.google.enterprise.adaptor"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/Status.html" title="interface in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-  <A HREF="../../../../index.html?com/google/enterprise/adaptor/SensitiveValueDecoder.html" target="_top"><B>FRAMES</B></A>  &nbsp;
-&nbsp;<A HREF="SensitiveValueDecoder.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+  <A HREF="../../../../index.html?com/google/enterprise/adaptor/Session.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Session.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
 &nbsp;<SCRIPT type="text/javascript">
   <!--
   if(window==top) {

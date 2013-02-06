@@ -53,7 +53,7 @@ function windowTitle()
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html" title="interface in com.google.enterprise.adaptor"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/AuthnIdentity.html" title="interface in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/AuthnAdaptor.html" title="interface in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../index.html?com/google/enterprise/adaptor/AdaptorContext.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="AdaptorContext.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
@@ -121,6 +121,15 @@ Methods for an Adaptor to communicate with the adaptor library.
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpContext.html?is-external=true" title="class or interface in com.sun.net.httpserver">HttpContext</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AdaptorContext.html#createHttpContext(java.lang.String, com.sun.net.httpserver.HttpHandler)">createHttpContext</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;path,
+                  <A HREF="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpHandler.html?is-external=true" title="class or interface in com.sun.net.httpserver">HttpHandler</A>&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Registers a handler with the library's <A HREF="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpServer.html?is-external=true" title="class or interface in com.sun.net.httpserver"><CODE>HttpServer</CODE></A> in similar fashion to <A HREF="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpServer.html?is-external=true#createContext(java.lang.String, com.sun.net.httpserver.HttpHandler)" title="class or interface in com.sun.net.httpserver"><CODE>HttpServer.createContext(java.lang.String, com.sun.net.httpserver.HttpHandler)</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A></CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getConfig()">getConfig</A></B>()</CODE>
 
@@ -159,6 +168,15 @@ Methods for an Adaptor to communicate with the adaptor library.
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieve decoder for sensitive values, like passwords.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/Session.html" title="interface in com.google.enterprise.adaptor">Session</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getUserSession(com.sun.net.httpserver.HttpExchange, boolean)">getUserSession</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpExchange.html?is-external=true" title="class or interface in com.sun.net.httpserver">HttpExchange</A>&nbsp;ex,
+               boolean&nbsp;create)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the session for the user communicating via <code>ex</code>.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -296,6 +314,47 @@ getSensitiveValueDecoder</H3>
 </DL>
 </DD>
 </DL>
+<HR>
+
+<A NAME="createHttpContext(java.lang.String, com.sun.net.httpserver.HttpHandler)"><!-- --></A><H3>
+createHttpContext</H3>
+<PRE>
+<A HREF="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpContext.html?is-external=true" title="class or interface in com.sun.net.httpserver">HttpContext</A> <B>createHttpContext</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;path,
+                              <A HREF="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpHandler.html?is-external=true" title="class or interface in com.sun.net.httpserver">HttpHandler</A>&nbsp;handler)</PRE>
+<DL>
+<DD>Registers a handler with the library's <A HREF="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpServer.html?is-external=true" title="class or interface in com.sun.net.httpserver"><CODE>HttpServer</CODE></A> in similar fashion to <A HREF="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpServer.html?is-external=true#createContext(java.lang.String, com.sun.net.httpserver.HttpHandler)" title="class or interface in com.sun.net.httpserver"><CODE>HttpServer.createContext(java.lang.String, com.sun.net.httpserver.HttpHandler)</CODE></A>. Removal of the handler
+ can be acheived by calling <code>httpContext.getServer().removeContext(httpContext)</code> on the returned
+ context. Handler registration should generally occur during <A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html#init(com.google.enterprise.adaptor.AdaptorContext)"><CODE>Adaptor.init(com.google.enterprise.adaptor.AdaptorContext)</CODE></A> and removal during <A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html#destroy()"><CODE>Adaptor.destroy()</CODE></A>.
+
+ <p>Although <code>path</code> may be passed directly to the underlying <code>HttpServer</code>, that is not necessarily the case. Thus, implementations should
+ use the returned context's path when forming URLs to the handler. In
+ addition, the handler and context may be modified before being returned;
+ this is primarily to allow adding commonly-needed filters for error
+ handling and logging, but also available for implementation-specific needs.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getUserSession(com.sun.net.httpserver.HttpExchange, boolean)"><!-- --></A><H3>
+getUserSession</H3>
+<PRE>
+<A HREF="../../../../com/google/enterprise/adaptor/Session.html" title="interface in com.google.enterprise.adaptor">Session</A> <B>getUserSession</B>(<A HREF="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpExchange.html?is-external=true" title="class or interface in com.sun.net.httpserver">HttpExchange</A>&nbsp;ex,
+                       boolean&nbsp;create)</PRE>
+<DL>
+<DD>Get the session for the user communicating via <code>ex</code>. If a session
+ does not already exist, then <code>create</code> determines if one should be
+ created.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>ex</CODE> - exchange which user issued request<DD><CODE>create</CODE> - whether a new session should be created if one does not
+     already exist for this user
+<DT><B>Returns:</B><DD>user's session, or <code>null</code> if session did not already exist
+     and <code>create = false</code></DL>
+</DD>
+</DL>
 <!-- ========= END OF CLASS DATA ========= -->
 <HR>
 
@@ -327,7 +386,7 @@ getSensitiveValueDecoder</H3>
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html" title="interface in com.google.enterprise.adaptor"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/AuthnIdentity.html" title="interface in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/AuthnAdaptor.html" title="interface in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../index.html?com/google/enterprise/adaptor/AdaptorContext.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="AdaptorContext.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;

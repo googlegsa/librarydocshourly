@@ -105,6 +105,14 @@ Adaptor interfaces and implementation.
 <TD>Methods for an Adaptor to communicate with the adaptor library.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/AuthnAdaptor.html" title="interface in com.google.enterprise.adaptor">AuthnAdaptor</A></B></TD>
+<TD>Interface for adaptors capable of authenticating users.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/AuthnAdaptor.Callback.html" title="interface in com.google.enterprise.adaptor">AuthnAdaptor.Callback</A></B></TD>
+<TD>Interface for replying to <A HREF="../../../../com/google/enterprise/adaptor/AuthnAdaptor.html#authenticateUser(com.sun.net.httpserver.HttpExchange, com.google.enterprise.adaptor.AuthnAdaptor.Callback)"><CODE>AuthnAdaptor.authenticateUser(HttpExchange, Callback)</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/AuthnIdentity.html" title="interface in com.google.enterprise.adaptor">AuthnIdentity</A></B></TD>
 <TD>User identification information for understanding who a user is or if they
  are allowed to access a resource.</TD>
@@ -148,6 +156,10 @@ Adaptor interfaces and implementation.
 <TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/SensitiveValueDecoder.html" title="interface in com.google.enterprise.adaptor">SensitiveValueDecoder</A></B></TD>
 <TD>Provides parsing of sensitive values that can be plain text, obfuscated, or
  encrypted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/Session.html" title="interface in com.google.enterprise.adaptor">Session</A></B></TD>
+<TD>Generic session-state container, but intended for authn bookkeeping.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/Status.html" title="interface in com.google.enterprise.adaptor">Status</A></B></TD>
@@ -220,6 +232,10 @@ Adaptor interfaces and implementation.
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/GsaCommunicationHandler.html" title="class in com.google.enterprise.adaptor">GsaCommunicationHandler</A></B></TD>
 <TD>This class handles the communications with GSA.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/HttpExchanges.html" title="class in com.google.enterprise.adaptor">HttpExchanges</A></B></TD>
+<TD>Utility class for working with <A HREF="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpExchange.html?is-external=true" title="class or interface in com.sun.net.httpserver"><CODE>HttpExchange</CODE></A>s.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/IOHelper.html" title="class in com.google.enterprise.adaptor">IOHelper</A></B></TD>
