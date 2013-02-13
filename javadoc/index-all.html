@@ -418,9 +418,12 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/Config.html#getFeedName()"><B>getFeedName()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>
 <DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/AdaptorContext.html#getGetDocIdsErrorHandler()"><B>getGetDocIdsErrorHandler()</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/AdaptorContext.html#getGetDocIdsFullErrorHandler()"><B>getGetDocIdsFullErrorHandler()</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</A>
-<DD>Retrieve the current <A HREF="./com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><CODE>GetDocIdsErrorHandler</CODE></A>.
+<DD>Retrieve the current <A HREF="./com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><CODE>GetDocIdsErrorHandler</CODE></A> for full push.
+<DT><A HREF="./com/google/enterprise/adaptor/AdaptorContext.html#getGetDocIdsIncrementalErrorHandler()"><B>getGetDocIdsIncrementalErrorHandler()</B></A> - 
+Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</A>
+<DD>Retrieve the current <A HREF="./com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><CODE>GetDocIdsErrorHandler</CODE></A> for incremental push.
 <DT><A HREF="./com/google/enterprise/adaptor/AuthnIdentity.html#getGroups()"><B>getGroups()</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AuthnIdentity.html" title="interface in com.google.enterprise.adaptor">AuthnIdentity</A>
 <DD>Gets all the groups a user belongs to in an immutable set.
@@ -1001,9 +1004,12 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record.Builder</A>
 <DD>Set the identifier for the document this record is providing
  information for.
-<DT><A HREF="./com/google/enterprise/adaptor/AdaptorContext.html#setGetDocIdsErrorHandler(com.google.enterprise.adaptor.GetDocIdsErrorHandler)"><B>setGetDocIdsErrorHandler(GetDocIdsErrorHandler)</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/AdaptorContext.html#setGetDocIdsFullErrorHandler(com.google.enterprise.adaptor.GetDocIdsErrorHandler)"><B>setGetDocIdsFullErrorHandler(GetDocIdsErrorHandler)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</A>
-<DD>Override the default <A HREF="./com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><CODE>GetDocIdsErrorHandler</CODE></A>.
+<DD>Override the default <A HREF="./com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><CODE>GetDocIdsErrorHandler</CODE></A> for full push.
+<DT><A HREF="./com/google/enterprise/adaptor/AdaptorContext.html#setGetDocIdsIncrementalErrorHandler(com.google.enterprise.adaptor.GetDocIdsErrorHandler)"><B>setGetDocIdsIncrementalErrorHandler(GetDocIdsErrorHandler)</B></A> - 
+Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</A>
+<DD>Override the default <A HREF="./com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><CODE>GetDocIdsErrorHandler</CODE></A> for incremental push.
 <DT><A HREF="./com/google/enterprise/adaptor/Acl.Builder.html#setInheritanceType(com.google.enterprise.adaptor.Acl.InheritanceType)"><B>setInheritanceType(Acl.InheritanceType)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Acl.Builder.html" title="class in com.google.enterprise.adaptor">Acl.Builder</A>
 <DD>Set the type of inheritance of ACL information used to combine authz

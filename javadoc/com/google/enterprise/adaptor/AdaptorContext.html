@@ -156,10 +156,18 @@ Methods for an Adaptor to communicate with the adaptor library.
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor">GetDocIdsErrorHandler</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getGetDocIdsErrorHandler()">getGetDocIdsErrorHandler</A></B>()</CODE>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getGetDocIdsFullErrorHandler()">getGetDocIdsFullErrorHandler</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieve the current <A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><CODE>GetDocIdsErrorHandler</CODE></A>.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieve the current <A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><CODE>GetDocIdsErrorHandler</CODE></A> for full push.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor">GetDocIdsErrorHandler</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getGetDocIdsIncrementalErrorHandler()">getGetDocIdsIncrementalErrorHandler</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieve the current <A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><CODE>GetDocIdsErrorHandler</CODE></A> for incremental push.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -189,10 +197,18 @@ Methods for an Adaptor to communicate with the adaptor library.
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AdaptorContext.html#setGetDocIdsErrorHandler(com.google.enterprise.adaptor.GetDocIdsErrorHandler)">setGetDocIdsErrorHandler</A></B>(<A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor">GetDocIdsErrorHandler</A>&nbsp;handler)</CODE>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AdaptorContext.html#setGetDocIdsFullErrorHandler(com.google.enterprise.adaptor.GetDocIdsErrorHandler)">setGetDocIdsFullErrorHandler</A></B>(<A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor">GetDocIdsErrorHandler</A>&nbsp;handler)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Override the default <A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><CODE>GetDocIdsErrorHandler</CODE></A>.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Override the default <A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><CODE>GetDocIdsErrorHandler</CODE></A> for full push.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AdaptorContext.html#setGetDocIdsIncrementalErrorHandler(com.google.enterprise.adaptor.GetDocIdsErrorHandler)">setGetDocIdsIncrementalErrorHandler</A></B>(<A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor">GetDocIdsErrorHandler</A>&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Override the default <A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><CODE>GetDocIdsErrorHandler</CODE></A> for incremental push.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -274,12 +290,12 @@ void <B>removeStatusSource</B>(<A HREF="../../../../com/google/enterprise/adapto
 </DL>
 <HR>
 
-<A NAME="setGetDocIdsErrorHandler(com.google.enterprise.adaptor.GetDocIdsErrorHandler)"><!-- --></A><H3>
-setGetDocIdsErrorHandler</H3>
+<A NAME="setGetDocIdsFullErrorHandler(com.google.enterprise.adaptor.GetDocIdsErrorHandler)"><!-- --></A><H3>
+setGetDocIdsFullErrorHandler</H3>
 <PRE>
-void <B>setGetDocIdsErrorHandler</B>(<A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor">GetDocIdsErrorHandler</A>&nbsp;handler)</PRE>
+void <B>setGetDocIdsFullErrorHandler</B>(<A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor">GetDocIdsErrorHandler</A>&nbsp;handler)</PRE>
 <DL>
-<DD>Override the default <A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><CODE>GetDocIdsErrorHandler</CODE></A>.
+<DD>Override the default <A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><CODE>GetDocIdsErrorHandler</CODE></A> for full push.
 <P>
 <DD><DL>
 </DL>
@@ -287,12 +303,38 @@ void <B>setGetDocIdsErrorHandler</B>(<A HREF="../../../../com/google/enterprise/
 </DL>
 <HR>
 
-<A NAME="getGetDocIdsErrorHandler()"><!-- --></A><H3>
-getGetDocIdsErrorHandler</H3>
+<A NAME="getGetDocIdsFullErrorHandler()"><!-- --></A><H3>
+getGetDocIdsFullErrorHandler</H3>
 <PRE>
-<A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor">GetDocIdsErrorHandler</A> <B>getGetDocIdsErrorHandler</B>()</PRE>
+<A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor">GetDocIdsErrorHandler</A> <B>getGetDocIdsFullErrorHandler</B>()</PRE>
 <DL>
-<DD>Retrieve the current <A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><CODE>GetDocIdsErrorHandler</CODE></A>.
+<DD>Retrieve the current <A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><CODE>GetDocIdsErrorHandler</CODE></A> for full push.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setGetDocIdsIncrementalErrorHandler(com.google.enterprise.adaptor.GetDocIdsErrorHandler)"><!-- --></A><H3>
+setGetDocIdsIncrementalErrorHandler</H3>
+<PRE>
+void <B>setGetDocIdsIncrementalErrorHandler</B>(<A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor">GetDocIdsErrorHandler</A>&nbsp;handler)</PRE>
+<DL>
+<DD>Override the default <A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><CODE>GetDocIdsErrorHandler</CODE></A> for incremental push.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getGetDocIdsIncrementalErrorHandler()"><!-- --></A><H3>
+getGetDocIdsIncrementalErrorHandler</H3>
+<PRE>
+<A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor">GetDocIdsErrorHandler</A> <B>getGetDocIdsIncrementalErrorHandler</B>()</PRE>
+<DL>
+<DD>Retrieve the current <A HREF="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><CODE>GetDocIdsErrorHandler</CODE></A> for incremental push.
 <P>
 <DD><DL>
 </DL>
