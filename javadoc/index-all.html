@@ -205,9 +205,6 @@ Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterp
 <A NAME="_D_"><!-- --></A><H2>
 <B>D</B></H2>
 <DL>
-<DT><A HREF="./com/google/enterprise/adaptor/HttpExchanges.html#dateFormatsRfc2616"><B>dateFormatsRfc2616</B></A> - 
-Static variable in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/HttpExchanges.html" title="class in com.google.enterprise.adaptor">HttpExchanges</A>
-<DD>The various date formats as required by RFC 2616 3.3.1.
 <DT><A HREF="./com/google/enterprise/adaptor/examples/DbAdaptorTemplate.html" title="class in com.google.enterprise.adaptor.examples"><B>DbAdaptorTemplate</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/examples/package-summary.html">com.google.enterprise.adaptor.examples</A><DD>Demonstrates what code is necessary for putting DB
  content onto a GSA.<DT><A HREF="./com/google/enterprise/adaptor/examples/DbAdaptorTemplate.html#DbAdaptorTemplate()"><B>DbAdaptorTemplate()</B></A> - 
 Constructor for class com.google.enterprise.adaptor.examples.<A HREF="./com/google/enterprise/adaptor/examples/DbAdaptorTemplate.html" title="class in com.google.enterprise.adaptor.examples">DbAdaptorTemplate</A>
@@ -254,7 +251,8 @@ Static variable in class com.google.enterprise.adaptor.<A HREF="./com/google/ent
 <DD>Empty convenience instance with all defaults used.
 <DT><A HREF="./com/google/enterprise/adaptor/HttpExchanges.html#enableCompressionIfSupported(com.sun.net.httpserver.HttpExchange)"><B>enableCompressionIfSupported(HttpExchange)</B></A> - 
 Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/HttpExchanges.html" title="class in com.google.enterprise.adaptor">HttpExchanges</A>
-<DD>If the client supports it, set the correct headers and make <A HREF="./com/google/enterprise/adaptor/HttpExchanges.html#respond(com.sun.net.httpserver.HttpExchange, int, java.lang.String, byte[])"><CODE>HttpExchanges.respond(com.sun.net.httpserver.HttpExchange, int, java.lang.String, byte[])</CODE></A> provide GZIPed response data to the client.
+<DD>If the client supports it, set the correct headers and streams to provide
+ GZIPed response data to the client.
 <DT><A HREF="./com/google/enterprise/adaptor/DocIdEncoder.html#encodeDocId(com.google.enterprise.adaptor.DocId)"><B>encodeDocId(DocId)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocIdEncoder.html" title="interface in com.google.enterprise.adaptor">DocIdEncoder</A>
 <DD>Encode the provided DocId into a URI.
@@ -931,10 +929,7 @@ Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterpri
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</A>
 <DD>Remove a previously added status source to the dashboard.
 <DT><A HREF="./com/google/enterprise/adaptor/Request.html" title="interface in com.google.enterprise.adaptor"><B>Request</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Interface provided to <A HREF="./com/google/enterprise/adaptor/Adaptor.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)"><CODE>Adaptor.getDocContent(Request, Response)</CODE></A> for describing the action that
- should be taken.<DT><A HREF="./com/google/enterprise/adaptor/HttpExchanges.html#respond(com.sun.net.httpserver.HttpExchange, int, java.lang.String, byte[])"><B>respond(HttpExchange, int, String, byte[])</B></A> - 
-Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/HttpExchanges.html" title="class in com.google.enterprise.adaptor">HttpExchanges</A>
-<DD>Sends response to GSA.
-<DT><A HREF="./com/google/enterprise/adaptor/Response.html#respondNotFound()"><B>respondNotFound()</B></A> - 
+ should be taken.<DT><A HREF="./com/google/enterprise/adaptor/Response.html#respondNotFound()"><B>respondNotFound()</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</A>
 <DD>Respond to the GSA or other client that the request document does not
  exist.
@@ -942,9 +937,6 @@ Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterpri
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</A>
 <DD>Respond to the GSA or other client that it already has the latest version
  of a file and its metadata.
-<DT><A HREF="./com/google/enterprise/adaptor/HttpExchanges.html#respondToHead(com.sun.net.httpserver.HttpExchange, int, java.lang.String)"><B>respondToHead(HttpExchange, int, String)</B></A> - 
-Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/HttpExchanges.html" title="class in com.google.enterprise.adaptor">HttpExchanges</A>
-<DD>Sends response to GSA.
 <DT><A HREF="./com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor"><B>Response</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Interface provided to <A HREF="./com/google/enterprise/adaptor/Adaptor.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)"><CODE>Adaptor.getDocContent(Request, Response)</CODE></A> for performing the actions needed
  to satisfy a request.<DT><A HREF="./com/google/enterprise/adaptor/Acl.BatchRetriever.html#retrieveAcls(java.util.Set)"><B>retrieveAcls(Set&lt;DocId&gt;)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Acl.BatchRetriever.html" title="interface in com.google.enterprise.adaptor">Acl.BatchRetriever</A>
@@ -1094,9 +1086,6 @@ Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/ent
 <DT><A HREF="./com/google/enterprise/adaptor/GsaCommunicationHandler.html#start()"><B>start()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/GsaCommunicationHandler.html" title="class in com.google.enterprise.adaptor">GsaCommunicationHandler</A>
 <DD>Starts listening for communications from GSA.
-<DT><A HREF="./com/google/enterprise/adaptor/HttpExchanges.html#startResponse(com.sun.net.httpserver.HttpExchange, int, java.lang.String, boolean)"><B>startResponse(HttpExchange, int, String, boolean)</B></A> - 
-Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/HttpExchanges.html" title="class in com.google.enterprise.adaptor">HttpExchanges</A>
-<DD>Sends headers and configures <code>ex</code> for (possibly) sending content.
 <DT><A HREF="./com/google/enterprise/adaptor/Status.html" title="interface in com.google.enterprise.adaptor"><B>Status</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Multi-state indicator providing the user with a notification of broken parts
  of the system.<DT><A HREF="./com/google/enterprise/adaptor/Status.Code.html" title="enum in com.google.enterprise.adaptor"><B>Status.Code</B></A> - Enum in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Available statuses for displaying state indicators on the dashboard.<DT><A HREF="./com/google/enterprise/adaptor/StatusSource.html" title="interface in com.google.enterprise.adaptor"><B>StatusSource</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>A source of <A HREF="./com/google/enterprise/adaptor/Status.html" title="interface in com.google.enterprise.adaptor"><CODE>Status</CODE></A> messages.<DT><A HREF="./com/google/enterprise/adaptor/GsaCommunicationHandler.html#stop(int)"><B>stop(int)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/GsaCommunicationHandler.html" title="class in com.google.enterprise.adaptor">GsaCommunicationHandler</A>
