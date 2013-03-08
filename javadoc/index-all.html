@@ -169,6 +169,9 @@ Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterp
 <DT><A HREF="./com/google/enterprise/adaptor/DocId.html#compareTo(com.google.enterprise.adaptor.DocId)"><B>compareTo(DocId)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</A>
 <DD>Provides comparison for ids based on the unique id string.
+<DT><A HREF="./com/google/enterprise/adaptor/Principal.html#compareTo(com.google.enterprise.adaptor.Principal)"><B>compareTo(Principal)</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</A>
+<DD>Sorts by 1) namespace, 2) user or group, 3) name.
 <DT><A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor"><B>Config</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Configuration values for this program, like the GSA's hostname.<DT><A HREF="./com/google/enterprise/adaptor/Config.html#Config()"><B>Config()</B></A> - 
 Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>
 <DD>&nbsp;
@@ -272,6 +275,9 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#equals(java.lang.Object)"><B>equals(Object)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
 <DD>True if exactly the same key-values are represented.
+<DT><A HREF="./com/google/enterprise/adaptor/Principal.html#equals(java.lang.Object)"><B>equals(Object)</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</A>
+<DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/Command.html#exec(java.lang.String[])"><B>exec(String[])</B></A> - 
 Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/Command.html" title="class in com.google.enterprise.adaptor.prebuilt">Command</A>
 <DD>Same as <code>exec(command, null, new byte[0])</code>.
@@ -467,9 +473,15 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/DocumentTransform.html#getName()"><B>getName()</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor">DocumentTransform</A>
 <DD>The name of this transform instance, typically provided by the user.
+<DT><A HREF="./com/google/enterprise/adaptor/Principal.html#getName()"><B>getName()</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</A>
+<DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/StatusSource.html#getName(java.util.Locale)"><B>getName(Locale)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/StatusSource.html" title="interface in com.google.enterprise.adaptor">StatusSource</A>
 <DD>Get the name of this source, for displaying to the user.
+<DT><A HREF="./com/google/enterprise/adaptor/Principal.html#getNamespace()"><B>getNamespace()</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</A>
+<DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#getOneValue(java.lang.String)"><B>getOneValue(String)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
 <DD>One of the inserted values, or null if none.
@@ -566,9 +578,9 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/DocId.html#getUniqueId()"><B>getUniqueId()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</A>
 <DD>Returns the string identifier provided to the constructor.
-<DT><A HREF="./com/google/enterprise/adaptor/AuthnIdentity.html#getUsername()"><B>getUsername()</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/AuthnIdentity.html#getUser()"><B>getUser()</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AuthnIdentity.html" title="interface in com.google.enterprise.adaptor">AuthnIdentity</A>
-<DD>Gets the user identifier.
+<DD>Gets the user principal.
 <DT><A HREF="./com/google/enterprise/adaptor/AdaptorContext.html#getUserSession(com.sun.net.httpserver.HttpExchange, boolean)"><B>getUserSession(HttpExchange, boolean)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</A>
 <DD>Get the session for the user communicating via <code>ex</code>.
@@ -584,6 +596,12 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#getWorkingDirectory()"><B>getWorkingDirectory()</B></A> - 
 Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineTransform</A>
+<DD>&nbsp;
+<DT><A HREF="./com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor"><B>GroupPrincipal</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Represents group.<DT><A HREF="./com/google/enterprise/adaptor/GroupPrincipal.html#GroupPrincipal(java.lang.String, java.lang.String)"><B>GroupPrincipal(String, String)</B></A> - 
+Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</A>
+<DD>&nbsp;
+<DT><A HREF="./com/google/enterprise/adaptor/GroupPrincipal.html#GroupPrincipal(java.lang.String)"><B>GroupPrincipal(String)</B></A> - 
+Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</A>
 <DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/GsaCommunicationHandler.html" title="class in com.google.enterprise.adaptor"><B>GsaCommunicationHandler</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>This class handles the communications with GSA.<DT><A HREF="./com/google/enterprise/adaptor/GsaCommunicationHandler.html#GsaCommunicationHandler(com.google.enterprise.adaptor.Adaptor, com.google.enterprise.adaptor.Config)"><B>GsaCommunicationHandler(Adaptor, Config)</B></A> - 
 Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/GsaCommunicationHandler.html" title="class in com.google.enterprise.adaptor">GsaCommunicationHandler</A>
@@ -641,6 +659,9 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.html#hashCode()"><B>hashCode()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</A>
 <DD>Generates hash code based on all visible fields.
+<DT><A HREF="./com/google/enterprise/adaptor/Principal.html#hashCode()"><B>hashCode()</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</A>
+<DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/RecursiveFileIterator.html#hasNext()"><B>hasNext()</B></A> - 
 Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/RecursiveFileIterator.html" title="class in com.google.enterprise.adaptor.prebuilt">RecursiveFileIterator</A>
 <DD>Returns <code>true</code> if the iteration has more elements.
@@ -697,7 +718,7 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
  document ids on startup.
 <DT><A HREF="./com/google/enterprise/adaptor/Acl.html#isAuthorized(com.google.enterprise.adaptor.AuthnIdentity, java.util.List)"><B>isAuthorized(AuthnIdentity, List&lt;Acl&gt;)</B></A> - 
 Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</A>
-<DD>Determine if the provided <code>userIdentifier</code> belonging to <code>groups</code> is authorized for the provided <code>aclChain</code>.
+<DD>Determine if the provided <code>userIdentity</code> belonging to <code>groups</code> is authorized for the provided <code>aclChain</code>.
 <DT><A HREF="./com/google/enterprise/adaptor/Acl.html#isAuthorizedBatch(com.google.enterprise.adaptor.AuthnIdentity, java.util.Collection, com.google.enterprise.adaptor.Acl.BatchRetriever)"><B>isAuthorizedBatch(AuthnIdentity, Collection&lt;DocId&gt;, Acl.BatchRetriever)</B></A> - 
 Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</A>
 <DD>Check authz for many DocIds at once.
@@ -719,6 +740,9 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>
 <DD>Optional (default false): Adds no-recrawl bit with sent records in feed
  file.
+<DT><A HREF="./com/google/enterprise/adaptor/Principal.html#isGroup()"><B>isGroup()</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</A>
+<DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/Config.html#isGsa614FeedWorkaroundEnabled()"><B>isGsa614FeedWorkaroundEnabled()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>
 <DD>&nbsp;
@@ -759,6 +783,9 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/CustomFormatter.html#isUseColor()"><B>isUseColor()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/CustomFormatter.html" title="class in com.google.enterprise.adaptor">CustomFormatter</A>
+<DD>&nbsp;
+<DT><A HREF="./com/google/enterprise/adaptor/Principal.html#isUser()"><B>isUser()</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</A>
 <DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/AbstractAdaptor.html#isUserAuthorized(com.google.enterprise.adaptor.AuthnIdentity, java.util.Collection)"><B>isUserAuthorized(AuthnIdentity, Collection&lt;DocId&gt;)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AbstractAdaptor.html" title="class in com.google.enterprise.adaptor">AbstractAdaptor</A>
@@ -864,7 +891,7 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/HttpExchanges.html" title="class in com.google.enterprise.adaptor">HttpExchanges</A>
 <DD>Parse request GET query parameters of <code>ex</code> into its parts, correctly
  taking into account <code>charset</code>.
-<DT><A HREF="./com/google/enterprise/adaptor/PollingIncrementalAdaptor.html" title="interface in com.google.enterprise.adaptor"><B>PollingIncrementalAdaptor</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Interface for library-assisted polling incremental adaptors.<DT><A HREF="./com/google/enterprise/adaptor/DocIdPusher.html#pushDocIds(java.lang.Iterable)"><B>pushDocIds(Iterable&lt;DocId&gt;)</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/PollingIncrementalAdaptor.html" title="interface in com.google.enterprise.adaptor"><B>PollingIncrementalAdaptor</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Interface for library-assisted polling incremental adaptors.<DT><A HREF="./com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor"><B>Principal</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Represents either a user or a group.<DT><A HREF="./com/google/enterprise/adaptor/DocIdPusher.html#pushDocIds(java.lang.Iterable)"><B>pushDocIds(Iterable&lt;DocId&gt;)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</A>
 <DD>Push <code>DocId</code>s immediately and block until they are successfully
  provided to the GSA or the error handler gives up.
@@ -986,10 +1013,10 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html#setDeleteFromIndex(boolean)"><B>setDeleteFromIndex(boolean)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record.Builder</A>
 <DD>Set whether the GSA is being informed the document has been deleted.
-<DT><A HREF="./com/google/enterprise/adaptor/Acl.Builder.html#setDenyGroups(java.util.Collection)"><B>setDenyGroups(Collection&lt;String&gt;)</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/Acl.Builder.html#setDenyGroups(java.util.Collection)"><B>setDenyGroups(Collection&lt;GroupPrincipal&gt;)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Acl.Builder.html" title="class in com.google.enterprise.adaptor">Acl.Builder</A>
 <DD>Replace existing deny groups.
-<DT><A HREF="./com/google/enterprise/adaptor/Acl.Builder.html#setDenyUsers(java.util.Collection)"><B>setDenyUsers(Collection&lt;String&gt;)</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/Acl.Builder.html#setDenyUsers(java.util.Collection)"><B>setDenyUsers(Collection&lt;UserPrincipal&gt;)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Acl.Builder.html" title="class in com.google.enterprise.adaptor">Acl.Builder</A>
 <DD>Replace existing deny users.
 <DT><A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html#setDocId(com.google.enterprise.adaptor.DocId)"><B>setDocId(DocId)</B></A> - 
@@ -1041,10 +1068,10 @@ Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterpri
 <DT><A HREF="./com/google/enterprise/adaptor/Response.html#setNoIndex(boolean)"><B>setNoIndex(boolean)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</A>
 <DD>Whether the GSA should index the content for searching.
-<DT><A HREF="./com/google/enterprise/adaptor/Acl.Builder.html#setPermitGroups(java.util.Collection)"><B>setPermitGroups(Collection&lt;String&gt;)</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/Acl.Builder.html#setPermitGroups(java.util.Collection)"><B>setPermitGroups(Collection&lt;GroupPrincipal&gt;)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Acl.Builder.html" title="class in com.google.enterprise.adaptor">Acl.Builder</A>
 <DD>Replace existing permit groups.
-<DT><A HREF="./com/google/enterprise/adaptor/Acl.Builder.html#setPermitUsers(java.util.Collection)"><B>setPermitUsers(Collection&lt;String&gt;)</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/Acl.Builder.html#setPermitUsers(java.util.Collection)"><B>setPermitUsers(Collection&lt;UserPrincipal&gt;)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Acl.Builder.html" title="class in com.google.enterprise.adaptor">Acl.Builder</A>
 <DD>Replace existing permit users.
 <DT><A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html#setRequired(boolean)"><B>setRequired(boolean)</B></A> - 
@@ -1126,6 +1153,9 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#toString()"><B>toString()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
 <DD>Contains every key and value pair; useful for debugging.
+<DT><A HREF="./com/google/enterprise/adaptor/Principal.html#toString()"><B>toString()</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</A>
+<DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/DocumentTransform.html#transform(java.io.ByteArrayOutputStream, java.io.OutputStream, com.google.enterprise.adaptor.Metadata, java.util.Map)"><B>transform(ByteArrayOutputStream, OutputStream, Metadata, Map&lt;String, String&gt;)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor">DocumentTransform</A>
 <DD>Read data from <code>contentIn</code>, transform it, and write it to <code>contentOut</code>.
@@ -1176,6 +1206,12 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/AuthnAdaptor.Callback.html#userAuthenticated(com.sun.net.httpserver.HttpExchange, com.google.enterprise.adaptor.AuthnIdentity)"><B>userAuthenticated(HttpExchange, AuthnIdentity)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AuthnAdaptor.Callback.html" title="interface in com.google.enterprise.adaptor">AuthnAdaptor.Callback</A>
 <DD>Respond with authentication information discovered during <A HREF="./com/google/enterprise/adaptor/AuthnAdaptor.html#authenticateUser(com.sun.net.httpserver.HttpExchange, com.google.enterprise.adaptor.AuthnAdaptor.Callback)"><CODE>AuthnAdaptor.authenticateUser(HttpExchange, Callback)</CODE></A>.
+<DT><A HREF="./com/google/enterprise/adaptor/UserPrincipal.html" title="class in com.google.enterprise.adaptor"><B>UserPrincipal</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Represents user.<DT><A HREF="./com/google/enterprise/adaptor/UserPrincipal.html#UserPrincipal(java.lang.String, java.lang.String)"><B>UserPrincipal(String, String)</B></A> - 
+Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/UserPrincipal.html" title="class in com.google.enterprise.adaptor">UserPrincipal</A>
+<DD>&nbsp;
+<DT><A HREF="./com/google/enterprise/adaptor/UserPrincipal.html#UserPrincipal(java.lang.String)"><B>UserPrincipal(String)</B></A> - 
+Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/UserPrincipal.html" title="class in com.google.enterprise.adaptor">UserPrincipal</A>
+<DD>&nbsp;
 </DL>
 <HR>
 <A NAME="_V_"><!-- --></A><H2>
