@@ -120,6 +120,9 @@ Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterpri
 <DT><A HREF="./com/google/enterprise/adaptor/AdaptorContext.html#addStatusSource(com.google.enterprise.adaptor.StatusSource)"><B>addStatusSource(StatusSource)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</A>
 <DD>Add a status source to the dashboard.
+<DT><A HREF="./com/google/enterprise/adaptor/Application.html" title="class in com.google.enterprise.adaptor"><B>Application</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Provides framework for adaptors to act as a stand-alone application.<DT><A HREF="./com/google/enterprise/adaptor/Application.html#Application(com.google.enterprise.adaptor.Adaptor, com.google.enterprise.adaptor.Config)"><B>Application(Adaptor, Config)</B></A> - 
+Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Application.html" title="class in com.google.enterprise.adaptor">Application</A>
+<DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/AuthnAdaptor.html#authenticateUser(com.sun.net.httpserver.HttpExchange, com.google.enterprise.adaptor.AuthnAdaptor.Callback)"><B>authenticateUser(HttpExchange, AuthnAdaptor.Callback)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AuthnAdaptor.html" title="interface in com.google.enterprise.adaptor">AuthnAdaptor</A>
 <DD>Authenticate the user connected via <code>ex</code>.
@@ -215,6 +218,9 @@ Constructor for class com.google.enterprise.adaptor.examples.<A HREF="./com/goog
 <DT><A HREF="./com/google/enterprise/adaptor/SensitiveValueDecoder.html#decodeValue(java.lang.String)"><B>decodeValue(String)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/SensitiveValueDecoder.html" title="interface in com.google.enterprise.adaptor">SensitiveValueDecoder</A>
 <DD>Decode an encoded sensitive string into its original string.
+<DT><A HREF="./com/google/enterprise/adaptor/Principal.html#DEFAULT_NAMESPACE"><B>DEFAULT_NAMESPACE</B></A> - 
+Static variable in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</A>
+<DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/DefaultGetDocIdsErrorHandler.html" title="class in com.google.enterprise.adaptor"><B>DefaultGetDocIdsErrorHandler</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Default handler of errors during <A HREF="./com/google/enterprise/adaptor/Adaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)"><CODE>Adaptor.getDocIds(DocIdPusher)</CODE></A>.<DT><A HREF="./com/google/enterprise/adaptor/DefaultGetDocIdsErrorHandler.html#DefaultGetDocIdsErrorHandler()"><B>DefaultGetDocIdsErrorHandler()</B></A> - 
 Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DefaultGetDocIdsErrorHandler.html" title="class in com.google.enterprise.adaptor">DefaultGetDocIdsErrorHandler</A>
 <DD>Same as <code>DefaultGetDocIdsErrorHandler(12, 5000)</code>.
@@ -434,6 +440,9 @@ Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterpri
 <DT><A HREF="./com/google/enterprise/adaptor/Config.html#getGsaCharacterEncoding()"><B>getGsaCharacterEncoding()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>
 <DD>Provides the character encoding the GSA prefers.
+<DT><A HREF="./com/google/enterprise/adaptor/Application.html#getGsaCommunicationHandler()"><B>getGsaCommunicationHandler()</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Application.html" title="class in com.google.enterprise.adaptor">Application</A>
+<DD>Returns the <A HREF="./com/google/enterprise/adaptor/GsaCommunicationHandler.html" title="class in com.google.enterprise.adaptor"><CODE>GsaCommunicationHandler</CODE></A> used by this instance.
 <DT><A HREF="./com/google/enterprise/adaptor/Config.html#getGsaHostname()"><B>getGsaHostname()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>
 <DD>Required to be set: GSA machine to send document ids to.
@@ -833,6 +842,9 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AbstractAdaptor.html" title="class in com.google.enterprise.adaptor">AbstractAdaptor</A>
 <DD>Standard main for all adaptors (including those not extending
  AbstractAdaptor).
+<DT><A HREF="./com/google/enterprise/adaptor/Application.html#main(com.google.enterprise.adaptor.Adaptor, java.lang.String[])"><B>main(Adaptor, String[])</B></A> - 
+Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Application.html" title="class in com.google.enterprise.adaptor">Application</A>
+<DD>Main for adaptors to utilize when wanting to act as an application.
 <DT><A HREF="./com/google/enterprise/adaptor/examples/AdaptorTemplate.html#main(java.lang.String[])"><B>main(String[])</B></A> - 
 Static method in class com.google.enterprise.adaptor.examples.<A HREF="./com/google/enterprise/adaptor/examples/AdaptorTemplate.html" title="class in com.google.enterprise.adaptor.examples">AdaptorTemplate</A>
 <DD>Call default main for adaptors.
@@ -1122,11 +1134,19 @@ Method in interface com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/StreamingCommand.StreamInputSource.html#source(java.io.OutputStream)"><B>source(OutputStream)</B></A> - 
 Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/StreamingCommand.StreamInputSource.html" title="class in com.google.enterprise.adaptor.prebuilt">StreamingCommand.StreamInputSource</A>
 <DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/GsaCommunicationHandler.html#start()"><B>start()</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/Application.html#start()"><B>start()</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Application.html" title="class in com.google.enterprise.adaptor">Application</A>
+<DD>Start necessary services for receiving requests and managing background
+ tasks.
+<DT><A HREF="./com/google/enterprise/adaptor/GsaCommunicationHandler.html#start(com.sun.net.httpserver.HttpServer, com.sun.net.httpserver.HttpServer)"><B>start(HttpServer, HttpServer)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/GsaCommunicationHandler.html" title="class in com.google.enterprise.adaptor">GsaCommunicationHandler</A>
 <DD>Starts listening for communications from GSA.
 <DT><A HREF="./com/google/enterprise/adaptor/Status.html" title="interface in com.google.enterprise.adaptor"><B>Status</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Multi-state indicator providing the user with a notification of broken parts
- of the system.<DT><A HREF="./com/google/enterprise/adaptor/Status.Code.html" title="enum in com.google.enterprise.adaptor"><B>Status.Code</B></A> - Enum in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Available statuses for displaying state indicators on the dashboard.<DT><A HREF="./com/google/enterprise/adaptor/StatusSource.html" title="interface in com.google.enterprise.adaptor"><B>StatusSource</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>A source of <A HREF="./com/google/enterprise/adaptor/Status.html" title="interface in com.google.enterprise.adaptor"><CODE>Status</CODE></A> messages.<DT><A HREF="./com/google/enterprise/adaptor/GsaCommunicationHandler.html#stop(int)"><B>stop(int)</B></A> - 
+ of the system.<DT><A HREF="./com/google/enterprise/adaptor/Status.Code.html" title="enum in com.google.enterprise.adaptor"><B>Status.Code</B></A> - Enum in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Available statuses for displaying state indicators on the dashboard.<DT><A HREF="./com/google/enterprise/adaptor/StatusSource.html" title="interface in com.google.enterprise.adaptor"><B>StatusSource</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>A source of <A HREF="./com/google/enterprise/adaptor/Status.html" title="interface in com.google.enterprise.adaptor"><CODE>Status</CODE></A> messages.<DT><A HREF="./com/google/enterprise/adaptor/Application.html#stop(long, java.util.concurrent.TimeUnit)"><B>stop(long, TimeUnit)</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Application.html" title="class in com.google.enterprise.adaptor">Application</A>
+<DD>Stop processing incoming requests and background tasks, allowing graceful
+ shutdown.
+<DT><A HREF="./com/google/enterprise/adaptor/GsaCommunicationHandler.html#stop(long, java.util.concurrent.TimeUnit)"><B>stop(long, TimeUnit)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/GsaCommunicationHandler.html" title="class in com.google.enterprise.adaptor">GsaCommunicationHandler</A>
 <DD>Stop the current services, allowing up to <code>maxDelay</code> seconds for
  things to shutdown.
