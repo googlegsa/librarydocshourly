@@ -183,26 +183,10 @@ Interface provided to <A HREF="../../../../com/google/enterprise/adaptor/Adaptor
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Response.html#setCrawlOnce(boolean)">setCrawlOnce</A></B>(boolean&nbsp;crawlOnce)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether the GSA should crawl the document just one time and never again.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Response.html#setLastModified(java.util.Date)">setLastModified</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</A>&nbsp;lastModified)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provide the last modification time of the document.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Response.html#setLock(boolean)">setLock</A></B>(boolean&nbsp;lock)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prevents the GSA from removing document from index.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -456,34 +440,6 @@ void <B>setNoArchive</B>(boolean&nbsp;noArchive)</PRE>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>noArchive</CODE> - <code>true</code> when the GSA shouldn't show the "Cached"
      link in search results</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="setCrawlOnce(boolean)"><!-- --></A><H3>
-setCrawlOnce</H3>
-<PRE>
-void <B>setCrawlOnce</B>(boolean&nbsp;crawlOnce)</PRE>
-<DL>
-<DD>Whether the GSA should crawl the document just one time and never again.
-<P>
-<DD><DL>
-<DT><B>Parameters:</B><DD><CODE>crawlOnce</CODE> - <code>true</code> when doc should be crawled only once</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="setLock(boolean)"><!-- --></A><H3>
-setLock</H3>
-<PRE>
-void <B>setLock</B>(boolean&nbsp;lock)</PRE>
-<DL>
-<DD>Prevents the GSA from removing document from index.  For example
- in cases where GSA is at license limit and is crawling more documents
- the GSA is not allowed to remove locked documents.
-<P>
-<DD><DL>
-<DT><B>Parameters:</B><DD><CODE>lock</CODE> - <code>true</code> when doc is be kept in index</DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->
