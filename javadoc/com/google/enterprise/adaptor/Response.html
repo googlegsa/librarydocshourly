@@ -183,10 +183,35 @@ Interface provided to <A HREF="../../../../com/google/enterprise/adaptor/Adaptor
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Response.html#setCrawlOnce(boolean)">setCrawlOnce</A></B>(boolean&nbsp;crawlOnce)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instruct the GSA to not recrawl the document after the initial
+ retrieval.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Response.html#setDisplayUrl(java.net.URI)">setDisplayUrl</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;displayUrl)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the URI to be displayed in search results.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Response.html#setLastModified(java.util.Date)">setLastModified</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</A>&nbsp;lastModified)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provide the last modification time of the document.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Response.html#setLock(boolean)">setLock</A></B>(boolean&nbsp;lock)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instruct the GSA to "lock" the document into its index.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -442,6 +467,51 @@ void <B>setNoArchive</B>(boolean&nbsp;noArchive)</PRE>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>noArchive</CODE> - <code>true</code> when the GSA shouldn't show the "Cached"
      link in search results</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setDisplayUrl(java.net.URI)"><!-- --></A><H3>
+setDisplayUrl</H3>
+<PRE>
+void <B>setDisplayUrl</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;displayUrl)</PRE>
+<DL>
+<DD>Set the URI to be displayed in search results. If <code>null</code>, then the
+ crawl URI representing the <code>DocId</code> is used. The default is <code>null</code>.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>displayUrl</CODE> - URI to be used for this document in search results</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCrawlOnce(boolean)"><!-- --></A><H3>
+setCrawlOnce</H3>
+<PRE>
+void <B>setCrawlOnce</B>(boolean&nbsp;crawlOnce)</PRE>
+<DL>
+<DD>Instruct the GSA to not recrawl the document after the initial
+ retrieval. The default is <code>false</code>.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>crawlOnce</CODE> - if <code>true</code>, the document does not need to be
+     recrawled periodically</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setLock(boolean)"><!-- --></A><H3>
+setLock</H3>
+<PRE>
+void <B>setLock</B>(boolean&nbsp;lock)</PRE>
+<DL>
+<DD>Instruct the GSA to "lock" the document into its index. When the license
+ limit is reached on the GSA, it deletes unlocked documents before locked
+ documents while making room for new documents. The default is <code>false</code>.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>lock</CODE> - if <code>true</code>, keep this document in the index in preference
+     to unlocked documents</DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->
