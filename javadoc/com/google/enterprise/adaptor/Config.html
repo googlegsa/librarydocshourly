@@ -107,6 +107,10 @@ Configuration values for this program, like the GSA's hostname. Also several
      <td><b>name</b></td><td><b>meaning</b></td>
  <tr><td> </td><td>adaptor.autoUnzip </td><td> expand zip files and send
      each file inside   separatly.  Defaults to false
+ <tr><td> </td><td>adaptor.sendDocControlsHeader </td><td>use 
+      X-Gsa-Doc-Controls HTTP header with namespaced ACLs.
+      Otherwise ACLs are sent without namespace and as metadata.
+      Defaults to false
  <tr><td> </td><td>adaptor.fullListingSchedule </td><td> when to invoke 
      <A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)"><CODE>Adaptor.getDocIds</CODE></A>, in cron format (minute,
      hour,  day of month, month, day of week).  Defaults to 0 3 * * *
@@ -566,6 +570,14 @@ Configuration values for this program, like the GSA's hostname. Also several
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#sendDocControlsHeader()">sendDocControlsHeader</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#useAdaptorAutoUnzip()">useAdaptorAutoUnzip</A></B>()</CODE>
 
 <BR>
@@ -903,6 +915,17 @@ public int <B>getServerQueueCapacity</B>()</PRE>
 isServerToUseCompression</H3>
 <PRE>
 public boolean <B>isServerToUseCompression</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sendDocControlsHeader()"><!-- --></A><H3>
+sendDocControlsHeader</H3>
+<PRE>
+public boolean <B>sendDocControlsHeader</B>()</PRE>
 <DL>
 <DD><DL>
 </DL>
