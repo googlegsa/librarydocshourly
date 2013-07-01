@@ -115,7 +115,10 @@ Configuration values for this program, like the GSA's hostname. Also several
  <tr><td> </td><td>adaptor.incrementalPollPeriodSecs </td><td> number
      of seconds between invocations of <A HREF="../../../../com/google/enterprise/adaptor/PollingIncrementalAdaptor.html#getModifiedDocIds(com.google.enterprise.adaptor.DocIdPusher)"><CODE>PollingIncrementalAdaptor.getModifiedDocIds</CODE></A>.    Defaults to 900
  <tr><td> </td><td>adaptor.docContentTimeoutSecs </td><td> number of seconds
-     before a call to get document content times out and is interrupted.
+     adaptor has to complete sending content before it is interrupted. Timing
+     starts when sending content starts. Defaults to 180
+ <tr><td> </td><td>adaptor.docHeaderTimeoutSecs </td><td> number of seconds
+     adaptor has to start sending content before it is interrupted.
      Defaults to 30
  <tr><td> </td><td>adaptor.pushDocIdsOnStartup </td><td> whether to invoke
      <A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)"><CODE>Adaptor.getDocIds</CODE></A> on process start
