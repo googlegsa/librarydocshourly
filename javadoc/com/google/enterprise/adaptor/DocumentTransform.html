@@ -89,7 +89,7 @@ com.google.enterprise.adaptor</FONT>
 <BR>
 Interface DocumentTransform</H2>
 <DL>
-<DT><B>All Known Implementing Classes:</B> <DD><A HREF="../../../../com/google/enterprise/adaptor/AbstractDocumentTransform.html" title="class in com.google.enterprise.adaptor">AbstractDocumentTransform</A>, <A HREF="../../../../com/google/enterprise/adaptor/examples/CalaisNERTransform.html" title="class in com.google.enterprise.adaptor.examples">CalaisNERTransform</A>, <A HREF="../../../../com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineTransform</A>, <A HREF="../../../../com/google/enterprise/adaptor/examples/MetaTaggerTransform.html" title="class in com.google.enterprise.adaptor.examples">MetaTaggerTransform</A>, <A HREF="../../../../com/google/enterprise/adaptor/examples/TableGeneratorTransform.html" title="class in com.google.enterprise.adaptor.examples">TableGeneratorTransform</A></DD>
+<DT><B>All Known Implementing Classes:</B> <DD><A HREF="../../../../com/google/enterprise/adaptor/AbstractDocumentTransform.html" title="class in com.google.enterprise.adaptor">AbstractDocumentTransform</A>, <A HREF="../../../../com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineTransform</A></DD>
 </DL>
 <HR>
 <DL>
@@ -101,8 +101,8 @@ Represents an individual transform in the transform pipeline.
 
  <p>Implementations should also typically have a static factory method with a
  single <code>Map&lt;String, String&gt;</code> argument for creating instances based on
- configuration. Implementations are encouraged to accept "name" and
- "required" as configuration keys.
+ configuration. Implementations are encouraged to accept "name" as a 
+ configuration key.
 <P>
 
 <P>
@@ -128,23 +128,13 @@ Represents an individual transform in the transform pipeline.
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;boolean</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocumentTransform.html#isRequired()">isRequired</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If this property is true, a failure of this transform will cause the entire
- transform pipeline to abort.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocumentTransform.html#transform(java.io.ByteArrayOutputStream, java.io.OutputStream, com.google.enterprise.adaptor.Metadata, java.util.Map)">transform</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/io/ByteArrayOutputStream.html?is-external=true" title="class or interface in java.io">ByteArrayOutputStream</A>&nbsp;contentIn,
-          <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</A>&nbsp;contentOut,
-          <A HREF="../../../../com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>&nbsp;metadata,
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/DocumentTransform.html#transform(com.google.enterprise.adaptor.Metadata, java.util.Map)">transform</A></B>(<A HREF="../../../../com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>&nbsp;metadata,
           <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>,<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;params)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Read data from <code>contentIn</code>, transform it, and write it to <code>contentOut</code>.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Any changes to <code>metadata</code> and <code>params</code> will be
+ passed on to subsequent transforms.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -160,17 +150,14 @@ Represents an individual transform in the transform pipeline.
 </TR>
 </TABLE>
 
-<A NAME="transform(java.io.ByteArrayOutputStream, java.io.OutputStream, com.google.enterprise.adaptor.Metadata, java.util.Map)"><!-- --></A><H3>
+<A NAME="transform(com.google.enterprise.adaptor.Metadata, java.util.Map)"><!-- --></A><H3>
 transform</H3>
 <PRE>
-void <B>transform</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/io/ByteArrayOutputStream.html?is-external=true" title="class or interface in java.io">ByteArrayOutputStream</A>&nbsp;contentIn,
-               <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</A>&nbsp;contentOut,
-               <A HREF="../../../../com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>&nbsp;metadata,
+void <B>transform</B>(<A HREF="../../../../com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>&nbsp;metadata,
                <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>,<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;params)
-               throws <A HREF="../../../../com/google/enterprise/adaptor/TransformException.html" title="class in com.google.enterprise.adaptor">TransformException</A>,
-                      <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+               throws <A HREF="../../../../com/google/enterprise/adaptor/TransformException.html" title="class in com.google.enterprise.adaptor">TransformException</A></PRE>
 <DL>
-<DD>Read data from <code>contentIn</code>, transform it, and write it to <code>contentOut</code>. Any changes to <code>metadata</code> and <code>params</code> will be
+<DD>Any changes to <code>metadata</code> and <code>params</code> will be
  passed on to subsequent transforms. This method must be thread-safe.
 <P>
 <DD><DL>
@@ -190,25 +177,6 @@ getName</H3>
 <DD>The name of this transform instance, typically provided by the user. It
  should not be <code>null</code>. Using the class name as a default is reasonable
  if no name has been provided.
-<P>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="isRequired()"><!-- --></A><H3>
-isRequired</H3>
-<PRE>
-boolean <B>isRequired</B>()</PRE>
-<DL>
-<DD>If this property is true, a failure of this transform will cause the entire
- transform pipeline to abort. This is useful in the case where a particular
- transform is required in order to server data. For example, a transform
- tasked with redacting or filtering document content.
-
- If this is false and a error occurs, this transform is treated as a
- identity transform.
 <P>
 <DD><DL>
 </DL>

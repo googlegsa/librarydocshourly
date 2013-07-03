@@ -86,7 +86,7 @@ Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterp
 <DT><A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html" title="class in com.google.enterprise.adaptor"><B>AbstractDocumentTransform</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Convenience class for implementing <code>DocumentTransform</code>s.<DT><A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html#AbstractDocumentTransform()"><B>AbstractDocumentTransform()</B></A> - 
 Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html" title="class in com.google.enterprise.adaptor">AbstractDocumentTransform</A>
 <DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html#AbstractDocumentTransform(java.lang.String, boolean)"><B>AbstractDocumentTransform(String, boolean)</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html#AbstractDocumentTransform(java.lang.String)"><B>AbstractDocumentTransform(String)</B></A> - 
 Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html" title="class in com.google.enterprise.adaptor">AbstractDocumentTransform</A>
 <DD>If <code>name</code> is <code>null</code>, the default is used.
 <DT><A HREF="./com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor"><B>Acl</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Immutable access control list.<DT><A HREF="./com/google/enterprise/adaptor/Acl.BatchRetriever.html" title="interface in com.google.enterprise.adaptor"><B>Acl.BatchRetriever</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Batch retrieval of ACLs for efficent processing of many authz checks at
@@ -143,10 +143,6 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <A NAME="_C_"><!-- --></A><H2>
 <B>C</B></H2>
 <DL>
-<DT><A HREF="./com/google/enterprise/adaptor/examples/CalaisNERTransform.html" title="class in com.google.enterprise.adaptor.examples"><B>CalaisNERTransform</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/examples/package-summary.html">com.google.enterprise.adaptor.examples</A><DD>This transform sends the content to the OpenCalais webservice, which
- extracts named entities.<DT><A HREF="./com/google/enterprise/adaptor/examples/CalaisNERTransform.html#CalaisNERTransform()"><B>CalaisNERTransform()</B></A> - 
-Constructor for class com.google.enterprise.adaptor.examples.<A HREF="./com/google/enterprise/adaptor/examples/CalaisNERTransform.html" title="class in com.google.enterprise.adaptor.examples">CalaisNERTransform</A>
-<DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/GsaCommunicationHandler.html#checkAndScheduleImmediatePushOfDocIds()"><B>checkAndScheduleImmediatePushOfDocIds()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/GsaCommunicationHandler.html" title="class in com.google.enterprise.adaptor">GsaCommunicationHandler</A>
 <DD>Ensure there is a push running right now.
@@ -185,15 +181,6 @@ Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/ent
 <DT><A HREF="./com/google/enterprise/adaptor/IOHelper.html#copyStream(java.io.InputStream, java.io.OutputStream)"><B>copyStream(InputStream, OutputStream)</B></A> - 
 Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/IOHelper.html" title="class in com.google.enterprise.adaptor">IOHelper</A>
 <DD>Copy contents of <code>in</code> to <code>out</code>.
-<DT><A HREF="./com/google/enterprise/adaptor/examples/CalaisNERTransform.html#create(java.util.Map)"><B>create(Map&lt;String, String&gt;)</B></A> - 
-Static method in class com.google.enterprise.adaptor.examples.<A HREF="./com/google/enterprise/adaptor/examples/CalaisNERTransform.html" title="class in com.google.enterprise.adaptor.examples">CalaisNERTransform</A>
-<DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/examples/MetaTaggerTransform.html#create(java.util.Map)"><B>create(Map&lt;String, String&gt;)</B></A> - 
-Static method in class com.google.enterprise.adaptor.examples.<A HREF="./com/google/enterprise/adaptor/examples/MetaTaggerTransform.html" title="class in com.google.enterprise.adaptor.examples">MetaTaggerTransform</A>
-<DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/examples/TableGeneratorTransform.html#create(java.util.Map)"><B>create(Map&lt;String, String&gt;)</B></A> - 
-Static method in class com.google.enterprise.adaptor.examples.<A HREF="./com/google/enterprise/adaptor/examples/TableGeneratorTransform.html" title="class in com.google.enterprise.adaptor.examples">TableGeneratorTransform</A>
-<DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#create(java.util.Map)"><B>create(Map&lt;String, String&gt;)</B></A> - 
 Static method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineTransform</A>
 <DD>&nbsp;
@@ -682,13 +669,6 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/Principal.html#isGroup()"><B>isGroup()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</A>
 <DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html#isRequired()"><B>isRequired()</B></A> - 
-Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html" title="class in com.google.enterprise.adaptor">AbstractDocumentTransform</A>
-<DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/DocumentTransform.html#isRequired()"><B>isRequired()</B></A> - 
-Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor">DocumentTransform</A>
-<DD>If this property is true, a failure of this transform will cause the entire
- transform pipeline to abort.
 <DT><A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.html#isToBeCrawledImmediately()"><B>isToBeCrawledImmediately()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</A>
 <DD>Informs the GSA that the document has been modified, and the GSA should
@@ -777,12 +757,6 @@ Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterp
 <DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#Metadata(java.lang.Iterable)"><B>Metadata(Iterable&lt;Map.Entry&lt;String, String&gt;&gt;)</B></A> - 
 Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
 <DD>Duplicate.
-<DT><A HREF="./com/google/enterprise/adaptor/examples/MetaTaggerTransform.html" title="class in com.google.enterprise.adaptor.examples"><B>MetaTaggerTransform</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/examples/package-summary.html">com.google.enterprise.adaptor.examples</A><DD>The transform examines the document for regex patterns.<DT><A HREF="./com/google/enterprise/adaptor/examples/MetaTaggerTransform.html#MetaTaggerTransform()"><B>MetaTaggerTransform()</B></A> - 
-Constructor for class com.google.enterprise.adaptor.examples.<A HREF="./com/google/enterprise/adaptor/examples/MetaTaggerTransform.html" title="class in com.google.enterprise.adaptor.examples">MetaTaggerTransform</A>
-<DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/examples/MetaTaggerTransform.html#MetaTaggerTransform(java.lang.String)"><B>MetaTaggerTransform(String)</B></A> - 
-Constructor for class com.google.enterprise.adaptor.examples.<A HREF="./com/google/enterprise/adaptor/examples/MetaTaggerTransform.html" title="class in com.google.enterprise.adaptor.examples">MetaTaggerTransform</A>
-<DD>&nbsp;
 </DL>
 <HR>
 <A NAME="_N_"><!-- --></A><H2>
@@ -1025,12 +999,6 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/Acl.Builder.html#setPermitUsers(java.util.Collection)"><B>setPermitUsers(Collection&lt;UserPrincipal&gt;)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Acl.Builder.html" title="class in com.google.enterprise.adaptor">Acl.Builder</A>
 <DD>Replace existing permit users.
-<DT><A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html#setRequired(boolean)"><B>setRequired(boolean)</B></A> - 
-Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html" title="class in com.google.enterprise.adaptor">AbstractDocumentTransform</A>
-<DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#setRequired(boolean)"><B>setRequired(boolean)</B></A> - 
-Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineTransform</A>
-<DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html#setResultLink(java.net.URI)"><B>setResultLink(URI)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record.Builder</A>
 <DD>Set the URI to be displayed to the user in search results.
@@ -1100,13 +1068,6 @@ Constructor for class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/goog
 <A NAME="_T_"><!-- --></A><H2>
 <B>T</B></H2>
 <DL>
-<DT><A HREF="./com/google/enterprise/adaptor/examples/TableGeneratorTransform.html" title="class in com.google.enterprise.adaptor.examples"><B>TableGeneratorTransform</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/examples/package-summary.html">com.google.enterprise.adaptor.examples</A><DD>This transform takes in a CSV file, generates an HTML table with the data,
- and inserts it into a template HTML file that's provided by the user.<DT><A HREF="./com/google/enterprise/adaptor/examples/TableGeneratorTransform.html#TableGeneratorTransform()"><B>TableGeneratorTransform()</B></A> - 
-Constructor for class com.google.enterprise.adaptor.examples.<A HREF="./com/google/enterprise/adaptor/examples/TableGeneratorTransform.html" title="class in com.google.enterprise.adaptor.examples">TableGeneratorTransform</A>
-<DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/examples/TableGeneratorTransform.html#TableGeneratorTransform(java.lang.String)"><B>TableGeneratorTransform(String)</B></A> - 
-Constructor for class com.google.enterprise.adaptor.examples.<A HREF="./com/google/enterprise/adaptor/examples/TableGeneratorTransform.html" title="class in com.google.enterprise.adaptor.examples">TableGeneratorTransform</A>
-<DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/Acl.html#toString()"><B>toString()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</A>
 <DD>Generates a string useful for debugging that contains users and groups
@@ -1124,27 +1085,16 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/Principal.html#toString()"><B>toString()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</A>
 <DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/DocumentTransform.html#transform(java.io.ByteArrayOutputStream, java.io.OutputStream, com.google.enterprise.adaptor.Metadata, java.util.Map)"><B>transform(ByteArrayOutputStream, OutputStream, Metadata, Map&lt;String, String&gt;)</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/DocumentTransform.html#transform(com.google.enterprise.adaptor.Metadata, java.util.Map)"><B>transform(Metadata, Map&lt;String, String&gt;)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor">DocumentTransform</A>
-<DD>Read data from <code>contentIn</code>, transform it, and write it to <code>contentOut</code>.
-<DT><A HREF="./com/google/enterprise/adaptor/examples/CalaisNERTransform.html#transform(java.io.ByteArrayOutputStream, java.io.OutputStream, com.google.enterprise.adaptor.Metadata, java.util.Map)"><B>transform(ByteArrayOutputStream, OutputStream, Metadata, Map&lt;String, String&gt;)</B></A> - 
-Method in class com.google.enterprise.adaptor.examples.<A HREF="./com/google/enterprise/adaptor/examples/CalaisNERTransform.html" title="class in com.google.enterprise.adaptor.examples">CalaisNERTransform</A>
-<DD>This transform must take in a parameter of the form:
- <code>(OpenCalaisAPIKey, key)</code>
-
- Optionally, extra parameters can be passed in to set which entity types to detect.
-<DT><A HREF="./com/google/enterprise/adaptor/examples/MetaTaggerTransform.html#transform(java.io.ByteArrayOutputStream, java.io.OutputStream, com.google.enterprise.adaptor.Metadata, java.util.Map)"><B>transform(ByteArrayOutputStream, OutputStream, Metadata, Map&lt;String, String&gt;)</B></A> - 
-Method in class com.google.enterprise.adaptor.examples.<A HREF="./com/google/enterprise/adaptor/examples/MetaTaggerTransform.html" title="class in com.google.enterprise.adaptor.examples">MetaTaggerTransform</A>
-<DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/examples/TableGeneratorTransform.html#transform(java.io.ByteArrayOutputStream, java.io.OutputStream, com.google.enterprise.adaptor.Metadata, java.util.Map)"><B>transform(ByteArrayOutputStream, OutputStream, Metadata, Map&lt;String, String&gt;)</B></A> - 
-Method in class com.google.enterprise.adaptor.examples.<A HREF="./com/google/enterprise/adaptor/examples/TableGeneratorTransform.html" title="class in com.google.enterprise.adaptor.examples">TableGeneratorTransform</A>
-<DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#transform(java.io.ByteArrayOutputStream, java.io.OutputStream, com.google.enterprise.adaptor.Metadata, java.util.Map)"><B>transform(ByteArrayOutputStream, OutputStream, Metadata, Map&lt;String, String&gt;)</B></A> - 
+<DD>Any changes to <code>metadata</code> and <code>params</code> will be
+ passed on to subsequent transforms.
+<DT><A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#transform(com.google.enterprise.adaptor.Metadata, java.util.Map)"><B>transform(Metadata, Map&lt;String, String&gt;)</B></A> - 
 Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineTransform</A>
 <DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/TransformPipeline.html#transform(byte[], java.io.OutputStream, com.google.enterprise.adaptor.Metadata, java.util.Map)"><B>transform(byte[], OutputStream, Metadata, Map&lt;String, String&gt;)</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/TransformPipeline.html#transform(com.google.enterprise.adaptor.Metadata, java.util.Map)"><B>transform(Metadata, Map&lt;String, String&gt;)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/TransformPipeline.html" title="class in com.google.enterprise.adaptor">TransformPipeline</A>
-<DD>Transform <code>contentIn</code> and <code>metadata</code>.
+<DD>Transform <code>metadata</code>.
 <DT><A HREF="./com/google/enterprise/adaptor/TransformException.html" title="class in com.google.enterprise.adaptor"><B>TransformException</B></A> - Exception in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Exception produced by <A HREF="./com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor"><CODE>DocumentTransform</CODE></A>s and <A HREF="./com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor"><CODE>DocumentTransform</CODE></A> in the case of a fatal error.<DT><A HREF="./com/google/enterprise/adaptor/TransformException.html#TransformException(java.lang.String)"><B>TransformException(String)</B></A> - 
 Constructor for exception com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/TransformException.html" title="class in com.google.enterprise.adaptor">TransformException</A>
 <DD>Constructs a new exception with a detailed message.
@@ -1156,7 +1106,7 @@ Constructor for exception com.google.enterprise.adaptor.<A HREF="./com/google/en
 Constructor for exception com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/TransformException.html" title="class in com.google.enterprise.adaptor">TransformException</A>
 <DD>Constructs a new exception with a <code>null</code> message and a cause
  initalized to <code>cause</code>.
-<DT><A HREF="./com/google/enterprise/adaptor/TransformPipeline.html" title="class in com.google.enterprise.adaptor"><B>TransformPipeline</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Modify content and metadata using multiple serial transforms.<DT><A HREF="./com/google/enterprise/adaptor/TransformPipeline.html#TransformPipeline(java.util.List)"><B>TransformPipeline(List&lt;? extends DocumentTransform&gt;)</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/TransformPipeline.html" title="class in com.google.enterprise.adaptor"><B>TransformPipeline</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Modify metadata using multiple serial transforms.<DT><A HREF="./com/google/enterprise/adaptor/TransformPipeline.html#TransformPipeline(java.util.List)"><B>TransformPipeline(List&lt;? extends DocumentTransform&gt;)</B></A> - 
 Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/TransformPipeline.html" title="class in com.google.enterprise.adaptor">TransformPipeline</A>
 <DD>&nbsp;
 </DL>

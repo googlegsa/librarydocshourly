@@ -98,7 +98,7 @@ Class TransformPipeline</H2>
 </PRE>
 
 <P>
-Modify content and metadata using multiple serial transforms. The transforms
+Modify metadata using multiple serial transforms. The transforms
  are arranged into a serial pipeline where the output of one becomes the
  input for the next in the series.
 
@@ -145,13 +145,11 @@ Modify content and metadata using multiple serial transforms. The transforms
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/TransformPipeline.html#transform(byte[], java.io.OutputStream, com.google.enterprise.adaptor.Metadata, java.util.Map)">transform</A></B>(byte[]&nbsp;contentIn,
-          <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</A>&nbsp;contentOut,
-          <A HREF="../../../../com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>&nbsp;metadata,
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/TransformPipeline.html#transform(com.google.enterprise.adaptor.Metadata, java.util.Map)">transform</A></B>(<A HREF="../../../../com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>&nbsp;metadata,
           <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>,<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;params)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transform <code>contentIn</code> and <code>metadata</code>.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transform <code>metadata</code>.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -193,25 +191,19 @@ public <B>TransformPipeline</B>(<A HREF="http://download.oracle.com/javase/6/doc
 </TR>
 </TABLE>
 
-<A NAME="transform(byte[], java.io.OutputStream, com.google.enterprise.adaptor.Metadata, java.util.Map)"><!-- --></A><H3>
+<A NAME="transform(com.google.enterprise.adaptor.Metadata, java.util.Map)"><!-- --></A><H3>
 transform</H3>
 <PRE>
-public void <B>transform</B>(byte[]&nbsp;contentIn,
-                      <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</A>&nbsp;contentOut,
-                      <A HREF="../../../../com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>&nbsp;metadata,
+public void <B>transform</B>(<A HREF="../../../../com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>&nbsp;metadata,
                       <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>,<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;params)
-               throws <A HREF="../../../../com/google/enterprise/adaptor/TransformException.html" title="class in com.google.enterprise.adaptor">TransformException</A>,
-                      <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+               throws <A HREF="../../../../com/google/enterprise/adaptor/TransformException.html" title="class in com.google.enterprise.adaptor">TransformException</A></PRE>
 <DL>
-<DD>Transform <code>contentIn</code> and <code>metadata</code>. <code>ContentIn</code> is
- guaranteed to remain unchanged; the rest of the parameters are expected to
- change.
+<DD>Transform <code>metadata</code>.
 <P>
 <DD><DL>
 
 <DT><B>Throws:</B>
-<DD><CODE><A HREF="../../../../com/google/enterprise/adaptor/TransformException.html" title="class in com.google.enterprise.adaptor">TransformException</A></CODE>
-<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+<DD><CODE><A HREF="../../../../com/google/enterprise/adaptor/TransformException.html" title="class in com.google.enterprise.adaptor">TransformException</A></CODE></DL>
 </DD>
 </DL>
 <HR>

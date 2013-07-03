@@ -96,7 +96,7 @@ Class AbstractDocumentTransform</H2>
 <DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor">DocumentTransform</A></DD>
 </DL>
 <DL>
-<DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../com/google/enterprise/adaptor/examples/CalaisNERTransform.html" title="class in com.google.enterprise.adaptor.examples">CalaisNERTransform</A>, <A HREF="../../../../com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineTransform</A>, <A HREF="../../../../com/google/enterprise/adaptor/examples/MetaTaggerTransform.html" title="class in com.google.enterprise.adaptor.examples">MetaTaggerTransform</A>, <A HREF="../../../../com/google/enterprise/adaptor/examples/TableGeneratorTransform.html" title="class in com.google.enterprise.adaptor.examples">TableGeneratorTransform</A></DD>
+<DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineTransform</A></DD>
 </DL>
 <HR>
 <DL>
@@ -105,7 +105,7 @@ Class AbstractDocumentTransform</H2>
 
 <P>
 Convenience class for implementing <code>DocumentTransform</code>s.
- Implementations only need to implement <A HREF="../../../../com/google/enterprise/adaptor/DocumentTransform.html#transform(java.io.ByteArrayOutputStream, java.io.OutputStream, com.google.enterprise.adaptor.Metadata, java.util.Map)"><CODE>DocumentTransform.transform(java.io.ByteArrayOutputStream, java.io.OutputStream, com.google.enterprise.adaptor.Metadata, java.util.Map<java.lang.String, java.lang.String>)</CODE></A>, although they
+ Implementations only need to implement <A HREF="../../../../com/google/enterprise/adaptor/DocumentTransform.html#transform(com.google.enterprise.adaptor.Metadata, java.util.Map)"><CODE>DocumentTransform.transform(com.google.enterprise.adaptor.Metadata, java.util.Map<java.lang.String, java.lang.String>)</CODE></A>, although they
  should also likely have a static factory method as defined in <A HREF="../../../../com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor"><CODE>DocumentTransform</CODE></A>.
 <P>
 
@@ -129,8 +129,7 @@ Convenience class for implementing <code>DocumentTransform</code>s.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AbstractDocumentTransform.html#AbstractDocumentTransform(java.lang.String, boolean)">AbstractDocumentTransform</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
-                          boolean&nbsp;required)</CODE>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AbstractDocumentTransform.html#AbstractDocumentTransform(java.lang.String)">AbstractDocumentTransform</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If <code>name</code> is <code>null</code>, the default is used.</TD>
@@ -163,25 +162,8 @@ Convenience class for implementing <code>DocumentTransform</code>s.
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;boolean</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AbstractDocumentTransform.html#isRequired()">isRequired</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If this property is true, a failure of this transform will cause the entire
- transform pipeline to abort.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>protected &nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AbstractDocumentTransform.html#setName(java.lang.String)">setName</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected &nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AbstractDocumentTransform.html#setRequired(boolean)">setRequired</A></B>(boolean&nbsp;required)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -202,7 +184,7 @@ Convenience class for implementing <code>DocumentTransform</code>s.
 <TH ALIGN="left"><B>Methods inherited from interface com.google.enterprise.adaptor.<A HREF="../../../../com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor">DocumentTransform</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../com/google/enterprise/adaptor/DocumentTransform.html#transform(java.io.ByteArrayOutputStream, java.io.OutputStream, com.google.enterprise.adaptor.Metadata, java.util.Map)">transform</A></CODE></TD>
+<TD><CODE><A HREF="../../../../com/google/enterprise/adaptor/DocumentTransform.html#transform(com.google.enterprise.adaptor.Metadata, java.util.Map)">transform</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -226,11 +208,10 @@ public <B>AbstractDocumentTransform</B>()</PRE>
 </DL>
 <HR>
 
-<A NAME="AbstractDocumentTransform(java.lang.String, boolean)"><!-- --></A><H3>
+<A NAME="AbstractDocumentTransform(java.lang.String)"><!-- --></A><H3>
 AbstractDocumentTransform</H3>
 <PRE>
-public <B>AbstractDocumentTransform</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
-                                 boolean&nbsp;required)</PRE>
+public <B>AbstractDocumentTransform</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</PRE>
 <DL>
 <DD>If <code>name</code> is <code>null</code>, the default is used.
 <P>
@@ -251,7 +232,7 @@ configure</H3>
 <PRE>
 protected void <B>configure</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>,<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;config)</PRE>
 <DL>
-<DD>Configure this instance with provided <code>config</code>. Accepts keys <code>"name"</code> and <code>"required"</code>. Unknown keys are ignored. This method is
+<DD>Configure this instance with provided <code>config</code>. Accepts key <code>"name"</code>. Unknown keys are ignored. This method is
  intended as a convenience for use in a static factory method.
 <P>
 <DD><DL>
@@ -289,43 +270,6 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.ht
 <P>
 <DD><DL>
 <DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/google/enterprise/adaptor/DocumentTransform.html#getName()">getName</A></CODE> in interface <CODE><A HREF="../../../../com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor">DocumentTransform</A></CODE></DL>
-</DD>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="setRequired(boolean)"><!-- --></A><H3>
-setRequired</H3>
-<PRE>
-protected void <B>setRequired</B>(boolean&nbsp;required)</PRE>
-<DL>
-<DD><DL>
-</DL>
-</DD>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="isRequired()"><!-- --></A><H3>
-isRequired</H3>
-<PRE>
-public boolean <B>isRequired</B>()</PRE>
-<DL>
-<DD><B>Description copied from interface: <CODE><A HREF="../../../../com/google/enterprise/adaptor/DocumentTransform.html#isRequired()">DocumentTransform</A></CODE></B></DD>
-<DD>If this property is true, a failure of this transform will cause the entire
- transform pipeline to abort. This is useful in the case where a particular
- transform is required in order to server data. For example, a transform
- tasked with redacting or filtering document content.
-
- If this is false and a error occurs, this transform is treated as a
- identity transform.
-<P>
-<DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/google/enterprise/adaptor/DocumentTransform.html#isRequired()">isRequired</A></CODE> in interface <CODE><A HREF="../../../../com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor">DocumentTransform</A></CODE></DL>
 </DD>
 <DD><DL>
 </DL>
