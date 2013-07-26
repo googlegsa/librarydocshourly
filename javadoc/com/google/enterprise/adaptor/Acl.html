@@ -181,34 +181,46 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Acl.html#getDenies()">getDenies</a></strong>()</code>
+<div class="block">Returns immutable set of denied users and groups;</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Acl.html#getDenyGroups()">getDenyGroups</a></strong>()</code>
 <div class="block">Returns immutable set of denied groups.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../com/google/enterprise/adaptor/UserPrincipal.html" title="class in com.google.enterprise.adaptor">UserPrincipal</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Acl.html#getDenyUsers()">getDenyUsers</a></strong>()</code>
 <div class="block">Returns immutable set of denied users.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/Acl.InheritanceType.html" title="enum in com.google.enterprise.adaptor">Acl.InheritanceType</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Acl.html#getInheritanceType()">getInheritanceType</a></strong>()</code>
 <div class="block">Returns the inheritance type used to combine authz decisions of these ACLs
  with its <em>child</em>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Acl.html#getInheritFrom()">getInheritFrom</a></strong>()</code>
 <div class="block">Returns <code>DocId</code> these ACLs are inherited from.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Acl.html#getPermitGroups()">getPermitGroups</a></strong>()</code>
 <div class="block">Returns immutable set of permitted groups.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Acl.html#getPermits()">getPermits</a></strong>()</code>
+<div class="block">Returns immutable set of permitted users and groups.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -342,6 +354,26 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
 <h4>getDenyUsers</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../com/google/enterprise/adaptor/UserPrincipal.html" title="class in com.google.enterprise.adaptor">UserPrincipal</a>&gt;&nbsp;getDenyUsers()</pre>
 <div class="block">Returns immutable set of denied users.</div>
+</li>
+</ul>
+<a name="getPermits()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPermits</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</a>&gt;&nbsp;getPermits()</pre>
+<div class="block">Returns immutable set of permitted users and groups.</div>
+</li>
+</ul>
+<a name="getDenies()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDenies</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</a>&gt;&nbsp;getDenies()</pre>
+<div class="block">Returns immutable set of denied users and groups;</div>
 </li>
 </ul>
 <a name="getInheritFrom()">
