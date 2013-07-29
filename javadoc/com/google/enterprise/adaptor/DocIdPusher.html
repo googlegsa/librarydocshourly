@@ -202,7 +202,7 @@
  <p>Equivalent to <code>pushDocIds(docIds, null)</code> and <a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushRecords(java.lang.Iterable)"><code>pushRecords(Iterable)</code></a> with default values for each <code>Record</code>.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first DocId to fail</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushDocIds(java.lang.Iterable, com.google.enterprise.adaptor.PushErrorHandler)"><code>pushDocIds(Iterable, PushErrorHandler)</code></a></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no DocIds were sent</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushDocIds(java.lang.Iterable, com.google.enterprise.adaptor.PushErrorHandler)"><code>pushDocIds(Iterable, PushErrorHandler)</code></a></dd></dl>
 </li>
 </ul>
 <a name="pushDocIds(java.lang.Iterable, com.google.enterprise.adaptor.PushErrorHandler)">
@@ -225,7 +225,7 @@
  with default values for each <code>Record</code>.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first DocId to fail</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no DocIds were sent</dd></dl>
 </li>
 </ul>
 <a name="pushRecords(java.lang.Iterable)">
@@ -244,7 +244,7 @@
  <p>Equivalent to <code>pushRecords(records, null)</code>.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first Record to fail</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushRecords(java.lang.Iterable, com.google.enterprise.adaptor.PushErrorHandler)"><code>pushRecords(Iterable, PushErrorHandler)</code></a></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no Records were sent</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushRecords(java.lang.Iterable, com.google.enterprise.adaptor.PushErrorHandler)"><code>pushRecords(Iterable, PushErrorHandler)</code></a></dd></dl>
 </li>
 </ul>
 <a name="pushRecords(java.lang.Iterable, com.google.enterprise.adaptor.PushErrorHandler)">
@@ -264,7 +264,7 @@
  <p>If handler is <code>null</code>, then a default error handler is used.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first Record to fail</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no Records were sent</dd></dl>
 </li>
 </ul>
 <a name="pushNamedResources(java.util.Map)">
@@ -290,7 +290,7 @@
  <p>Equivalent to <code>pushNamedResources(resources, null)</code>.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first DocId to fail</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushNamedResources(java.util.Map, com.google.enterprise.adaptor.PushErrorHandler)"><code>pushNamedResources(Map, PushErrorHandler)</code></a></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no resources were sent</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushNamedResources(java.util.Map, com.google.enterprise.adaptor.PushErrorHandler)"><code>pushNamedResources(Map, PushErrorHandler)</code></a></dd></dl>
 </li>
 </ul>
 <a name="pushNamedResources(java.util.Map, com.google.enterprise.adaptor.PushErrorHandler)">
@@ -317,7 +317,7 @@
  <p>If handler is <code>null</code>, then a default error handler is used.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first DocId to fail</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no resources were sent</dd></dl>
 </li>
 </ul>
 </li>
