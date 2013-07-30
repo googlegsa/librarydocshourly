@@ -133,9 +133,9 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor">GetDocIdsErrorHandler</a></td>
+<td class="colFirst"><a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a></td>
 <td class="colLast">
-<div class="block">Interface for handling errors encountered during scheduled pushing of <code>DocId</code>s.</div>
+<div class="block">Interface for handling errors and handling retrying policy.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -145,47 +145,40 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../com/google/enterprise/adaptor/PushErrorHandler.html" title="interface in com.google.enterprise.adaptor">PushErrorHandler</a></td>
-<td class="colLast">
-<div class="block">Interface for handling errors encountered during pushing of <code>DocId</code>s
- via <a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor"><code>DocIdPusher</code></a>.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><a href="../../../../com/google/enterprise/adaptor/Request.html" title="interface in com.google.enterprise.adaptor">Request</a></td>
 <td class="colLast">
 <div class="block">Interface provided to <a href="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)"><code>Adaptor.getDocContent(Request, Response)</code></a> for describing the action that
  should be taken.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</a></td>
 <td class="colLast">
 <div class="block">Interface provided to <a href="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)"><code>Adaptor.getDocContent(Request, Response)</code></a> for performing the actions needed
  to satisfy a request.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../com/google/enterprise/adaptor/SensitiveValueDecoder.html" title="interface in com.google.enterprise.adaptor">SensitiveValueDecoder</a></td>
 <td class="colLast">
 <div class="block">Provides parsing of sensitive values that can be plain text, obfuscated, or
  encrypted.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../com/google/enterprise/adaptor/Session.html" title="interface in com.google.enterprise.adaptor">Session</a></td>
 <td class="colLast">
 <div class="block">Generic session-state container, but intended for authn bookkeeping.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../com/google/enterprise/adaptor/Status.html" title="interface in com.google.enterprise.adaptor">Status</a></td>
 <td class="colLast">
 <div class="block">Multi-state indicator providing the user with a notification of broken parts
  of the system.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../com/google/enterprise/adaptor/StatusSource.html" title="interface in com.google.enterprise.adaptor">StatusSource</a></td>
 <td class="colLast">
 <div class="block">A source of <a href="../../../../com/google/enterprise/adaptor/Status.html" title="interface in com.google.enterprise.adaptor"><code>Status</code></a> messages.</div>
@@ -259,18 +252,6 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../../com/google/enterprise/adaptor/DefaultGetDocIdsErrorHandler.html" title="class in com.google.enterprise.adaptor">DefaultGetDocIdsErrorHandler</a></td>
-<td class="colLast">
-<div class="block">Default handler of errors during <a href="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)"><code>Adaptor.getDocIds(DocIdPusher)</code></a>.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../com/google/enterprise/adaptor/DefaultPushErrorHandler.html" title="class in com.google.enterprise.adaptor">DefaultPushErrorHandler</a></td>
-<td class="colLast">
-<div class="block">Default handler of errors during a push of <code>DocId</code>s to the GSA.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a></td>
 <td class="colLast">
 <div class="block">Refers to a unique document in repository.</div>
@@ -289,49 +270,55 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../../com/google/enterprise/adaptor/ExceptionHandlers.html" title="class in com.google.enterprise.adaptor">ExceptionHandlers</a></td>
+<td class="colLast">
+<div class="block">Utility class for <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a>s.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</a></td>
 <td class="colLast">
 <div class="block">Represents group.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../com/google/enterprise/adaptor/GsaCommunicationHandler.html" title="class in com.google.enterprise.adaptor">GsaCommunicationHandler</a></td>
 <td class="colLast">
 <div class="block">This class handles the communications with GSA.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../com/google/enterprise/adaptor/HttpExchanges.html" title="class in com.google.enterprise.adaptor">HttpExchanges</a></td>
 <td class="colLast">
 <div class="block">Utility class for working with <a href="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpExchange.html?is-external=true" title="class or interface in com.sun.net.httpserver"><code>HttpExchange</code></a>s.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../com/google/enterprise/adaptor/IOHelper.html" title="class in com.google.enterprise.adaptor">IOHelper</a></td>
 <td class="colLast">
 <div class="block">Utility class for providing useful methods when handling streams or other
  forms of I/O.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</a></td>
 <td class="colLast">
 <div class="block">Allows storing multiple metadata values to a single key.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</a></td>
 <td class="colLast">
 <div class="block">Represents either a user or a group.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../../com/google/enterprise/adaptor/TransformPipeline.html" title="class in com.google.enterprise.adaptor">TransformPipeline</a></td>
 <td class="colLast">
 <div class="block">Modify metadata using multiple serial transforms.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../../com/google/enterprise/adaptor/UserPrincipal.html" title="class in com.google.enterprise.adaptor">UserPrincipal</a></td>
 <td class="colLast">
 <div class="block">Represents user.</div>

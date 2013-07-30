@@ -2,13 +2,13 @@
 <!-- NewPage -->
 <html lang="en">
 <head>
-<title>GetDocIdsErrorHandler</title>
+<title>ExceptionHandler</title>
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="GetDocIdsErrorHandler";
+        parent.document.title="ExceptionHandler";
     }
 //-->
 </script>
@@ -34,11 +34,11 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor"><span class="strong">PREV CLASS</span></a></li>
-<li><a href="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor"><span class="strong">NEXT CLASS</span></a></li>
+<li><a href="../../../../com/google/enterprise/adaptor/ExceptionHandlers.html" title="class in com.google.enterprise.adaptor"><span class="strong">NEXT CLASS</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../../index.html?com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" target="_top">FRAMES</a></li>
-<li><a href="GetDocIdsErrorHandler.html" target="_top">NO FRAMES</a></li>
+<li><a href="../../../../index.html?com/google/enterprise/adaptor/ExceptionHandler.html" target="_top">FRAMES</a></li>
+<li><a href="ExceptionHandler.html" target="_top">NO FRAMES</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
 <li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
@@ -77,20 +77,16 @@
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <p class="subTitle">com.google.enterprise.adaptor</p>
-<h2 title="Interface GetDocIdsErrorHandler" class="title">Interface GetDocIdsErrorHandler</h2>
+<h2 title="Interface ExceptionHandler" class="title">Interface ExceptionHandler</h2>
 </div>
 <div class="contentContainer">
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
-<dl>
-<dt>All Known Implementing Classes:</dt>
-<dd><a href="../../../../com/google/enterprise/adaptor/DefaultGetDocIdsErrorHandler.html" title="class in com.google.enterprise.adaptor">DefaultGetDocIdsErrorHandler</a></dd>
-</dl>
 <hr>
 <br>
-<pre>public interface <strong>GetDocIdsErrorHandler</strong></pre>
-<div class="block">Interface for handling errors encountered during scheduled pushing of <code>DocId</code>s.</div>
+<pre>public interface <strong>ExceptionHandler</strong></pre>
+<div class="block">Interface for handling errors and handling retrying policy.</div>
 </li>
 </ul>
 </div>
@@ -111,9 +107,9 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/GetDocIdsErrorHandler.html#handleFailedToGetDocIds(java.lang.Exception, int)">handleFailedToGetDocIds</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&nbsp;ex,
-                       int&nbsp;ntries)</code>
-<div class="block">There was a failure running <a href="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)"><code>Adaptor.getDocIds(com.google.enterprise.adaptor.DocIdPusher)</code></a>.</div>
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html#handleException(java.lang.Exception, int)">handleException</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&nbsp;ex,
+               int&nbsp;ntries)</code>
+<div class="block">Determine how to proceed after an exception was thrown.</div>
 </td>
 </tr>
 </table>
@@ -131,20 +127,19 @@
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="handleFailedToGetDocIds(java.lang.Exception, int)">
+<a name="handleException(java.lang.Exception, int)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>handleFailedToGetDocIds</h4>
-<pre>boolean&nbsp;handleFailedToGetDocIds(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&nbsp;ex,
-                              int&nbsp;ntries)
-                                throws <a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
-<div class="block">There was a failure running <a href="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)"><code>Adaptor.getDocIds(com.google.enterprise.adaptor.DocIdPusher)</code></a>. The thrown exception
- is provided as well as the number of times the call has been attempted. It
- is fine to call <code>Thread.sleep()</code> before returning.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd><code>true</code> for immediate retry, <code>false</code> to abort this
-   scheduled execution</dd>
+<h4>handleException</h4>
+<pre>boolean&nbsp;handleException(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&nbsp;ex,
+                      int&nbsp;ntries)
+                        throws <a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<div class="block">Determine how to proceed after an exception was thrown. The thrown
+ exception is provided as well as the number of times the call has been
+ attempted. It is fine to call <code>Thread.sleep()</code> before returning.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><code>true</code> for immediate retry, <code>false</code> to abort</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
 </li>
@@ -175,11 +170,11 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor"><span class="strong">PREV CLASS</span></a></li>
-<li><a href="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor"><span class="strong">NEXT CLASS</span></a></li>
+<li><a href="../../../../com/google/enterprise/adaptor/ExceptionHandlers.html" title="class in com.google.enterprise.adaptor"><span class="strong">NEXT CLASS</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../../index.html?com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" target="_top">FRAMES</a></li>
-<li><a href="GetDocIdsErrorHandler.html" target="_top">NO FRAMES</a></li>
+<li><a href="../../../../index.html?com/google/enterprise/adaptor/ExceptionHandler.html" target="_top">FRAMES</a></li>
+<li><a href="ExceptionHandler.html" target="_top">NO FRAMES</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">
 <li><a href="../../../../allclasses-noframe.html">All Classes</a></li>

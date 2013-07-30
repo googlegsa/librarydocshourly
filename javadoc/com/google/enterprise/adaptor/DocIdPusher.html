@@ -135,8 +135,8 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushDocIds(java.lang.Iterable, com.google.enterprise.adaptor.PushErrorHandler)">pushDocIds</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>&gt;&nbsp;docIds,
-          <a href="../../../../com/google/enterprise/adaptor/PushErrorHandler.html" title="interface in com.google.enterprise.adaptor">PushErrorHandler</a>&nbsp;handler)</code>
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushDocIds(java.lang.Iterable, com.google.enterprise.adaptor.ExceptionHandler)">pushDocIds</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>&gt;&nbsp;docIds,
+          <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a>&nbsp;handler)</code>
 <div class="block">Push <code>DocId</code>s immediately and block until they are successfully
  provided to the GSA or the error handler gives up.</div>
 </td>
@@ -150,8 +150,8 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushNamedResources(java.util.Map, com.google.enterprise.adaptor.PushErrorHandler)">pushNamedResources</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>,<a href="../../../../com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</a>&gt;&nbsp;resources,
-                  <a href="../../../../com/google/enterprise/adaptor/PushErrorHandler.html" title="interface in com.google.enterprise.adaptor">PushErrorHandler</a>&nbsp;handler)</code>
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushNamedResources(java.util.Map, com.google.enterprise.adaptor.ExceptionHandler)">pushNamedResources</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>,<a href="../../../../com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</a>&gt;&nbsp;resources,
+                  <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a>&nbsp;handler)</code>
 <div class="block">Push named resources immediately and block until they are successfully
  provided to the GSA or the error handler gives up.</div>
 </td>
@@ -165,8 +165,8 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushRecords(java.lang.Iterable, com.google.enterprise.adaptor.PushErrorHandler)">pushRecords</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</a>&gt;&nbsp;records,
-           <a href="../../../../com/google/enterprise/adaptor/PushErrorHandler.html" title="interface in com.google.enterprise.adaptor">PushErrorHandler</a>&nbsp;handler)</code>
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushRecords(java.lang.Iterable, com.google.enterprise.adaptor.ExceptionHandler)">pushRecords</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</a>&gt;&nbsp;records,
+           <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a>&nbsp;handler)</code>
 <div class="block">Push <code>Record</code>s immediately and block until they are successfully
  provided to the GSA or the error handler gives up.</div>
 </td>
@@ -202,17 +202,17 @@
  <p>Equivalent to <code>pushDocIds(docIds, null)</code> and <a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushRecords(java.lang.Iterable)"><code>pushRecords(Iterable)</code></a> with default values for each <code>Record</code>.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first DocId to fail</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no DocIds were sent</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushDocIds(java.lang.Iterable, com.google.enterprise.adaptor.PushErrorHandler)"><code>pushDocIds(Iterable, PushErrorHandler)</code></a></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no DocIds were sent</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushDocIds(java.lang.Iterable, com.google.enterprise.adaptor.ExceptionHandler)"><code>pushDocIds(Iterable, ExceptionHandler)</code></a></dd></dl>
 </li>
 </ul>
-<a name="pushDocIds(java.lang.Iterable, com.google.enterprise.adaptor.PushErrorHandler)">
+<a name="pushDocIds(java.lang.Iterable, com.google.enterprise.adaptor.ExceptionHandler)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>pushDocIds</h4>
 <pre><a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>&nbsp;pushDocIds(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>&gt;&nbsp;docIds,
-               <a href="../../../../com/google/enterprise/adaptor/PushErrorHandler.html" title="interface in com.google.enterprise.adaptor">PushErrorHandler</a>&nbsp;handler)
+               <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a>&nbsp;handler)
                  throws <a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <div class="block">Push <code>DocId</code>s immediately and block until they are successfully
  provided to the GSA or the error handler gives up. This method can take a
@@ -221,7 +221,7 @@
 
  <p>If handler is <code>null</code>, then a default error handler is used.
 
- <p>Equivalent to <a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushRecords(java.lang.Iterable, com.google.enterprise.adaptor.PushErrorHandler)"><code>pushRecords(Iterable, PushErrorHandler)</code></a>
+ <p>Equivalent to <a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushRecords(java.lang.Iterable, com.google.enterprise.adaptor.ExceptionHandler)"><code>pushRecords(Iterable, ExceptionHandler)</code></a>
  with default values for each <code>Record</code>.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first DocId to fail</dd>
 <dt><span class="strong">Throws:</span></dt>
@@ -244,17 +244,17 @@
  <p>Equivalent to <code>pushRecords(records, null)</code>.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first Record to fail</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no Records were sent</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushRecords(java.lang.Iterable, com.google.enterprise.adaptor.PushErrorHandler)"><code>pushRecords(Iterable, PushErrorHandler)</code></a></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no Records were sent</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushRecords(java.lang.Iterable, com.google.enterprise.adaptor.ExceptionHandler)"><code>pushRecords(Iterable, ExceptionHandler)</code></a></dd></dl>
 </li>
 </ul>
-<a name="pushRecords(java.lang.Iterable, com.google.enterprise.adaptor.PushErrorHandler)">
+<a name="pushRecords(java.lang.Iterable, com.google.enterprise.adaptor.ExceptionHandler)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>pushRecords</h4>
 <pre><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</a>&nbsp;pushRecords(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</a>&gt;&nbsp;records,
-                             <a href="../../../../com/google/enterprise/adaptor/PushErrorHandler.html" title="interface in com.google.enterprise.adaptor">PushErrorHandler</a>&nbsp;handler)
+                             <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a>&nbsp;handler)
                                throws <a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <div class="block">Push <code>Record</code>s immediately and block until they are successfully
  provided to the GSA or the error handler gives up. This method can take a
@@ -290,17 +290,17 @@
  <p>Equivalent to <code>pushNamedResources(resources, null)</code>.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first DocId to fail</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no resources were sent</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushNamedResources(java.util.Map, com.google.enterprise.adaptor.PushErrorHandler)"><code>pushNamedResources(Map, PushErrorHandler)</code></a></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no resources were sent</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushNamedResources(java.util.Map, com.google.enterprise.adaptor.ExceptionHandler)"><code>pushNamedResources(Map, ExceptionHandler)</code></a></dd></dl>
 </li>
 </ul>
-<a name="pushNamedResources(java.util.Map, com.google.enterprise.adaptor.PushErrorHandler)">
+<a name="pushNamedResources(java.util.Map, com.google.enterprise.adaptor.ExceptionHandler)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>pushNamedResources</h4>
 <pre><a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>&nbsp;pushNamedResources(<a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>,<a href="../../../../com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</a>&gt;&nbsp;resources,
-                       <a href="../../../../com/google/enterprise/adaptor/PushErrorHandler.html" title="interface in com.google.enterprise.adaptor">PushErrorHandler</a>&nbsp;handler)
+                       <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a>&nbsp;handler)
                          throws <a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <div class="block">Push named resources immediately and block until they are successfully
  provided to the GSA or the error handler gives up. This method can take a

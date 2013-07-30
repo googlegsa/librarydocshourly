@@ -304,31 +304,9 @@
 </dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/Principal.html#DEFAULT_NAMESPACE">DEFAULT_NAMESPACE</a></span> - Static variable in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="./com/google/enterprise/adaptor/DefaultGetDocIdsErrorHandler.html" title="class in com.google.enterprise.adaptor"><span class="strong">DefaultGetDocIdsErrorHandler</span></a> - Class in <a href="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</a></dt>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/ExceptionHandlers.html#defaultHandler()">defaultHandler()</a></span> - Static method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/ExceptionHandlers.html" title="class in com.google.enterprise.adaptor">ExceptionHandlers</a></dt>
 <dd>
-<div class="block">Default handler of errors during <a href="./com/google/enterprise/adaptor/Adaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)"><code>Adaptor.getDocIds(DocIdPusher)</code></a>.</div>
-</dd>
-<dt><span class="strong"><a href="./com/google/enterprise/adaptor/DefaultGetDocIdsErrorHandler.html#DefaultGetDocIdsErrorHandler()">DefaultGetDocIdsErrorHandler()</a></span> - Constructor for class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DefaultGetDocIdsErrorHandler.html" title="class in com.google.enterprise.adaptor">DefaultGetDocIdsErrorHandler</a></dt>
-<dd>
-<div class="block">Same as <code>DefaultGetDocIdsErrorHandler(12, 5000)</code>.</div>
-</dd>
-<dt><span class="strong"><a href="./com/google/enterprise/adaptor/DefaultGetDocIdsErrorHandler.html#DefaultGetDocIdsErrorHandler(int, long)">DefaultGetDocIdsErrorHandler(int, long)</a></span> - Constructor for class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DefaultGetDocIdsErrorHandler.html" title="class in com.google.enterprise.adaptor">DefaultGetDocIdsErrorHandler</a></dt>
-<dd>
-<div class="block">Create a default error handler that gives up after <code>maximumTries</code> and
- sleeps <code>sleepTimeMillis * numberOfTries</code> before retrying.</div>
-</dd>
-<dt><a href="./com/google/enterprise/adaptor/DefaultPushErrorHandler.html" title="class in com.google.enterprise.adaptor"><span class="strong">DefaultPushErrorHandler</span></a> - Class in <a href="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</a></dt>
-<dd>
-<div class="block">Default handler of errors during a push of <code>DocId</code>s to the GSA.</div>
-</dd>
-<dt><span class="strong"><a href="./com/google/enterprise/adaptor/DefaultPushErrorHandler.html#DefaultPushErrorHandler()">DefaultPushErrorHandler()</a></span> - Constructor for class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DefaultPushErrorHandler.html" title="class in com.google.enterprise.adaptor">DefaultPushErrorHandler</a></dt>
-<dd>
-<div class="block">Same as <code>DefaultPushErrorHandler(12, 5000)</code>.</div>
-</dd>
-<dt><span class="strong"><a href="./com/google/enterprise/adaptor/DefaultPushErrorHandler.html#DefaultPushErrorHandler(int, long)">DefaultPushErrorHandler(int, long)</a></span> - Constructor for class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DefaultPushErrorHandler.html" title="class in com.google.enterprise.adaptor">DefaultPushErrorHandler</a></dt>
-<dd>
-<div class="block">Create a default error handler that gives up after <code>maximumTries</code> and
- sleeps <code>sleepTimeMillis * numberOfTries</code> before retrying.</div>
+<div class="block">The default exception handler.</div>
 </dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/AbstractAdaptor.html#destroy()">destroy()</a></span> - Method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/AbstractAdaptor.html" title="class in com.google.enterprise.adaptor">AbstractAdaptor</a></dt>
 <dd>
@@ -416,6 +394,14 @@
 </dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/Principal.html#equals(java.lang.Object)">equals(Object)</a></span> - Method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="./com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><span class="strong">ExceptionHandler</span></a> - Interface in <a href="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</a></dt>
+<dd>
+<div class="block">Interface for handling errors and handling retrying policy.</div>
+</dd>
+<dt><a href="./com/google/enterprise/adaptor/ExceptionHandlers.html" title="class in com.google.enterprise.adaptor"><span class="strong">ExceptionHandlers</span></a> - Class in <a href="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</a></dt>
+<dd>
+<div class="block">Utility class for <a href="./com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a>s.</div>
+</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/prebuilt/Command.html#exec(java.lang.String[])">exec(String[])</a></span> - Method in class com.google.enterprise.adaptor.prebuilt.<a href="./com/google/enterprise/adaptor/prebuilt/Command.html" title="class in com.google.enterprise.adaptor.prebuilt">Command</a></dt>
 <dd>
 <div class="block">Same as <code>exec(command, null, new byte[0])</code>.</div>
@@ -441,6 +427,10 @@
 <dd>
 <div class="block">Create process <code>command</code> starting in the <code>workingDir</code> and
  providing <code>stdin</code> as input.</div>
+</dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/ExceptionHandlers.html#exponentialBackoffHandler(int, long, java.util.concurrent.TimeUnit)">exponentialBackoffHandler(int, long, TimeUnit)</a></span> - Static method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/ExceptionHandlers.html" title="class in com.google.enterprise.adaptor">ExceptionHandlers</a></dt>
+<dd>
+<div class="block">Create a handler that uses exponential backoff to sleep before retrying.</div>
 </dd>
 </dl>
 <a name="_F_">
@@ -577,21 +567,17 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/prebuilt/FileSystemAdaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)">getDocIds(DocIdPusher)</a></span> - Method in class com.google.enterprise.adaptor.prebuilt.<a href="./com/google/enterprise/adaptor/prebuilt/FileSystemAdaptor.html" title="class in com.google.enterprise.adaptor.prebuilt">FileSystemAdaptor</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="./com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><span class="strong">GetDocIdsErrorHandler</span></a> - Interface in <a href="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</a></dt>
-<dd>
-<div class="block">Interface for handling errors encountered during scheduled pushing of <code>DocId</code>s.</div>
-</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/TransformPipeline.html#getDocumentTransforms()">getDocumentTransforms()</a></span> - Method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/TransformPipeline.html" title="class in com.google.enterprise.adaptor">TransformPipeline</a></dt>
 <dd>
 <div class="block">Retrieve transforms in the order they are processed in the pipeline.</div>
 </dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/AdaptorContext.html#getGetDocIdsFullErrorHandler()">getGetDocIdsFullErrorHandler()</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</a></dt>
 <dd>
-<div class="block">Retrieve the current <a href="./com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><code>GetDocIdsErrorHandler</code></a> for full push.</div>
+<div class="block">Retrieve the current <a href="./com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a> for full push.</div>
 </dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/AdaptorContext.html#getGetDocIdsIncrementalErrorHandler()">getGetDocIdsIncrementalErrorHandler()</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</a></dt>
 <dd>
-<div class="block">Retrieve the current <a href="./com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><code>GetDocIdsErrorHandler</code></a> for incremental push.</div>
+<div class="block">Retrieve the current <a href="./com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a> for incremental push.</div>
 </dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/AuthnIdentity.html#getGroups()">getGroups()</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/AuthnIdentity.html" title="interface in com.google.enterprise.adaptor">AuthnIdentity</a></dt>
 <dd>
@@ -752,49 +738,9 @@
 </a>
 <h2 class="title">H</h2>
 <dl>
-<dt><span class="strong"><a href="./com/google/enterprise/adaptor/DefaultPushErrorHandler.html#handleFailedReadingReply(java.lang.Exception, int)">handleFailedReadingReply(Exception, int)</a></span> - Method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DefaultPushErrorHandler.html" title="class in com.google.enterprise.adaptor">DefaultPushErrorHandler</a></dt>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/ExceptionHandler.html#handleException(java.lang.Exception, int)">handleException(Exception, int)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a></dt>
 <dd>
-<div class="block">Handle a failure that <a href="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor"><code>DocIdPusher</code></a> had reading the GSA's response.</div>
-</dd>
-<dt><span class="strong"><a href="./com/google/enterprise/adaptor/PushErrorHandler.html#handleFailedReadingReply(java.lang.Exception, int)">handleFailedReadingReply(Exception, int)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/PushErrorHandler.html" title="interface in com.google.enterprise.adaptor">PushErrorHandler</a></dt>
-<dd>
-<div class="block">Handle a failure that <a href="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor"><code>DocIdPusher</code></a> had reading the GSA's response.</div>
-</dd>
-<dt><span class="strong"><a href="./com/google/enterprise/adaptor/DefaultPushErrorHandler.html#handleFailedToConnect(java.lang.Exception, int)">handleFailedToConnect(Exception, int)</a></span> - Method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DefaultPushErrorHandler.html" title="class in com.google.enterprise.adaptor">DefaultPushErrorHandler</a></dt>
-<dd>
-<div class="block">Handle a failure that <a href="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor"><code>DocIdPusher</code></a> had connecting with the GSA to
- send a batch.</div>
-</dd>
-<dt><span class="strong"><a href="./com/google/enterprise/adaptor/PushErrorHandler.html#handleFailedToConnect(java.lang.Exception, int)">handleFailedToConnect(Exception, int)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/PushErrorHandler.html" title="interface in com.google.enterprise.adaptor">PushErrorHandler</a></dt>
-<dd>
-<div class="block">Handle a failure that <a href="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor"><code>DocIdPusher</code></a> had connecting with the GSA to
- send a batch.</div>
-</dd>
-<dt><span class="strong"><a href="./com/google/enterprise/adaptor/DefaultGetDocIdsErrorHandler.html#handleFailedToGetDocIds(java.lang.Exception, int)">handleFailedToGetDocIds(Exception, int)</a></span> - Method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DefaultGetDocIdsErrorHandler.html" title="class in com.google.enterprise.adaptor">DefaultGetDocIdsErrorHandler</a></dt>
-<dd>
-<div class="block">There was a failure running <a href="./com/google/enterprise/adaptor/Adaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)"><code>Adaptor.getDocIds(com.google.enterprise.adaptor.DocIdPusher)</code></a>.</div>
-</dd>
-<dt><span class="strong"><a href="./com/google/enterprise/adaptor/GetDocIdsErrorHandler.html#handleFailedToGetDocIds(java.lang.Exception, int)">handleFailedToGetDocIds(Exception, int)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor">GetDocIdsErrorHandler</a></dt>
-<dd>
-<div class="block">There was a failure running <a href="./com/google/enterprise/adaptor/Adaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)"><code>Adaptor.getDocIds(com.google.enterprise.adaptor.DocIdPusher)</code></a>.</div>
-</dd>
-<dt><span class="strong"><a href="./com/google/enterprise/adaptor/DefaultPushErrorHandler.html#handleFailedWriting(java.lang.Exception, int)">handleFailedWriting(Exception, int)</a></span> - Method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DefaultPushErrorHandler.html" title="class in com.google.enterprise.adaptor">DefaultPushErrorHandler</a></dt>
-<dd>
-<div class="block">Handle a failure that <a href="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor"><code>DocIdPusher</code></a> had writing to the GSA while
- sending a batch.</div>
-</dd>
-<dt><span class="strong"><a href="./com/google/enterprise/adaptor/PushErrorHandler.html#handleFailedWriting(java.lang.Exception, int)">handleFailedWriting(Exception, int)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/PushErrorHandler.html" title="interface in com.google.enterprise.adaptor">PushErrorHandler</a></dt>
-<dd>
-<div class="block">Handle a failure that <a href="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor"><code>DocIdPusher</code></a> had writing to the GSA while
- sending a batch.</div>
-</dd>
-<dt><span class="strong"><a href="./com/google/enterprise/adaptor/DefaultGetDocIdsErrorHandler.html#handleGeneric(java.lang.Exception, int)">handleGeneric(Exception, int)</a></span> - Method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DefaultGetDocIdsErrorHandler.html" title="class in com.google.enterprise.adaptor">DefaultGetDocIdsErrorHandler</a></dt>
-<dd>
-<div class="block">Common handle method for generic error handling.</div>
-</dd>
-<dt><span class="strong"><a href="./com/google/enterprise/adaptor/DefaultPushErrorHandler.html#handleGeneric(java.lang.Exception, int)">handleGeneric(Exception, int)</a></span> - Method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DefaultPushErrorHandler.html" title="class in com.google.enterprise.adaptor">DefaultPushErrorHandler</a></dt>
-<dd>
-<div class="block">Common handle method for generic error handling.</div>
+<div class="block">Determine how to proceed after an exception was thrown.</div>
 </dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/Request.html#hasChangedSinceLastAccess(java.util.Date)">hasChangedSinceLastAccess(Date)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/Request.html" title="interface in com.google.enterprise.adaptor">Request</a></dt>
 <dd>
@@ -1062,22 +1008,17 @@
 <div class="block">Push <code>DocId</code>s immediately and block until they are successfully
  provided to the GSA or the error handler gives up.</div>
 </dd>
-<dt><span class="strong"><a href="./com/google/enterprise/adaptor/DocIdPusher.html#pushDocIds(java.lang.Iterable, com.google.enterprise.adaptor.PushErrorHandler)">pushDocIds(Iterable&lt;DocId&gt;, PushErrorHandler)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</a></dt>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/DocIdPusher.html#pushDocIds(java.lang.Iterable, com.google.enterprise.adaptor.ExceptionHandler)">pushDocIds(Iterable&lt;DocId&gt;, ExceptionHandler)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</a></dt>
 <dd>
 <div class="block">Push <code>DocId</code>s immediately and block until they are successfully
  provided to the GSA or the error handler gives up.</div>
-</dd>
-<dt><a href="./com/google/enterprise/adaptor/PushErrorHandler.html" title="interface in com.google.enterprise.adaptor"><span class="strong">PushErrorHandler</span></a> - Interface in <a href="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</a></dt>
-<dd>
-<div class="block">Interface for handling errors encountered during pushing of <code>DocId</code>s
- via <a href="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor"><code>DocIdPusher</code></a>.</div>
 </dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/DocIdPusher.html#pushNamedResources(java.util.Map)">pushNamedResources(Map&lt;DocId, Acl&gt;)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</a></dt>
 <dd>
 <div class="block">Push named resources immediately and block until they are successfully
  provided to the GSA or the error handler gives up.</div>
 </dd>
-<dt><span class="strong"><a href="./com/google/enterprise/adaptor/DocIdPusher.html#pushNamedResources(java.util.Map, com.google.enterprise.adaptor.PushErrorHandler)">pushNamedResources(Map&lt;DocId, Acl&gt;, PushErrorHandler)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</a></dt>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/DocIdPusher.html#pushNamedResources(java.util.Map, com.google.enterprise.adaptor.ExceptionHandler)">pushNamedResources(Map&lt;DocId, Acl&gt;, ExceptionHandler)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</a></dt>
 <dd>
 <div class="block">Push named resources immediately and block until they are successfully
  provided to the GSA or the error handler gives up.</div>
@@ -1087,7 +1028,7 @@
 <div class="block">Push <code>Record</code>s immediately and block until they are successfully
  provided to the GSA or the error handler gives up.</div>
 </dd>
-<dt><span class="strong"><a href="./com/google/enterprise/adaptor/DocIdPusher.html#pushRecords(java.lang.Iterable, com.google.enterprise.adaptor.PushErrorHandler)">pushRecords(Iterable&lt;DocIdPusher.Record&gt;, PushErrorHandler)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</a></dt>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/DocIdPusher.html#pushRecords(java.lang.Iterable, com.google.enterprise.adaptor.ExceptionHandler)">pushRecords(Iterable&lt;DocIdPusher.Record&gt;, ExceptionHandler)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</a></dt>
 <dd>
 <div class="block">Push <code>Record</code>s immediately and block until they are successfully
  provided to the GSA or the error handler gives up.</div>
@@ -1100,7 +1041,7 @@
 <dl>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/CommandStreamParser.html#readFromAuthorizer()">readFromAuthorizer()</a></span> - Method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/CommandStreamParser.html" title="class in com.google.enterprise.adaptor">CommandStreamParser</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./com/google/enterprise/adaptor/CommandStreamParser.html#readFromLister(com.google.enterprise.adaptor.DocIdPusher, com.google.enterprise.adaptor.PushErrorHandler)">readFromLister(DocIdPusher, PushErrorHandler)</a></span> - Method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/CommandStreamParser.html" title="class in com.google.enterprise.adaptor">CommandStreamParser</a></dt>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/CommandStreamParser.html#readFromLister(com.google.enterprise.adaptor.DocIdPusher, com.google.enterprise.adaptor.ExceptionHandler)">readFromLister(DocIdPusher, ExceptionHandler)</a></span> - Method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/CommandStreamParser.html" title="class in com.google.enterprise.adaptor">CommandStreamParser</a></dt>
 <dd>
 <div class="block">Parse a listing response, sending results to <code>pusher</code>.</div>
 </dd>
@@ -1265,13 +1206,13 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/Acl.Builder.html#setEverythingCaseSensitive()">setEverythingCaseSensitive()</a></span> - Method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/Acl.Builder.html" title="class in com.google.enterprise.adaptor">Acl.Builder</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./com/google/enterprise/adaptor/AdaptorContext.html#setGetDocIdsFullErrorHandler(com.google.enterprise.adaptor.GetDocIdsErrorHandler)">setGetDocIdsFullErrorHandler(GetDocIdsErrorHandler)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</a></dt>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/AdaptorContext.html#setGetDocIdsFullErrorHandler(com.google.enterprise.adaptor.ExceptionHandler)">setGetDocIdsFullErrorHandler(ExceptionHandler)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</a></dt>
 <dd>
-<div class="block">Override the default <a href="./com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><code>GetDocIdsErrorHandler</code></a> for full push.</div>
+<div class="block">Override the default <a href="./com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a> for full push.</div>
 </dd>
-<dt><span class="strong"><a href="./com/google/enterprise/adaptor/AdaptorContext.html#setGetDocIdsIncrementalErrorHandler(com.google.enterprise.adaptor.GetDocIdsErrorHandler)">setGetDocIdsIncrementalErrorHandler(GetDocIdsErrorHandler)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</a></dt>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/AdaptorContext.html#setGetDocIdsIncrementalErrorHandler(com.google.enterprise.adaptor.ExceptionHandler)">setGetDocIdsIncrementalErrorHandler(ExceptionHandler)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</a></dt>
 <dd>
-<div class="block">Override the default <a href="./com/google/enterprise/adaptor/GetDocIdsErrorHandler.html" title="interface in com.google.enterprise.adaptor"><code>GetDocIdsErrorHandler</code></a> for incremental push.</div>
+<div class="block">Override the default <a href="./com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a> for incremental push.</div>
 </dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/Acl.Builder.html#setInheritanceType(com.google.enterprise.adaptor.Acl.InheritanceType)">setInheritanceType(Acl.InheritanceType)</a></span> - Method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/Acl.Builder.html" title="class in com.google.enterprise.adaptor">Acl.Builder</a></dt>
 <dd>
