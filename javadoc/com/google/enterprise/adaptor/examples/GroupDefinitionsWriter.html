@@ -2,13 +2,13 @@
 <!-- NewPage -->
 <html lang="en">
 <head>
-<title>FileSystemAdaptor</title>
+<title>GroupDefinitionsWriter</title>
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="FileSystemAdaptor";
+        parent.document.title="GroupDefinitionsWriter";
     }
 //-->
 </script>
@@ -33,12 +33,12 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/google/enterprise/adaptor/examples/DbAdaptorTemplate.html" title="class in com.google.enterprise.adaptor.examples"><span class="strong">PREV CLASS</span></a></li>
-<li><a href="../../../../../com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html" title="class in com.google.enterprise.adaptor.examples"><span class="strong">NEXT CLASS</span></a></li>
+<li><a href="../../../../../com/google/enterprise/adaptor/examples/FileSystemAdaptor.html" title="class in com.google.enterprise.adaptor.examples"><span class="strong">PREV CLASS</span></a></li>
+<li>NEXT CLASS</li>
 </ul>
 <ul class="navList">
-<li><a href="../../../../../index.html?com/google/enterprise/adaptor/examples/FileSystemAdaptor.html" target="_top">FRAMES</a></li>
-<li><a href="FileSystemAdaptor.html" target="_top">NO FRAMES</a></li>
+<li><a href="../../../../../index.html?com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html" target="_top">FRAMES</a></li>
+<li><a href="GroupDefinitionsWriter.html" target="_top">NO FRAMES</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
 <li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
@@ -77,7 +77,7 @@
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <p class="subTitle">com.google.enterprise.adaptor.examples</p>
-<h2 title="Class FileSystemAdaptor" class="title">Class FileSystemAdaptor</h2>
+<h2 title="Class GroupDefinitionsWriter" class="title">Class GroupDefinitionsWriter</h2>
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
@@ -87,7 +87,7 @@
 <li><a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html" title="class in com.google.enterprise.adaptor">com.google.enterprise.adaptor.AbstractAdaptor</a></li>
 <li>
 <ul class="inheritance">
-<li>com.google.enterprise.adaptor.examples.FileSystemAdaptor</li>
+<li>com.google.enterprise.adaptor.examples.GroupDefinitionsWriter</li>
 </ul>
 </li>
 </ul>
@@ -102,9 +102,9 @@
 </dl>
 <hr>
 <br>
-<pre>public class <strong>FileSystemAdaptor</strong>
+<pre>public class <strong>GroupDefinitionsWriter</strong>
 extends <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html" title="class in com.google.enterprise.adaptor">AbstractAdaptor</a></pre>
-<div class="block">Simple example adaptor that serves files from the local filesystem.</div>
+<div class="block">Demonstrates sending group definitions to GSA.</div>
 </li>
 </ul>
 </div>
@@ -123,7 +123,7 @@ extends <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.ht
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../../../com/google/enterprise/adaptor/examples/FileSystemAdaptor.html#FileSystemAdaptor()">FileSystemAdaptor</a></strong>()</code>&nbsp;</td>
+<td class="colOne"><code><strong><a href="../../../../../com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html#GroupDefinitionsWriter()">GroupDefinitionsWriter</a></strong>()</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -142,35 +142,20 @@ extends <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.ht
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../com/google/enterprise/adaptor/examples/FileSystemAdaptor.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)">getDocContent</a></strong>(<a href="../../../../../com/google/enterprise/adaptor/Request.html" title="interface in com.google.enterprise.adaptor">Request</a>&nbsp;req,
-             <a href="../../../../../com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</a>&nbsp;resp)</code>
+<td class="colLast"><code><strong><a href="../../../../../com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)">getDocContent</a></strong>(<a href="../../../../../com/google/enterprise/adaptor/Request.html" title="interface in com.google.enterprise.adaptor">Request</a>&nbsp;req,
+             <a href="../../../../../com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</a>&nbsp;res)</code>
 <div class="block">Provides contents and metadata of particular document.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../com/google/enterprise/adaptor/examples/FileSystemAdaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)">getDocIds</a></strong>(<a href="../../../../../com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</a>&nbsp;pusher)</code>
+<td class="colLast"><code><strong><a href="../../../../../com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)">getDocIds</a></strong>(<a href="../../../../../com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</a>&nbsp;pusher)</code>
 <div class="block">Pushes all the <code>DocId</code>s that are suppose to be indexed by the GSA.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../com/google/enterprise/adaptor/examples/FileSystemAdaptor.html#init(com.google.enterprise.adaptor.AdaptorContext)">init</a></strong>(<a href="../../../../../com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</a>&nbsp;context)</code>
-<div class="block">Initialize adaptor with the current context.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../com/google/enterprise/adaptor/examples/FileSystemAdaptor.html#initConfig(com.google.enterprise.adaptor.Config)">initConfig</a></strong>(<a href="../../../../../com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</a>&nbsp;config)</code>
-<div class="block">Provides the opportunity for the Adaptor to create new configuration values
- or override default values.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../com/google/enterprise/adaptor/examples/FileSystemAdaptor.html#main(java.lang.String[])">main</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</code>
-<div class="block">Call default main for adaptors.</div>
-</td>
+<td class="colLast"><code><strong><a href="../../../../../com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html#main(java.lang.String[])">main</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -178,7 +163,7 @@ extends <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.ht
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;com.google.enterprise.adaptor.<a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html" title="class in com.google.enterprise.adaptor">AbstractAdaptor</a></h3>
-<code><a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#destroy()">destroy</a>, <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#isUserAuthorized(com.google.enterprise.adaptor.AuthnIdentity, java.util.Collection)">isUserAuthorized</a>, <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#main(com.google.enterprise.adaptor.Adaptor, java.lang.String[])">main</a></code></li>
+<code><a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#destroy()">destroy</a>, <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#init(com.google.enterprise.adaptor.AdaptorContext)">init</a>, <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#initConfig(com.google.enterprise.adaptor.Config)">initConfig</a>, <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#isUserAuthorized(com.google.enterprise.adaptor.AuthnIdentity, java.util.Collection)">isUserAuthorized</a>, <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#main(com.google.enterprise.adaptor.Adaptor, java.lang.String[])">main</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -201,13 +186,13 @@ extends <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.ht
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="FileSystemAdaptor()">
+<a name="GroupDefinitionsWriter()">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>FileSystemAdaptor</h4>
-<pre>public&nbsp;FileSystemAdaptor()</pre>
+<h4>GroupDefinitionsWriter</h4>
+<pre>public&nbsp;GroupDefinitionsWriter()</pre>
 </li>
 </ul>
 </li>
@@ -218,60 +203,6 @@ extends <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.ht
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="initConfig(com.google.enterprise.adaptor.Config)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>initConfig</h4>
-<pre>public&nbsp;void&nbsp;initConfig(<a href="../../../../../com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</a>&nbsp;config)</pre>
-<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#initConfig(com.google.enterprise.adaptor.Config)">AbstractAdaptor</a></code></strong></div>
-<div class="block">Provides the opportunity for the Adaptor to create new configuration values
- or override default values. Only <a href="../../../../../com/google/enterprise/adaptor/Config.html#addKey(java.lang.String, java.lang.String)"><code>Config.addKey(java.lang.String, java.lang.String)</code></a> should likely be
- called. The user's configuration will override any values set in this way.
- This method is called by <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#main(com.google.enterprise.adaptor.Adaptor, java.lang.String[])"><code>AbstractAdaptor.main(com.google.enterprise.adaptor.Adaptor, java.lang.String[])</code></a> before <a href="../../../../../com/google/enterprise/adaptor/Adaptor.html#init(com.google.enterprise.adaptor.AdaptorContext)"><code>Adaptor.init(com.google.enterprise.adaptor.AdaptorContext)</code></a>
- is called.
-
- <p>This implementation does nothing.</div>
-<dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../../../../com/google/enterprise/adaptor/Adaptor.html#initConfig(com.google.enterprise.adaptor.Config)">initConfig</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/google/enterprise/adaptor/Adaptor.html" title="interface in com.google.enterprise.adaptor">Adaptor</a></code></dd>
-<dt><strong>Overrides:</strong></dt>
-<dd><code><a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#initConfig(com.google.enterprise.adaptor.Config)">initConfig</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html" title="class in com.google.enterprise.adaptor">AbstractAdaptor</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="init(com.google.enterprise.adaptor.AdaptorContext)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>init</h4>
-<pre>public&nbsp;void&nbsp;init(<a href="../../../../../com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</a>&nbsp;context)
-          throws <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
-<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#init(com.google.enterprise.adaptor.AdaptorContext)">AbstractAdaptor</a></code></strong></div>
-<div class="block">Initialize adaptor with the current context. This is the ideal time to
- start any threads to do extra behind-the-scenes work. The <code>context</code>
- points to other useful objects that can be used at any time. For example,
- methods on <a href="../../../../../com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor"><code>DocIdPusher</code></a> provided via <a href="../../../../../com/google/enterprise/adaptor/AdaptorContext.html#getDocIdPusher()"><code>AdaptorContext.getDocIdPusher()</code></a> are allowed to be called whenever the
- Adaptor wishes. This allows doing event-based incremental pushes at any
- time.
-
- <p>The method is called at the end of <a href="../../../../../com/google/enterprise/adaptor/GsaCommunicationHandler.html#start(com.sun.net.httpserver.HttpServer, com.sun.net.httpserver.HttpServer)"><code>GsaCommunicationHandler.start(com.sun.net.httpserver.HttpServer, com.sun.net.httpserver.HttpServer)</code></a>.
-
- <p>If you experience a fatal error during initialization, feel free to
- throw an <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang"><code>Exception</code></a> to cancel the startup process.
-
- <p>This implementation does nothing.</div>
-<dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../../../../com/google/enterprise/adaptor/Adaptor.html#init(com.google.enterprise.adaptor.AdaptorContext)">init</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/google/enterprise/adaptor/Adaptor.html" title="interface in com.google.enterprise.adaptor">Adaptor</a></code></dd>
-<dt><strong>Overrides:</strong></dt>
-<dd><code><a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#init(com.google.enterprise.adaptor.AdaptorContext)">init</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html" title="class in com.google.enterprise.adaptor">AbstractAdaptor</a></code></dd>
-<dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
-</li>
-</ul>
 <a name="getDocIds(com.google.enterprise.adaptor.DocIdPusher)">
 <!--   -->
 </a>
@@ -279,8 +210,7 @@ extends <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.ht
 <li class="blockList">
 <h4>getDocIds</h4>
 <pre>public&nbsp;void&nbsp;getDocIds(<a href="../../../../../com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</a>&nbsp;pusher)
-               throws <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
-                      <a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+               throws <a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../com/google/enterprise/adaptor/Adaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)">Adaptor</a></code></strong></div>
 <div class="block">Pushes all the <code>DocId</code>s that are suppose to be indexed by the GSA.
  This will frequently involve re-sending <code>DocId</code>s to the GSA, but this
@@ -296,7 +226,6 @@ extends <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.ht
  <a href="../../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a> in use in <a href="../../../../../com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor"><code>AdaptorContext</code></a> will
  determine if and when to retry.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
 <dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
 </li>
 </ul>
@@ -307,7 +236,7 @@ extends <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.ht
 <li class="blockList">
 <h4>getDocContent</h4>
 <pre>public&nbsp;void&nbsp;getDocContent(<a href="../../../../../com/google/enterprise/adaptor/Request.html" title="interface in com.google.enterprise.adaptor">Request</a>&nbsp;req,
-                 <a href="../../../../../com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</a>&nbsp;resp)
+                 <a href="../../../../../com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</a>&nbsp;res)
                    throws <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../com/google/enterprise/adaptor/Adaptor.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)">Adaptor</a></code></strong></div>
 <div class="block">Provides contents and metadata of particular document. This method should
@@ -329,7 +258,6 @@ extends <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.ht
 <li class="blockList">
 <h4>main</h4>
 <pre>public static&nbsp;void&nbsp;main(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</pre>
-<div class="block">Call default main for adaptors.</div>
 </li>
 </ul>
 </li>
@@ -357,12 +285,12 @@ extends <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.ht
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/google/enterprise/adaptor/examples/DbAdaptorTemplate.html" title="class in com.google.enterprise.adaptor.examples"><span class="strong">PREV CLASS</span></a></li>
-<li><a href="../../../../../com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html" title="class in com.google.enterprise.adaptor.examples"><span class="strong">NEXT CLASS</span></a></li>
+<li><a href="../../../../../com/google/enterprise/adaptor/examples/FileSystemAdaptor.html" title="class in com.google.enterprise.adaptor.examples"><span class="strong">PREV CLASS</span></a></li>
+<li>NEXT CLASS</li>
 </ul>
 <ul class="navList">
-<li><a href="../../../../../index.html?com/google/enterprise/adaptor/examples/FileSystemAdaptor.html" target="_top">FRAMES</a></li>
-<li><a href="FileSystemAdaptor.html" target="_top">NO FRAMES</a></li>
+<li><a href="../../../../../index.html?com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html" target="_top">FRAMES</a></li>
+<li><a href="GroupDefinitionsWriter.html" target="_top">NO FRAMES</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">
 <li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>

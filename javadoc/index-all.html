@@ -523,6 +523,8 @@
 </dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/FileSystemAdaptor.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)">getDocContent(Request, Response)</a></span> - Method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/FileSystemAdaptor.html" title="class in com.google.enterprise.adaptor.examples">FileSystemAdaptor</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)">getDocContent(Request, Response)</a></span> - Method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html" title="class in com.google.enterprise.adaptor.examples">GroupDefinitionsWriter</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/prebuilt/CommandLineAdaptor.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)">getDocContent(Request, Response)</a></span> - Method in class com.google.enterprise.adaptor.prebuilt.<a href="./com/google/enterprise/adaptor/prebuilt/CommandLineAdaptor.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineAdaptor</a></dt>
 <dd>
 <div class="block">Gives the bytes of a document referenced with id.</div>
@@ -562,6 +564,8 @@
 <div class="block">Get all doc ids from database.</div>
 </dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/FileSystemAdaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)">getDocIds(DocIdPusher)</a></span> - Method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/FileSystemAdaptor.html" title="class in com.google.enterprise.adaptor.examples">FileSystemAdaptor</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)">getDocIds(DocIdPusher)</a></span> - Method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html" title="class in com.google.enterprise.adaptor.examples">GroupDefinitionsWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/prebuilt/CommandLineAdaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)">getDocIds(DocIdPusher)</a></span> - Method in class com.google.enterprise.adaptor.prebuilt.<a href="./com/google/enterprise/adaptor/prebuilt/CommandLineAdaptor.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineAdaptor</a></dt>
 <dd>&nbsp;</dd>
@@ -717,6 +721,12 @@
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/CommandStreamParser.html#getVersionNumber()">getVersionNumber()</a></span> - Method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/CommandStreamParser.html" title="class in com.google.enterprise.adaptor">CommandStreamParser</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#getWorkingDirectory()">getWorkingDirectory()</a></span> - Method in class com.google.enterprise.adaptor.prebuilt.<a href="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineTransform</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html" title="class in com.google.enterprise.adaptor.examples"><span class="strong">GroupDefinitionsWriter</span></a> - Class in <a href="./com/google/enterprise/adaptor/examples/package-summary.html">com.google.enterprise.adaptor.examples</a></dt>
+<dd>
+<div class="block">Demonstrates sending group definitions to GSA.</div>
+</dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html#GroupDefinitionsWriter()">GroupDefinitionsWriter()</a></span> - Constructor for class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html" title="class in com.google.enterprise.adaptor.examples">GroupDefinitionsWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor"><span class="strong">GroupPrincipal</span></a> - Class in <a href="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</a></dt>
 <dd>
@@ -934,6 +944,8 @@
 <dd>
 <div class="block">Call default main for adaptors.</div>
 </dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html#main(java.lang.String[])">main(String[])</a></span> - Static method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html" title="class in com.google.enterprise.adaptor.examples">GroupDefinitionsWriter</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/experimental/Sim.html#main(java.lang.String[])">main(String[])</a></span> - Static method in class com.google.enterprise.adaptor.experimental.<a href="./com/google/enterprise/adaptor/experimental/Sim.html" title="class in com.google.enterprise.adaptor.experimental">Sim</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/prebuilt/CommandLineAdaptor.html#main(java.lang.String[])">main(String[])</a></span> - Static method in class com.google.enterprise.adaptor.prebuilt.<a href="./com/google/enterprise/adaptor/prebuilt/CommandLineAdaptor.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineAdaptor</a></dt>
@@ -1012,6 +1024,16 @@
 <dd>
 <div class="block">Push <code>DocId</code>s immediately and block until they are successfully
  provided to the GSA or the error handler gives up.</div>
+</dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/DocIdPusher.html#pushGroupDefinitions(java.util.Map, boolean)">pushGroupDefinitions(Map&lt;GroupPrincipal, ? extends Collection&lt;Principal&gt;&gt;, boolean)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</a></dt>
+<dd>
+<div class="block">Blocking call to push group definitions to GSA ends in success or
+ when default error handler gives up.</div>
+</dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/DocIdPusher.html#pushGroupDefinitions(java.util.Map, boolean, com.google.enterprise.adaptor.ExceptionHandler)">pushGroupDefinitions(Map&lt;GroupPrincipal, ? extends Collection&lt;Principal&gt;&gt;, boolean, ExceptionHandler)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</a></dt>
+<dd>
+<div class="block">Blocking call to push group definitions to GSA ends in success or
+ when provided error handler gives up.</div>
 </dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/DocIdPusher.html#pushNamedResources(java.util.Map)">pushNamedResources(Map&lt;DocId, Acl&gt;)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</a></dt>
 <dd>
@@ -1321,6 +1343,10 @@
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/Daemon.html#start()">start()</a></span> - Method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/Daemon.html" title="class in com.google.enterprise.adaptor">Daemon</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/GsaCommunicationHandler.html#start(com.sun.net.httpserver.HttpServer, com.sun.net.httpserver.HttpServer)">start(HttpServer, HttpServer)</a></span> - Method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/GsaCommunicationHandler.html" title="class in com.google.enterprise.adaptor">GsaCommunicationHandler</a></dt>
+<dd>
+<div class="block">Starts listening for communications from GSA.</div>
+</dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/GsaCommunicationHandler.html#start(com.sun.net.httpserver.HttpServer, com.sun.net.httpserver.HttpServer, java.lang.String)">start(HttpServer, HttpServer, String)</a></span> - Method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/GsaCommunicationHandler.html" title="class in com.google.enterprise.adaptor">GsaCommunicationHandler</a></dt>
 <dd>
 <div class="block">Starts listening for communications from GSA.</div>
 </dd>
