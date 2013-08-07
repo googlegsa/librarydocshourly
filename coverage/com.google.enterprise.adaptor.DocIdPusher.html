@@ -368,7 +368,7 @@
   <td class="src"><pre class="src">&nbsp;<span class="comment">   * Immutable feed attributes for a document identified by its {@code DocId}.</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;174</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;175</td>  <td class="nbHitsCovered">&nbsp;30109</td>  <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">class</span> Record <span class="keyword">implements</span> DocIdSender.Item {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;175</td>  <td class="nbHitsCovered">&nbsp;30111</td>  <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">class</span> Record <span class="keyword">implements</span> DocIdSender.Item {</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;176</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">final</span> DocId id;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;177</td>  <td class="nbHits">&nbsp;</td>
@@ -387,15 +387,15 @@
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;184</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> Record(DocId docid, <span class="keyword">boolean</span> delete, Date lastModified,</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;185</td>  <td class="nbHitsCovered">&nbsp;30060</td>  <td class="src"><pre class="src">&nbsp;        URI link, <span class="keyword">boolean</span> crawlImmediately, <span class="keyword">boolean</span> crawlOnce, <span class="keyword">boolean</span> lock) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;186</td>  <td class="nbHitsCovered">&nbsp;30060</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">this</span>.id = docid;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;187</td>  <td class="nbHitsCovered">&nbsp;30060</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">this</span>.delete = delete;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;188</td>  <td class="nbHitsCovered">&nbsp;30060</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">this</span>.lastModified = lastModified;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;189</td>  <td class="nbHitsCovered">&nbsp;30060</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">this</span>.link = link;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;190</td>  <td class="nbHitsCovered">&nbsp;30060</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">this</span>.crawlImmediately = crawlImmediately;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;191</td>  <td class="nbHitsCovered">&nbsp;30060</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">this</span>.crawlOnce = crawlOnce;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;192</td>  <td class="nbHitsCovered">&nbsp;30060</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">this</span>.lock = lock;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;193</td>  <td class="nbHitsCovered">&nbsp;30060</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;185</td>  <td class="nbHitsCovered">&nbsp;30062</td>  <td class="src"><pre class="src">&nbsp;        URI link, <span class="keyword">boolean</span> crawlImmediately, <span class="keyword">boolean</span> crawlOnce, <span class="keyword">boolean</span> lock) {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;186</td>  <td class="nbHitsCovered">&nbsp;30062</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">this</span>.id = docid;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;187</td>  <td class="nbHitsCovered">&nbsp;30062</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">this</span>.delete = delete;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;188</td>  <td class="nbHitsCovered">&nbsp;30062</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">this</span>.lastModified = lastModified;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;189</td>  <td class="nbHitsCovered">&nbsp;30062</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">this</span>.link = link;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;190</td>  <td class="nbHitsCovered">&nbsp;30062</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">this</span>.crawlImmediately = crawlImmediately;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;191</td>  <td class="nbHitsCovered">&nbsp;30062</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">this</span>.crawlOnce = crawlOnce;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;192</td>  <td class="nbHitsCovered">&nbsp;30062</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">this</span>.lock = lock;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;193</td>  <td class="nbHitsCovered">&nbsp;30062</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;194</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;195</td>  <td class="nbHits">&nbsp;</td>
@@ -521,10 +521,10 @@
   <td class="src"><pre class="src">&nbsp;    @Override</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;259</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">boolean</span> equals(Object o) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;260</td>  <td class="nbHitsCovered">&nbsp;24</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">boolean</span> same = <span class="keyword">false</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;261</td>  <td class="nbHitsCovered"><a title="Line 261: Conditional coverage 100% (4/4) [each condition: 100%, 100%].">&nbsp;24</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 261: Conditional coverage 100% (4/4) [each condition: 100%, 100%].">      <span class="keyword">if</span> (<span class="keyword">null</span> != o &amp;&amp; <span class="keyword">this</span>.getClass().equals(o.getClass())) {</a></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;262</td>  <td class="nbHitsCovered">&nbsp;22</td>  <td class="src"><pre class="src">&nbsp;        Record other = (Record) o;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;263</td>  <td class="nbHitsCovered"><a title="Line 263: Conditional coverage 100% (14/14) [each condition: 100%, 100%, 100%, 100%, 100%, 100%, 100%].">&nbsp;22</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 263: Conditional coverage 100% (14/14) [each condition: 100%, 100%, 100%, 100%, 100%, 100%, 100%].">        same = <span class="keyword">this</span>.id.equals(other.id)</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;260</td>  <td class="nbHitsCovered">&nbsp;26</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">boolean</span> same = <span class="keyword">false</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;261</td>  <td class="nbHitsCovered"><a title="Line 261: Conditional coverage 100% (4/4) [each condition: 100%, 100%].">&nbsp;26</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 261: Conditional coverage 100% (4/4) [each condition: 100%, 100%].">      <span class="keyword">if</span> (<span class="keyword">null</span> != o &amp;&amp; <span class="keyword">this</span>.getClass().equals(o.getClass())) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;262</td>  <td class="nbHitsCovered">&nbsp;24</td>  <td class="src"><pre class="src">&nbsp;        Record other = (Record) o;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;263</td>  <td class="nbHitsCovered"><a title="Line 263: Conditional coverage 100% (14/14) [each condition: 100%, 100%, 100%, 100%, 100%, 100%, 100%].">&nbsp;24</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 263: Conditional coverage 100% (14/14) [each condition: 100%, 100%, 100%, 100%, 100%, 100%, 100%].">        same = <span class="keyword">this</span>.id.equals(other.id)</a></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;264</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;            &amp;&amp; (<span class="keyword">this</span>.delete == other.delete)</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;265</td>  <td class="nbHits">&nbsp;</td>
@@ -539,7 +539,7 @@
   <td class="src"><pre class="src">&nbsp;            &amp;&amp; equalsNullSafe(link, other.link);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;270</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;271</td>  <td class="nbHitsCovered">&nbsp;24</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">return</span> same;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;271</td>  <td class="nbHitsCovered">&nbsp;26</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">return</span> same;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;272</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;273</td>  <td class="nbHits">&nbsp;</td>
@@ -595,8 +595,8 @@
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> equalsNullSafe(Object a, Object b) {</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;300</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      <span class="keyword">boolean</span> same;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;301</td>  <td class="nbHitsCovered"><a title="Line 301: Conditional coverage 100% (4/4) [each condition: 100%, 100%].">&nbsp;27</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 301: Conditional coverage 100% (4/4) [each condition: 100%, 100%].">      <span class="keyword">if</span> (<span class="keyword">null</span> == a &amp;&amp; <span class="keyword">null</span> == b) {</a></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;302</td>  <td class="nbHitsCovered">&nbsp;21</td>  <td class="src"><pre class="src">&nbsp;        same = <span class="keyword">true</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;301</td>  <td class="nbHitsCovered"><a title="Line 301: Conditional coverage 100% (4/4) [each condition: 100%, 100%].">&nbsp;31</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 301: Conditional coverage 100% (4/4) [each condition: 100%, 100%].">      <span class="keyword">if</span> (<span class="keyword">null</span> == a &amp;&amp; <span class="keyword">null</span> == b) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;302</td>  <td class="nbHitsCovered">&nbsp;25</td>  <td class="src"><pre class="src">&nbsp;        same = <span class="keyword">true</span>;</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;303</td>  <td class="nbHitsCovered"><a title="Line 303: Conditional coverage 100% (4/4) [each condition: 100%, 100%].">&nbsp;6</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 303: Conditional coverage 100% (4/4) [each condition: 100%, 100%].">      } <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">null</span> != a &amp;&amp; <span class="keyword">null</span> != b) {</a></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;304</td>  <td class="nbHitsCovered">&nbsp;3</td>  <td class="src"><pre class="src">&nbsp;        same = a.equals(b);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;305</td>  <td class="nbHits">&nbsp;</td>
@@ -604,7 +604,7 @@
 <tr>  <td class="numLineCover">&nbsp;306</td>  <td class="nbHitsCovered">&nbsp;3</td>  <td class="src"><pre class="src">&nbsp;        same = <span class="keyword">false</span>;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;307</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;308</td>  <td class="nbHitsCovered">&nbsp;27</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">return</span> same;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;308</td>  <td class="nbHitsCovered">&nbsp;31</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">return</span> same;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;309</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;310</td>  <td class="nbHits">&nbsp;</td>
@@ -617,13 +617,13 @@
   <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;314</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> Builder {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;315</td>  <td class="nbHitsCovered">&nbsp;30060</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">private</span> DocId docid = <span class="keyword">null</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;316</td>  <td class="nbHitsCovered">&nbsp;30060</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">private</span> <span class="keyword">boolean</span> delete = <span class="keyword">false</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;317</td>  <td class="nbHitsCovered">&nbsp;30060</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">private</span> Date lastModified = <span class="keyword">null</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;318</td>  <td class="nbHitsCovered">&nbsp;30060</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">private</span> URI link = <span class="keyword">null</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;319</td>  <td class="nbHitsCovered">&nbsp;30060</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">private</span> <span class="keyword">boolean</span> crawlImmediately = <span class="keyword">false</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;320</td>  <td class="nbHitsCovered">&nbsp;30060</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">private</span> <span class="keyword">boolean</span> crawlOnce = <span class="keyword">false</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;321</td>  <td class="nbHitsCovered">&nbsp;30060</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">private</span> <span class="keyword">boolean</span> lock = <span class="keyword">false</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;315</td>  <td class="nbHitsCovered">&nbsp;30062</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">private</span> DocId docid = <span class="keyword">null</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;316</td>  <td class="nbHitsCovered">&nbsp;30062</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">private</span> <span class="keyword">boolean</span> delete = <span class="keyword">false</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;317</td>  <td class="nbHitsCovered">&nbsp;30062</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">private</span> Date lastModified = <span class="keyword">null</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;318</td>  <td class="nbHitsCovered">&nbsp;30062</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">private</span> URI link = <span class="keyword">null</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;319</td>  <td class="nbHitsCovered">&nbsp;30062</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">private</span> <span class="keyword">boolean</span> crawlImmediately = <span class="keyword">false</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;320</td>  <td class="nbHitsCovered">&nbsp;30062</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">private</span> <span class="keyword">boolean</span> crawlOnce = <span class="keyword">false</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;321</td>  <td class="nbHitsCovered">&nbsp;30062</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">private</span> <span class="keyword">boolean</span> lock = <span class="keyword">false</span>;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;322</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;323</td>  <td class="nbHits">&nbsp;</td>
@@ -636,13 +636,13 @@
   <td class="src"><pre class="src">&nbsp;<span class="comment">       * @param id non-{@code null} identifier for the document being described</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;327</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="comment">       */</span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;328</td>  <td class="nbHitsCovered">&nbsp;30053</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">public</span> Builder(DocId id) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;329</td>  <td class="nbHitsCovered"><a title="Line 329: Conditional coverage 100% (2/2).">&nbsp;30053</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 329: Conditional coverage 100% (2/2).">        <span class="keyword">if</span> (<span class="keyword">null</span> == id) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;328</td>  <td class="nbHitsCovered">&nbsp;30055</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">public</span> Builder(DocId id) {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;329</td>  <td class="nbHitsCovered"><a title="Line 329: Conditional coverage 100% (2/2).">&nbsp;30055</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 329: Conditional coverage 100% (2/2).">        <span class="keyword">if</span> (<span class="keyword">null</span> == id) {</a></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;330</td>  <td class="nbHitsCovered">&nbsp;1</td>  <td class="src"><pre class="src">&nbsp;          <span class="keyword">throw</span> <span class="keyword">new</span> NullPointerException();</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;331</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;        }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;332</td>  <td class="nbHitsCovered">&nbsp;30052</td>  <td class="src"><pre class="src">&nbsp;        docid = id;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;333</td>  <td class="nbHitsCovered">&nbsp;30052</td>  <td class="src"><pre class="src">&nbsp;      }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;332</td>  <td class="nbHitsCovered">&nbsp;30054</td>  <td class="src"><pre class="src">&nbsp;        docid = id;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;333</td>  <td class="nbHitsCovered">&nbsp;30054</td>  <td class="src"><pre class="src">&nbsp;      }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;334</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;335</td>  <td class="nbHits">&nbsp;</td>
@@ -830,7 +830,7 @@
   <td class="src"><pre class="src">&nbsp;      <span class="comment">/** Creates single instance of Record.  Does not reset builder. */</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;439</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      <span class="keyword">public</span> Record build() {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;440</td>  <td class="nbHitsCovered">&nbsp;30060</td>  <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> <span class="keyword">new</span> Record(docid, delete, lastModified,</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;440</td>  <td class="nbHitsCovered">&nbsp;30062</td>  <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> <span class="keyword">new</span> Record(docid, delete, lastModified,</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;441</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;            link, crawlImmediately, crawlOnce, lock);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;442</td>  <td class="nbHits">&nbsp;</td>
