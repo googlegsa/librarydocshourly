@@ -246,6 +246,15 @@ Configuration values for this program, like the GSA's hostname. Also several
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>,<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#getListOfConfigs(java.lang.String)">getListOfConfigs</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a list of maps corresponding to each item of the comma-separated
+ value of <code>key</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Config.html#getRawValue(java.lang.String)">getRawValue</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;key)</CODE>
 
@@ -347,6 +356,51 @@ getAllKeys</H3>
 <PRE>
 public <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt; <B>getAllKeys</B>()</PRE>
 <DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getListOfConfigs(java.lang.String)"><!-- --></A><H3>
+getListOfConfigs</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>,<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&gt; <B>getListOfConfigs</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;key)</PRE>
+<DL>
+<DD>Returns a list of maps corresponding to each item of the comma-separated
+ value of <code>key</code>. Each map is the configuration entries for that item
+ in the list. The 'name' configuration entry is added in each map based on
+ the name provided by the user.
+
+ <p>As an example, provided the following config:
+ <pre><code>adaptor.servers=server1,fluttershy , rainbowDash
+adaptor.servers.fluttershy.hostname=fluttershy
+adaptor.servers.fluttershy.port=42
+adaptor.servers.server1.hostname=applejack
+adaptor.servers.server1.port=314
+adaptor.servers.rainbowDash.hostname=rainbowdash
+adaptor.servers.rainbowDash.port=159
+adaptor.servers.rainbowDash.name=20% cooler
+adaptor.servers.derpy.hostname=hooves</code></pre>
+
+ <p>And calling:
+ <pre><code>config.getConfigList("adaptor.servers");</code></pre>
+
+ <p>Returns:
+ <pre><code>[{
+  "hostname": "applejack",
+  "port": "42",
+  "name": "server1",
+}, {
+  "hostname": "fluttershy",
+  "port": "314",
+  "name": "fluttershy",
+}, {
+  "hostname": "rainbowdash",
+  "port": "159",
+  "name": "raindowDash",
+}]</code></pre>
+<P>
 <DD><DL>
 </DL>
 </DD>
