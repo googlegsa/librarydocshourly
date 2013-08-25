@@ -432,6 +432,10 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/Acl.html#getInheritFrom()"><B>getInheritFrom()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</A>
 <DD>Returns <code>DocId</code> these ACLs are inherited from.
+<DT><A HREF="./com/google/enterprise/adaptor/Acl.html#getInheritFromFragment()"><B>getInheritFromFragment()</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</A>
+<DD>Returns fragment, if there is one, that specifies which of the parent's
+ ACLs is to to be inhertied from.
 <DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#getKeys()"><B>getKeys()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
 <DD>Get modifiable set of all keys with at least one value.
@@ -812,6 +816,10 @@ Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterpri
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</A>
 <DD>Push <code>Record</code>s immediately and block until they are successfully
  provided to the GSA or the error handler gives up.
+<DT><A HREF="./com/google/enterprise/adaptor/Response.html#putNamedResource(java.lang.String, com.google.enterprise.adaptor.Acl)"><B>putNamedResource(String, Acl)</B></A> - 
+Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</A>
+<DD>Provide alternative ACLs for this document, uniquely identified by
+ response document's <code>DocId</code> and <code>fragment</code>.
 </DL>
 <HR>
 <A NAME="_R_"><!-- --></A><H2>
@@ -953,7 +961,7 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DD>Set <code>DocId</code> to inherit ACLs from.
 <DT><A HREF="./com/google/enterprise/adaptor/Acl.Builder.html#setInheritFrom(com.google.enterprise.adaptor.DocId, java.lang.String)"><B>setInheritFrom(DocId, String)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Acl.Builder.html" title="class in com.google.enterprise.adaptor">Acl.Builder</A>
-<DD>&nbsp;
+<DD>Set the parent to inherit ACLs from.
 <DT><A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html#setLastModified(java.util.Date)"><B>setLastModified(Date)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record.Builder</A>
 <DD>Provides the last-modified date of the document.

@@ -211,7 +211,7 @@ Mutable ACL for creating instances of <A HREF="../../../../com/google/enterprise
                <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;fragment)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the parent to inherit ACLs from.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -438,8 +438,21 @@ setInheritFrom</H3>
 public <A HREF="../../../../com/google/enterprise/adaptor/Acl.Builder.html" title="class in com.google.enterprise.adaptor">Acl.Builder</A> <B>setInheritFrom</B>(<A HREF="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</A>&nbsp;inheritFrom,
                                   <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;fragment)</PRE>
 <DL>
+<DD>Set the parent to inherit ACLs from. 
+ Note that the parent's <code>InheritanceType</code>
+ determines how to combine results with this ACL.
+ <p>
+ The fragment facilitates a single parent <code>DocId</code>
+ having multiple ACLs to inherit from.  For example
+ a single parent DocId could have ACLs that are to be inherited
+ by sub-folder <code>DocId</code> instances and different
+ ACLs that are to be inherited by children files.
+ The fragment allows specifying which of the parent's ACLs
+ is to be inherited from.
+<P>
 <DD><DL>
-</DL>
+
+<DT><B>Returns:</B><DD>the same instance of the builder, for chaining calls<DT><B>See Also:</B><DD><A HREF="../../../../com/google/enterprise/adaptor/Acl.Builder.html#setInheritanceType(com.google.enterprise.adaptor.Acl.InheritanceType)"><CODE>setInheritanceType(com.google.enterprise.adaptor.Acl.InheritanceType)</CODE></A></DL>
 </DD>
 </DL>
 <HR>

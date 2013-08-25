@@ -221,6 +221,15 @@ Immutable access control list. For description of the semantics of the
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Acl.html#getInheritFromFragment()">getInheritFromFragment</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns fragment, if there is one, that specifies which of the parent's
+ ACLs is to to be inhertied from.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</A>&lt;<A HREF="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</A>&gt;</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/Acl.html#getPermitGroups()">getPermitGroups</A></B>()</CODE>
 
@@ -433,6 +442,20 @@ public <A HREF="../../../../com/google/enterprise/adaptor/DocId.html" title="cla
 <DD>Returns <code>DocId</code> these ACLs are inherited from. This is also known as
  the "parent's" ACLs. Note that the parent's <code>InheritanceType</code>
  determines how to combine results with this ACL.
+<P>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../com/google/enterprise/adaptor/Acl.html#getInheritanceType()"><CODE>getInheritanceType()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInheritFromFragment()"><!-- --></A><H3>
+getInheritFromFragment</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getInheritFromFragment</B>()</PRE>
+<DL>
+<DD>Returns fragment, if there is one, that specifies which of the parent's
+ ACLs is to to be inhertied from.
 <P>
 <DD><DL>
 <DT><B>See Also:</B><DD><A HREF="../../../../com/google/enterprise/adaptor/Acl.html#getInheritanceType()"><CODE>getInheritanceType()</CODE></A></DL>
