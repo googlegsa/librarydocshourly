@@ -83,12 +83,6 @@ function windowTitle()
  methods.<DT><A HREF="./com/google/enterprise/adaptor/AbstractAdaptor.html#AbstractAdaptor()"><B>AbstractAdaptor()</B></A> - 
 Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AbstractAdaptor.html" title="class in com.google.enterprise.adaptor">AbstractAdaptor</A>
 <DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html" title="class in com.google.enterprise.adaptor"><B>AbstractDocumentTransform</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Convenience class for implementing <code>DocumentTransform</code>s.<DT><A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html#AbstractDocumentTransform()"><B>AbstractDocumentTransform()</B></A> - 
-Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html" title="class in com.google.enterprise.adaptor">AbstractDocumentTransform</A>
-<DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html#AbstractDocumentTransform(java.lang.String)"><B>AbstractDocumentTransform(String)</B></A> - 
-Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html" title="class in com.google.enterprise.adaptor">AbstractDocumentTransform</A>
-<DD>If <code>name</code> is <code>null</code>, the default is used.
 <DT><A HREF="./com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor"><B>Acl</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Immutable access control list.<DT><A HREF="./com/google/enterprise/adaptor/Acl.BatchRetriever.html" title="interface in com.google.enterprise.adaptor"><B>Acl.BatchRetriever</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Batch retrieval of ACLs for efficent processing of many authz checks at
  once.<DT><A HREF="./com/google/enterprise/adaptor/Acl.Builder.html" title="class in com.google.enterprise.adaptor"><B>Acl.Builder</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Mutable ACL for creating instances of <A HREF="./com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor"><CODE>Acl</CODE></A>.<DT><A HREF="./com/google/enterprise/adaptor/Acl.Builder.html#Acl.Builder()"><B>Acl.Builder()</B></A> - 
 Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Acl.Builder.html" title="class in com.google.enterprise.adaptor">Acl.Builder</A>
@@ -171,19 +165,12 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor"><B>Config</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Configuration values for this program, like the GSA's hostname.<DT><A HREF="./com/google/enterprise/adaptor/Config.html#Config()"><B>Config()</B></A> - 
 Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>
 <DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html#configure(java.util.Map)"><B>configure(Map&lt;String, String&gt;)</B></A> - 
-Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html" title="class in com.google.enterprise.adaptor">AbstractDocumentTransform</A>
-<DD>Configure this instance with provided <code>config</code>.
-<DT><A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#configure(java.util.Map)"><B>configure(Map&lt;String, String&gt;)</B></A> - 
-Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineTransform</A>
-<DD>Accepts keys <code>"cmd"</code>, <code>"workingDirectory"</code>, <code>"arg?"</code>, and
- any keys accepted by the super class.
 <DT><A HREF="./com/google/enterprise/adaptor/IOHelper.html#copyStream(java.io.InputStream, java.io.OutputStream)"><B>copyStream(InputStream, OutputStream)</B></A> - 
 Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/IOHelper.html" title="class in com.google.enterprise.adaptor">IOHelper</A>
 <DD>Copy contents of <code>in</code> to <code>out</code>.
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#create(java.util.Map)"><B>create(Map&lt;String, String&gt;)</B></A> - 
 Static method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineTransform</A>
-<DD>&nbsp;
+<DD>Accepts keys <code>"cmd"</code>, <code>"workingDirectory"</code>, and <code>"arg?"</code>.
 <DT><A HREF="./com/google/enterprise/adaptor/AdaptorContext.html#createHttpContext(java.lang.String, com.sun.net.httpserver.HttpHandler)"><B>createHttpContext(String, HttpHandler)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</A>
 <DD>Registers a handler with the library's <A HREF="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpServer.html?is-external=true" title="class or interface in com.sun.net.httpserver"><CODE>HttpServer</CODE></A> in similar fashion to <A HREF="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpServer.html?is-external=true#createContext(java.lang.String, com.sun.net.httpserver.HttpHandler)" title="class or interface in com.sun.net.httpserver"><CODE>HttpServer.createContext(java.lang.String, com.sun.net.httpserver.HttpHandler)</CODE></A>.
@@ -406,9 +393,6 @@ Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/ent
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/FileSystemAdaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)"><B>getDocIds(DocIdPusher)</B></A> - 
 Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/FileSystemAdaptor.html" title="class in com.google.enterprise.adaptor.prebuilt">FileSystemAdaptor</A>
 <DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/TransformPipeline.html#getDocumentTransforms()"><B>getDocumentTransforms()</B></A> - 
-Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/TransformPipeline.html" title="class in com.google.enterprise.adaptor">TransformPipeline</A>
-<DD>Retrieve transforms in the order they are processed in the pipeline.
 <DT><A HREF="./com/google/enterprise/adaptor/AdaptorContext.html#getGetDocIdsFullErrorHandler()"><B>getGetDocIdsFullErrorHandler()</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</A>
 <DD>Retrieve the current <A HREF="./com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><CODE>ExceptionHandler</CODE></A> for full push.
@@ -459,12 +443,6 @@ Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterpri
 <DT><A HREF="./com/google/enterprise/adaptor/PollingIncrementalAdaptor.html#getModifiedDocIds(com.google.enterprise.adaptor.DocIdPusher)"><B>getModifiedDocIds(DocIdPusher)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/PollingIncrementalAdaptor.html" title="interface in com.google.enterprise.adaptor">PollingIncrementalAdaptor</A>
 <DD>Check for documents modified since the last call to the method.
-<DT><A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html#getName()"><B>getName()</B></A> - 
-Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html" title="class in com.google.enterprise.adaptor">AbstractDocumentTransform</A>
-<DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/DocumentTransform.html#getName()"><B>getName()</B></A> - 
-Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor">DocumentTransform</A>
-<DD>The name of this transform instance, typically provided by the user.
 <DT><A HREF="./com/google/enterprise/adaptor/Principal.html#getName()"><B>getName()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</A>
 <DD>&nbsp;
@@ -650,9 +628,15 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/Acl.html#isEverythingCaseSensitive()"><B>isEverythingCaseSensitive()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</A>
 <DD>Says whether letter casing differentiates names during authorization.
+<DT><A HREF="./com/google/enterprise/adaptor/GroupPrincipal.html#isGroup()"><B>isGroup()</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</A>
+<DD>Always returns <code>true</code>.
 <DT><A HREF="./com/google/enterprise/adaptor/Principal.html#isGroup()"><B>isGroup()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</A>
 <DD>&nbsp;
+<DT><A HREF="./com/google/enterprise/adaptor/UserPrincipal.html#isGroup()"><B>isGroup()</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/UserPrincipal.html" title="class in com.google.enterprise.adaptor">UserPrincipal</A>
+<DD>Always returns <code>false</code>.
 <DT><A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.html#isToBeCrawledImmediately()"><B>isToBeCrawledImmediately()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</A>
 <DD>Informs the GSA that the document has been modified, and the GSA should
@@ -669,9 +653,15 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/CustomFormatter.html#isUseColor()"><B>isUseColor()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/CustomFormatter.html" title="class in com.google.enterprise.adaptor">CustomFormatter</A>
 <DD>&nbsp;
+<DT><A HREF="./com/google/enterprise/adaptor/GroupPrincipal.html#isUser()"><B>isUser()</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</A>
+<DD>Always returns <code>false</code>.
 <DT><A HREF="./com/google/enterprise/adaptor/Principal.html#isUser()"><B>isUser()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</A>
 <DD>&nbsp;
+<DT><A HREF="./com/google/enterprise/adaptor/UserPrincipal.html#isUser()"><B>isUser()</B></A> - 
+Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/UserPrincipal.html" title="class in com.google.enterprise.adaptor">UserPrincipal</A>
+<DD>Always returns <code>true</code>.
 <DT><A HREF="./com/google/enterprise/adaptor/AbstractAdaptor.html#isUserAuthorized(com.google.enterprise.adaptor.AuthnIdentity, java.util.Collection)"><B>isUserAuthorized(AuthnIdentity, Collection&lt;DocId&gt;)</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AbstractAdaptor.html" title="class in com.google.enterprise.adaptor">AbstractAdaptor</A>
 <DD>Determines whether the user identified is allowed to access the <code>DocId</code>s.
@@ -980,12 +970,6 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/Response.html#setLock(boolean)"><B>setLock(boolean)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</A>
 <DD>Instruct the GSA to "lock" the document into its index.
-<DT><A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html#setName(java.lang.String)"><B>setName(String)</B></A> - 
-Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AbstractDocumentTransform.html" title="class in com.google.enterprise.adaptor">AbstractDocumentTransform</A>
-<DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#setName(java.lang.String)"><B>setName(String)</B></A> - 
-Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineTransform</A>
-<DD>&nbsp;
 <DT><A HREF="./com/google/enterprise/adaptor/Response.html#setNoArchive(boolean)"><B>setNoArchive(boolean)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</A>
 <DD>Whether the GSA should show the "Cached" link in search results for this
@@ -1101,23 +1085,6 @@ Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterpri
  passed on to subsequent transforms.
 <DT><A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#transform(com.google.enterprise.adaptor.Metadata, java.util.Map)"><B>transform(Metadata, Map&lt;String, String&gt;)</B></A> - 
 Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineTransform</A>
-<DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/TransformPipeline.html#transform(com.google.enterprise.adaptor.Metadata, java.util.Map)"><B>transform(Metadata, Map&lt;String, String&gt;)</B></A> - 
-Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/TransformPipeline.html" title="class in com.google.enterprise.adaptor">TransformPipeline</A>
-<DD>Transform <code>metadata</code>.
-<DT><A HREF="./com/google/enterprise/adaptor/TransformException.html" title="class in com.google.enterprise.adaptor"><B>TransformException</B></A> - Exception in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Exception produced by <A HREF="./com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor"><CODE>DocumentTransform</CODE></A>s and <A HREF="./com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor"><CODE>DocumentTransform</CODE></A> in the case of a fatal error.<DT><A HREF="./com/google/enterprise/adaptor/TransformException.html#TransformException(java.lang.String)"><B>TransformException(String)</B></A> - 
-Constructor for exception com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/TransformException.html" title="class in com.google.enterprise.adaptor">TransformException</A>
-<DD>Constructs a new exception with a detailed message.
-<DT><A HREF="./com/google/enterprise/adaptor/TransformException.html#TransformException(java.lang.String, java.lang.Throwable)"><B>TransformException(String, Throwable)</B></A> - 
-Constructor for exception com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/TransformException.html" title="class in com.google.enterprise.adaptor">TransformException</A>
-<DD>Constructs a new exception with a detailed message and a cause initialized
- to <code>cause</code>.
-<DT><A HREF="./com/google/enterprise/adaptor/TransformException.html#TransformException(java.lang.Throwable)"><B>TransformException(Throwable)</B></A> - 
-Constructor for exception com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/TransformException.html" title="class in com.google.enterprise.adaptor">TransformException</A>
-<DD>Constructs a new exception with a <code>null</code> message and a cause
- initalized to <code>cause</code>.
-<DT><A HREF="./com/google/enterprise/adaptor/TransformPipeline.html" title="class in com.google.enterprise.adaptor"><B>TransformPipeline</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Modify metadata using multiple serial transforms.<DT><A HREF="./com/google/enterprise/adaptor/TransformPipeline.html#TransformPipeline(java.util.List)"><B>TransformPipeline(List&lt;? extends DocumentTransform&gt;)</B></A> - 
-Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/TransformPipeline.html" title="class in com.google.enterprise.adaptor">TransformPipeline</A>
 <DD>&nbsp;
 </DL>
 <HR>
