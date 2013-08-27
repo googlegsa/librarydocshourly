@@ -3,7 +3,7 @@
 <HTML>
 <HEAD>
 <TITLE>
-AuthnIdentity
+AuthnAuthority.Callback
 </TITLE>
 
 
@@ -13,7 +13,7 @@ AuthnIdentity
 function windowTitle()
 {
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="AuthnIdentity";
+        parent.document.title="AuthnAuthority.Callback";
     }
 }
 </SCRIPT>
@@ -52,11 +52,11 @@ function windowTitle()
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/AuthnAuthority.Callback.html" title="interface in com.google.enterprise.adaptor"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/AuthzAuthority.html" title="interface in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/AuthnAuthority.html" title="interface in com.google.enterprise.adaptor"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/AuthnIdentity.html" title="interface in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-  <A HREF="../../../../index.html?com/google/enterprise/adaptor/AuthnIdentity.html" target="_top"><B>FRAMES</B></A>  &nbsp;
-&nbsp;<A HREF="AuthnIdentity.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+  <A HREF="../../../../index.html?com/google/enterprise/adaptor/AuthnAuthority.Callback.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="AuthnAuthority.Callback.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
 &nbsp;<SCRIPT type="text/javascript">
   <!--
   if(window==top) {
@@ -87,15 +87,17 @@ DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHO
 <FONT SIZE="-1">
 com.google.enterprise.adaptor</FONT>
 <BR>
-Interface AuthnIdentity</H2>
+Interface AuthnAuthority.Callback</H2>
+<DL>
+<DT><B>Enclosing interface:</B><DD><A HREF="../../../../com/google/enterprise/adaptor/AuthnAuthority.html" title="interface in com.google.enterprise.adaptor">AuthnAuthority</A></DD>
+</DL>
 <HR>
 <DL>
-<DT><PRE>public interface <B>AuthnIdentity</B></DL>
+<DT><PRE>public static interface <B>AuthnAuthority.Callback</B></DL>
 </PRE>
 
 <P>
-User identification information for understanding who a user is or if they
- are allowed to access a resource.
+Interface for replying to <A HREF="../../../../com/google/enterprise/adaptor/AuthnAuthority.html#authenticateUser(com.sun.net.httpserver.HttpExchange, com.google.enterprise.adaptor.AuthnAuthority.Callback)"><CODE>AuthnAdaptor.authenticateUser(HttpExchange, Callback)</CODE></A>.
 <P>
 
 <P>
@@ -113,27 +115,12 @@ User identification information for understanding who a user is or if they
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</A>&lt;<A HREF="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</A>&gt;</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AuthnIdentity.html#getGroups()">getGroups</A></B>()</CODE>
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AuthnAuthority.Callback.html#userAuthenticated(com.sun.net.httpserver.HttpExchange, com.google.enterprise.adaptor.AuthnIdentity)">userAuthenticated</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpExchange.html?is-external=true" title="class or interface in com.sun.net.httpserver">HttpExchange</A>&nbsp;ex,
+                  <A HREF="../../../../com/google/enterprise/adaptor/AuthnIdentity.html" title="interface in com.google.enterprise.adaptor">AuthnIdentity</A>&nbsp;identity)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets all the groups a user belongs to in an immutable set.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AuthnIdentity.html#getPassword()">getPassword</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the user's password.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/UserPrincipal.html" title="class in com.google.enterprise.adaptor">UserPrincipal</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/google/enterprise/adaptor/AuthnIdentity.html#getUser()">getUser</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the user principal.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Respond with authentication information discovered during <A HREF="../../../../com/google/enterprise/adaptor/AuthnAuthority.html#authenticateUser(com.sun.net.httpserver.HttpExchange, com.google.enterprise.adaptor.AuthnAuthority.Callback)"><CODE>AuthnAdaptor.authenticateUser(HttpExchange, Callback)</CODE></A>.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -149,44 +136,28 @@ User identification information for understanding who a user is or if they
 </TR>
 </TABLE>
 
-<A NAME="getUser()"><!-- --></A><H3>
-getUser</H3>
+<A NAME="userAuthenticated(com.sun.net.httpserver.HttpExchange, com.google.enterprise.adaptor.AuthnIdentity)"><!-- --></A><H3>
+userAuthenticated</H3>
 <PRE>
-<A HREF="../../../../com/google/enterprise/adaptor/UserPrincipal.html" title="class in com.google.enterprise.adaptor">UserPrincipal</A> <B>getUser</B>()</PRE>
+void <B>userAuthenticated</B>(<A HREF="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpExchange.html?is-external=true" title="class or interface in com.sun.net.httpserver">HttpExchange</A>&nbsp;ex,
+                       <A HREF="../../../../com/google/enterprise/adaptor/AuthnIdentity.html" title="interface in com.google.enterprise.adaptor">AuthnIdentity</A>&nbsp;identity)
+                       throws <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
 <DL>
-<DD>Gets the user principal. This value will always be available.
+<DD>Respond with authentication information discovered during <A HREF="../../../../com/google/enterprise/adaptor/AuthnAuthority.html#authenticateUser(com.sun.net.httpserver.HttpExchange, com.google.enterprise.adaptor.AuthnAuthority.Callback)"><CODE>AuthnAdaptor.authenticateUser(HttpExchange, Callback)</CODE></A>.
+ The exchange <code>ex</code> does not need to be the same instance provided to
+ <code>authenticateUser()</code>, but it does need to be a connection to the
+ same client. This method provides a response to the client using <code>ex</code>, so the exchange should not have had its headers sent and should be
+ considered completed after the method returns.
+
+ <p>If authentication failed, then identity should be <code>null</code>. If an
+ <code>identity</code> is provided, its username must not be <code>null</code> or
+ empty.
 <P>
 <DD><DL>
-
-<DT><B>Returns:</B><DD>the user's identifier.</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getPassword()"><!-- --></A><H3>
-getPassword</H3>
-<PRE>
-<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getPassword</B>()</PRE>
-<DL>
-<DD>Gets the user's password.
-<P>
-<DD><DL>
-
-<DT><B>Returns:</B><DD>the user's password, or <code>null</code> if it is unavailable.</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getGroups()"><!-- --></A><H3>
-getGroups</H3>
-<PRE>
-<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</A>&lt;<A HREF="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</A>&gt; <B>getGroups</B>()</PRE>
-<DL>
-<DD>Gets all the groups a user belongs to in an immutable set.
-<P>
-<DD><DL>
-
-<DT><B>Returns:</B><DD>the user's groups, or <code>null</code> if they are unavailable.</DL>
+<DT><B>Parameters:</B><DD><CODE>ex</CODE> - exchange whose request body has been processed, but whose
+     response body and headers have not been sent<DD><CODE>identity</CODE> - authenticated user identity information, or <code>null</code>
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->
@@ -219,11 +190,11 @@ getGroups</H3>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/AuthnAuthority.Callback.html" title="interface in com.google.enterprise.adaptor"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/AuthzAuthority.html" title="interface in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/AuthnAuthority.html" title="interface in com.google.enterprise.adaptor"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../com/google/enterprise/adaptor/AuthnIdentity.html" title="interface in com.google.enterprise.adaptor"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-  <A HREF="../../../../index.html?com/google/enterprise/adaptor/AuthnIdentity.html" target="_top"><B>FRAMES</B></A>  &nbsp;
-&nbsp;<A HREF="AuthnIdentity.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+  <A HREF="../../../../index.html?com/google/enterprise/adaptor/AuthnAuthority.Callback.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="AuthnAuthority.Callback.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
 &nbsp;<SCRIPT type="text/javascript">
   <!--
   if(window==top) {

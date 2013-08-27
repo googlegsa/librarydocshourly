@@ -105,17 +105,21 @@ Adaptor interfaces and implementation.
 <TD>Methods for an Adaptor to communicate with the adaptor library.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/AuthnAdaptor.html" title="interface in com.google.enterprise.adaptor">AuthnAdaptor</A></B></TD>
+<TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/AuthnAuthority.html" title="interface in com.google.enterprise.adaptor">AuthnAuthority</A></B></TD>
 <TD>Interface for adaptors capable of authenticating users.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/AuthnAdaptor.Callback.html" title="interface in com.google.enterprise.adaptor">AuthnAdaptor.Callback</A></B></TD>
-<TD>Interface for replying to <A HREF="../../../../com/google/enterprise/adaptor/AuthnAdaptor.html#authenticateUser(com.sun.net.httpserver.HttpExchange, com.google.enterprise.adaptor.AuthnAdaptor.Callback)"><CODE>AuthnAdaptor.authenticateUser(HttpExchange, Callback)</CODE></A>.</TD>
+<TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/AuthnAuthority.Callback.html" title="interface in com.google.enterprise.adaptor">AuthnAuthority.Callback</A></B></TD>
+<TD>Interface for replying to <A HREF="../../../../com/google/enterprise/adaptor/AuthnAuthority.html#authenticateUser(com.sun.net.httpserver.HttpExchange, com.google.enterprise.adaptor.AuthnAuthority.Callback)"><CODE>AuthnAdaptor.authenticateUser(HttpExchange, Callback)</CODE></A>.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/AuthnIdentity.html" title="interface in com.google.enterprise.adaptor">AuthnIdentity</A></B></TD>
 <TD>User identification information for understanding who a user is or if they
  are allowed to access a resource.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/AuthzAuthority.html" title="interface in com.google.enterprise.adaptor">AuthzAuthority</A></B></TD>
+<TD>Interface for adaptors capable of authorizing users.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/DocIdEncoder.html" title="interface in com.google.enterprise.adaptor">DocIdEncoder</A></B></TD>
@@ -134,7 +138,7 @@ Adaptor interfaces and implementation.
 <TD>Interface for handling errors and handling retrying policy.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/PollingIncrementalAdaptor.html" title="interface in com.google.enterprise.adaptor">PollingIncrementalAdaptor</A></B></TD>
+<TD WIDTH="15%"><B><A HREF="../../../../com/google/enterprise/adaptor/PollingIncrementalLister.html" title="interface in com.google.enterprise.adaptor">PollingIncrementalLister</A></B></TD>
 <TD>Interface for library-assisted polling incremental adaptors.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
