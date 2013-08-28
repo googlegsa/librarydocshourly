@@ -165,6 +165,9 @@ Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/a
 <DT><A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor"><B>Config</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Configuration values for this program, like the GSA's hostname.<DT><A HREF="./com/google/enterprise/adaptor/Config.html#Config()"><B>Config()</B></A> - 
 Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</A>
 <DD>&nbsp;
+<DT><A HREF="./com/google/enterprise/adaptor/prebuilt/PrebuiltTransforms.html#copyMetadata(java.util.Map)"><B>copyMetadata(Map&lt;String, String&gt;)</B></A> - 
+Static method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/PrebuiltTransforms.html" title="class in com.google.enterprise.adaptor.prebuilt">PrebuiltTransforms</A>
+<DD>Returns a transform that copies metadata values from one key to another.
 <DT><A HREF="./com/google/enterprise/adaptor/IOHelper.html#copyStream(java.io.InputStream, java.io.OutputStream)"><B>copyStream(InputStream, OutputStream)</B></A> - 
 Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/IOHelper.html" title="class in com.google.enterprise.adaptor">IOHelper</A>
 <DD>Copy contents of <code>in</code> to <code>out</code>.
@@ -199,6 +202,9 @@ Static variable in class com.google.enterprise.adaptor.<A HREF="./com/google/ent
 <DT><A HREF="./com/google/enterprise/adaptor/ExceptionHandlers.html#defaultHandler()"><B>defaultHandler()</B></A> - 
 Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/ExceptionHandlers.html" title="class in com.google.enterprise.adaptor">ExceptionHandlers</A>
 <DD>The default exception handler.
+<DT><A HREF="./com/google/enterprise/adaptor/prebuilt/PrebuiltTransforms.html#deleteMetadata(java.util.Map)"><B>deleteMetadata(Map&lt;String, String&gt;)</B></A> - 
+Static method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/PrebuiltTransforms.html" title="class in com.google.enterprise.adaptor.prebuilt">PrebuiltTransforms</A>
+<DD>Returns a transform that deletes metadata keys.
 <DT><A HREF="./com/google/enterprise/adaptor/AbstractAdaptor.html#destroy()"><B>destroy()</B></A> - 
 Method in class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/AbstractAdaptor.html" title="class in com.google.enterprise.adaptor">AbstractAdaptor</A>
 <DD>Shutdown and release resources of adaptor.
@@ -743,6 +749,9 @@ Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterp
 <DT><A HREF="./com/google/enterprise/adaptor/Metadata.html#Metadata(java.lang.Iterable)"><B>Metadata(Iterable&lt;Map.Entry&lt;String, String&gt;&gt;)</B></A> - 
 Constructor for class com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</A>
 <DD>Duplicate.
+<DT><A HREF="./com/google/enterprise/adaptor/prebuilt/PrebuiltTransforms.html#moveMetadata(java.util.Map)"><B>moveMetadata(Map&lt;String, String&gt;)</B></A> - 
+Static method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/PrebuiltTransforms.html" title="class in com.google.enterprise.adaptor.prebuilt">PrebuiltTransforms</A>
+<DD>Returns a transform that moves metadata values from one key to another.
 </DL>
 <HR>
 <A NAME="_N_"><!-- --></A><H2>
@@ -774,7 +783,7 @@ Static method in class com.google.enterprise.adaptor.<A HREF="./com/google/enter
 <DT><A HREF="./com/google/enterprise/adaptor/experimental/Sim.html#percentDecode(java.lang.String)"><B>percentDecode(String)</B></A> - 
 Static method in class com.google.enterprise.adaptor.experimental.<A HREF="./com/google/enterprise/adaptor/experimental/Sim.html" title="class in com.google.enterprise.adaptor.experimental">Sim</A>
 <DD>&nbsp;
-<DT><A HREF="./com/google/enterprise/adaptor/PollingIncrementalLister.html" title="interface in com.google.enterprise.adaptor"><B>PollingIncrementalLister</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Interface for library-assisted polling incremental adaptors.<DT><A HREF="./com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor"><B>Principal</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Represents either a user or a group.<DT><A HREF="./com/google/enterprise/adaptor/DocIdPusher.html#pushDocIds(java.lang.Iterable)"><B>pushDocIds(Iterable&lt;DocId&gt;)</B></A> - 
+<DT><A HREF="./com/google/enterprise/adaptor/PollingIncrementalLister.html" title="interface in com.google.enterprise.adaptor"><B>PollingIncrementalLister</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Interface for library-assisted polling incremental adaptors.<DT><A HREF="./com/google/enterprise/adaptor/prebuilt/PrebuiltTransforms.html" title="class in com.google.enterprise.adaptor.prebuilt"><B>PrebuiltTransforms</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/prebuilt/package-summary.html">com.google.enterprise.adaptor.prebuilt</A><DD>Common transforms that you would expect to have available.<DT><A HREF="./com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor"><B>Principal</B></A> - Class in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Represents either a user or a group.<DT><A HREF="./com/google/enterprise/adaptor/DocIdPusher.html#pushDocIds(java.lang.Iterable)"><B>pushDocIds(Iterable&lt;DocId&gt;)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</A>
 <DD>Push <code>DocId</code>s immediately and block until they are successfully
  provided to the GSA or the error handler gives up.
@@ -846,6 +855,10 @@ Method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/ent
 <DT><A HREF="./com/google/enterprise/adaptor/Session.html#removeAttribute(java.lang.String)"><B>removeAttribute(String)</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Session.html" title="interface in com.google.enterprise.adaptor">Session</A>
 <DD>Remove attribute value.
+<DT><A HREF="./com/google/enterprise/adaptor/prebuilt/PrebuiltTransforms.html#replaceMetadata(java.util.Map)"><B>replaceMetadata(Map&lt;String, String&gt;)</B></A> - 
+Static method in class com.google.enterprise.adaptor.prebuilt.<A HREF="./com/google/enterprise/adaptor/prebuilt/PrebuiltTransforms.html" title="class in com.google.enterprise.adaptor.prebuilt">PrebuiltTransforms</A>
+<DD>Returns a transform that preforms string replacements within metadata
+ values.
 <DT><A HREF="./com/google/enterprise/adaptor/Request.html" title="interface in com.google.enterprise.adaptor"><B>Request</B></A> - Interface in <A HREF="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</A><DD>Interface provided to <A HREF="./com/google/enterprise/adaptor/Adaptor.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)"><CODE>Adaptor.getDocContent(Request, Response)</CODE></A> for describing the action that
  should be taken.<DT><A HREF="./com/google/enterprise/adaptor/Response.html#respondNotFound()"><B>respondNotFound()</B></A> - 
 Method in interface com.google.enterprise.adaptor.<A HREF="./com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</A>
