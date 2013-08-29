@@ -105,10 +105,12 @@ Configuration values for this program, like the GSA's hostname. Also several
  <table>
  <tr><td align=center><b>required?</b></td>
      <td><b>name</b></td><td><b>meaning</b></td>
- <tr><td> </td><td>adaptor.sendDocControlsHeader </td><td>use 
+ <tr><td> </td><td>gsa.acceptsDocControlsHeader </td><td>use 
       X-Gsa-Doc-Controls HTTP header with namespaced ACLs.
       Otherwise ACLs are sent without namespace and as metadata.
-      Defaults to false
+      If not set, then an attempt to compute from gsa.version is made.
+      Defaults to true for 7.2.0-0 and later, and false for earlier,
+      as defined by gsa.version.
  <tr><td> </td><td>adaptor.fullListingSchedule </td><td> when to invoke 
      <A HREF="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)"><CODE>Adaptor.getDocIds</CODE></A>, in cron format (minute,
      hour,  day of month, month, day of week).  Defaults to 0 3 * * *
@@ -134,6 +136,9 @@ Configuration values for this program, like the GSA's hostname. Also several
      if not provided
  <tr><td> </td><td>feed.noRecrawlBitEnabled </td><td> send bit telling
      GSA to crawl your documents only once.  Defaults to  false
+ <tr><td> </td><td>gsa.version </td><td> version number used to configure
+     expected GSA features.  Defaults to acquiring from GSA.
+     Uses 7.0.14-114 if acquiring fails.
  <tr><td> </td><td>gsa.614FeedWorkaroundEnabled </td><td> enable detour
      around particular feed parsing failure found in GSA version 6.14 .
      Defaults to false
