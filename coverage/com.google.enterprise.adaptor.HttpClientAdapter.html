@@ -422,9 +422,9 @@
   <td class="src"><pre class="src">&nbsp;      }</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;241</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      InputStream is = getResponseEntityAsStream();</span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;242</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;243</td>  <td class="nbHits">&nbsp;</td>
+<tr>  <td class="numLineCover">&nbsp;243</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      Reader reader = <span class="keyword">new</span> InputStreamReader(is, charset);</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;244</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      <span class="keyword">try</span> {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;244</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        Reader reader = <span class="keyword">new</span> InputStreamReader(is, charset);</span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;245</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">char</span>[] buf = <span class="keyword">new</span> <span class="keyword">char</span>[1024];</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;246</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;        <span class="keyword">int</span> read;</pre></td></tr>
@@ -434,7 +434,7 @@
   <td class="src"><pre class="src">&nbsp;        }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;250</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      } <span class="keyword">finally</span> {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;251</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        is.close();</span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;251</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        reader.close();</span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;252</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      }</span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;253</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      <span class="keyword">return</span> sb.toString();</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;254</td>  <td class="nbHits">&nbsp;</td>
