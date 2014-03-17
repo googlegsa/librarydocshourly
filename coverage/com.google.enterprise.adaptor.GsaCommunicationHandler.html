@@ -225,10 +225,10 @@
   <td class="src"><pre class="src">&nbsp;<span class="comment">   * new start() calls before stop() is done processing.</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;102</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;103</td>  <td class="nbHitsCovered">&nbsp;39</td>  <td class="src"><pre class="src">&nbsp;  <span class="keyword">private</span> <span class="keyword">final</span> AtomicInteger shutdownCount = <span class="keyword">new</span> AtomicInteger();</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;103</td>  <td class="nbHitsCovered">&nbsp;37</td>  <td class="src"><pre class="src">&nbsp;  <span class="keyword">private</span> <span class="keyword">final</span> AtomicInteger shutdownCount = <span class="keyword">new</span> AtomicInteger();</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;104</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">private</span> ShutdownWaiter waiter;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;105</td>  <td class="nbHitsCovered">&nbsp;39</td>  <td class="src"><pre class="src">&nbsp;  <span class="keyword">private</span> <span class="keyword">final</span> List&lt;Filter&gt; commonFilters = Arrays.asList(<span class="keyword">new</span> Filter[] {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;105</td>  <td class="nbHitsCovered">&nbsp;37</td>  <td class="src"><pre class="src">&nbsp;  <span class="keyword">private</span> <span class="keyword">final</span> List&lt;Filter&gt; commonFilters = Arrays.asList(<span class="keyword">new</span> Filter[] {</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;106</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">new</span> AbortImmediatelyFilter(),</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;107</td>  <td class="nbHits">&nbsp;</td>
@@ -239,13 +239,13 @@
   <td class="src"><pre class="src">&nbsp;  });</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;110</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;111</td>  <td class="nbHitsCovered">&nbsp;39</td>  <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> GsaCommunicationHandler(Adaptor adaptor, Config config) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;112</td>  <td class="nbHitsCovered">&nbsp;39</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">this</span>.adaptor = adaptor;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;113</td>  <td class="nbHitsCovered">&nbsp;39</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">this</span>.config = config;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;111</td>  <td class="nbHitsCovered">&nbsp;37</td>  <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> GsaCommunicationHandler(Adaptor adaptor, Config config) {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;112</td>  <td class="nbHitsCovered">&nbsp;37</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">this</span>.adaptor = adaptor;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;113</td>  <td class="nbHitsCovered">&nbsp;37</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">this</span>.config = config;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;114</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;115</td>  <td class="nbHitsCovered">&nbsp;39</td>  <td class="src"><pre class="src">&nbsp;    journal = <span class="keyword">new</span> Journal(config.isJournalReducedMem());</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;116</td>  <td class="nbHitsCovered">&nbsp;39</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;115</td>  <td class="nbHitsCovered">&nbsp;37</td>  <td class="src"><pre class="src">&nbsp;    journal = <span class="keyword">new</span> Journal(config.isJournalReducedMem());</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;116</td>  <td class="nbHitsCovered">&nbsp;37</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;117</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;118</td>  <td class="nbHits">&nbsp;</td>
@@ -262,19 +262,19 @@
   <td class="src"><pre class="src">&nbsp;      HttpServer dashboardServer, String contextPrefix) <span class="keyword">throws</span> IOException,</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;124</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      InterruptedException {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;125</td>  <td class="nbHitsUncovered"><a title="Line 125: Conditional coverage 50% (1/2).">&nbsp;17</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 125: Conditional coverage 50% (1/2).">    <span class="keyword">if</span> (<span class="keyword">this</span>.scope != <span class="keyword">null</span>) {</a></span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;125</td>  <td class="nbHitsUncovered"><a title="Line 125: Conditional coverage 50% (1/2).">&nbsp;16</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 125: Conditional coverage 50% (1/2).">    <span class="keyword">if</span> (<span class="keyword">this</span>.scope != <span class="keyword">null</span>) {</a></span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;126</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(<span class="string">"Already listening"</span>);</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;127</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;128</td>  <td class="nbHitsUncovered"><a title="Line 128: Conditional coverage 50% (2/4) [each condition: 50%, 50%].">&nbsp;17</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 128: Conditional coverage 50% (2/4) [each condition: 50%, 50%].">    <span class="keyword">if</span> (server == <span class="keyword">null</span> || dashboardServer == <span class="keyword">null</span>) {</a></span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;128</td>  <td class="nbHitsUncovered"><a title="Line 128: Conditional coverage 50% (2/4) [each condition: 50%, 50%].">&nbsp;16</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 128: Conditional coverage 50% (2/4) [each condition: 50%, 50%].">    <span class="keyword">if</span> (server == <span class="keyword">null</span> || dashboardServer == <span class="keyword">null</span>) {</a></span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;129</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      <span class="keyword">throw</span> <span class="keyword">new</span> NullPointerException();</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;130</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;131</td>  <td class="nbHitsCovered"><a title="Line 131: Conditional coverage 100% (2/2).">&nbsp;17</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 131: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (contextPrefix == <span class="keyword">null</span>) {</a></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;132</td>  <td class="nbHitsCovered">&nbsp;15</td>  <td class="src"><pre class="src">&nbsp;      contextPrefix = <span class="string">""</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;131</td>  <td class="nbHitsCovered"><a title="Line 131: Conditional coverage 100% (2/2).">&nbsp;16</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 131: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (contextPrefix == <span class="keyword">null</span>) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;132</td>  <td class="nbHitsCovered">&nbsp;14</td>  <td class="src"><pre class="src">&nbsp;      contextPrefix = <span class="string">""</span>;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;133</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;134</td>  <td class="nbHitsUncovered"><a title="Line 134: Conditional coverage 50% (1/2).">&nbsp;17</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 134: Conditional coverage 50% (1/2).">    <span class="keyword">if</span> (server <span class="keyword">instanceof</span> HttpsServer</a></span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;134</td>  <td class="nbHitsUncovered"><a title="Line 134: Conditional coverage 50% (1/2).">&nbsp;16</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 134: Conditional coverage 50% (1/2).">    <span class="keyword">if</span> (server <span class="keyword">instanceof</span> HttpsServer</a></span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;135</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;        != dashboardServer <span class="keyword">instanceof</span> HttpsServer) {</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;136</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(</span></pre></td></tr>
@@ -284,15 +284,15 @@
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;139</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;140</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">boolean</span> secure = server <span class="keyword">instanceof</span> HttpsServer;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;141</td>  <td class="nbHitsUncovered"><a title="Line 141: Conditional coverage 50% (1/2).">&nbsp;17</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 141: Conditional coverage 50% (1/2).">    <span class="keyword">if</span> (secure != config.isServerSecure()) {</a></span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;140</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">boolean</span> secure = server <span class="keyword">instanceof</span> HttpsServer;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;141</td>  <td class="nbHitsUncovered"><a title="Line 141: Conditional coverage 50% (1/2).">&nbsp;16</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 141: Conditional coverage 50% (1/2).">    <span class="keyword">if</span> (secure != config.isServerSecure()) {</a></span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;142</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      config.setValue(<span class="string">"server.secure"</span>, <span class="string">""</span> + secure);</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;143</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;144</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    keyPair = <span class="keyword">null</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;144</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    keyPair = <span class="keyword">null</span>;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;145</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">try</span> {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;146</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;      keyPair = getKeyPair(config.getServerKeyAlias());</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;146</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;      keyPair = getKeyPair(config.getServerKeyAlias());</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;147</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;    } <span class="keyword">catch</span> (IOException ex) {</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;148</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      <span class="comment">// The exception is only fatal if we are in secure mode.</span></pre></td></tr>
@@ -307,27 +307,27 @@
 <tr>  <td class="numLineCover">&nbsp;155</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">throw</span> ex;</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;156</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;157</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;158</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    secureValueCodec = <span class="keyword">new</span> SensitiveValueCodec(keyPair);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;157</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;158</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    secureValueCodec = <span class="keyword">new</span> SensitiveValueCodec(keyPair);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;159</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;160</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">int</span> port = server.getAddress().getPort();</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;161</td>  <td class="nbHitsCovered"><a title="Line 161: Conditional coverage 100% (2/2).">&nbsp;17</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 161: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (port != config.getServerPort()) {</a></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;162</td>  <td class="nbHitsCovered">&nbsp;14</td>  <td class="src"><pre class="src">&nbsp;        config.setValue(<span class="string">"server.port"</span>, <span class="string">""</span> + port);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;160</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">int</span> port = server.getAddress().getPort();</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;161</td>  <td class="nbHitsCovered"><a title="Line 161: Conditional coverage 100% (2/2).">&nbsp;16</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 161: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (port != config.getServerPort()) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;162</td>  <td class="nbHitsCovered">&nbsp;13</td>  <td class="src"><pre class="src">&nbsp;        config.setValue(<span class="string">"server.port"</span>, <span class="string">""</span> + port);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;163</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;164</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">int</span> dashboardPort = dashboardServer.getAddress().getPort();</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;165</td>  <td class="nbHitsCovered"><a title="Line 165: Conditional coverage 100% (2/2).">&nbsp;17</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 165: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (dashboardPort != config.getServerDashboardPort()) {</a></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;166</td>  <td class="nbHitsCovered">&nbsp;14</td>  <td class="src"><pre class="src">&nbsp;      config.setValue(<span class="string">"server.dashboardPort"</span>, <span class="string">""</span> + dashboardPort);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;164</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">int</span> dashboardPort = dashboardServer.getAddress().getPort();</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;165</td>  <td class="nbHitsCovered"><a title="Line 165: Conditional coverage 100% (2/2).">&nbsp;16</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 165: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (dashboardPort != config.getServerDashboardPort()) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;166</td>  <td class="nbHitsCovered">&nbsp;13</td>  <td class="src"><pre class="src">&nbsp;      config.setValue(<span class="string">"server.dashboardPort"</span>, <span class="string">""</span> + dashboardPort);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;167</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;168</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;169</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    scope = <span class="keyword">new</span> HttpServerScope(server, contextPrefix);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;170</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    waiter = <span class="keyword">new</span> ShutdownWaiter();</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;169</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    scope = <span class="keyword">new</span> HttpServerScope(server, contextPrefix);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;170</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    waiter = <span class="keyword">new</span> ShutdownWaiter();</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;171</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;172</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    sessionManager = <span class="keyword">new</span> SessionManager&lt;HttpExchange&gt;(</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;172</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    sessionManager = <span class="keyword">new</span> SessionManager&lt;HttpExchange&gt;(</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;173</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;          <span class="keyword">new</span> SessionManager.HttpExchangeClientStore(<span class="string">"sessid_"</span> + port, secure),</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;174</td>  <td class="nbHits">&nbsp;</td>
@@ -336,30 +336,30 @@
   <td class="src"><pre class="src">&nbsp;          5 * 60 * 1000 <span class="comment">/* max cleanup frequency: 5 minutes */</span>);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;176</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;177</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    URI baseUri = config.getServerBaseUri();</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;177</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    URI baseUri = config.getServerBaseUri();</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;178</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    URI docUri;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;179</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">try</span> {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;180</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;      docUri = <span class="keyword">new</span> URI(<span class="keyword">null</span>, <span class="keyword">null</span>, contextPrefix + config.getServerDocIdPath(),</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;180</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;      docUri = <span class="keyword">new</span> URI(<span class="keyword">null</span>, <span class="keyword">null</span>, contextPrefix + config.getServerDocIdPath(),</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;181</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;          <span class="keyword">null</span>);</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;182</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;    } <span class="keyword">catch</span> (URISyntaxException ex) {</span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;183</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"Invalid prefix or docIdPath"</span>, ex);</span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;184</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;185</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    docIdCodec = <span class="keyword">new</span> DocIdCodec(baseUri.resolve(docUri), config.isDocIdUrl());</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;186</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    GsaFeedFileSender fileSender = <span class="keyword">new</span> GsaFeedFileSender(</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;184</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;185</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    docIdCodec = <span class="keyword">new</span> DocIdCodec(baseUri.resolve(docUri), config.isDocIdUrl());</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;186</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    GsaFeedFileSender fileSender = <span class="keyword">new</span> GsaFeedFileSender(</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;187</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;        config.getGsaHostname(), config.isServerSecure(), <span class="comment">// use secure bool?</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;188</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;        config.getGsaCharacterEncoding());</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;189</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    aclTransform = createAclTransform();</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;190</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    GsaFeedFileMaker fileMaker = <span class="keyword">new</span> GsaFeedFileMaker(docIdCodec, aclTransform,</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;189</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    aclTransform = createAclTransform();</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;190</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    GsaFeedFileMaker fileMaker = <span class="keyword">new</span> GsaFeedFileMaker(docIdCodec, aclTransform,</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;191</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;        config.isGsa614FeedWorkaroundEnabled(),</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;192</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;        config.isGsa70AuthMethodWorkaroundEnabled());</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;193</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    docIdSender</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;193</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    docIdSender</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;194</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;        = <span class="keyword">new</span> DocIdSender(fileMaker, fileSender, journal, config, adaptor);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;195</td>  <td class="nbHits">&nbsp;</td>
@@ -368,7 +368,7 @@
   <td class="src"><pre class="src">&nbsp;    <span class="comment">// Could be done during start(), but then we would have to save</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;197</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="comment">// dashboardServer and contextPrefix.</span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;198</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    dashboardScope = <span class="keyword">new</span> HttpServerScope(dashboardServer, contextPrefix);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;198</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    dashboardScope = <span class="keyword">new</span> HttpServerScope(dashboardServer, contextPrefix);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;199</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;200</td>  <td class="nbHits">&nbsp;</td>
@@ -379,7 +379,7 @@
   <td class="src"><pre class="src">&nbsp;    <span class="comment">// reference to 'adaptor' before this point must be done very carefully to</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;203</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="comment">// ensure it doesn't call the adaptor until after Adaptor.init() completes.</span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;204</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> adaptorContext = <span class="keyword">new</span> AdaptorContextImpl();</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;204</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> adaptorContext = <span class="keyword">new</span> AdaptorContextImpl();</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;205</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;206</td>  <td class="nbHits">&nbsp;</td>
@@ -573,7 +573,7 @@
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">void</span> tryToPutVersionIntoConfig() <span class="keyword">throws</span> IOException {</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;319</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">try</span> {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;320</td>  <td class="nbHitsUncovered"><a title="Line 320: Conditional coverage 50% (1/2).">&nbsp;12</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 320: Conditional coverage 50% (1/2).">      <span class="keyword">if</span> (<span class="string">"GENERATE"</span>.equals(config.getGsaVersion())) {  <span class="comment">// is not set</span></a></span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;320</td>  <td class="nbHitsUncovered"><a title="Line 320: Conditional coverage 50% (1/2).">&nbsp;11</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 320: Conditional coverage 50% (1/2).">      <span class="keyword">if</span> (<span class="string">"GENERATE"</span>.equals(config.getGsaVersion())) {  <span class="comment">// is not set</span></a></span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;321</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        GsaVersion ver = GsaVersion.get(config.getGsaHostname(),</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;322</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;            config.isServerSecure());</pre></td></tr>
@@ -590,8 +590,8 @@
   <td class="src"><pre class="src">&nbsp;      <span class="comment">// we're talking to a GSA whose version we don't understand </span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;331</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      log.log(Level.FINE, <span class="string">"gsa provided incomprehensible version"</span>, iae);</span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;332</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      config.setValue(<span class="string">"gsa.version"</span>, <span class="string">"7.0.14-114"</span>);</span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;333</td>  <td class="nbHitsCovered">&nbsp;12</td>  <td class="src"><pre class="src">&nbsp;    } <span class="comment">// other IOException propagates out</span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;334</td>  <td class="nbHitsCovered">&nbsp;12</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;333</td>  <td class="nbHitsCovered">&nbsp;11</td>  <td class="src"><pre class="src">&nbsp;    } <span class="comment">// other IOException propagates out</span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;334</td>  <td class="nbHitsCovered">&nbsp;11</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;335</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;336</td>  <td class="nbHits">&nbsp;</td>
@@ -681,7 +681,7 @@
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;396</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">private</span> AclTransform createAclTransform() {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;397</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> createAclTransform(config.getValuesWithPrefix(<span class="string">"transform.acl."</span>));</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;397</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> createAclTransform(config.getValuesWithPrefix(<span class="string">"transform.acl."</span>));</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;398</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;399</td>  <td class="nbHits">&nbsp;</td>
@@ -690,8 +690,8 @@
   <td class="src"><pre class="src">&nbsp;  @VisibleForTesting</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;401</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">static</span> AclTransform createAclTransform(Map&lt;String, String&gt; aclConfigRaw) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;402</td>  <td class="nbHitsCovered">&nbsp;19</td>  <td class="src"><pre class="src">&nbsp;    Map&lt;Integer, String&gt; aclConfig = <span class="keyword">new</span> TreeMap&lt;Integer, String&gt;();</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;403</td>  <td class="nbHitsCovered"><a title="Line 403: Conditional coverage 100% (2/2).">&nbsp;19</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 403: Conditional coverage 100% (2/2).">    <span class="keyword">for</span> (Map.Entry&lt;String, String&gt; me : aclConfigRaw.entrySet()) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;402</td>  <td class="nbHitsCovered">&nbsp;18</td>  <td class="src"><pre class="src">&nbsp;    Map&lt;Integer, String&gt; aclConfig = <span class="keyword">new</span> TreeMap&lt;Integer, String&gt;();</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;403</td>  <td class="nbHitsCovered"><a title="Line 403: Conditional coverage 100% (2/2).">&nbsp;18</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 403: Conditional coverage 100% (2/2).">    <span class="keyword">for</span> (Map.Entry&lt;String, String&gt; me : aclConfigRaw.entrySet()) {</a></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;404</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      <span class="keyword">try</span> {</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;405</td>  <td class="nbHitsCovered">&nbsp;9</td>  <td class="src"><pre class="src">&nbsp;        aclConfig.put(Integer.parseInt(me.getKey()), me.getValue());</pre></td></tr>
@@ -706,8 +706,8 @@
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;412</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;413</td>  <td class="nbHitsCovered">&nbsp;19</td>  <td class="src"><pre class="src">&nbsp;    List&lt;AclTransform.Rule&gt; rules = <span class="keyword">new</span> LinkedList&lt;AclTransform.Rule&gt;();</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;414</td>  <td class="nbHitsCovered"><a title="Line 414: Conditional coverage 100% (2/2).">&nbsp;19</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 414: Conditional coverage 100% (2/2).">    <span class="keyword">for</span> (String value : aclConfig.values()) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;413</td>  <td class="nbHitsCovered">&nbsp;18</td>  <td class="src"><pre class="src">&nbsp;    List&lt;AclTransform.Rule&gt; rules = <span class="keyword">new</span> LinkedList&lt;AclTransform.Rule&gt;();</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;414</td>  <td class="nbHitsCovered"><a title="Line 414: Conditional coverage 100% (2/2).">&nbsp;18</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 414: Conditional coverage 100% (2/2).">    <span class="keyword">for</span> (String value : aclConfig.values()) {</a></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;415</td>  <td class="nbHitsCovered">&nbsp;8</td>  <td class="src"><pre class="src">&nbsp;      String[] parts = value.split(<span class="string">";"</span>, 2);</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;416</td>  <td class="nbHitsCovered"><a title="Line 416: Conditional coverage 100% (2/2).">&nbsp;8</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 416: Conditional coverage 100% (2/2).">      <span class="keyword">if</span> (parts.length != 2) {</a></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;417</td>  <td class="nbHitsCovered">&nbsp;1</td>  <td class="src"><pre class="src">&nbsp;        log.log(Level.WARNING, <span class="string">"Could not find semicolon in acl transform: {0}"</span>,</pre></td></tr>
@@ -734,7 +734,7 @@
   <td class="src"><pre class="src">&nbsp;      }</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;433</td>  <td class="nbHitsCovered">&nbsp;3</td>  <td class="src"><pre class="src">&nbsp;      rules.add(<span class="keyword">new</span> AclTransform.Rule(search, replace));</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;434</td>  <td class="nbHitsCovered">&nbsp;3</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;435</td>  <td class="nbHitsCovered">&nbsp;19</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> <span class="keyword">new</span> AclTransform(rules);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;435</td>  <td class="nbHitsCovered">&nbsp;18</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> <span class="keyword">new</span> AclTransform(rules);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;436</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;437</td>  <td class="nbHits">&nbsp;</td>
@@ -809,26 +809,26 @@
   <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;487</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">private</span> <span class="keyword">static</span> KeyPair getKeyPair(String alias) <span class="keyword">throws</span> IOException {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;488</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">final</span> String keystoreKey = <span class="string">"javax.net.ssl.keyStore"</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;489</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">final</span> String keystorePasswordKey = <span class="string">"javax.net.ssl.keyStorePassword"</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;490</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    String keystore = System.getProperty(keystoreKey);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;491</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    String keystoreType = System.getProperty(<span class="string">"javax.net.ssl.keyStoreType"</span>,</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;488</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">final</span> String keystoreKey = <span class="string">"javax.net.ssl.keyStore"</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;489</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">final</span> String keystorePasswordKey = <span class="string">"javax.net.ssl.keyStorePassword"</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;490</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    String keystore = System.getProperty(keystoreKey);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;491</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    String keystoreType = System.getProperty(<span class="string">"javax.net.ssl.keyStoreType"</span>,</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;492</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;                                             KeyStore.getDefaultType());</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;493</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    String keystorePassword = System.getProperty(keystorePasswordKey);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;493</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    String keystorePassword = System.getProperty(keystorePasswordKey);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;494</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;495</td>  <td class="nbHitsUncovered"><a title="Line 495: Conditional coverage 50% (1/2).">&nbsp;17</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 495: Conditional coverage 50% (1/2).">    <span class="keyword">if</span> (keystore == <span class="keyword">null</span>) {</a></span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;495</td>  <td class="nbHitsUncovered"><a title="Line 495: Conditional coverage 50% (1/2).">&nbsp;16</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 495: Conditional coverage 50% (1/2).">    <span class="keyword">if</span> (keystore == <span class="keyword">null</span>) {</a></span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;496</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      <span class="keyword">throw</span> <span class="keyword">new</span> NullPointerException(<span class="string">"You must set "</span> + keystoreKey);</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;497</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;498</td>  <td class="nbHitsUncovered"><a title="Line 498: Conditional coverage 50% (1/2).">&nbsp;17</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 498: Conditional coverage 50% (1/2).">    <span class="keyword">if</span> (keystorePassword == <span class="keyword">null</span>) {</a></span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;498</td>  <td class="nbHitsUncovered"><a title="Line 498: Conditional coverage 50% (1/2).">&nbsp;16</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 498: Conditional coverage 50% (1/2).">    <span class="keyword">if</span> (keystorePassword == <span class="keyword">null</span>) {</a></span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;499</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      <span class="keyword">throw</span> <span class="keyword">new</span> NullPointerException(<span class="string">"You must set "</span> + keystorePasswordKey);</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;500</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;501</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;502</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> getKeyPair(alias, keystore, keystoreType, keystorePassword);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;502</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> getKeyPair(alias, keystore, keystoreType, keystorePassword);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;503</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;504</td>  <td class="nbHits">&nbsp;</td>
@@ -843,43 +843,43 @@
   <td class="src"><pre class="src">&nbsp;    PublicKey publicKey;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;509</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">try</span> {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;510</td>  <td class="nbHitsCovered">&nbsp;21</td>  <td class="src"><pre class="src">&nbsp;      KeyStore ks = KeyStore.getInstance(keystoreType);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;511</td>  <td class="nbHitsCovered">&nbsp;20</td>  <td class="src"><pre class="src">&nbsp;      InputStream ksis = <span class="keyword">new</span> FileInputStream(keystoreFile);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;512</td>  <td class="nbHitsUncovered"><a title="Line 512: Conditional coverage 50% (1/2).">&nbsp;19</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 512: Conditional coverage 50% (1/2).">      <span class="keyword">char</span>[] keystorePassword = keystorePasswordStr == <span class="keyword">null</span> ? <span class="keyword">null</span></a></span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;510</td>  <td class="nbHitsCovered">&nbsp;20</td>  <td class="src"><pre class="src">&nbsp;      KeyStore ks = KeyStore.getInstance(keystoreType);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;511</td>  <td class="nbHitsCovered">&nbsp;19</td>  <td class="src"><pre class="src">&nbsp;      InputStream ksis = <span class="keyword">new</span> FileInputStream(keystoreFile);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;512</td>  <td class="nbHitsUncovered"><a title="Line 512: Conditional coverage 50% (1/2).">&nbsp;18</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 512: Conditional coverage 50% (1/2).">      <span class="keyword">char</span>[] keystorePassword = keystorePasswordStr == <span class="keyword">null</span> ? <span class="keyword">null</span></a></span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;513</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;          : keystorePasswordStr.toCharArray();</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;514</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      <span class="keyword">try</span> {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;515</td>  <td class="nbHitsCovered">&nbsp;19</td>  <td class="src"><pre class="src">&nbsp;        ks.load(ksis, keystorePassword);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;515</td>  <td class="nbHitsCovered">&nbsp;18</td>  <td class="src"><pre class="src">&nbsp;        ks.load(ksis, keystorePassword);</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;516</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      } <span class="keyword">catch</span> (NoSuchAlgorithmException ex) {</span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;517</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(ex);</span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;518</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      } <span class="keyword">catch</span> (CertificateException ex) {</span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;519</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(ex);</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;520</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      } <span class="keyword">finally</span> {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;521</td>  <td class="nbHitsCovered">&nbsp;19</td>  <td class="src"><pre class="src">&nbsp;        ksis.close();</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;522</td>  <td class="nbHitsCovered">&nbsp;19</td>  <td class="src"><pre class="src">&nbsp;      }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;523</td>  <td class="nbHitsCovered">&nbsp;19</td>  <td class="src"><pre class="src">&nbsp;      Key key = <span class="keyword">null</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;521</td>  <td class="nbHitsCovered">&nbsp;18</td>  <td class="src"><pre class="src">&nbsp;        ksis.close();</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;522</td>  <td class="nbHitsCovered">&nbsp;18</td>  <td class="src"><pre class="src">&nbsp;      }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;523</td>  <td class="nbHitsCovered">&nbsp;18</td>  <td class="src"><pre class="src">&nbsp;      Key key = <span class="keyword">null</span>;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;524</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      <span class="keyword">try</span> {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;525</td>  <td class="nbHitsCovered">&nbsp;19</td>  <td class="src"><pre class="src">&nbsp;        key = ks.getKey(alias, keystorePassword);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;525</td>  <td class="nbHitsCovered">&nbsp;18</td>  <td class="src"><pre class="src">&nbsp;        key = ks.getKey(alias, keystorePassword);</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;526</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      } <span class="keyword">catch</span> (NoSuchAlgorithmException ex) {</span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;527</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(ex);</span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;528</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      } <span class="keyword">catch</span> (UnrecoverableKeyException ex) {</span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;529</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(ex);</span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;530</td>  <td class="nbHitsCovered">&nbsp;19</td>  <td class="src"><pre class="src">&nbsp;      }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;531</td>  <td class="nbHitsCovered"><a title="Line 531: Conditional coverage 100% (2/2).">&nbsp;19</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 531: Conditional coverage 100% (2/2).">      <span class="keyword">if</span> (key == <span class="keyword">null</span>) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;530</td>  <td class="nbHitsCovered">&nbsp;18</td>  <td class="src"><pre class="src">&nbsp;      }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;531</td>  <td class="nbHitsCovered"><a title="Line 531: Conditional coverage 100% (2/2).">&nbsp;18</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 531: Conditional coverage 100% (2/2).">      <span class="keyword">if</span> (key == <span class="keyword">null</span>) {</a></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;532</td>  <td class="nbHitsCovered">&nbsp;1</td>  <td class="src"><pre class="src">&nbsp;        <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(<span class="string">"Could not find key for alias '"</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;533</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;                                        + alias + <span class="string">"'"</span>);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;534</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;535</td>  <td class="nbHitsCovered">&nbsp;18</td>  <td class="src"><pre class="src">&nbsp;      privateKey = (PrivateKey) key;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;536</td>  <td class="nbHitsCovered">&nbsp;18</td>  <td class="src"><pre class="src">&nbsp;      publicKey = ks.getCertificate(alias).getPublicKey();</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;535</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;      privateKey = (PrivateKey) key;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;536</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;      publicKey = ks.getCertificate(alias).getPublicKey();</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;537</td>  <td class="nbHitsCovered">&nbsp;1</td>  <td class="src"><pre class="src">&nbsp;    } <span class="keyword">catch</span> (KeyStoreException ex) {</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;538</td>  <td class="nbHitsCovered">&nbsp;1</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(ex);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;539</td>  <td class="nbHitsCovered">&nbsp;18</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;540</td>  <td class="nbHitsCovered">&nbsp;18</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> <span class="keyword">new</span> KeyPair(publicKey, privateKey);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;539</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;540</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> <span class="keyword">new</span> KeyPair(publicKey, privateKey);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;541</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;542</td>  <td class="nbHits">&nbsp;</td>
@@ -915,19 +915,19 @@
   <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;560</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">boolean</span> stop(<span class="keyword">long</span> time, TimeUnit unit) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;561</td>  <td class="nbHitsCovered">&nbsp;32</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">boolean</span> clean = <span class="keyword">true</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;562</td>  <td class="nbHitsCovered"><a title="Line 562: Conditional coverage 100% (2/2).">&nbsp;32</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 562: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (adaptorContext != <span class="keyword">null</span>) {</a></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;563</td>  <td class="nbHitsCovered">&nbsp;18</td>  <td class="src"><pre class="src">&nbsp;      adaptorContext.freeze();</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;561</td>  <td class="nbHitsCovered">&nbsp;31</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">boolean</span> clean = <span class="keyword">true</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;562</td>  <td class="nbHitsCovered"><a title="Line 562: Conditional coverage 100% (2/2).">&nbsp;31</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 562: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (adaptorContext != <span class="keyword">null</span>) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;563</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;      adaptorContext.freeze();</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;564</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;565</td>  <td class="nbHitsCovered"><a title="Line 565: Conditional coverage 100% (2/2).">&nbsp;32</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 565: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (scope != <span class="keyword">null</span>) {</a></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;566</td>  <td class="nbHitsCovered">&nbsp;18</td>  <td class="src"><pre class="src">&nbsp;      scope.close();</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;567</td>  <td class="nbHitsCovered">&nbsp;18</td>  <td class="src"><pre class="src">&nbsp;      scope = <span class="keyword">new</span> HttpServerScope(</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;565</td>  <td class="nbHitsCovered"><a title="Line 565: Conditional coverage 100% (2/2).">&nbsp;31</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 565: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (scope != <span class="keyword">null</span>) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;566</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;      scope.close();</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;567</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;      scope = <span class="keyword">new</span> HttpServerScope(</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;568</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;          scope.getHttpServer(), scope.getContextPrefix());</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;569</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;570</td>  <td class="nbHitsCovered"><a title="Line 570: Conditional coverage 100% (2/2).">&nbsp;32</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 570: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (scheduleExecutor != <span class="keyword">null</span>) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;570</td>  <td class="nbHitsCovered"><a title="Line 570: Conditional coverage 100% (2/2).">&nbsp;31</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 570: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (scheduleExecutor != <span class="keyword">null</span>) {</a></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;571</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      <span class="comment">// Post-Adaptor.init() resources need to be stopped.</span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;572</td>  <td class="nbHitsCovered">&nbsp;15</td>  <td class="src"><pre class="src">&nbsp;      dashboardScope.close();</pre></td></tr>
@@ -971,7 +971,7 @@
 <tr>  <td class="numLineCover">&nbsp;600</td>  <td class="nbHitsCovered">&nbsp;15</td>  <td class="src"><pre class="src">&nbsp;      waiter = <span class="keyword">new</span> ShutdownWaiter();</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;601</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;602</td>  <td class="nbHitsCovered">&nbsp;32</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> clean;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;602</td>  <td class="nbHitsCovered">&nbsp;31</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> clean;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;603</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;604</td>  <td class="nbHits">&nbsp;</td>
@@ -986,11 +986,11 @@
   <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;609</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> teardown() {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;610</td>  <td class="nbHitsCovered">&nbsp;31</td>  <td class="src"><pre class="src">&nbsp;    scope = <span class="keyword">null</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;611</td>  <td class="nbHitsCovered">&nbsp;31</td>  <td class="src"><pre class="src">&nbsp;    dashboardScope = <span class="keyword">null</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;612</td>  <td class="nbHitsCovered">&nbsp;31</td>  <td class="src"><pre class="src">&nbsp;    keyPair = <span class="keyword">null</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;613</td>  <td class="nbHitsCovered">&nbsp;31</td>  <td class="src"><pre class="src">&nbsp;    aclTransform = <span class="keyword">null</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;614</td>  <td class="nbHitsCovered">&nbsp;31</td>  <td class="src"><pre class="src">&nbsp;    waiter = <span class="keyword">null</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;610</td>  <td class="nbHitsCovered">&nbsp;30</td>  <td class="src"><pre class="src">&nbsp;    scope = <span class="keyword">null</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;611</td>  <td class="nbHitsCovered">&nbsp;30</td>  <td class="src"><pre class="src">&nbsp;    dashboardScope = <span class="keyword">null</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;612</td>  <td class="nbHitsCovered">&nbsp;30</td>  <td class="src"><pre class="src">&nbsp;    keyPair = <span class="keyword">null</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;613</td>  <td class="nbHitsCovered">&nbsp;30</td>  <td class="src"><pre class="src">&nbsp;    aclTransform = <span class="keyword">null</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;614</td>  <td class="nbHitsCovered">&nbsp;30</td>  <td class="src"><pre class="src">&nbsp;    waiter = <span class="keyword">null</span>;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;615</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;616</td>  <td class="nbHits">&nbsp;</td>
@@ -999,12 +999,12 @@
   <td class="src"><pre class="src">&nbsp;    <span class="comment">// AdaptorContext, so that the AdaptorContext is usable until the very</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;618</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="comment">// end.</span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;619</td>  <td class="nbHitsCovered">&nbsp;31</td>  <td class="src"><pre class="src">&nbsp;    secureValueCodec = <span class="keyword">null</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;620</td>  <td class="nbHitsCovered">&nbsp;31</td>  <td class="src"><pre class="src">&nbsp;    sessionManager = <span class="keyword">null</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;621</td>  <td class="nbHitsCovered">&nbsp;31</td>  <td class="src"><pre class="src">&nbsp;    docIdCodec = <span class="keyword">null</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;622</td>  <td class="nbHitsCovered">&nbsp;31</td>  <td class="src"><pre class="src">&nbsp;    docIdSender = <span class="keyword">null</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;623</td>  <td class="nbHitsCovered">&nbsp;31</td>  <td class="src"><pre class="src">&nbsp;    adaptorContext = <span class="keyword">null</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;624</td>  <td class="nbHitsCovered">&nbsp;31</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;619</td>  <td class="nbHitsCovered">&nbsp;30</td>  <td class="src"><pre class="src">&nbsp;    secureValueCodec = <span class="keyword">null</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;620</td>  <td class="nbHitsCovered">&nbsp;30</td>  <td class="src"><pre class="src">&nbsp;    sessionManager = <span class="keyword">null</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;621</td>  <td class="nbHitsCovered">&nbsp;30</td>  <td class="src"><pre class="src">&nbsp;    docIdCodec = <span class="keyword">null</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;622</td>  <td class="nbHitsCovered">&nbsp;30</td>  <td class="src"><pre class="src">&nbsp;    docIdSender = <span class="keyword">null</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;623</td>  <td class="nbHitsCovered">&nbsp;30</td>  <td class="src"><pre class="src">&nbsp;    adaptorContext = <span class="keyword">null</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;624</td>  <td class="nbHitsCovered">&nbsp;30</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;625</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;626</td>  <td class="nbHits">&nbsp;</td>
@@ -1115,7 +1115,7 @@
   <td class="src"><pre class="src">&nbsp;  <span class="comment">/** The adaptor instance being used. */</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;691</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> Adaptor getAdaptor() {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;692</td>  <td class="nbHitsCovered">&nbsp;36</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> adaptor;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;692</td>  <td class="nbHitsCovered">&nbsp;33</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> adaptor;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;693</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;694</td>  <td class="nbHits">&nbsp;</td>
@@ -1264,15 +1264,15 @@
   <td class="src"><pre class="src">&nbsp;<span class="comment">   * This class is thread-safe.</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;781</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;782</td>  <td class="nbHitsCovered">&nbsp;161</td>  <td class="src"><pre class="src">&nbsp;  <span class="keyword">private</span> <span class="keyword">class</span> AdaptorContextImpl <span class="keyword">implements</span> AdaptorContext {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;783</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">boolean</span> mutable = <span class="keyword">true</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;784</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> ExceptionHandler fullExceptionHandler</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;782</td>  <td class="nbHitsCovered">&nbsp;158</td>  <td class="src"><pre class="src">&nbsp;  <span class="keyword">private</span> <span class="keyword">class</span> AdaptorContextImpl <span class="keyword">implements</span> AdaptorContext {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;783</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">boolean</span> mutable = <span class="keyword">true</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;784</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> ExceptionHandler fullExceptionHandler</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;785</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;        = ExceptionHandlers.defaultHandler();</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;786</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> ExceptionHandler incrExceptionHandler</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;786</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> ExceptionHandler incrExceptionHandler</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;787</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;        = ExceptionHandlers.defaultHandler();</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;788</td>  <td class="nbHitsCovered">&nbsp;17</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">final</span> List&lt;StatusSource&gt; statusSources</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;788</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">final</span> List&lt;StatusSource&gt; statusSources</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;789</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;        = <span class="keyword">new</span> ArrayList&lt;StatusSource&gt;();</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;790</td>  <td class="nbHits">&nbsp;</td>
@@ -1285,8 +1285,8 @@
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;794</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> freeze() {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;795</td>  <td class="nbHitsCovered">&nbsp;33</td>  <td class="src"><pre class="src">&nbsp;      mutable = <span class="keyword">false</span>;</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;796</td>  <td class="nbHitsCovered">&nbsp;33</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;795</td>  <td class="nbHitsCovered">&nbsp;32</td>  <td class="src"><pre class="src">&nbsp;      mutable = <span class="keyword">false</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;796</td>  <td class="nbHitsCovered">&nbsp;32</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;797</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;798</td>  <td class="nbHits">&nbsp;</td>
