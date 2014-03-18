@@ -145,6 +145,11 @@
 </dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/Application.html#Application(com.google.enterprise.adaptor.Adaptor, com.google.enterprise.adaptor.Config)">Application(Adaptor, Config)</a></span> - Constructor for class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/Application.html" title="class in com.google.enterprise.adaptor">Application</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="./com/google/enterprise/adaptor/AsyncDocIdPusher.html" title="interface in com.google.enterprise.adaptor"><span class="strong">AsyncDocIdPusher</span></a> - Interface in <a href="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</a></dt>
+<dd>
+<div class="block">Interface that allows asynchronous at-will pushing of <code>DocId</code>s
+ to the GSA.</div>
+</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/AuthnAuthority.html#authenticateUser(com.sun.net.httpserver.HttpExchange, com.google.enterprise.adaptor.AuthnAuthority.Callback)">authenticateUser(HttpExchange, AuthnAuthority.Callback)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/AuthnAuthority.html" title="interface in com.google.enterprise.adaptor">AuthnAuthority</a></dt>
 <dd>
 <div class="block">Authenticate the user connected via <code>ex</code>.</div>
@@ -486,6 +491,11 @@
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/Metadata.html#getAllValues(java.lang.String)">getAllValues(String)</a></span> - Method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</a></dt>
 <dd>
 <div class="block">Gives unmodifiable reference to inserted values for key, empty if none.</div>
+</dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/AdaptorContext.html#getAsyncDocIdPusher()">getAsyncDocIdPusher()</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</a></dt>
+<dd>
+<div class="block">Callback object for asynchronously pushing <code>DocId</code>s to the GSA
+ at any time.</div>
 </dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/Session.html#getAttribute(java.lang.String)">getAttribute(String)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/Session.html" title="interface in com.google.enterprise.adaptor">Session</a></dt>
 <dd>
@@ -1062,6 +1072,10 @@
 <dd>
 <div class="block">Represents either a user or a group.</div>
 </dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/AsyncDocIdPusher.html#pushDocId(com.google.enterprise.adaptor.DocId)">pushDocId(DocId)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/AsyncDocIdPusher.html" title="interface in com.google.enterprise.adaptor">AsyncDocIdPusher</a></dt>
+<dd>
+<div class="block">Push a <code>DocId</code> asynchronously to the GSA.</div>
+</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/DocIdPusher.html#pushDocIds(java.lang.Iterable)">pushDocIds(Iterable&lt;DocId&gt;)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</a></dt>
 <dd>
 <div class="block">Push <code>DocId</code>s immediately and block until they are successfully
@@ -1082,6 +1096,10 @@
 <div class="block">Blocking call to push group definitions to GSA ends in success or
  when provided error handler gives up.</div>
 </dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/AsyncDocIdPusher.html#pushNamedResource(com.google.enterprise.adaptor.DocId, com.google.enterprise.adaptor.Acl)">pushNamedResource(DocId, Acl)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/AsyncDocIdPusher.html" title="interface in com.google.enterprise.adaptor">AsyncDocIdPusher</a></dt>
+<dd>
+<div class="block">Push a named resource asynchronously to the GSA.</div>
+</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/DocIdPusher.html#pushNamedResources(java.util.Map)">pushNamedResources(Map&lt;DocId, Acl&gt;)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</a></dt>
 <dd>
 <div class="block">Push named resources immediately and block until they are successfully
@@ -1091,6 +1109,10 @@
 <dd>
 <div class="block">Push named resources immediately and block until they are successfully
  provided to the GSA or the error handler gives up.</div>
+</dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/AsyncDocIdPusher.html#pushRecord(com.google.enterprise.adaptor.DocIdPusher.Record)">pushRecord(DocIdPusher.Record)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/AsyncDocIdPusher.html" title="interface in com.google.enterprise.adaptor">AsyncDocIdPusher</a></dt>
+<dd>
+<div class="block">Push a <code>Record</code> asynchronously to the GSA.</div>
 </dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/DocIdPusher.html#pushRecords(java.lang.Iterable)">pushRecords(Iterable&lt;DocIdPusher.Record&gt;)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</a></dt>
 <dd>

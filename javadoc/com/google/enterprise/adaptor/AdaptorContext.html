@@ -120,76 +120,83 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/AsyncDocIdPusher.html" title="interface in com.google.enterprise.adaptor">AsyncDocIdPusher</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getAsyncDocIdPusher()">getAsyncDocIdPusher</a></strong>()</code>
+<div class="block">Callback object for asynchronously pushing <code>DocId</code>s to the GSA
+ at any time.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getConfig()">getConfig</a></strong>()</code>
 <div class="block">Configuration instance for the adaptor and all things within the adaptor
  library.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/DocIdEncoder.html" title="interface in com.google.enterprise.adaptor">DocIdEncoder</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getDocIdEncoder()">getDocIdEncoder</a></strong>()</code>
 <div class="block">A way to construct URIs from DocIds.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getDocIdPusher()">getDocIdPusher</a></strong>()</code>
 <div class="block">Callback object for pushing <code>DocId</code>s to the GSA at any time.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getGetDocIdsFullErrorHandler()">getGetDocIdsFullErrorHandler</a></strong>()</code>
 <div class="block">Retrieve the current <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a> for full push.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getGetDocIdsIncrementalErrorHandler()">getGetDocIdsIncrementalErrorHandler</a></strong>()</code>
 <div class="block">Retrieve the current <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a> for incremental push.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/SensitiveValueDecoder.html" title="interface in com.google.enterprise.adaptor">SensitiveValueDecoder</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getSensitiveValueDecoder()">getSensitiveValueDecoder</a></strong>()</code>
 <div class="block">Retrieve decoder for sensitive values, like passwords.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/Session.html" title="interface in com.google.enterprise.adaptor">Session</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getUserSession(com.sun.net.httpserver.HttpExchange, boolean)">getUserSession</a></strong>(<a href="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpExchange.html?is-external=true" title="class or interface in com.sun.net.httpserver">HttpExchange</a>&nbsp;ex,
               boolean&nbsp;create)</code>
 <div class="block">Get the session for the user communicating via <code>ex</code>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#setAuthnAuthority(com.google.enterprise.adaptor.AuthnAuthority)">setAuthnAuthority</a></strong>(<a href="../../../../com/google/enterprise/adaptor/AuthnAuthority.html" title="interface in com.google.enterprise.adaptor">AuthnAuthority</a>&nbsp;authnAuthority)</code>
 <div class="block">Register an authentication provider, so it can authenticate users for the
  GSA.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#setAuthzAuthority(com.google.enterprise.adaptor.AuthzAuthority)">setAuthzAuthority</a></strong>(<a href="../../../../com/google/enterprise/adaptor/AuthzAuthority.html" title="interface in com.google.enterprise.adaptor">AuthzAuthority</a>&nbsp;authzAuthority)</code>
 <div class="block">Register an authorization provider, so it can check authorization of users
  for the GSA.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#setGetDocIdsFullErrorHandler(com.google.enterprise.adaptor.ExceptionHandler)">setGetDocIdsFullErrorHandler</a></strong>(<a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a>&nbsp;handler)</code>
 <div class="block">Override the default <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a> for full push.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#setGetDocIdsIncrementalErrorHandler(com.google.enterprise.adaptor.ExceptionHandler)">setGetDocIdsIncrementalErrorHandler</a></strong>(<a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a>&nbsp;handler)</code>
 <div class="block">Override the default <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a> for incremental push.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#setPollingIncrementalLister(com.google.enterprise.adaptor.PollingIncrementalLister)">setPollingIncrementalLister</a></strong>(<a href="../../../../com/google/enterprise/adaptor/PollingIncrementalLister.html" title="interface in com.google.enterprise.adaptor">PollingIncrementalLister</a>&nbsp;lister)</code>
 <div class="block">Register a polling incremental lister, so that it can be called when
@@ -230,6 +237,17 @@
 <h4>getDocIdPusher</h4>
 <pre><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</a>&nbsp;getDocIdPusher()</pre>
 <div class="block">Callback object for pushing <code>DocId</code>s to the GSA at any time.</div>
+</li>
+</ul>
+<a name="getAsyncDocIdPusher()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAsyncDocIdPusher</h4>
+<pre><a href="../../../../com/google/enterprise/adaptor/AsyncDocIdPusher.html" title="interface in com.google.enterprise.adaptor">AsyncDocIdPusher</a>&nbsp;getAsyncDocIdPusher()</pre>
+<div class="block">Callback object for asynchronously pushing <code>DocId</code>s to the GSA
+ at any time.</div>
 </li>
 </ul>
 <a name="getDocIdEncoder()">
