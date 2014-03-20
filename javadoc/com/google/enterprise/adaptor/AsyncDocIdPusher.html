@@ -114,18 +114,12 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AsyncDocIdPusher.html#pushItem(com.google.enterprise.adaptor.DocIdPusher.Item)">pushItem</a></strong>(<a href="../../../../com/google/enterprise/adaptor/DocIdPusher.Item.html" title="interface in com.google.enterprise.adaptor">DocIdPusher.Item</a>&nbsp;item)</code>
-<div class="block">Push a <code>Item</code> asynchronously to the GSA.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AsyncDocIdPusher.html#pushNamedResource(com.google.enterprise.adaptor.DocId, com.google.enterprise.adaptor.Acl)">pushNamedResource</a></strong>(<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>&nbsp;docId,
                  <a href="../../../../com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</a>&nbsp;acl)</code>
 <div class="block">Push a named resource asynchronously to the GSA.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AsyncDocIdPusher.html#pushRecord(com.google.enterprise.adaptor.DocIdPusher.Record)">pushRecord</a></strong>(<a href="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</a>&nbsp;record)</code>
 <div class="block">Push a <code>Record</code> asynchronously to the GSA.</div>
@@ -146,18 +140,6 @@
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="pushItem(com.google.enterprise.adaptor.DocIdPusher.Item)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>pushItem</h4>
-<pre>void&nbsp;pushItem(<a href="../../../../com/google/enterprise/adaptor/DocIdPusher.Item.html" title="interface in com.google.enterprise.adaptor">DocIdPusher.Item</a>&nbsp;item)</pre>
-<div class="block">Push a <code>Item</code> asynchronously to the GSA. The <code>Item</code> is
- enqueued and sent in the next batch to the GSA. If the queue is full,
- then the item will be dropped and a warning will be logged.</div>
-</li>
-</ul>
 <a name="pushDocId(com.google.enterprise.adaptor.DocId)">
 <!--   -->
 </a>
