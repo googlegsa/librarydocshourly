@@ -1228,7 +1228,7 @@
 <tr>  <td class="numLine">&nbsp;688</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;689</td>  <td class="nbHitsCovered"><a title="Line 689: Conditional coverage 100% (2/2).">&nbsp;16</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 689: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (unset.size() != 0) {</a></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;690</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(<span class="string">"Missing configuration values: "</span> + unset);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;690</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">throw</span> <span class="keyword">new</span> InvalidConfigurationException(<span class="string">"Missing configuration values: "</span> + unset);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;691</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;692</td>  <td class="nbHitsCovered">&nbsp;14</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
@@ -1252,7 +1252,7 @@
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> String getRawValue(String key) {</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;702</td>  <td class="nbHitsCovered">&nbsp;1090</td>  <td class="src"><pre class="src">&nbsp;    String value = config.getProperty(key);</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;703</td>  <td class="nbHitsUncovered"><a title="Line 703: Conditional coverage 50% (1/2).">&nbsp;1090</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 703: Conditional coverage 50% (1/2).">    <span class="keyword">if</span> (value == <span class="keyword">null</span>) {</a></span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;704</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(MessageFormat.format(</span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;704</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      <span class="keyword">throw</span> <span class="keyword">new</span> InvalidConfigurationException(MessageFormat.format(</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;705</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;          <span class="string">"You must set configuration key ''{0}''."</span>, key));</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;706</td>  <td class="nbHits">&nbsp;</td>
