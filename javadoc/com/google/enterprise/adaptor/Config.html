@@ -108,6 +108,9 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
       If not set, then an attempt to compute from gsa.version is made.
       Defaults to true for 7.2.0-0 and later, and false for earlier,
       as defined by gsa.version.
+ <tr><td> </td><td>adaptor.markAllDocsAsPublic </td><td> Tells GSA all
+        documents are public.  Overrides all ACLs and even the setting of
+        <code>Response.setSecure()</code>.  Defaults to false
  <tr><td> </td><td>adaptor.fullListingSchedule </td><td> when to invoke 
      <a href="../../../../com/google/enterprise/adaptor/Adaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)"><code>Adaptor.getDocIds</code></a>, in cron format (minute,
      hour,  day of month, month, day of week).  Defaults to 0 3 * * *
