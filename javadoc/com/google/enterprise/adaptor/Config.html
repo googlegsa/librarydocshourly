@@ -148,6 +148,10 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
      in feed files. Defaults to  UTF-8
  <tr><td align="center"> yes </td><td>gsa.hostname </td><td> machine to
      send feed files to.  Process errors if not provided 
+ <tr><td> </td><td>gsa.admin.hostname </td><td> administrative host for
+     the GSA. This may be different from gsa.hostname if the GSA's dedicated
+     administrative network interface is enabled. Defaults to the same
+     value as gsa.hostname.
  <tr><td> </td><td>gsa.samlEntityId </td><td> The SAML Entity ID that
      identifies the GSA. Defaults to
      http://google.com/enterprise/gsa/security-manager
