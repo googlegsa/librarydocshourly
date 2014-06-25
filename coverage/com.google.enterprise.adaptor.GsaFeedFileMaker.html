@@ -508,7 +508,7 @@
 <tr>  <td class="numLine">&nbsp;320</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">private</span> &lt;T <span class="keyword">extends</span> Collection&lt;Principal&gt;&gt; <span class="keyword">void</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;321</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;      constructGroupsDefinitionsFileBody(Document doc, Element root,</pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;      constructGroupDefinitionsFileBody(Document doc, Element root,</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;322</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      Collection&lt;Map.Entry&lt;GroupPrincipal, T&gt;&gt; items,</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;323</td>  <td class="nbHits">&nbsp;</td>
@@ -527,7 +527,7 @@
 <tr>  <td class="numLine">&nbsp;331</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">private</span> &lt;T <span class="keyword">extends</span> Collection&lt;Principal&gt;&gt; <span class="keyword">void</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;332</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;      constructGroupsDefinitionsFeedFile(Document doc,</pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;      constructGroupDefinitionsFeedFile(Document doc,</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;333</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      Collection&lt;Map.Entry&lt;GroupPrincipal, T&gt;&gt; items,</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;334</td>  <td class="nbHits">&nbsp;</td>
@@ -536,7 +536,7 @@
 <tr>  <td class="numLineCover">&nbsp;336</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;    doc.appendChild(root);</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;337</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;    Comment comment = doc.createComment(<span class="string">"GSA EasyConnector"</span>);</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;338</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;    root.appendChild(comment);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;339</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;    constructGroupsDefinitionsFileBody(doc, root, items, caseSensitiveMembers);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;339</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;    constructGroupDefinitionsFileBody(doc, root, items, caseSensitiveMembers);</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;340</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;341</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
@@ -549,7 +549,7 @@
 <tr>  <td class="numLine">&nbsp;345</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  <span class="comment">/** Makes feed file with groups and their definitions. */</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;346</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> &lt;T <span class="keyword">extends</span> Collection&lt;Principal&gt;&gt; String makeGroupsDefinitionsXml(</pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> &lt;T <span class="keyword">extends</span> Collection&lt;Principal&gt;&gt; String makeGroupDefinitionsXml(</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;347</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      Collection&lt;Map.Entry&lt;GroupPrincipal, T&gt;&gt; items,</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;348</td>  <td class="nbHits">&nbsp;</td>
@@ -559,7 +559,7 @@
 <tr>  <td class="numLineCover">&nbsp;350</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;      DocumentBuilderFactory dbfac = DocumentBuilderFactory.newInstance();</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;351</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;      DocumentBuilder docBuilder = dbfac.newDocumentBuilder();</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;352</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;      Document doc = docBuilder.newDocument();</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;353</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;      constructGroupsDefinitionsFeedFile(doc, items, caseSensitiveMembers);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;353</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;      constructGroupDefinitionsFeedFile(doc, items, caseSensitiveMembers);</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;354</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;      String xmlString = documentToString(doc); </pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;355</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">return</span> xmlString;</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;356</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;    } <span class="keyword">catch</span> (TransformerConfigurationException tce) {</span></pre></td></tr>

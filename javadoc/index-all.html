@@ -458,6 +458,11 @@
 </a>
 <h2 class="title">F</h2>
 <dl>
+<dt><a href="./com/google/enterprise/adaptor/FeedArchiver.html" title="interface in com.google.enterprise.adaptor"><span class="strong">FeedArchiver</span></a> - Interface in <a href="./com/google/enterprise/adaptor/package-summary.html">com.google.enterprise.adaptor</a></dt>
+<dd>
+<div class="block">Takes an XML feed destined for the GSA and makes a copy in the
+ configured feed archive directory.</div>
+</dd>
 <dt><a href="./com/google/enterprise/adaptor/examples/FileSystemAdaptor.html" title="class in com.google.enterprise.adaptor.examples"><span class="strong">FileSystemAdaptor</span></a> - Class in <a href="./com/google/enterprise/adaptor/examples/package-summary.html">com.google.enterprise.adaptor.examples</a></dt>
 <dd>
 <div class="block">Simple example adaptor that serves files from the local filesystem.</div>
@@ -550,6 +555,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsFromCsv.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)">getDocContent(Request, Response)</a></span> - Method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsFromCsv.html" title="class in com.google.enterprise.adaptor.examples">GroupDefinitionsFromCsv</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsScaleTester.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)">getDocContent(Request, Response)</a></span> - Method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsScaleTester.html" title="class in com.google.enterprise.adaptor.examples">GroupDefinitionsScaleTester</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)">getDocContent(Request, Response)</a></span> - Method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html" title="class in com.google.enterprise.adaptor.examples">GroupDefinitionsWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/prebuilt/CommandLineAdaptor.html#getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)">getDocContent(Request, Response)</a></span> - Method in class com.google.enterprise.adaptor.prebuilt.<a href="./com/google/enterprise/adaptor/prebuilt/CommandLineAdaptor.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineAdaptor</a></dt>
@@ -594,12 +601,19 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsFromCsv.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)">getDocIds(DocIdPusher)</a></span> - Method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsFromCsv.html" title="class in com.google.enterprise.adaptor.examples">GroupDefinitionsFromCsv</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsScaleTester.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)">getDocIds(DocIdPusher)</a></span> - Method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsScaleTester.html" title="class in com.google.enterprise.adaptor.examples">GroupDefinitionsScaleTester</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)">getDocIds(DocIdPusher)</a></span> - Method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html" title="class in com.google.enterprise.adaptor.examples">GroupDefinitionsWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/prebuilt/CommandLineAdaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)">getDocIds(DocIdPusher)</a></span> - Method in class com.google.enterprise.adaptor.prebuilt.<a href="./com/google/enterprise/adaptor/prebuilt/CommandLineAdaptor.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineAdaptor</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/prebuilt/FileSystemAdaptor.html#getDocIds(com.google.enterprise.adaptor.DocIdPusher)">getDocIds(DocIdPusher)</a></span> - Method in class com.google.enterprise.adaptor.prebuilt.<a href="./com/google/enterprise/adaptor/prebuilt/FileSystemAdaptor.html" title="class in com.google.enterprise.adaptor.prebuilt">FileSystemAdaptor</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/AdaptorContext.html#getFeedArchiver()">getFeedArchiver()</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</a></dt>
+<dd>
+<div class="block">Returns the <a href="./com/google/enterprise/adaptor/FeedArchiver.html" title="interface in com.google.enterprise.adaptor"><code>FeedArchiver</code></a>, which saves feeds destined for the GSA
+ in the configured feed archive directory.</div>
+</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/AdaptorContext.html#getGetDocIdsFullErrorHandler()">getGetDocIdsFullErrorHandler()</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</a></dt>
 <dd>
 <div class="block">Retrieve the current <a href="./com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a> for full push.</div>
@@ -757,6 +771,12 @@
 </dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsFromCsv.html#GroupDefinitionsFromCsv()">GroupDefinitionsFromCsv()</a></span> - Constructor for class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsFromCsv.html" title="class in com.google.enterprise.adaptor.examples">GroupDefinitionsFromCsv</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsScaleTester.html" title="class in com.google.enterprise.adaptor.examples"><span class="strong">GroupDefinitionsScaleTester</span></a> - Class in <a href="./com/google/enterprise/adaptor/examples/package-summary.html">com.google.enterprise.adaptor.examples</a></dt>
+<dd>
+<div class="block">Creates groups and users and pushes some number of principals per group.</div>
+</dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsScaleTester.html#GroupDefinitionsScaleTester()">GroupDefinitionsScaleTester()</a></span> - Constructor for class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsScaleTester.html" title="class in com.google.enterprise.adaptor.examples">GroupDefinitionsScaleTester</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html" title="class in com.google.enterprise.adaptor.examples"><span class="strong">GroupDefinitionsWriter</span></a> - Class in <a href="./com/google/enterprise/adaptor/examples/package-summary.html">com.google.enterprise.adaptor.examples</a></dt>
 <dd>
 <div class="block">Demonstrates sending group definitions to GSA.</div>
@@ -845,6 +865,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsFromCsv.html#init(com.google.enterprise.adaptor.AdaptorContext)">init(AdaptorContext)</a></span> - Method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsFromCsv.html" title="class in com.google.enterprise.adaptor.examples">GroupDefinitionsFromCsv</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsScaleTester.html#init(com.google.enterprise.adaptor.AdaptorContext)">init(AdaptorContext)</a></span> - Method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsScaleTester.html" title="class in com.google.enterprise.adaptor.examples">GroupDefinitionsScaleTester</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/prebuilt/CommandLineAdaptor.html#init(com.google.enterprise.adaptor.AdaptorContext)">init(AdaptorContext)</a></span> - Method in class com.google.enterprise.adaptor.prebuilt.<a href="./com/google/enterprise/adaptor/prebuilt/CommandLineAdaptor.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineAdaptor</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/prebuilt/FileSystemAdaptor.html#init(com.google.enterprise.adaptor.AdaptorContext)">init(AdaptorContext)</a></span> - Method in class com.google.enterprise.adaptor.prebuilt.<a href="./com/google/enterprise/adaptor/prebuilt/FileSystemAdaptor.html" title="class in com.google.enterprise.adaptor.prebuilt">FileSystemAdaptor</a></dt>
@@ -864,6 +886,8 @@
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/FileSystemAdaptor.html#initConfig(com.google.enterprise.adaptor.Config)">initConfig(Config)</a></span> - Method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/FileSystemAdaptor.html" title="class in com.google.enterprise.adaptor.examples">FileSystemAdaptor</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsFromCsv.html#initConfig(com.google.enterprise.adaptor.Config)">initConfig(Config)</a></span> - Method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsFromCsv.html" title="class in com.google.enterprise.adaptor.examples">GroupDefinitionsFromCsv</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsScaleTester.html#initConfig(com.google.enterprise.adaptor.Config)">initConfig(Config)</a></span> - Method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsScaleTester.html" title="class in com.google.enterprise.adaptor.examples">GroupDefinitionsScaleTester</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/prebuilt/CommandLineAdaptor.html#initConfig(com.google.enterprise.adaptor.Config)">initConfig(Config)</a></span> - Method in class com.google.enterprise.adaptor.prebuilt.<a href="./com/google/enterprise/adaptor/prebuilt/CommandLineAdaptor.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineAdaptor</a></dt>
 <dd>&nbsp;</dd>
@@ -1018,6 +1042,8 @@
 <div class="block">Call default main for adaptors.</div>
 </dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsFromCsv.html#main(java.lang.String[])">main(String[])</a></span> - Static method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsFromCsv.html" title="class in com.google.enterprise.adaptor.examples">GroupDefinitionsFromCsv</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsScaleTester.html#main(java.lang.String[])">main(String[])</a></span> - Static method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsScaleTester.html" title="class in com.google.enterprise.adaptor.examples">GroupDefinitionsScaleTester</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html#main(java.lang.String[])">main(String[])</a></span> - Static method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/GroupDefinitionsWriter.html" title="class in com.google.enterprise.adaptor.examples">GroupDefinitionsWriter</a></dt>
 <dd>&nbsp;</dd>
@@ -1247,6 +1273,16 @@
 </a>
 <h2 class="title">S</h2>
 <dl>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/FeedArchiver.html#saveFailedFeed(java.lang.String, java.lang.String)">saveFailedFeed(String, String)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/FeedArchiver.html" title="interface in com.google.enterprise.adaptor">FeedArchiver</a></dt>
+<dd>
+<div class="block">Save the supplied XML string as a file in the feed archive
+ directory.</div>
+</dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/FeedArchiver.html#saveFeed(java.lang.String, java.lang.String)">saveFeed(String, String)</a></span> - Method in interface com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/FeedArchiver.html" title="interface in com.google.enterprise.adaptor">FeedArchiver</a></dt>
+<dd>
+<div class="block">Save the supplied XML string as a file in the feed archive
+ directory.</div>
+</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/HttpExchanges.html#sendRedirect(com.sun.net.httpserver.HttpExchange, java.net.URI)">sendRedirect(HttpExchange, URI)</a></span> - Static method in class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/HttpExchanges.html" title="class in com.google.enterprise.adaptor">HttpExchanges</a></dt>
 <dd>
 <div class="block">Redirect client to <code>location</code>.</div>

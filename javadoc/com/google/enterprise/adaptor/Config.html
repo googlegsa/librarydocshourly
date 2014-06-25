@@ -136,6 +136,10 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
      if not provided
  <tr><td> </td><td>feed.noRecrawlBitEnabled </td><td> send bit telling
      GSA to crawl your documents only once.  Defaults to  false
+ <tr><td> </td><td>feed.archiveDirectory </td><td> specifies a directory in
+     which all feeds sent to the GSA will be archived.  Feeds that failed to
+     be sent to the GSA will be tagged with "FAILED" in the file name.
+     If no directory is specified, feed files will not be saved.
  <tr><td> </td><td>gsa.version </td><td> version number used to configure
      expected GSA features.  Defaults to acquiring from GSA.
      Uses 7.0.14-114 if acquiring fails.
