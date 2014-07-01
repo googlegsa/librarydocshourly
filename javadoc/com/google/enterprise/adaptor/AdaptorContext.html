@@ -146,64 +146,57 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/FeedArchiver.html" title="interface in com.google.enterprise.adaptor">FeedArchiver</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getFeedArchiver()">getFeedArchiver</a></strong>()</code>
-<div class="block">Returns the <a href="../../../../com/google/enterprise/adaptor/FeedArchiver.html" title="interface in com.google.enterprise.adaptor"><code>FeedArchiver</code></a>, which saves feeds destined for the GSA
- in the configured feed archive directory.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getGetDocIdsFullErrorHandler()">getGetDocIdsFullErrorHandler</a></strong>()</code>
 <div class="block">Retrieve the current <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a> for full push.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getGetDocIdsIncrementalErrorHandler()">getGetDocIdsIncrementalErrorHandler</a></strong>()</code>
 <div class="block">Retrieve the current <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a> for incremental push.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/SensitiveValueDecoder.html" title="interface in com.google.enterprise.adaptor">SensitiveValueDecoder</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getSensitiveValueDecoder()">getSensitiveValueDecoder</a></strong>()</code>
 <div class="block">Retrieve decoder for sensitive values, like passwords.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/Session.html" title="interface in com.google.enterprise.adaptor">Session</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getUserSession(com.sun.net.httpserver.HttpExchange, boolean)">getUserSession</a></strong>(<a href="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpExchange.html?is-external=true" title="class or interface in com.sun.net.httpserver">HttpExchange</a>&nbsp;ex,
               boolean&nbsp;create)</code>
 <div class="block">Get the session for the user communicating via <code>ex</code>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#setAuthnAuthority(com.google.enterprise.adaptor.AuthnAuthority)">setAuthnAuthority</a></strong>(<a href="../../../../com/google/enterprise/adaptor/AuthnAuthority.html" title="interface in com.google.enterprise.adaptor">AuthnAuthority</a>&nbsp;authnAuthority)</code>
 <div class="block">Register an authentication provider, so it can authenticate users for the
  GSA.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#setAuthzAuthority(com.google.enterprise.adaptor.AuthzAuthority)">setAuthzAuthority</a></strong>(<a href="../../../../com/google/enterprise/adaptor/AuthzAuthority.html" title="interface in com.google.enterprise.adaptor">AuthzAuthority</a>&nbsp;authzAuthority)</code>
 <div class="block">Register an authorization provider, so it can check authorization of users
  for the GSA.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#setGetDocIdsFullErrorHandler(com.google.enterprise.adaptor.ExceptionHandler)">setGetDocIdsFullErrorHandler</a></strong>(<a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a>&nbsp;handler)</code>
 <div class="block">Override the default <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a> for full push.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#setGetDocIdsIncrementalErrorHandler(com.google.enterprise.adaptor.ExceptionHandler)">setGetDocIdsIncrementalErrorHandler</a></strong>(<a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a>&nbsp;handler)</code>
 <div class="block">Override the default <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a> for incremental push.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#setPollingIncrementalLister(com.google.enterprise.adaptor.PollingIncrementalLister)">setPollingIncrementalLister</a></strong>(<a href="../../../../com/google/enterprise/adaptor/PollingIncrementalLister.html" title="interface in com.google.enterprise.adaptor">PollingIncrementalLister</a>&nbsp;lister)</code>
 <div class="block">Register a polling incremental lister, so that it can be called when
@@ -393,24 +386,12 @@
 <a name="setAuthzAuthority(com.google.enterprise.adaptor.AuthzAuthority)">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>setAuthzAuthority</h4>
 <pre>void&nbsp;setAuthzAuthority(<a href="../../../../com/google/enterprise/adaptor/AuthzAuthority.html" title="interface in com.google.enterprise.adaptor">AuthzAuthority</a>&nbsp;authzAuthority)</pre>
 <div class="block">Register an authorization provider, so it can check authorization of users
  for the GSA. Registration may not occur after <a href="../../../../com/google/enterprise/adaptor/Adaptor.html#init(com.google.enterprise.adaptor.AdaptorContext)"><code>Adaptor.init(com.google.enterprise.adaptor.AdaptorContext)</code></a>.</div>
-</li>
-</ul>
-<a name="getFeedArchiver()">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>getFeedArchiver</h4>
-<pre><a href="../../../../com/google/enterprise/adaptor/FeedArchiver.html" title="interface in com.google.enterprise.adaptor">FeedArchiver</a>&nbsp;getFeedArchiver()</pre>
-<div class="block">Returns the <a href="../../../../com/google/enterprise/adaptor/FeedArchiver.html" title="interface in com.google.enterprise.adaptor"><code>FeedArchiver</code></a>, which saves feeds destined for the GSA
- in the configured feed archive directory.  The feed archive directory is
- specified using the <code>feed.archiveDirectory</code> configuration property.</div>
 </li>
 </ul>
 </li>
