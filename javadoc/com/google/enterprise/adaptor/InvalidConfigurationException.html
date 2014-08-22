@@ -142,20 +142,26 @@ extends <a href="../../../../com/google/enterprise/adaptor/StartupException.html
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><strong><a href="../../../../com/google/enterprise/adaptor/InvalidConfigurationException.html#InvalidConfigurationException()">InvalidConfigurationException</a></strong>()</code>
-<div class="block">Constructs a new InvalidConfigurationException with no message and no root
+<div class="block">Constructs a new InvalidConfigurationException with no message and no
  cause.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colOne"><code><strong><a href="../../../../com/google/enterprise/adaptor/InvalidConfigurationException.html#InvalidConfigurationException(java.lang.String)">InvalidConfigurationException</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</code>
-<div class="block">Constructs a InvalidConfigurationException with a supplied message
- but no root cause.</div>
+<div class="block">Constructs a InvalidConfigurationException with a supplied message but no
+ cause.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><strong><a href="../../../../com/google/enterprise/adaptor/InvalidConfigurationException.html#InvalidConfigurationException(java.lang.String, java.lang.Throwable)">InvalidConfigurationException</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
-                             <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;rootCause)</code>
-<div class="block">Constructs a InvalidConfigurationException with message and root cause.</div>
+                             <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;cause)</code>
+<div class="block">Constructs a InvalidConfigurationException with message and cause.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../com/google/enterprise/adaptor/InvalidConfigurationException.html#InvalidConfigurationException(java.lang.Throwable)">InvalidConfigurationException</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;cause)</code>
+<div class="block">Constructs a InvalidConfigurationException with specified cause, copying
+ its message if cause is non-<code>null</code>.</div>
 </td>
 </tr>
 </table>
@@ -202,7 +208,7 @@ extends <a href="../../../../com/google/enterprise/adaptor/StartupException.html
 <li class="blockList">
 <h4>InvalidConfigurationException</h4>
 <pre>public&nbsp;InvalidConfigurationException()</pre>
-<div class="block">Constructs a new InvalidConfigurationException with no message and no root
+<div class="block">Constructs a new InvalidConfigurationException with no message and no
  cause.</div>
 </li>
 </ul>
@@ -213,8 +219,8 @@ extends <a href="../../../../com/google/enterprise/adaptor/StartupException.html
 <li class="blockList">
 <h4>InvalidConfigurationException</h4>
 <pre>public&nbsp;InvalidConfigurationException(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</pre>
-<div class="block">Constructs a InvalidConfigurationException with a supplied message
- but no root cause.</div>
+<div class="block">Constructs a InvalidConfigurationException with a supplied message but no
+ cause.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>message</code> - the message. Can be retrieved by the <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true#getMessage()" title="class or interface in java.lang"><code>Throwable.getMessage()</code></a>
         method.</dd></dl>
 </li>
@@ -222,14 +228,27 @@ extends <a href="../../../../com/google/enterprise/adaptor/StartupException.html
 <a name="InvalidConfigurationException(java.lang.String, java.lang.Throwable)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>InvalidConfigurationException</h4>
 <pre>public&nbsp;InvalidConfigurationException(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
-                             <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;rootCause)</pre>
-<div class="block">Constructs a InvalidConfigurationException with message and root cause.</div>
+                             <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;cause)</pre>
+<div class="block">Constructs a InvalidConfigurationException with message and cause.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>message</code> - the message. Can be retrieved by the <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true#getMessage()" title="class or interface in java.lang"><code>Throwable.getMessage()</code></a>
-        method.</dd><dd><code>rootCause</code> - root failure cause</dd></dl>
+        method.</dd><dd><code>cause</code> - failure cause</dd></dl>
+</li>
+</ul>
+<a name="InvalidConfigurationException(java.lang.Throwable)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>InvalidConfigurationException</h4>
+<pre>public&nbsp;InvalidConfigurationException(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;cause)</pre>
+<div class="block">Constructs a InvalidConfigurationException with specified cause, copying
+ its message if cause is non-<code>null</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>message</code> - the message. Can be retrieved by the <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true#getMessage()" title="class or interface in java.lang"><code>Throwable.getMessage()</code></a>
+        method.</dd><dd><code>cause</code> - failure cause</dd></dl>
 </li>
 </ul>
 </li>

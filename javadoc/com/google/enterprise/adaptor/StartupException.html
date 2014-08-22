@@ -120,8 +120,8 @@
 extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</a></pre>
 <div class="block">Thrown for unrecoverable startup errors, such as fatal configuration
  errors or running on the wrong platform.  StartupExceptions will bypass
- the retry with back-off recovery logic and immediately terminate the
- adaptor.</div>
+ the retry with back-off recovery logic of <a href="../../../../com/google/enterprise/adaptor/Application.html" title="class in com.google.enterprise.adaptor"><code>Application</code></a> and immediately
+ terminate the adaptor.</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../serialized-form.html#com.google.enterprise.adaptor.StartupException">Serialized Form</a></dd></dl>
 </li>
 </ul>
@@ -142,20 +142,24 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/RuntimeE
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><strong><a href="../../../../com/google/enterprise/adaptor/StartupException.html#StartupException()">StartupException</a></strong>()</code>
-<div class="block">Constructs a new StartupException with no message and no root
- cause.</div>
+<div class="block">Constructs a new StartupException with no message and no cause.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colOne"><code><strong><a href="../../../../com/google/enterprise/adaptor/StartupException.html#StartupException(java.lang.String)">StartupException</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</code>
-<div class="block">Constructs a StartupException with a supplied message but no root
- cause.</div>
+<div class="block">Constructs a StartupException with a supplied message but no cause.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><strong><a href="../../../../com/google/enterprise/adaptor/StartupException.html#StartupException(java.lang.String, java.lang.Throwable)">StartupException</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
-                <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;rootCause)</code>
-<div class="block">Constructs a StartupException with message and root cause.</div>
+                <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;cause)</code>
+<div class="block">Constructs a StartupException with message and cause.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../com/google/enterprise/adaptor/StartupException.html#StartupException(java.lang.Throwable)">StartupException</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;cause)</code>
+<div class="block">Constructs a StartupException with specified cause, copying its message if
+ cause is non-<code>null</code>.</div>
 </td>
 </tr>
 </table>
@@ -202,8 +206,7 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/RuntimeE
 <li class="blockList">
 <h4>StartupException</h4>
 <pre>public&nbsp;StartupException()</pre>
-<div class="block">Constructs a new StartupException with no message and no root
- cause.</div>
+<div class="block">Constructs a new StartupException with no message and no cause.</div>
 </li>
 </ul>
 <a name="StartupException(java.lang.String)">
@@ -213,8 +216,7 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/RuntimeE
 <li class="blockList">
 <h4>StartupException</h4>
 <pre>public&nbsp;StartupException(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</pre>
-<div class="block">Constructs a StartupException with a supplied message but no root
- cause.</div>
+<div class="block">Constructs a StartupException with a supplied message but no cause.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>message</code> - the message. Can be retrieved by the <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true#getMessage()" title="class or interface in java.lang"><code>Throwable.getMessage()</code></a>
         method.</dd></dl>
 </li>
@@ -222,14 +224,26 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/RuntimeE
 <a name="StartupException(java.lang.String, java.lang.Throwable)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>StartupException</h4>
 <pre>public&nbsp;StartupException(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
-                <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;rootCause)</pre>
-<div class="block">Constructs a StartupException with message and root cause.</div>
+                <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;cause)</pre>
+<div class="block">Constructs a StartupException with message and cause.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>message</code> - the message. Can be retrieved by the <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true#getMessage()" title="class or interface in java.lang"><code>Throwable.getMessage()</code></a>
-        method.</dd><dd><code>rootCause</code> - root failure cause</dd></dl>
+        method.</dd><dd><code>cause</code> - failure cause</dd></dl>
+</li>
+</ul>
+<a name="StartupException(java.lang.Throwable)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>StartupException</h4>
+<pre>public&nbsp;StartupException(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;cause)</pre>
+<div class="block">Constructs a StartupException with specified cause, copying its message if
+ cause is non-<code>null</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cause</code> - failure cause</dd></dl>
 </li>
 </ul>
 </li>

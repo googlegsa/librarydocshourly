@@ -140,12 +140,25 @@ extends <a href="../../../../com/google/enterprise/adaptor/StartupException.html
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><strong><a href="../../../../com/google/enterprise/adaptor/UnsupportedPlatformException.html#UnsupportedPlatformException()">UnsupportedPlatformException</a></strong>()</code>
-<div class="block">Constructs a new UnsupportedPlatformException with a default message.</div>
+<div class="block">Constructs a new UnsupportedPlatformException with no message.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colOne"><code><strong><a href="../../../../com/google/enterprise/adaptor/UnsupportedPlatformException.html#UnsupportedPlatformException(java.lang.String)">UnsupportedPlatformException</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</code>
 <div class="block">Constructs a UnsupportedPlatformException with a supplied message.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../com/google/enterprise/adaptor/UnsupportedPlatformException.html#UnsupportedPlatformException(java.lang.String, java.lang.Throwable)">UnsupportedPlatformException</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
+                            <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;cause)</code>
+<div class="block">Constructs a UnsupportedPlatformException with a supplied message and
+ cause.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../com/google/enterprise/adaptor/UnsupportedPlatformException.html#UnsupportedPlatformException(java.lang.Throwable)">UnsupportedPlatformException</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;cause)</code>
+<div class="block">Constructs a UnsupportedPlatformException with specified cause, copying its
+ message if cause is non-<code>null</code>.</div>
 </td>
 </tr>
 </table>
@@ -192,19 +205,45 @@ extends <a href="../../../../com/google/enterprise/adaptor/StartupException.html
 <li class="blockList">
 <h4>UnsupportedPlatformException</h4>
 <pre>public&nbsp;UnsupportedPlatformException()</pre>
-<div class="block">Constructs a new UnsupportedPlatformException with a default message.</div>
+<div class="block">Constructs a new UnsupportedPlatformException with no message.</div>
 </li>
 </ul>
 <a name="UnsupportedPlatformException(java.lang.String)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>UnsupportedPlatformException</h4>
 <pre>public&nbsp;UnsupportedPlatformException(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</pre>
 <div class="block">Constructs a UnsupportedPlatformException with a supplied message.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>message</code> - the message. Can be retrieved by the <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true#getMessage()" title="class or interface in java.lang"><code>Throwable.getMessage()</code></a>
         method.</dd></dl>
+</li>
+</ul>
+<a name="UnsupportedPlatformException(java.lang.String, java.lang.Throwable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>UnsupportedPlatformException</h4>
+<pre>public&nbsp;UnsupportedPlatformException(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
+                            <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;cause)</pre>
+<div class="block">Constructs a UnsupportedPlatformException with a supplied message and
+ cause.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>message</code> - the message. Can be retrieved by the <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true#getMessage()" title="class or interface in java.lang"><code>Throwable.getMessage()</code></a>
+        method.</dd><dd><code>cause</code> - failure cause</dd></dl>
+</li>
+</ul>
+<a name="UnsupportedPlatformException(java.lang.Throwable)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>UnsupportedPlatformException</h4>
+<pre>public&nbsp;UnsupportedPlatformException(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;cause)</pre>
+<div class="block">Constructs a UnsupportedPlatformException with specified cause, copying its
+ message if cause is non-<code>null</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cause</code> - failure cause</dd></dl>
 </li>
 </ul>
 </li>
