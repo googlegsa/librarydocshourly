@@ -129,13 +129,17 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
      are already URLs and avoid them being inserted into adaptor
        generated URLs.   Defaults to false
  <tr><td> </td><td>feed.crawlImmediatelyBitEnabled </td><td> send bit telling
-     GSA to crawl immediately.  Defaults to false
+     GSA to crawl immediately.
+     Defaults to not overriding adaptor's decision which is typically to send
+     updates as crawl-immediately and let GSA schedule crawl of all other ids
+ <tr><td> </td><td>feed.noRecrawlBitEnabled </td><td> send bit telling
+     GSA to crawl your documents only once. 
+     Defaults to not overriding adaptor's decision which is typically to send
+     all documents as recrawlable (equivalent to value of false)
  <tr><td> </td><td>feed.maxUrls </td><td> set max number of URLs included
      per feed file.    Defaults to 5000
  <tr><td> </td><td>feed.name </td><td> source name used in feeds. Generated
      if not provided
- <tr><td> </td><td>feed.noRecrawlBitEnabled </td><td> send bit telling
-     GSA to crawl your documents only once.  Defaults to  false
  <tr><td> </td><td>feed.archiveDirectory </td><td> specifies a directory in
      which all feeds sent to the GSA will be archived.  Feeds that failed to
      be sent to the GSA will be tagged with "FAILED" in the file name.
