@@ -169,6 +169,8 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
  <tr><td> </td><td>gsa.scoringType</td><td> type of relevance algorithm
       GSA utilizes to rank documents.  Either content or web.  Is sent
       when gsa.acceptsDocControlsHeader is true.  Defaults to content
+ <tr><td> </td><td>server.asyncDocIdSenderQueueSize </td><td> queue size of
+     the asynchronous DocId sender.  Defaults to 2 * feed.maxUrls
  <tr><td> </td><td>server.dashboardPort </td><td> port on adaptor's
      machine for accessing adaptor's dashboard.   Defaults to  5679
  <tr><td> </td><td>server.docIdPath </td><td> part of URL preceding
