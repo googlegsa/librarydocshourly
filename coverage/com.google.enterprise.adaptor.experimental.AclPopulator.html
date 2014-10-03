@@ -84,33 +84,33 @@
 <tr>  <td class="numLine">&nbsp;33</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="comment">/**</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;34</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment"> * Result of running this adaptor: </span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment"> * Result of running this adaptor:</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;35</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment"> *   1. CHILD_OVERRIDES ACLs with inheritance chain of depth 10 </span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment"> *   1. CHILD_OVERRIDES ACLs with inheritance chain of depth 10</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;36</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment"> *   2. 500K docs, say 20KB in size </span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment"> *   2. 500K docs, say 20KB in size</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;37</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment"> *   3. There is a special user who has access to roughly 100 files and will be </span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment"> *   3. There is a special user who has access to roughly 100 files and will be</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;38</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment"> *      denied access to all other files. The 100 files are uniformly </span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment"> *      denied access to all other files. The 100 files are uniformly</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;39</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="comment"> *      distributed around all leaves.</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;40</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment"> *   4. For all the files/directories other than the 100 files which the </span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment"> *   4. For all the files/directories other than the 100 files which the</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;41</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="comment"> *      special user has access to, they will have 2 random permitted users and</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;42</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment"> *      2 unique denied users. The users' names are uniquely made up, e.g., </span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment"> *      2 unique denied users. The users' names are uniquely made up, e.g.,</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;43</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment"> *      user1, user123. Note that the unique users get changed with every </span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment"> *      user1, user123. Note that the unique users get changed with every</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;44</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="comment"> *      recrawl.</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;45</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment"> * </span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;46</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="comment"> */</span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;47</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<span class="keyword">public</span> <span class="keyword">class</span> AclPopulator <span class="keyword">extends</span> AbstractAdaptor {</span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;48</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;  <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger log </span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;48</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;  <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger log</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;49</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      = Logger.getLogger(AclPopulator.<span class="keyword">class</span>.getName());</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;50</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;  <span class="keyword">private</span> Charset encoding = Charset.forName(<span class="string">"UTF-8"</span>);</span></pre></td></tr>
