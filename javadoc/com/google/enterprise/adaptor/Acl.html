@@ -33,12 +33,12 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../com/google/enterprise/adaptor/AbstractAdaptor.html" title="class in com.google.enterprise.adaptor"><span class="strong">PREV CLASS</span></a></li>
-<li><a href="../../../../com/google/enterprise/adaptor/Acl.BatchRetriever.html" title="interface in com.google.enterprise.adaptor"><span class="strong">NEXT CLASS</span></a></li>
+<li><a href="../../../../com/google/enterprise/adaptor/AbstractAdaptor.html" title="class in com.google.enterprise.adaptor"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../com/google/enterprise/adaptor/Acl.BatchRetriever.html" title="interface in com.google.enterprise.adaptor"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../../index.html?com/google/enterprise/adaptor/Acl.html" target="_top">FRAMES</a></li>
-<li><a href="Acl.html" target="_top">NO FRAMES</a></li>
+<li><a href="../../../../index.html?com/google/enterprise/adaptor/Acl.html" target="_top">Frames</a></li>
+<li><a href="Acl.html" target="_top">No Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
 <li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
@@ -57,17 +57,17 @@
 </div>
 <div>
 <ul class="subNavList">
-<li>SUMMARY:&nbsp;</li>
-<li><a href="#nested_class_summary">NESTED</a>&nbsp;|&nbsp;</li>
-<li><a href="#field_summary">FIELD</a>&nbsp;|&nbsp;</li>
-<li>CONSTR&nbsp;|&nbsp;</li>
-<li><a href="#method_summary">METHOD</a></li>
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
-<li>DETAIL:&nbsp;</li>
-<li><a href="#field_detail">FIELD</a>&nbsp;|&nbsp;</li>
-<li>CONSTR&nbsp;|&nbsp;</li>
-<li><a href="#method_detail">METHOD</a></li>
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
 <a name="skip-navbar_top">
@@ -76,7 +76,7 @@
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<p class="subTitle">com.google.enterprise.adaptor</p>
+<div class="subTitle">com.google.enterprise.adaptor</div>
 <h2 title="Class Acl" class="title">Class Acl</h2>
 </div>
 <div class="contentContainer">
@@ -93,11 +93,11 @@
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <strong>Acl</strong>
+<pre>public class <span class="strong">Acl</span>
 extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Immutable access control list. For description of the semantics of the
  various fields, see <a href="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorizedLocal(com.google.enterprise.adaptor.AuthnIdentity)"><code>isAuthorizedLocal</code></a> and
- <a href="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorized(com.google.enterprise.adaptor.AuthnIdentity, java.util.List)"><code>isAuthorized</code></a>. Users and groups must not be <code>null</code>, <code>""</code>, or have surrounding whitespace. These values are
+ <a href="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorized(com.google.enterprise.adaptor.AuthnIdentity,%20java.util.List)"><code>isAuthorized</code></a>. Users and groups must not be <code>null</code>, <code>""</code>, or have surrounding whitespace. These values are
  disallowed to prevent confusion since <code>null</code> doesn't make sense, <code>""</code> would be ignored by the GSA, and surrounding whitespace is automatically
  trimmed by the GSA.</div>
 </li>
@@ -244,14 +244,14 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../com/google/enterprise/adaptor/AuthzStatus.html" title="enum in com.google.enterprise.adaptor">AuthzStatus</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorized(com.google.enterprise.adaptor.AuthnIdentity, java.util.List)">isAuthorized</a></strong>(<a href="../../../../com/google/enterprise/adaptor/AuthnIdentity.html" title="interface in com.google.enterprise.adaptor">AuthnIdentity</a>&nbsp;userIdentity,
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorized(com.google.enterprise.adaptor.AuthnIdentity,%20java.util.List)">isAuthorized</a></strong>(<a href="../../../../com/google/enterprise/adaptor/AuthnIdentity.html" title="interface in com.google.enterprise.adaptor">AuthnIdentity</a>&nbsp;userIdentity,
             <a href="http://download.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</a>&gt;&nbsp;aclChain)</code>
 <div class="block">Determine if the provided <code>userIdentity</code> belonging to <code>groups</code> is authorized for the provided <code>aclChain</code>.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>,<a href="../../../../com/google/enterprise/adaptor/AuthzStatus.html" title="enum in com.google.enterprise.adaptor">AuthzStatus</a>&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorizedBatch(com.google.enterprise.adaptor.AuthnIdentity, java.util.Collection, com.google.enterprise.adaptor.Acl.BatchRetriever)">isAuthorizedBatch</a></strong>(<a href="../../../../com/google/enterprise/adaptor/AuthnIdentity.html" title="interface in com.google.enterprise.adaptor">AuthnIdentity</a>&nbsp;userIdentity,
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorizedBatch(com.google.enterprise.adaptor.AuthnIdentity,%20java.util.Collection,%20com.google.enterprise.adaptor.Acl.BatchRetriever)">isAuthorizedBatch</a></strong>(<a href="../../../../com/google/enterprise/adaptor/AuthnIdentity.html" title="interface in com.google.enterprise.adaptor">AuthnIdentity</a>&nbsp;userIdentity,
                  <a href="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>&gt;&nbsp;ids,
                  <a href="../../../../com/google/enterprise/adaptor/Acl.BatchRetriever.html" title="interface in com.google.enterprise.adaptor">Acl.BatchRetriever</a>&nbsp;retriever)</code>
 <div class="block">Check authz for many DocIds at once.</div>
@@ -288,7 +288,7 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</a></code></li>
+<code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
 </ul>
 </li>
 </ul>
@@ -470,7 +470,7 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
  <p>If you have an ACL and wish to determine if a user is authorized, you
  should manually generate an aclChain by recursively retrieving the ACLs of
  the <code>inheritFrom</code> <a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor"><code>DocId</code></a>. The ACL you started with should be
- at the end of the chain. Alternatively, you can use <a href="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorizedBatch(com.google.enterprise.adaptor.AuthnIdentity, java.util.Collection, com.google.enterprise.adaptor.Acl.BatchRetriever)"><code>isAuthorizedBatch()</code></a>.
+ at the end of the chain. Alternatively, you can use <a href="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorizedBatch(com.google.enterprise.adaptor.AuthnIdentity,%20java.util.Collection,%20com.google.enterprise.adaptor.Acl.BatchRetriever)"><code>isAuthorizedBatch()</code></a>.
 
  <p>If the entire chain has empty permit/deny sets, then the result is
  <a href="../../../../com/google/enterprise/adaptor/AuthzStatus.html#INDETERMINATE"><code>AuthzStatus.INDETERMINATE</code></a>.
@@ -518,7 +518,7 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
                                                 throws <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Check authz for many DocIds at once. This will only fetch ACL information
  for a DocId once, even when considering inheritFrom. It will then create
- the appropriate chains and call <a href="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorized(com.google.enterprise.adaptor.AuthnIdentity, java.util.List)"><code>isAuthorized()</code></a>.
+ the appropriate chains and call <a href="../../../../com/google/enterprise/adaptor/Acl.html#isAuthorized(com.google.enterprise.adaptor.AuthnIdentity,%20java.util.List)"><code>isAuthorized()</code></a>.
 
  <p>If there is an inheritance cycle, an ACL for a DocId in <code>ids</code> was
  not returned by <code>retriever</code> when requested, or an inherited ACL was
@@ -599,12 +599,12 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../com/google/enterprise/adaptor/AbstractAdaptor.html" title="class in com.google.enterprise.adaptor"><span class="strong">PREV CLASS</span></a></li>
-<li><a href="../../../../com/google/enterprise/adaptor/Acl.BatchRetriever.html" title="interface in com.google.enterprise.adaptor"><span class="strong">NEXT CLASS</span></a></li>
+<li><a href="../../../../com/google/enterprise/adaptor/AbstractAdaptor.html" title="class in com.google.enterprise.adaptor"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../com/google/enterprise/adaptor/Acl.BatchRetriever.html" title="interface in com.google.enterprise.adaptor"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../../index.html?com/google/enterprise/adaptor/Acl.html" target="_top">FRAMES</a></li>
-<li><a href="Acl.html" target="_top">NO FRAMES</a></li>
+<li><a href="../../../../index.html?com/google/enterprise/adaptor/Acl.html" target="_top">Frames</a></li>
+<li><a href="Acl.html" target="_top">No Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">
 <li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
@@ -623,17 +623,17 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
 </div>
 <div>
 <ul class="subNavList">
-<li>SUMMARY:&nbsp;</li>
-<li><a href="#nested_class_summary">NESTED</a>&nbsp;|&nbsp;</li>
-<li><a href="#field_summary">FIELD</a>&nbsp;|&nbsp;</li>
-<li>CONSTR&nbsp;|&nbsp;</li>
-<li><a href="#method_summary">METHOD</a></li>
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
-<li>DETAIL:&nbsp;</li>
-<li><a href="#field_detail">FIELD</a>&nbsp;|&nbsp;</li>
-<li>CONSTR&nbsp;|&nbsp;</li>
-<li><a href="#method_detail">METHOD</a></li>
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
 <a name="skip-navbar_bottom">
