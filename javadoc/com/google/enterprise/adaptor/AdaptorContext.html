@@ -113,10 +113,10 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpContext.html?is-external=true" title="class or interface in com.sun.net.httpserver">HttpContext</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#createHttpContext(java.lang.String,%20com.sun.net.httpserver.HttpHandler)">createHttpContext</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
-                 <a href="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpHandler.html?is-external=true" title="class or interface in com.sun.net.httpserver">HttpHandler</a>&nbsp;handler)</code>
-<div class="block">Registers a handler with the library's <a href="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpServer.html?is-external=true" title="class or interface in com.sun.net.httpserver"><code>HttpServer</code></a> in similar fashion to <a href="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpServer.html?is-external=true#createContext(java.lang.String,%20com.sun.net.httpserver.HttpHandler)" title="class or interface in com.sun.net.httpserver"><code>HttpServer.createContext(java.lang.String, com.sun.net.httpserver.HttpHandler)</code></a>.</div>
+<td class="colFirst"><code>com.sun.net.httpserver.HttpContext</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#createHttpContext(java.lang.String,%20com.sun.net.httpserver.HttpHandler)">createHttpContext</a></strong>(java.lang.String&nbsp;path,
+                 com.sun.net.httpserver.HttpHandler&nbsp;handler)</code>
+<div class="block">Registers a handler with the library's <code>HttpServer</code> in similar fashion to <code>HttpServer.createContext(java.lang.String, com.sun.net.httpserver.HttpHandler)</code>.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -165,7 +165,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/Session.html" title="interface in com.google.enterprise.adaptor">Session</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getUserSession(com.sun.net.httpserver.HttpExchange,%20boolean)">getUserSession</a></strong>(<a href="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpExchange.html?is-external=true" title="class or interface in com.sun.net.httpserver">HttpExchange</a>&nbsp;ex,
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getUserSession(com.sun.net.httpserver.HttpExchange,%20boolean)">getUserSession</a></strong>(com.sun.net.httpserver.HttpExchange&nbsp;ex,
               boolean&nbsp;create)</code>
 <div class="block">Get the session for the user communicating via <code>ex</code>.</div>
 </td>
@@ -331,9 +331,9 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>createHttpContext</h4>
-<pre><a href="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpContext.html?is-external=true" title="class or interface in com.sun.net.httpserver">HttpContext</a>&nbsp;createHttpContext(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
-                            <a href="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpHandler.html?is-external=true" title="class or interface in com.sun.net.httpserver">HttpHandler</a>&nbsp;handler)</pre>
-<div class="block">Registers a handler with the library's <a href="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpServer.html?is-external=true" title="class or interface in com.sun.net.httpserver"><code>HttpServer</code></a> in similar fashion to <a href="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpServer.html?is-external=true#createContext(java.lang.String,%20com.sun.net.httpserver.HttpHandler)" title="class or interface in com.sun.net.httpserver"><code>HttpServer.createContext(java.lang.String, com.sun.net.httpserver.HttpHandler)</code></a>. The handler will
+<pre>com.sun.net.httpserver.HttpContext&nbsp;createHttpContext(java.lang.String&nbsp;path,
+                                                   com.sun.net.httpserver.HttpHandler&nbsp;handler)</pre>
+<div class="block">Registers a handler with the library's <code>HttpServer</code> in similar fashion to <code>HttpServer.createContext(java.lang.String, com.sun.net.httpserver.HttpHandler)</code>. The handler will
  automatically be removed during adaptor shutdown. Handler registration
  should occur during <a href="../../../../com/google/enterprise/adaptor/Adaptor.html#init(com.google.enterprise.adaptor.AdaptorContext)"><code>Adaptor.init(com.google.enterprise.adaptor.AdaptorContext)</code></a>.
 
@@ -350,7 +350,7 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>getUserSession</h4>
-<pre><a href="../../../../com/google/enterprise/adaptor/Session.html" title="interface in com.google.enterprise.adaptor">Session</a>&nbsp;getUserSession(<a href="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpExchange.html?is-external=true" title="class or interface in com.sun.net.httpserver">HttpExchange</a>&nbsp;ex,
+<pre><a href="../../../../com/google/enterprise/adaptor/Session.html" title="interface in com.google.enterprise.adaptor">Session</a>&nbsp;getUserSession(com.sun.net.httpserver.HttpExchange&nbsp;ex,
                      boolean&nbsp;create)</pre>
 <div class="block">Get the session for the user communicating via <code>ex</code>. If a session
  does not already exist, then <code>create</code> determines if one should be

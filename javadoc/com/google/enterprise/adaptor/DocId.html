@@ -81,7 +81,7 @@
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
 <li>com.google.enterprise.adaptor.DocId</li>
@@ -93,14 +93,14 @@
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>&gt;</dd>
+<dd>java.lang.Comparable&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>&gt;</dd>
 </dl>
 <hr>
 <br>
 <pre>public class <span class="strong">DocId</span>
-extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
-implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>&gt;</pre>
-<div class="block">Refers to a unique document in repository. It is a thin wrapper of <a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> that adds meaning to the String and prevents the string from being
+extends java.lang.Object
+implements java.lang.Comparable&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>&gt;</pre>
+<div class="block">Refers to a unique document in repository. It is a thin wrapper of <code>String</code> that adds meaning to the String and prevents the string from being
  confused with others that do not refer to documents.
 
  <p>You provide a <code>DocId</code> to methods like <a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushDocIds(java.lang.Iterable)"><code>DocIdPusher.pushDocIds(java.lang.Iterable&lt;com.google.enterprise.adaptor.DocId&gt;)</code></a>
@@ -127,7 +127,7 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Compa
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../../com/google/enterprise/adaptor/DocId.html#DocId(java.lang.String)">DocId</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id)</code>
+<td class="colOne"><code><strong><a href="../../../../com/google/enterprise/adaptor/DocId.html#DocId(java.lang.String)">DocId</a></strong>(java.lang.String&nbsp;id)</code>
 <div class="block">Construct an identifier based on <code>id</code>.</div>
 </td>
 </tr>
@@ -154,12 +154,12 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Compa
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/DocId.html#equals(java.lang.Object)">equals</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</code>
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/DocId.html#equals(java.lang.Object)">equals</a></strong>(java.lang.Object&nbsp;o)</code>
 <div class="block">Determines equality based on the unique id string.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/DocId.html#getUniqueId()">getUniqueId</a></strong>()</code>
 <div class="block">Returns the string identifier provided to the constructor.</div>
 </td>
@@ -171,7 +171,7 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Compa
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/DocId.html#toString()">toString</a></strong>()</code>
 <div class="block">Generates a string useful for debugging that contains the unique id.</div>
 </td>
@@ -181,8 +181,8 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Compa
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, finalize, getClass, notify, notifyAll, wait, wait, wait</code></li>
 </ul>
 </li>
 </ul>
@@ -204,7 +204,7 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Compa
 <ul class="blockListLast">
 <li class="blockList">
 <h4>DocId</h4>
-<pre>public&nbsp;DocId(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id)</pre>
+<pre>public&nbsp;DocId(java.lang.String&nbsp;id)</pre>
 <div class="block">Construct an identifier based on <code>id</code>.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>id</code> - non-<code>null</code> document identifier</dd></dl>
 </li>
@@ -223,7 +223,7 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Compa
 <ul class="blockList">
 <li class="blockList">
 <h4>getUniqueId</h4>
-<pre>public&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getUniqueId()</pre>
+<pre>public&nbsp;java.lang.String&nbsp;getUniqueId()</pre>
 <div class="block">Returns the string identifier provided to the constructor.</div>
 </li>
 </ul>
@@ -233,11 +233,11 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Compa
 <ul class="blockList">
 <li class="blockList">
 <h4>toString</h4>
-<pre>public&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toString()</pre>
+<pre>public&nbsp;java.lang.String&nbsp;toString()</pre>
 <div class="block">Generates a string useful for debugging that contains the unique id.</div>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+<dd><code>toString</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>
@@ -247,11 +247,11 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Compa
 <ul class="blockList">
 <li class="blockList">
 <h4>equals</h4>
-<pre>public&nbsp;boolean&nbsp;equals(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</pre>
+<pre>public&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;o)</pre>
 <div class="block">Determines equality based on the unique id string.</div>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a></code>&nbsp;in class&nbsp;<code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+<dd><code>equals</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>
@@ -265,7 +265,7 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Compa
 <div class="block">Generates a hash code based on the unique id string.</div>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+<dd><code>hashCode</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>
@@ -279,7 +279,7 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Compa
 <div class="block">Provides comparison for ids based on the unique id string.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Comparable.html?is-external=true#compareTo(T)" title="class or interface in java.lang">compareTo</a></code>&nbsp;in interface&nbsp;<code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>&gt;</code></dd>
+<dd><code>compareTo</code>&nbsp;in interface&nbsp;<code>java.lang.Comparable&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>&gt;</code></dd>
 </dl>
 </li>
 </ul>

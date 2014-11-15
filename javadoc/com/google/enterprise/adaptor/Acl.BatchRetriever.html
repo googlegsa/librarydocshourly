@@ -112,8 +112,8 @@
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>,<a href="../../../../com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</a>&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Acl.BatchRetriever.html#retrieveAcls(java.util.Set)">retrieveAcls</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>&gt;&nbsp;ids)</code>
+<td class="colFirst"><code>java.util.Map&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>,<a href="../../../../com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Acl.BatchRetriever.html#retrieveAcls(java.util.Set)">retrieveAcls</a></strong>(java.util.Set&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>&gt;&nbsp;ids)</code>
 <div class="block">Retrieve the ACLs for the requested DocIds.</div>
 </td>
 </tr>
@@ -138,8 +138,8 @@
 <ul class="blockListLast">
 <li class="blockList">
 <h4>retrieveAcls</h4>
-<pre><a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>,<a href="../../../../com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</a>&gt;&nbsp;retrieveAcls(<a href="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>&gt;&nbsp;ids)
-                            throws <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>java.util.Map&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>,<a href="../../../../com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</a>&gt;&nbsp;retrieveAcls(java.util.Set&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>&gt;&nbsp;ids)
+                                      throws java.io.IOException</pre>
 <div class="block">Retrieve the ACLs for the requested DocIds. This method is permitted to
  return ACLs for DocIds not requested, but it should never provide a
  <code>null</code> value for a DocId's ACLs. If a DocId does not exist, then it
@@ -149,7 +149,7 @@
  use, which is not the common case) in addition to any normal documents.
  For more information about named resources, see <a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushNamedResources(java.util.Map)"><code>DocIdPusher.pushNamedResources(java.util.Map&lt;com.google.enterprise.adaptor.DocId, com.google.enterprise.adaptor.Acl&gt;)</code></a>.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if there was an error contacting the data store</dd></dl>
+<dd><code>java.io.IOException</code> - if there was an error contacting the data store</dd></dl>
 </li>
 </ul>
 </li>

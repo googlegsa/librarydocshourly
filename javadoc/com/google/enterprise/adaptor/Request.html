@@ -113,14 +113,14 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="http://download.oracle.com/javase/6/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a></code></td>
+<td class="colFirst"><code>java.util.Date</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Request.html#getLastAccessTime()">getLastAccessTime</a></strong>()</code>
 <div class="block">Returns the last time a GSA or other client retrieved the data, or <code>null</code> if none was provided by the client.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Request.html#hasChangedSinceLastAccess(java.util.Date)">hasChangedSinceLastAccess</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;lastModified)</code>
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Request.html#hasChangedSinceLastAccess(java.util.Date)">hasChangedSinceLastAccess</a></strong>(java.util.Date&nbsp;lastModified)</code>
 <div class="block">Returns <code>true</code> if the GSA or other client's current copy of the
  document was retrieved after the <code>lastModified</code> date; <code>false</code>
  otherwise.</div>
@@ -147,7 +147,7 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>hasChangedSinceLastAccess</h4>
-<pre>boolean&nbsp;hasChangedSinceLastAccess(<a href="http://download.oracle.com/javase/6/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;lastModified)</pre>
+<pre>boolean&nbsp;hasChangedSinceLastAccess(java.util.Date&nbsp;lastModified)</pre>
 <div class="block">Returns <code>true</code> if the GSA or other client's current copy of the
  document was retrieved after the <code>lastModified</code> date; <code>false</code>
  otherwise. <code>lastModified</code> must be in GMT.
@@ -163,7 +163,7 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>getLastAccessTime</h4>
-<pre><a href="http://download.oracle.com/javase/6/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;getLastAccessTime()</pre>
+<pre>java.util.Date&nbsp;getLastAccessTime()</pre>
 <div class="block">Returns the last time a GSA or other client retrieved the data, or <code>null</code> if none was provided by the client. The returned <code>Date</code> is in
  GMT.
 

@@ -81,7 +81,7 @@
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
 <li>com.google.enterprise.adaptor.prebuilt.CommandLineTransform</li>
@@ -98,7 +98,7 @@
 <hr>
 <br>
 <pre>public class <span class="strong">CommandLineTransform</span>
-extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+extends java.lang.Object
 implements <a href="../../../../../com/google/enterprise/adaptor/DocumentTransform.html" title="interface in com.google.enterprise.adaptor">DocumentTransform</a></pre>
 <div class="block">A conduit that allows a simple way to create a document transform based on
  a command line program.</div>
@@ -139,7 +139,7 @@ implements <a href="../../../../../com/google/enterprise/adaptor/DocumentTransfo
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineTransform</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../../com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#create(java.util.Map)">create</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;config)</code>
+<td class="colLast"><code><strong><a href="../../../../../com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#create(java.util.Map)">create</a></strong>(java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;config)</code>
 <div class="block">Accepts keys <code>"cmd"</code>, <code>"workingDirectory"</code>, and <code>"arg?"</code>.</div>
 </td>
 </tr>
@@ -148,11 +148,11 @@ implements <a href="../../../../../com/google/enterprise/adaptor/DocumentTransfo
 <td class="colLast"><code><strong><a href="../../../../../com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#getCommandAcceptsParameters()">getCommandAcceptsParameters</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="http://download.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#getTransformCommand()">getTransformCommand</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a></code></td>
+<td class="colFirst"><code>java.io.File</code></td>
 <td class="colLast"><code><strong><a href="../../../../../com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#getWorkingDirectory()">getWorkingDirectory</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -164,20 +164,20 @@ implements <a href="../../../../../com/google/enterprise/adaptor/DocumentTransfo
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#setTransformCommand(java.util.List)">setTransformCommand</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;transformCommand)</code>
+<td class="colLast"><code><strong><a href="../../../../../com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#setTransformCommand(java.util.List)">setTransformCommand</a></strong>(java.util.List&lt;java.lang.String&gt;&nbsp;transformCommand)</code>
 <div class="block">Sets the command that is in charge of transforming the document content.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#setWorkingDirectory(java.io.File)">setWorkingDirectory</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dir)</code>
+<td class="colLast"><code><strong><a href="../../../../../com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#setWorkingDirectory(java.io.File)">setWorkingDirectory</a></strong>(java.io.File&nbsp;dir)</code>
 <div class="block">Sets the working directory.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#transform(com.google.enterprise.adaptor.Metadata,%20java.util.Map)">transform</a></strong>(<a href="../../../../../com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</a>&nbsp;metadata,
-         <a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;params)</code>
+         java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;params)</code>
 <div class="block">Any changes to <code>metadata</code> and <code>params</code> will be
  passed on to subsequent transforms.</div>
 </td>
@@ -187,8 +187,8 @@ implements <a href="../../../../../com/google/enterprise/adaptor/DocumentTransfo
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 </li>
 </ul>
@@ -227,7 +227,7 @@ implements <a href="../../../../../com/google/enterprise/adaptor/DocumentTransfo
 <ul class="blockList">
 <li class="blockList">
 <h4>create</h4>
-<pre>public static&nbsp;<a href="../../../../../com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineTransform</a>&nbsp;create(<a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;config)</pre>
+<pre>public static&nbsp;<a href="../../../../../com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineTransform</a>&nbsp;create(java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;config)</pre>
 <div class="block">Accepts keys <code>"cmd"</code>, <code>"workingDirectory"</code>, and <code>"arg?"</code>.
  The <code>"arg?"</code> configuration values should be numerically increasing
  starting from one: <code>"arg1"</code>, <code>"arg2"</code>, <code>"arg3</code>, ...</div>
@@ -240,7 +240,7 @@ implements <a href="../../../../../com/google/enterprise/adaptor/DocumentTransfo
 <li class="blockList">
 <h4>transform</h4>
 <pre>public&nbsp;void&nbsp;transform(<a href="../../../../../com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</a>&nbsp;metadata,
-             <a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;params)</pre>
+             java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;params)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../com/google/enterprise/adaptor/DocumentTransform.html#transform(com.google.enterprise.adaptor.Metadata,%20java.util.Map)">DocumentTransform</a></code></strong></div>
 <div class="block">Any changes to <code>metadata</code> and <code>params</code> will be
  passed on to subsequent transforms. This method must be thread-safe.</div>
@@ -277,7 +277,7 @@ implements <a href="../../../../../com/google/enterprise/adaptor/DocumentTransfo
 <ul class="blockList">
 <li class="blockList">
 <h4>setTransformCommand</h4>
-<pre>public&nbsp;void&nbsp;setTransformCommand(<a href="http://download.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;transformCommand)</pre>
+<pre>public&nbsp;void&nbsp;setTransformCommand(java.util.List&lt;java.lang.String&gt;&nbsp;transformCommand)</pre>
 <div class="block">Sets the command that is in charge of transforming the document content.
  This command should take input on stdin, and print the output to stdout.
     e.g. /path/to/command metadataFile paramsFile
@@ -292,7 +292,7 @@ implements <a href="../../../../../com/google/enterprise/adaptor/DocumentTransfo
 <ul class="blockList">
 <li class="blockList">
 <h4>getTransformCommand</h4>
-<pre>public&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;getTransformCommand()</pre>
+<pre>public&nbsp;java.util.List&lt;java.lang.String&gt;&nbsp;getTransformCommand()</pre>
 </li>
 </ul>
 <a name="setWorkingDirectory(java.io.File)">
@@ -301,10 +301,10 @@ implements <a href="../../../../../com/google/enterprise/adaptor/DocumentTransfo
 <ul class="blockList">
 <li class="blockList">
 <h4>setWorkingDirectory</h4>
-<pre>public&nbsp;void&nbsp;setWorkingDirectory(<a href="http://download.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dir)</pre>
+<pre>public&nbsp;void&nbsp;setWorkingDirectory(java.io.File&nbsp;dir)</pre>
 <div class="block">Sets the working directory. Must be valid.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>dir</code> is not a directory</dd></dl>
+<dd><code>java.lang.IllegalArgumentException</code> - if <code>dir</code> is not a directory</dd></dl>
 </li>
 </ul>
 <a name="getWorkingDirectory()">
@@ -313,7 +313,7 @@ implements <a href="../../../../../com/google/enterprise/adaptor/DocumentTransfo
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getWorkingDirectory</h4>
-<pre>public&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;getWorkingDirectory()</pre>
+<pre>public&nbsp;java.io.File&nbsp;getWorkingDirectory()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>The working directory for the command line process.</dd></dl>
 </li>
 </ul>

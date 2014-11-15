@@ -116,28 +116,28 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#addAnchor(java.net.URI,%20java.lang.String)">addAnchor</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</a>&nbsp;uri,
-         <a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text)</code>
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#addAnchor(java.net.URI,%20java.lang.String)">addAnchor</a></strong>(java.net.URI&nbsp;uri,
+         java.lang.String&nbsp;text)</code>
 <div class="block">Add a hyperlink for the GSA to follow without modifying the document
  contents.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#addMetadata(java.lang.String,%20java.lang.String)">addMetadata</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
-           <a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#addMetadata(java.lang.String,%20java.lang.String)">addMetadata</a></strong>(java.lang.String&nbsp;key,
+           java.lang.String&nbsp;value)</code>
 <div class="block">Add metadata element that applies to the document.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a></code></td>
+<td class="colFirst"><code>java.io.OutputStream</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#getOutputStream()">getOutputStream</a></strong>()</code>
 <div class="block">Get stream to write document contents to.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#putNamedResource(java.lang.String,%20com.google.enterprise.adaptor.Acl)">putNamedResource</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fragment,
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#putNamedResource(java.lang.String,%20com.google.enterprise.adaptor.Acl)">putNamedResource</a></strong>(java.lang.String&nbsp;fragment,
                 <a href="../../../../com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</a>&nbsp;acl)</code>
 <div class="block">Provide alternative ACLs for this document, uniquely identified by
  response document's <code>DocId</code> and <code>fragment</code>.</div>
@@ -165,7 +165,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#setContentType(java.lang.String)">setContentType</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;contentType)</code>
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#setContentType(java.lang.String)">setContentType</a></strong>(java.lang.String&nbsp;contentType)</code>
 <div class="block">Describe the content type of the document.</div>
 </td>
 </tr>
@@ -178,13 +178,13 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#setDisplayUrl(java.net.URI)">setDisplayUrl</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</a>&nbsp;displayUrl)</code>
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#setDisplayUrl(java.net.URI)">setDisplayUrl</a></strong>(java.net.URI&nbsp;displayUrl)</code>
 <div class="block">Set the URI to be displayed in search results.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#setLastModified(java.util.Date)">setLastModified</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;lastModified)</code>
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#setLastModified(java.util.Date)">setLastModified</a></strong>(java.util.Date&nbsp;lastModified)</code>
 <div class="block">Provide the last modification time of the document.</div>
 </td>
 </tr>
@@ -242,7 +242,7 @@
 <li class="blockList">
 <h4>respondNotModified</h4>
 <pre>void&nbsp;respondNotModified()
-                        throws <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+                        throws java.io.IOException</pre>
 <div class="block">Respond to the GSA or other client that it already has the latest version
  of a file and its metadata. If you have called other methods on this object
  to provide various metadata, the effects of those methods will be ignored.
@@ -251,7 +251,7 @@
  this method, for the rest of the processing, exceptions may no longer be
  communicated to clients cleanly.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dd><code>java.io.IOException</code></dd></dl>
 </li>
 </ul>
 <a name="respondNotFound()">
@@ -261,7 +261,7 @@
 <li class="blockList">
 <h4>respondNotFound</h4>
 <pre>void&nbsp;respondNotFound()
-                     throws <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+                     throws java.io.IOException</pre>
 <div class="block">Respond to the GSA or other client that the request document does not
  exist. If you have called other methods on this object, the effects of
  those methods will be ignored.
@@ -270,7 +270,7 @@
  this method, for the rest of the processing, exceptions may no longer be
  communicated to the clients cleanly.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dd><code>java.io.IOException</code></dd></dl>
 </li>
 </ul>
 <a name="getOutputStream()">
@@ -279,8 +279,8 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>getOutputStream</h4>
-<pre><a href="http://download.oracle.com/javase/6/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;getOutputStream()
-                             throws <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>java.io.OutputStream&nbsp;getOutputStream()
+                                     throws java.io.IOException</pre>
 <div class="block">Get stream to write document contents to. There is no need to flush or
  close the <code>OutputStream</code> when done.
 
@@ -289,7 +289,7 @@
  method, for the rest of the processing, exceptions may no longer be
  communicated to clients cleanly.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dd><code>java.io.IOException</code></dd></dl>
 </li>
 </ul>
 <a name="setContentType(java.lang.String)">
@@ -298,7 +298,7 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>setContentType</h4>
-<pre>void&nbsp;setContentType(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;contentType)</pre>
+<pre>void&nbsp;setContentType(java.lang.String&nbsp;contentType)</pre>
 <div class="block">Describe the content type of the document.</div>
 </li>
 </ul>
@@ -308,7 +308,7 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>setLastModified</h4>
-<pre>void&nbsp;setLastModified(<a href="http://download.oracle.com/javase/6/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;lastModified)</pre>
+<pre>void&nbsp;setLastModified(java.util.Date&nbsp;lastModified)</pre>
 <div class="block">Provide the last modification time of the document.</div>
 </li>
 </ul>
@@ -318,14 +318,14 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>addMetadata</h4>
-<pre>void&nbsp;addMetadata(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
-               <a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</pre>
+<pre>void&nbsp;addMetadata(java.lang.String&nbsp;key,
+               java.lang.String&nbsp;value)</pre>
 <div class="block">Add metadata element that applies to the document. Providing multiple
  values for the same key is supported; simply repeat the call once for each
  value.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>key</code> - the key of metadata element</dd><dd><code>value</code> - the value of metadata element</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>key</code> or <code>value</code>
+<dd><code>java.lang.NullPointerException</code> - if <code>key</code> or <code>value</code>
      is <code>null</code></dd></dl>
 </li>
 </ul>
@@ -347,7 +347,7 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>putNamedResource</h4>
-<pre>void&nbsp;putNamedResource(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fragment,
+<pre>void&nbsp;putNamedResource(java.lang.String&nbsp;fragment,
                     <a href="../../../../com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</a>&nbsp;acl)</pre>
 <div class="block">Provide alternative ACLs for this document, uniquely identified by
  response document's <code>DocId</code> and <code>fragment</code>.</div>
@@ -375,14 +375,14 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>addAnchor</h4>
-<pre>void&nbsp;addAnchor(<a href="http://download.oracle.com/javase/6/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</a>&nbsp;uri,
-             <a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text)</pre>
+<pre>void&nbsp;addAnchor(java.net.URI&nbsp;uri,
+             java.lang.String&nbsp;text)</pre>
 <div class="block">Add a hyperlink for the GSA to follow without modifying the document
  contents. This is equivalent to the following HTML: <code>&lt;a href='$uri'&gt;$text&lt;/a&gt;</code>. If you want to link to a <a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor"><code>DocId</code></a>, then you
  may use the <a href="../../../../com/google/enterprise/adaptor/DocIdEncoder.html" title="interface in com.google.enterprise.adaptor"><code>DocIdEncoder</code></a> provided by <a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#getDocIdEncoder()"><code>AdaptorContext.getDocIdEncoder()</code></a> to produce an appropriate URI.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>uri</code> - the URI of the anchor</dd><dd><code>text</code> - the text of the anchor, or <code>null</code></dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>uri</code> is <code>null</code></dd></dl>
+<dd><code>java.lang.NullPointerException</code> - if <code>uri</code> is <code>null</code></dd></dl>
 </li>
 </ul>
 <a name="setNoIndex(boolean)">
@@ -432,7 +432,7 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>setDisplayUrl</h4>
-<pre>void&nbsp;setDisplayUrl(<a href="http://download.oracle.com/javase/6/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</a>&nbsp;displayUrl)</pre>
+<pre>void&nbsp;setDisplayUrl(java.net.URI&nbsp;displayUrl)</pre>
 <div class="block">Set the URI to be displayed in search results. If <code>null</code>, then the
  crawl URI representing the <code>DocId</code> is used. The default is <code>null</code>.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>displayUrl</code> - URI to be used for this document in search results</dd></dl>

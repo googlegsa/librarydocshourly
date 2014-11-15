@@ -107,7 +107,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html#handleException(java.lang.Exception,%20int)">handleException</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&nbsp;ex,
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html#handleException(java.lang.Exception,%20int)">handleException</a></strong>(java.lang.Exception&nbsp;ex,
                int&nbsp;ntries)</code>
 <div class="block">Determine how to proceed after an exception was thrown.</div>
 </td>
@@ -133,15 +133,15 @@
 <ul class="blockListLast">
 <li class="blockList">
 <h4>handleException</h4>
-<pre>boolean&nbsp;handleException(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&nbsp;ex,
+<pre>boolean&nbsp;handleException(java.lang.Exception&nbsp;ex,
                       int&nbsp;ntries)
-                        throws <a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+                        throws java.lang.InterruptedException</pre>
 <div class="block">Determine how to proceed after an exception was thrown. The thrown
  exception is provided as well as the number of times the call has been
  attempted. It is fine to call <code>Thread.sleep()</code> before returning.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd><code>true</code> for immediate retry, <code>false</code> to abort</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+<dd><code>java.lang.InterruptedException</code></dd></dl>
 </li>
 </ul>
 </li>
