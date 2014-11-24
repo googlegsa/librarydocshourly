@@ -130,7 +130,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AuthnAuthority.html#authenticateUser(com.sun.net.httpserver.HttpExchange,%20com.google.enterprise.adaptor.AuthnAuthority.Callback)">authenticateUser</a></strong>(com.sun.net.httpserver.HttpExchange&nbsp;ex,
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AuthnAuthority.html#authenticateUser(com.sun.net.httpserver.HttpExchange,%20com.google.enterprise.adaptor.AuthnAuthority.Callback)">authenticateUser</a></strong>(<a href="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpExchange.html?is-external=true" title="class or interface in com.sun.net.httpserver">HttpExchange</a>&nbsp;ex,
                 <a href="../../../../com/google/enterprise/adaptor/AuthnAuthority.Callback.html" title="interface in com.google.enterprise.adaptor">AuthnAuthority.Callback</a>&nbsp;callback)</code>
 <div class="block">Authenticate the user connected via <code>ex</code>.</div>
 </td>
@@ -156,16 +156,16 @@
 <ul class="blockListLast">
 <li class="blockList">
 <h4>authenticateUser</h4>
-<pre>void&nbsp;authenticateUser(com.sun.net.httpserver.HttpExchange&nbsp;ex,
+<pre>void&nbsp;authenticateUser(<a href="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpExchange.html?is-external=true" title="class or interface in com.sun.net.httpserver">HttpExchange</a>&nbsp;ex,
                     <a href="../../../../com/google/enterprise/adaptor/AuthnAuthority.Callback.html" title="interface in com.google.enterprise.adaptor">AuthnAuthority.Callback</a>&nbsp;callback)
-                      throws java.io.IOException</pre>
+                      throws <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Authenticate the user connected via <code>ex</code>. After attempting to
  authenticate the user the implementation should respond by calling <a href="../../../../com/google/enterprise/adaptor/AuthnAuthority.Callback.html#userAuthenticated(com.sun.net.httpserver.HttpExchange,%20com.google.enterprise.adaptor.AuthnIdentity)"><code>AuthnAuthority.Callback.userAuthenticated(com.sun.net.httpserver.HttpExchange, com.google.enterprise.adaptor.AuthnIdentity)</code></a>.
 
  <p>The implementation is expected to provide a response to the user with
  <code>ex</code>. Since authentication commonly requires redirects, forms, and
  other general HTTP mechanisms, full control is given to the implementation.
- The implementation will likely need to use its own <code>HttpHandler</code>s that can be registered with <a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#createHttpContext(java.lang.String,%20com.sun.net.httpserver.HttpHandler)"><code>AdaptorContext.createHttpContext(java.lang.String, com.sun.net.httpserver.HttpHandler)</code></a>.
+ The implementation will likely need to use its own <a href="http://download.oracle.com/javase/6/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpHandler.html?is-external=true" title="class or interface in com.sun.net.httpserver"><code>HttpHandler</code></a>s that can be registered with <a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html#createHttpContext(java.lang.String,%20com.sun.net.httpserver.HttpHandler)"><code>AdaptorContext.createHttpContext(java.lang.String, com.sun.net.httpserver.HttpHandler)</code></a>.
 
  <p>If an implementation places <code>callback</code> in a session object, the
  implementation should also remove the instance when <code>userAuthenticated()</code> is called. This is to release resources as well as
@@ -173,7 +173,7 @@
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>ex</code> - exchange whose request body has been processed, but whose
      response body and headers have not been sent</dd><dd><code>callback</code> - object to receive and respond with authentication results</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code>java.io.IOException</code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 </li>

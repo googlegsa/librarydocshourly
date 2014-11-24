@@ -176,19 +176,19 @@
 <h4>getDocContent</h4>
 <pre>void&nbsp;getDocContent(<a href="../../../../com/google/enterprise/adaptor/Request.html" title="interface in com.google.enterprise.adaptor">Request</a>&nbsp;request,
                  <a href="../../../../com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</a>&nbsp;response)
-                   throws java.io.IOException,
-                          java.lang.InterruptedException</pre>
+                   throws <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                          <a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <div class="block">Provides contents and metadata of particular document. This method should
  be highly parallelizable and support twenty or more concurrent calls. Two
  to three concurrent calls may be average during initial GSA crawling, but
  twenty or more concurrent calls is typical when the GSA is recrawling
  unmodified content.
 
- <p>If you experience a fatal error, feel free to throw an <code>IOException</code> or <code>RuntimeException</code>. In the case of an error, the GSA
+ <p>If you experience a fatal error, feel free to throw an <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io"><code>IOException</code></a> or <a href="http://download.oracle.com/javase/6/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang"><code>RuntimeException</code></a>. In the case of an error, the GSA
  will determine if and when to retry.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
-<dd><code>java.io.IOException</code></dd>
-<dd><code>java.lang.InterruptedException</code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
 </li>
 </ul>
 <a name="getDocIds(com.google.enterprise.adaptor.DocIdPusher)">
@@ -198,8 +198,8 @@
 <li class="blockList">
 <h4>getDocIds</h4>
 <pre>void&nbsp;getDocIds(<a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</a>&nbsp;pusher)
-               throws java.io.IOException,
-                      java.lang.InterruptedException</pre>
+               throws <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                      <a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <div class="block">Pushes all the <code>DocId</code>s that are suppose to be indexed by the GSA.
  This will frequently involve re-sending <code>DocId</code>s to the GSA, but this
  allows healing previous errors and cache inconsistencies. Re-sending <code>DocIds</code> is very fast and should be considered free on the GSA. This method
@@ -207,15 +207,15 @@
 
  <p><code>pusher</code> is provided as convenience and is the same object
  provided to <a href="../../../../com/google/enterprise/adaptor/Adaptor.html#init(com.google.enterprise.adaptor.AdaptorContext)"><code>init(com.google.enterprise.adaptor.AdaptorContext)</code></a> previously. This method may take a while and
- implementations are free to call <code>Thread.sleep(long)</code> occasionally to
+ implementations are free to call <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Thread.html?is-external=true#sleep(long)" title="class or interface in java.lang"><code>Thread.sleep(long)</code></a> occasionally to
  reduce load.
 
- <p>If you experience a fatal error, feel free to throw an <code>IOException</code> or <code>RuntimeException</code>. In the case of an error, the
+ <p>If you experience a fatal error, feel free to throw an <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io"><code>IOException</code></a> or <a href="http://download.oracle.com/javase/6/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang"><code>RuntimeException</code></a>. In the case of an error, the
  <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a> in use in <a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor"><code>AdaptorContext</code></a> will
  determine if and when to retry.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
-<dd><code>java.io.IOException</code></dd>
-<dd><code>java.lang.InterruptedException</code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
 </li>
 </ul>
 <a name="initConfig(com.google.enterprise.adaptor.Config)">
@@ -239,7 +239,7 @@
 <li class="blockList">
 <h4>init</h4>
 <pre>void&nbsp;init(<a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor">AdaptorContext</a>&nbsp;context)
-          throws java.lang.Exception</pre>
+          throws <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block">Initialize adaptor with the current context. This is the ideal time to
  start any threads to do extra behind-the-scenes work. The <code>context</code>
  points to other useful objects that can be used at any time. For example,
@@ -250,9 +250,9 @@
  <p>The method is called at the end of <a href="../../../../com/google/enterprise/adaptor/GsaCommunicationHandler.html#start(java.lang.Runnable)"><code>GsaCommunicationHandler.start(java.lang.Runnable)</code></a>.
 
  <p>If you experience a fatal error during initialization, feel free to
- throw an <code>Exception</code> to cancel the startup process.</div>
+ throw an <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang"><code>Exception</code></a> to cancel the startup process.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
-<dd><code>java.lang.Exception</code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
 </li>
 </ul>
 <a name="destroy()">

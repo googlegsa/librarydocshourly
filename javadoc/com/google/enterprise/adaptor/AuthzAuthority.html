@@ -112,9 +112,9 @@
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>java.util.Map&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>,<a href="../../../../com/google/enterprise/adaptor/AuthzStatus.html" title="enum in com.google.enterprise.adaptor">AuthzStatus</a>&gt;</code></td>
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>,<a href="../../../../com/google/enterprise/adaptor/AuthzStatus.html" title="enum in com.google.enterprise.adaptor">AuthzStatus</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/AuthzAuthority.html#isUserAuthorized(com.google.enterprise.adaptor.AuthnIdentity,%20java.util.Collection)">isUserAuthorized</a></strong>(<a href="../../../../com/google/enterprise/adaptor/AuthnIdentity.html" title="interface in com.google.enterprise.adaptor">AuthnIdentity</a>&nbsp;userIdentity,
-                java.util.Collection&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>&gt;&nbsp;ids)</code>
+                <a href="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>&gt;&nbsp;ids)</code>
 <div class="block">Determines whether the user identified is allowed to access the <code>DocId</code>s.</div>
 </td>
 </tr>
@@ -139,9 +139,9 @@
 <ul class="blockListLast">
 <li class="blockList">
 <h4>isUserAuthorized</h4>
-<pre>java.util.Map&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>,<a href="../../../../com/google/enterprise/adaptor/AuthzStatus.html" title="enum in com.google.enterprise.adaptor">AuthzStatus</a>&gt;&nbsp;isUserAuthorized(<a href="../../../../com/google/enterprise/adaptor/AuthnIdentity.html" title="interface in com.google.enterprise.adaptor">AuthnIdentity</a>&nbsp;userIdentity,
-                                                java.util.Collection&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>&gt;&nbsp;ids)
-                                                  throws java.io.IOException</pre>
+<pre><a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>,<a href="../../../../com/google/enterprise/adaptor/AuthzStatus.html" title="enum in com.google.enterprise.adaptor">AuthzStatus</a>&gt;&nbsp;isUserAuthorized(<a href="../../../../com/google/enterprise/adaptor/AuthnIdentity.html" title="interface in com.google.enterprise.adaptor">AuthnIdentity</a>&nbsp;userIdentity,
+                                      <a href="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../com/google/enterprise/adaptor/DocId.html" title="class in com.google.enterprise.adaptor">DocId</a>&gt;&nbsp;ids)
+                                        throws <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Determines whether the user identified is allowed to access the <code>DocId</code>s. The user is either anonymous or assumed to be previously
  authenticated. If an anonymous user is denied access to a document, then
  the caller may prompt the user to go through an authentication process and
@@ -159,13 +159,13 @@
  cached copy will be provided to the user but the user may be informed the
  document doesn't exist. Highly sensitive repositories may return <code>DENY</code>.
 
- <p>If you experience a fatal error, feel free to throw an <code>IOException</code> or <code>RuntimeException</code>. In the case of an error, the
+ <p>If you experience a fatal error, feel free to throw an <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io"><code>IOException</code></a> or <a href="http://download.oracle.com/javase/6/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang"><code>RuntimeException</code></a>. In the case of an error, the
  users will be denied access to the resources.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>userIdentity</code> - user to authorize, or <code>null</code> for anonymous
         users</dd><dd><code>ids</code> - Collection of <code>DocId</code>s that need to be checked</dd>
 <dt><span class="strong">Returns:</span></dt><dd>an <code>AuthzStatus</code> for each <code>DocId</code> provided in <code>ids</code></dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code>java.io.IOException</code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 </li>
