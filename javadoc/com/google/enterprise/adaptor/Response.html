@@ -145,76 +145,85 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#respondNoContent()">respondNoContent</a></strong>()</code>
+<div class="block">Respond to the GSA that it already has the latest content 
+ of a file but not necessarily the latest ACLs or metadata;
+ Respond to non GSA client that it already has the latest version
+ of a file.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#respondNotFound()">respondNotFound</a></strong>()</code>
 <div class="block">Respond to the GSA or other client that the request document does not
  exist.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#respondNotModified()">respondNotModified</a></strong>()</code>
 <div class="block">Respond to the GSA or other client that it already has the latest version
  of a file and its metadata.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#setAcl(com.google.enterprise.adaptor.Acl)">setAcl</a></strong>(<a href="../../../../com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</a>&nbsp;acl)</code>
 <div class="block">Provide the document's ACLs for early-binding security on the GSA.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#setContentType(java.lang.String)">setContentType</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;contentType)</code>
 <div class="block">Describe the content type of the document.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#setCrawlOnce(boolean)">setCrawlOnce</a></strong>(boolean&nbsp;crawlOnce)</code>
 <div class="block">Instruct the GSA to not recrawl the document after the initial
  retrieval.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#setDisplayUrl(java.net.URI)">setDisplayUrl</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</a>&nbsp;displayUrl)</code>
 <div class="block">Set the URI to be displayed in search results.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#setLastModified(java.util.Date)">setLastModified</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;lastModified)</code>
 <div class="block">Provide the last modification time of the document.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#setLock(boolean)">setLock</a></strong>(boolean&nbsp;lock)</code>
 <div class="block">Instruct the GSA to "lock" the document into its index.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#setNoArchive(boolean)">setNoArchive</a></strong>(boolean&nbsp;noArchive)</code>
 <div class="block">Whether the GSA should show the "Cached" link in search results for this
  document.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#setNoFollow(boolean)">setNoFollow</a></strong>(boolean&nbsp;noFollow)</code>
 <div class="block">Whether the GSA should follow the links within the document to find other
  documents.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#setNoIndex(boolean)">setNoIndex</a></strong>(boolean&nbsp;noIndex)</code>
 <div class="block">Whether the GSA should index the content for searching.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Response.html#setSecure(boolean)">setSecure</a></strong>(boolean&nbsp;secure)</code>
 <div class="block">Mark the document as secure, for use with late-binding security.</div>
@@ -266,6 +275,26 @@
  exist. If you have called other methods on this object, the effects of
  those methods will be ignored.
 
+ <p>If called, this must be the last call to this interface. Once you call
+ this method, for the rest of the processing, exceptions may no longer be
+ communicated to the clients cleanly.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="respondNoContent()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>respondNoContent</h4>
+<pre>void&nbsp;respondNoContent()
+                      throws <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Respond to the GSA that it already has the latest content 
+ of a file but not necessarily the latest ACLs or metadata;
+ Respond to non GSA client that it already has the latest version
+ of a file.
+ 
  <p>If called, this must be the last call to this interface. Once you call
  this method, for the rest of the processing, exceptions may no longer be
  communicated to the clients cleanly.</div>
