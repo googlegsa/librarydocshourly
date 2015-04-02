@@ -324,6 +324,14 @@
 </dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/Daemon.html#Daemon()">Daemon()</a></span> - Constructor for class com.google.enterprise.adaptor.<a href="./com/google/enterprise/adaptor/Daemon.html" title="class in com.google.enterprise.adaptor">Daemon</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="./com/google/enterprise/adaptor/examples/DateSplitTransform.html" title="class in com.google.enterprise.adaptor.examples"><span class="strong">DateSplitTransform</span></a> - Class in <a href="./com/google/enterprise/adaptor/examples/package-summary.html">com.google.enterprise.adaptor.examples</a></dt>
+<dd>
+<div class="block">Metadata Transform to split date field into 3 separate metadata fields
+ (month, day, year)
+
+ Specify the name of the metadata field containing the date as dateField
+ and the format of the date as dateFormat.</div>
+</dd>
 <dt><a href="./com/google/enterprise/adaptor/examples/DbAdaptorTemplate.html" title="class in com.google.enterprise.adaptor.examples"><span class="strong">DbAdaptorTemplate</span></a> - Class in <a href="./com/google/enterprise/adaptor/examples/package-summary.html">com.google.enterprise.adaptor.examples</a></dt>
 <dd>
 <div class="block">Demonstrates what code is necessary for putting DB
@@ -1066,6 +1074,11 @@
 <dd>
 <div class="block">Load user-provided configuration file.</div>
 </dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/DateSplitTransform.html#load(java.util.Map)">load(Map&lt;String, String&gt;)</a></span> - Static method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/DateSplitTransform.html" title="class in com.google.enterprise.adaptor.examples">DateSplitTransform</a></dt>
+<dd>
+<div class="block">Called as <code>transform.pipeline.<stepX>.factoryMethod for this
+ transformation pipline as specified in adaptor-config.properties.</div>
+</dd>
 </dl>
 <a name="_M_">
 <!--   -->
@@ -1707,6 +1720,11 @@
 </dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/AddContentTypeToMetadata.html#transform(com.google.enterprise.adaptor.Metadata,%20java.util.Map)">transform(Metadata, Map&lt;String, String&gt;)</a></span> - Method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/AddContentTypeToMetadata.html" title="class in com.google.enterprise.adaptor.examples">AddContentTypeToMetadata</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/DateSplitTransform.html#transform(com.google.enterprise.adaptor.Metadata,%20java.util.Map)">transform(Metadata, Map&lt;String, String&gt;)</a></span> - Method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/DateSplitTransform.html" title="class in com.google.enterprise.adaptor.examples">DateSplitTransform</a></dt>
+<dd>
+<div class="block">Here we check to see if the current doc contains a "dateField" key
+ and if so, add the additional values</div>
+</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/examples/MetadataTransformExample.html#transform(com.google.enterprise.adaptor.Metadata,%20java.util.Map)">transform(Metadata, Map&lt;String, String&gt;)</a></span> - Method in class com.google.enterprise.adaptor.examples.<a href="./com/google/enterprise/adaptor/examples/MetadataTransformExample.html" title="class in com.google.enterprise.adaptor.examples">MetadataTransformExample</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html#transform(com.google.enterprise.adaptor.Metadata,%20java.util.Map)">transform(Metadata, Map&lt;String, String&gt;)</a></span> - Method in class com.google.enterprise.adaptor.prebuilt.<a href="./com/google/enterprise/adaptor/prebuilt/CommandLineTransform.html" title="class in com.google.enterprise.adaptor.prebuilt">CommandLineTransform</a></dt>
