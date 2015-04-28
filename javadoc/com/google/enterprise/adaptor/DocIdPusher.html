@@ -145,15 +145,34 @@
 <td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushGroupDefinitions(java.util.Map,%20boolean)">pushGroupDefinitions</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</a>,? extends <a href="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</a>&gt;&gt;&nbsp;defs,
                     boolean&nbsp;caseSensitive)</code>
-<div class="block">Blocking call to push group definitions to GSA ends in success or
- when default error handler gives up.</div>
+<div class="block">Blocking call to (incrementally) push group definitions to GSA ends in
+ success or when default error handler gives up.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushGroupDefinitions(java.util.Map,%20boolean,%20boolean)">pushGroupDefinitions</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</a>,? extends <a href="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</a>&gt;&gt;&nbsp;defs,
+                    boolean&nbsp;caseSensitive,
+                    boolean&nbsp;incremental)</code>
+<div class="block">Blocking call to push group definitions to GSA ends in success or
+ when default error handler gives up.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushGroupDefinitions(java.util.Map,%20boolean,%20com.google.enterprise.adaptor.ExceptionHandler)">pushGroupDefinitions</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</a>,? extends <a href="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</a>&gt;&gt;&nbsp;defs,
                     boolean&nbsp;caseSensitive,
                     <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a>&nbsp;handler)</code>
+<div class="block">Blocking call to (incrementally) push group definitions to GSA ends in
+ success or when default error handler gives up.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushGroupDefinitions(java.util.Map,%20boolean,%20com.google.enterprise.adaptor.ExceptionHandler,%20boolean)">pushGroupDefinitions</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</a>,? extends <a href="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</a>&gt;&gt;&nbsp;defs,
+                    boolean&nbsp;caseSensitive,
+                    <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a>&nbsp;handler,
+                    boolean&nbsp;incremental)</code>
 <div class="block">Blocking call to push group definitions to GSA ends in success or
  when provided error handler gives up.</div>
 </td>
@@ -346,10 +365,12 @@
 <pre><a href="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</a>&nbsp;pushGroupDefinitions(<a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</a>,? extends <a href="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</a>&gt;&gt;&nbsp;defs,
                                   boolean&nbsp;caseSensitive)
                                     throws <a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
-<div class="block">Blocking call to push group definitions to GSA ends in success or
- when default error handler gives up.  Can take significant time
- if errors arise.
- 
+<div class="block">Blocking call to (incrementally) push group definitions to GSA ends in
+ success or when default error handler gives up.  Can take significant time
+ if errors arise.  To push-and-replace all groups (per data source), call
+ a version of this method that accepts the <code>incremental</code>
+ parameter, and set that parameter to <code>false</code>.
+
  <p>A group definition consists of a group being defined
  and members, which is a list of users and groups.
 
@@ -363,17 +384,19 @@
 <a name="pushGroupDefinitions(java.util.Map, boolean, com.google.enterprise.adaptor.ExceptionHandler)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>pushGroupDefinitions</h4>
 <pre><a href="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</a>&nbsp;pushGroupDefinitions(<a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</a>,? extends <a href="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</a>&gt;&gt;&nbsp;defs,
                                   boolean&nbsp;caseSensitive,
                                   <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a>&nbsp;handler)
                                     throws <a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
-<div class="block">Blocking call to push group definitions to GSA ends in success or
- when provided error handler gives up.  Can take significant time
- if errors arise.
- 
+<div class="block">Blocking call to (incrementally) push group definitions to GSA ends in
+ success or when default error handler gives up.  Can take significant time
+ if errors arise.  To push-and-replace all groups (per data source), call
+ a version of this method that accepts the <code>incremental</code>
+ parameter, and set that parameter to <code>false</code>.
+
  <p>A group definition consists of a group being defined
  and members, which is a list of users and groups.
 
@@ -382,6 +405,80 @@
 
  <p>If handler is <code>null</code>, then a default error handler is used.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first GroupPrincipal to fail</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no definitions were sent</dd></dl>
+</li>
+</ul>
+<a name="pushGroupDefinitions(java.util.Map, boolean, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>pushGroupDefinitions</h4>
+<pre><a href="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</a>&nbsp;pushGroupDefinitions(<a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</a>,? extends <a href="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</a>&gt;&gt;&nbsp;defs,
+                                  boolean&nbsp;caseSensitive,
+                                  boolean&nbsp;incremental)
+                                    throws <a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<div class="block">Blocking call to push group definitions to GSA ends in success or
+ when default error handler gives up.  Can take significant time
+ if errors arise.
+
+ <p>A group definition consists of a group being defined
+ and members, which is a list of users and groups.
+
+ <p>If you plan on using the return code, then the provided map should have
+ a predictable iteration order, like <a href="http://download.oracle.com/javase/6/docs/api/java/util/TreeMap.html?is-external=true" title="class or interface in java.util"><code>TreeMap</code></a>.
+
+ <p>Calling this method via this method signature uses the default error
+ handler.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>incremental</code> - - when <code>true</code>, push groups to the GSA,
+ replacing any existing group in <code>defs</code>, but
+ leaving untouched any group not in <code>defs</code>.  When
+ <code>false</code>, push groups (in a single batch) replacing all other
+ groups from this data source with the specified groups.  It is possible
+ for this one batch to consume a lot of memory if a lot of group members
+ are being updated at once.
+ <p> if <code>incremental</code> is specified as <code>false</code>, but
+ the GSA version is below 7.4.0, a warning is logged, and
+ <code>incremental</code> is set to <code>true</code>.</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first GroupPrincipal to fail</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no definitions were sent</dd></dl>
+</li>
+</ul>
+<a name="pushGroupDefinitions(java.util.Map, boolean, com.google.enterprise.adaptor.ExceptionHandler, boolean)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>pushGroupDefinitions</h4>
+<pre><a href="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</a>&nbsp;pushGroupDefinitions(<a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../com/google/enterprise/adaptor/GroupPrincipal.html" title="class in com.google.enterprise.adaptor">GroupPrincipal</a>,? extends <a href="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../com/google/enterprise/adaptor/Principal.html" title="class in com.google.enterprise.adaptor">Principal</a>&gt;&gt;&nbsp;defs,
+                                  boolean&nbsp;caseSensitive,
+                                  <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a>&nbsp;handler,
+                                  boolean&nbsp;incremental)
+                                    throws <a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
+<div class="block">Blocking call to push group definitions to GSA ends in success or
+ when provided error handler gives up.  Can take significant time
+ if errors arise.
+
+ <p>A group definition consists of a group being defined
+ and members, which is a list of users and groups.
+
+ <p>If you plan on using the return code, then the provided map should have
+ a predictable iteration order, like <a href="http://download.oracle.com/javase/6/docs/api/java/util/TreeMap.html?is-external=true" title="class or interface in java.util"><code>TreeMap</code></a>.
+
+ <p>If handler is <code>null</code>, then a default error handler is used.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>incremental</code> - - when <code>true</code>, push groups to the GSA,
+ replacing any existing group in <code>defs</code>, but
+ leaving untouched any group not in <code>defs</code>.  When
+ <code>false</code>, push groups (in a single batch) replacing all other
+ groups from this data source with the specified groups.  It is possible
+ for this one batch to consume a lot of memory if a lot of group members
+ are being updated at once.
+ <p> if <code>incremental</code> is specified as <code>false</code>, but
+ the GSA version is below 7.4.0, a warning is logged, and
+ <code>incremental</code> is set to <code>true</code>.</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first GroupPrincipal to fail</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no definitions were sent</dd></dl>
 </li>
