@@ -1526,235 +1526,237 @@
   <td class="src"><pre class="src">&nbsp;      }</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;875</td>  <td class="nbHitsCovered">&nbsp;37</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;876</td>  <td class="nbHitsCovered"><a title="Line 876: Conditional coverage 100% (2/2).">&nbsp;37</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 876: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (unset.size() != 0) {</a></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;877</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">throw</span> <span class="keyword">new</span> InvalidConfigurationException(<span class="string">"Missing configuration values: "</span> + unset);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;877</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">throw</span> <span class="keyword">new</span> InvalidConfigurationException(</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;878</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;          <span class="string">"Missing configuration values: "</span> + unset);</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;879</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;879</td>  <td class="nbHitsCovered">&nbsp;35</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;880</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;880</td>  <td class="nbHitsCovered">&nbsp;35</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;881</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  <span class="comment">/**</span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;882</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * Get a configuration value exactly as provided in configuration. Generally,</span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;  <span class="comment">/**</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;883</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * {@link #getValue} should be used instead of this method.</span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * Get a configuration value exactly as provided in configuration. Generally,</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;884</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   *</span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * {@link #getValue} should be used instead of this method.</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;885</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * @return raw non-{@code null} value of {@code key}</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;886</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * @throws IllegalStateException if {@code key} has no value</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;887</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;888</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> String getRawValue(String key) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;889</td>  <td class="nbHitsCovered">&nbsp;1376</td>  <td class="src"><pre class="src">&nbsp;    String value = config.getProperty(key);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;890</td>  <td class="nbHitsCovered"><a title="Line 890: Conditional coverage 100% (2/2).">&nbsp;1376</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 890: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (value == <span class="keyword">null</span>) {</a></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;891</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">throw</span> <span class="keyword">new</span> InvalidConfigurationException(MessageFormat.format(</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;892</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;          <span class="string">"You must set configuration key ''{0}''."</span>, key));</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;893</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;894</td>  <td class="nbHitsCovered">&nbsp;1374</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> value;</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;895</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;896</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;897</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  <span class="comment">/**</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;898</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * Get a configuration value as computed based on the configuration. Some</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;899</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * configuration values can be generated from other values. This method</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;900</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * returns that computed configuration value instead of the raw value provided</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;901</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * in configuration. This method should be preferred over {@link</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;902</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * #getRawValue}.</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;903</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="comment">   *</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;904</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * @return non-{@code null} value of {@code key}</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;905</td>  <td class="nbHits">&nbsp;</td>
+<tr>  <td class="numLine">&nbsp;886</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * @return raw non-{@code null} value of {@code key}</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;887</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="comment">   * @throws IllegalStateException if {@code key} has no value</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;888</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;889</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> String getRawValue(String key) {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;890</td>  <td class="nbHitsCovered">&nbsp;1376</td>  <td class="src"><pre class="src">&nbsp;    String value = config.getProperty(key);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;891</td>  <td class="nbHitsCovered"><a title="Line 891: Conditional coverage 100% (2/2).">&nbsp;1376</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 891: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (value == <span class="keyword">null</span>) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;892</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">throw</span> <span class="keyword">new</span> InvalidConfigurationException(MessageFormat.format(</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;893</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;          <span class="string">"You must set configuration key ''{0}''."</span>, key));</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;894</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;895</td>  <td class="nbHitsCovered">&nbsp;1374</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> value;</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;896</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;897</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;898</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;  <span class="comment">/**</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;899</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * Get a configuration value as computed based on the configuration. Some</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;900</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * configuration values can be generated from other values. This method</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;901</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * returns that computed configuration value instead of the raw value provided</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;902</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * in configuration. This method should be preferred over {@link</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;903</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * #getRawValue}.</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;904</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   *</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;905</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * @return non-{@code null} value of {@code key}</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;906</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * @throws IllegalStateException if {@code key} has no value</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;907</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;908</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> String getValue(String key) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;908</td>  <td class="nbHitsCovered">&nbsp;1375</td>  <td class="src"><pre class="src">&nbsp;    String value = getRawValue(key);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;909</td>  <td class="nbHitsCovered">&nbsp;1373</td>  <td class="src"><pre class="src">&nbsp;    ValueComputer computer = computeMap.get(key);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;910</td>  <td class="nbHitsCovered"><a title="Line 910: Conditional coverage 100% (2/2).">&nbsp;1373</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 910: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (computer != <span class="keyword">null</span>) {</a></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;911</td>  <td class="nbHitsCovered">&nbsp;147</td>  <td class="src"><pre class="src">&nbsp;      value = computer.compute(value);</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;912</td>  <td class="nbHits">&nbsp;</td>
+<tr>  <td class="numLineCover">&nbsp;909</td>  <td class="nbHitsCovered">&nbsp;1375</td>  <td class="src"><pre class="src">&nbsp;    String value = getRawValue(key);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;910</td>  <td class="nbHitsCovered">&nbsp;1373</td>  <td class="src"><pre class="src">&nbsp;    ValueComputer computer = computeMap.get(key);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;911</td>  <td class="nbHitsCovered"><a title="Line 911: Conditional coverage 100% (2/2).">&nbsp;1373</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 911: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (computer != <span class="keyword">null</span>) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;912</td>  <td class="nbHitsCovered">&nbsp;147</td>  <td class="src"><pre class="src">&nbsp;      value = computer.compute(value);</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;913</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;913</td>  <td class="nbHitsCovered">&nbsp;1373</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> value;</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;914</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;914</td>  <td class="nbHitsCovered">&nbsp;1373</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> value;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;915</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;916</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  <span class="comment">/**</span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;917</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * Returns the current config file</span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;  <span class="comment">/**</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;918</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * Returns the current config file</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;919</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;920</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  File getConfigFile() {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;920</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> configFile;</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;921</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;921</td>  <td class="nbHitsCovered">&nbsp;16</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> configFile;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;922</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;923</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  <span class="comment">/**</span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;924</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * Gets all configuration values that begin with {@code prefix}, returning</span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;  <span class="comment">/**</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;925</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * them as a map with the keys having {@code prefix} removed.</span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * Gets all configuration values that begin with {@code prefix}, returning</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;926</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * them as a map with the keys having {@code prefix} removed.</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;927</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;928</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> <span class="keyword">synchronized</span> Map&lt;String, String&gt; getValuesWithPrefix(String prefix) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;928</td>  <td class="nbHitsCovered">&nbsp;25</td>  <td class="src"><pre class="src">&nbsp;    Map&lt;String, String&gt; values = <span class="keyword">new</span> HashMap&lt;String, String&gt;();</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;929</td>  <td class="nbHitsCovered"><a title="Line 929: Conditional coverage 100% (2/2).">&nbsp;25</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 929: Conditional coverage 100% (2/2).">    <span class="keyword">for</span> (String key : config.stringPropertyNames()) {</a></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;930</td>  <td class="nbHitsCovered"><a title="Line 930: Conditional coverage 100% (2/2).">&nbsp;1055</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 930: Conditional coverage 100% (2/2).">      <span class="keyword">if</span> (!key.startsWith(prefix)) {</a></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;931</td>  <td class="nbHitsCovered">&nbsp;1044</td>  <td class="src"><pre class="src">&nbsp;        <span class="keyword">continue</span>;</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;932</td>  <td class="nbHits">&nbsp;</td>
+<tr>  <td class="numLineCover">&nbsp;929</td>  <td class="nbHitsCovered">&nbsp;25</td>  <td class="src"><pre class="src">&nbsp;    Map&lt;String, String&gt; values = <span class="keyword">new</span> HashMap&lt;String, String&gt;();</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;930</td>  <td class="nbHitsCovered"><a title="Line 930: Conditional coverage 100% (2/2).">&nbsp;25</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 930: Conditional coverage 100% (2/2).">    <span class="keyword">for</span> (String key : config.stringPropertyNames()) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;931</td>  <td class="nbHitsCovered"><a title="Line 931: Conditional coverage 100% (2/2).">&nbsp;1055</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 931: Conditional coverage 100% (2/2).">      <span class="keyword">if</span> (!key.startsWith(prefix)) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;932</td>  <td class="nbHitsCovered">&nbsp;1044</td>  <td class="src"><pre class="src">&nbsp;        <span class="keyword">continue</span>;</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;933</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;933</td>  <td class="nbHitsCovered">&nbsp;11</td>  <td class="src"><pre class="src">&nbsp;      values.put(key.substring(prefix.length()), config.getProperty(key));</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;934</td>  <td class="nbHitsCovered">&nbsp;11</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;935</td>  <td class="nbHitsCovered">&nbsp;25</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> values;</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;936</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;934</td>  <td class="nbHitsCovered">&nbsp;11</td>  <td class="src"><pre class="src">&nbsp;      values.put(key.substring(prefix.length()), config.getProperty(key));</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;935</td>  <td class="nbHitsCovered">&nbsp;11</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;936</td>  <td class="nbHitsCovered">&nbsp;25</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> values;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;937</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;938</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  <span class="comment">/**</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;939</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * Add configuration key. If {@code defaultValue} is {@code null}, then no</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;940</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * default value is used and the user must provide one.</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;941</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;942</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> addKey(String key, String defaultValue) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;943</td>  <td class="nbHitsCovered"><a title="Line 943: Conditional coverage 100% (4/4) [each condition: 100%, 100%].">&nbsp;4928</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 943: Conditional coverage 100% (4/4) [each condition: 100%, 100%].">    <span class="keyword">if</span> (defaultConfig.containsKey(key) || noDefaultConfig.contains(key)) {</a></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;944</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(<span class="string">"Key already added: "</span> + key);</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;945</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;946</td>  <td class="nbHitsCovered"><a title="Line 946: Conditional coverage 100% (2/2).">&nbsp;4926</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 946: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (defaultValue == <span class="keyword">null</span>) {</a></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;947</td>  <td class="nbHitsCovered">&nbsp;123</td>  <td class="src"><pre class="src">&nbsp;      noDefaultConfig.add(key);</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;948</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;    } <span class="keyword">else</span> {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;949</td>  <td class="nbHitsCovered">&nbsp;4803</td>  <td class="src"><pre class="src">&nbsp;      defaultConfig.setProperty(key, defaultValue);</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;950</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;951</td>  <td class="nbHitsCovered">&nbsp;4926</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;952</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;953</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  <span class="keyword">synchronized</span> <span class="keyword">void</span> addKey(String key, String defaultValue,</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;954</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;      ValueComputer computer) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;955</td>  <td class="nbHitsCovered">&nbsp;606</td>  <td class="src"><pre class="src">&nbsp;    addKey(key, defaultValue);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;956</td>  <td class="nbHitsCovered">&nbsp;606</td>  <td class="src"><pre class="src">&nbsp;    computeMap.put(key, computer);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;957</td>  <td class="nbHitsCovered">&nbsp;606</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;958</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;959</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  <span class="comment">/**</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;960</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * Change the default value of a preexisting configuration key. If {@code</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;961</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * defaultValue} is {@code null}, then no default is used and the user must</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;962</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * provide one.</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;963</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;964</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> overrideKey(String key, String defaultValue) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;965</td>  <td class="nbHitsUncovered"><a title="Line 965: Conditional coverage 0% (0/4) [each condition: 0%, 0%].">&nbsp;0</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 965: Conditional coverage 0% (0/4) [each condition: 0%, 0%].">    <span class="keyword">if</span> (!defaultConfig.containsKey(key) &amp;&amp; !noDefaultConfig.contains(key)) {</a></span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;966</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      log.log(Level.WARNING, <span class="string">"Overriding unknown configuration key: {0}"</span>, key);</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;967</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;968</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;    defaultConfig.remove(key);</span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;969</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;    noDefaultConfig.remove(key);</span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;970</td>  <td class="nbHitsUncovered"><a title="Line 970: Conditional coverage 0% (0/2).">&nbsp;0</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 970: Conditional coverage 0% (0/2).">    <span class="keyword">if</span> (defaultValue == <span class="keyword">null</span>) {</a></span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;971</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      noDefaultConfig.add(key);</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;972</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;    } <span class="keyword">else</span> {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;973</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      defaultConfig.setProperty(key, defaultValue);</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;974</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;975</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;  }</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;976</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;977</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  <span class="comment">/**</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;978</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * Manually set a configuration value. Depending on when called, it can</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;979</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   * override a user's configuration, which should be avoided.</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;980</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;981</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  <span class="keyword">synchronized</span> <span class="keyword">void</span> setValue(String key, String value) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;982</td>  <td class="nbHitsCovered">&nbsp;254</td>  <td class="src"><pre class="src">&nbsp;    config.setProperty(key, value);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;983</td>  <td class="nbHitsCovered">&nbsp;254</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;984</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;985</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  <span class="keyword">void</span> addConfigModificationListener(</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;986</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;      ConfigModificationListener listener) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;987</td>  <td class="nbHitsCovered">&nbsp;11</td>  <td class="src"><pre class="src">&nbsp;    modificationListeners.add(listener);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;988</td>  <td class="nbHitsCovered">&nbsp;11</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;989</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;990</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  <span class="keyword">void</span> removeConfigModificationListener(</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;991</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;      ConfigModificationListener listener) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;992</td>  <td class="nbHitsCovered">&nbsp;14</td>  <td class="src"><pre class="src">&nbsp;    modificationListeners.remove(listener);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;993</td>  <td class="nbHitsCovered">&nbsp;14</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;994</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;995</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  <span class="keyword">private</span> <span class="keyword">void</span> fireConfigModificationEvent(Config oldConfig,</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;996</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;                                           Set&lt;String&gt; modifiedKeys) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;997</td>  <td class="nbHitsCovered">&nbsp;27</td>  <td class="src"><pre class="src">&nbsp;    ConfigModificationEvent ev</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;998</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;        = <span class="keyword">new</span> ConfigModificationEvent(<span class="keyword">this</span>, oldConfig, modifiedKeys);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;999</td>  <td class="nbHitsCovered"><a title="Line 999: Conditional coverage 100% (2/2).">&nbsp;27</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 999: Conditional coverage 100% (2/2).">    <span class="keyword">for</span> (ConfigModificationListener listener : modificationListeners) {</a></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;1000</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;      <span class="keyword">try</span> {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;1001</td>  <td class="nbHitsCovered">&nbsp;3</td>  <td class="src"><pre class="src">&nbsp;        listener.configModified(ev);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;1002</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      } <span class="keyword">catch</span> (Exception ex) {</span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;1003</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        log.log(Level.WARNING,</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;1004</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;                <span class="string">"Unexpected exception. Consider filing a bug."</span>, ex);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;1005</td>  <td class="nbHitsCovered">&nbsp;3</td>  <td class="src"><pre class="src">&nbsp;      }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;1006</td>  <td class="nbHitsCovered">&nbsp;3</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;1007</td>  <td class="nbHitsCovered">&nbsp;27</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;1008</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;1009</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;  <span class="keyword">interface</span> ValueComputer {</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;1010</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;    <span class="comment">/**</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;1011</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">     * Computes the effective value of a configuration value provided the</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;1012</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">     * literal value provided in configuration.</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;1013</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;1014</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String compute(String rawValue);</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;1015</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;938</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;939</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;  <span class="comment">/**</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;940</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * Add configuration key. If {@code defaultValue} is {@code null}, then no</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;941</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * default value is used and the user must provide one.</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;942</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;943</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> addKey(String key, String defaultValue) {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;944</td>  <td class="nbHitsCovered"><a title="Line 944: Conditional coverage 100% (4/4) [each condition: 100%, 100%].">&nbsp;4928</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 944: Conditional coverage 100% (4/4) [each condition: 100%, 100%].">    <span class="keyword">if</span> (defaultConfig.containsKey(key) || noDefaultConfig.contains(key)) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;945</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(<span class="string">"Key already added: "</span> + key);</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;946</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;947</td>  <td class="nbHitsCovered"><a title="Line 947: Conditional coverage 100% (2/2).">&nbsp;4926</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 947: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (defaultValue == <span class="keyword">null</span>) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;948</td>  <td class="nbHitsCovered">&nbsp;123</td>  <td class="src"><pre class="src">&nbsp;      noDefaultConfig.add(key);</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;949</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;    } <span class="keyword">else</span> {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;950</td>  <td class="nbHitsCovered">&nbsp;4803</td>  <td class="src"><pre class="src">&nbsp;      defaultConfig.setProperty(key, defaultValue);</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;951</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;952</td>  <td class="nbHitsCovered">&nbsp;4926</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;953</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;954</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;  <span class="keyword">synchronized</span> <span class="keyword">void</span> addKey(String key, String defaultValue,</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;955</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;      ValueComputer computer) {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;956</td>  <td class="nbHitsCovered">&nbsp;606</td>  <td class="src"><pre class="src">&nbsp;    addKey(key, defaultValue);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;957</td>  <td class="nbHitsCovered">&nbsp;606</td>  <td class="src"><pre class="src">&nbsp;    computeMap.put(key, computer);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;958</td>  <td class="nbHitsCovered">&nbsp;606</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;959</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;960</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;  <span class="comment">/**</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;961</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * Change the default value of a preexisting configuration key. If {@code</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;962</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * defaultValue} is {@code null}, then no default is used and the user must</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;963</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * provide one.</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;964</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;965</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> overrideKey(String key, String defaultValue) {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;966</td>  <td class="nbHitsUncovered"><a title="Line 966: Conditional coverage 0% (0/4) [each condition: 0%, 0%].">&nbsp;0</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 966: Conditional coverage 0% (0/4) [each condition: 0%, 0%].">    <span class="keyword">if</span> (!defaultConfig.containsKey(key) &amp;&amp; !noDefaultConfig.contains(key)) {</a></span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;967</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      log.log(Level.WARNING, <span class="string">"Overriding unknown configuration key: {0}"</span>, key);</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;968</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;969</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;    defaultConfig.remove(key);</span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;970</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;    noDefaultConfig.remove(key);</span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;971</td>  <td class="nbHitsUncovered"><a title="Line 971: Conditional coverage 0% (0/2).">&nbsp;0</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 971: Conditional coverage 0% (0/2).">    <span class="keyword">if</span> (defaultValue == <span class="keyword">null</span>) {</a></span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;972</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      noDefaultConfig.add(key);</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;973</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;    } <span class="keyword">else</span> {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;974</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      defaultConfig.setProperty(key, defaultValue);</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;975</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;976</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;  }</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;977</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;978</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;  <span class="comment">/**</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;979</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * Manually set a configuration value. Depending on when called, it can</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;980</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   * override a user's configuration, which should be avoided.</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;981</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;982</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;  <span class="keyword">synchronized</span> <span class="keyword">void</span> setValue(String key, String value) {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;983</td>  <td class="nbHitsCovered">&nbsp;254</td>  <td class="src"><pre class="src">&nbsp;    config.setProperty(key, value);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;984</td>  <td class="nbHitsCovered">&nbsp;254</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;985</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;986</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;  <span class="keyword">void</span> addConfigModificationListener(</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;987</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;      ConfigModificationListener listener) {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;988</td>  <td class="nbHitsCovered">&nbsp;11</td>  <td class="src"><pre class="src">&nbsp;    modificationListeners.add(listener);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;989</td>  <td class="nbHitsCovered">&nbsp;11</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;990</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;991</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;  <span class="keyword">void</span> removeConfigModificationListener(</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;992</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;      ConfigModificationListener listener) {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;993</td>  <td class="nbHitsCovered">&nbsp;14</td>  <td class="src"><pre class="src">&nbsp;    modificationListeners.remove(listener);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;994</td>  <td class="nbHitsCovered">&nbsp;14</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;995</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;996</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;  <span class="keyword">private</span> <span class="keyword">void</span> fireConfigModificationEvent(Config oldConfig,</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;997</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;                                           Set&lt;String&gt; modifiedKeys) {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;998</td>  <td class="nbHitsCovered">&nbsp;27</td>  <td class="src"><pre class="src">&nbsp;    ConfigModificationEvent ev</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;999</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;        = <span class="keyword">new</span> ConfigModificationEvent(<span class="keyword">this</span>, oldConfig, modifiedKeys);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;1000</td>  <td class="nbHitsCovered"><a title="Line 1000: Conditional coverage 100% (2/2).">&nbsp;27</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 1000: Conditional coverage 100% (2/2).">    <span class="keyword">for</span> (ConfigModificationListener listener : modificationListeners) {</a></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;1001</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;      <span class="keyword">try</span> {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;1002</td>  <td class="nbHitsCovered">&nbsp;3</td>  <td class="src"><pre class="src">&nbsp;        listener.configModified(ev);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;1003</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;      } <span class="keyword">catch</span> (Exception ex) {</span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;1004</td>  <td class="nbHitsUncovered">&nbsp;0</td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        log.log(Level.WARNING,</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;1005</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;                <span class="string">"Unexpected exception. Consider filing a bug."</span>, ex);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;1006</td>  <td class="nbHitsCovered">&nbsp;3</td>  <td class="src"><pre class="src">&nbsp;      }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;1007</td>  <td class="nbHitsCovered">&nbsp;3</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;1008</td>  <td class="nbHitsCovered">&nbsp;27</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;1009</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;1010</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;  <span class="keyword">interface</span> ValueComputer {</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;1011</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;    <span class="comment">/**</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;1012</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">     * Computes the effective value of a configuration value provided the</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;1013</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">     * literal value provided in configuration.</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;1014</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;1015</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String compute(String rawValue);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;1016</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;1017</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;}</pre></td></tr>
 </table>
 
