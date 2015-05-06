@@ -150,7 +150,8 @@
 <div class="block">Push a <code>DocId</code> asynchronously to the GSA. The <code>DocId</code> is
  enqueued and sent in the next batch to the GSA. If the queue is full,
  then the item will be dropped and a warning will be logged.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd><code>true</code> if the DocId was accepted, <code>false</code> otherwise</dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>docId</code> - that is to be crawled</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if the DocId was accepted, <code>false</code> otherwise</dd></dl>
 </li>
 </ul>
 <a name="pushRecord(com.google.enterprise.adaptor.DocIdPusher.Record)">
@@ -163,7 +164,8 @@
 <div class="block">Push a <code>Record</code> asynchronously to the GSA. The <code>Record</code>
  is enqueued and sent in the next batch to the GSA. If the queue is full,
  then the item will be dropped and a warning will be logged.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd><code>true</code> if the Record was accepted, <code>false</code> otherwise</dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>record</code> - that is to be crawled</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if the Record was accepted, <code>false</code> otherwise</dd></dl>
 </li>
 </ul>
 <a name="pushNamedResource(com.google.enterprise.adaptor.DocId, com.google.enterprise.adaptor.Acl)">
@@ -181,7 +183,8 @@
  <p>Named resources are <code>DocId</code>s without any content or metadata,
  that only exist for ACL inheritance. These <code>DocId</code> will never be
  visible to the user and have no meaning outside of ACL processing.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd><code>true</code> if the NamedResource was accepted, <code>false</code>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>docId</code> - name or label of the access control list</dd><dd><code>acl</code> - is the access control list mapped onto by docId</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if the NamedResource was accepted, <code>false</code>
    otherwise</dd></dl>
 </li>
 </ul>

@@ -117,9 +117,9 @@
 <tr>  <td class="numLine">&nbsp;46</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="comment"> * &lt;p&gt;All available configuration:&lt;br&gt;</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;47</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;<span class="comment"> * &lt;style type="text/css"&gt; td { padding-right:2em; } &lt;/style&gt;</span></pre></td></tr>
-<tr>  <td class="numLine">&nbsp;48</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="comment"> * &lt;table&gt;</span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;48</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;<span class="comment"> * &lt;caption&gt; All available configuration &lt;/caption&gt;</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;49</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="comment"> * &lt;tr&gt;&lt;td align=center&gt;&lt;b&gt;required?&lt;/b&gt;&lt;/td&gt;</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;50</td>  <td class="nbHits">&nbsp;</td>
@@ -1260,7 +1260,7 @@
   <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;694</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">int</span> getFeedMaxUrls() {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;695</td>  <td class="nbHitsCovered">&nbsp;40</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> Integer.parseInt(getValue(<span class="string">"feed.maxUrls"</span>));</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;695</td>  <td class="nbHitsCovered">&nbsp;41</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> Integer.parseInt(getValue(<span class="string">"feed.maxUrls"</span>));</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;696</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;697</td>  <td class="nbHits">&nbsp;</td>
@@ -1550,14 +1550,14 @@
   <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;889</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> String getRawValue(String key) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;890</td>  <td class="nbHitsCovered">&nbsp;1376</td>  <td class="src"><pre class="src">&nbsp;    String value = config.getProperty(key);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;891</td>  <td class="nbHitsCovered"><a title="Line 891: Conditional coverage 100% (2/2).">&nbsp;1376</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 891: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (value == <span class="keyword">null</span>) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;890</td>  <td class="nbHitsCovered">&nbsp;1377</td>  <td class="src"><pre class="src">&nbsp;    String value = config.getProperty(key);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;891</td>  <td class="nbHitsCovered"><a title="Line 891: Conditional coverage 100% (2/2).">&nbsp;1377</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 891: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (value == <span class="keyword">null</span>) {</a></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;892</td>  <td class="nbHitsCovered">&nbsp;2</td>  <td class="src"><pre class="src">&nbsp;      <span class="keyword">throw</span> <span class="keyword">new</span> InvalidConfigurationException(MessageFormat.format(</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;893</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;          <span class="string">"You must set configuration key ''{0}''."</span>, key));</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;894</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;895</td>  <td class="nbHitsCovered">&nbsp;1374</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> value;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;895</td>  <td class="nbHitsCovered">&nbsp;1375</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> value;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;896</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;897</td>  <td class="nbHits">&nbsp;</td>
@@ -1584,13 +1584,13 @@
   <td class="src"><pre class="src">&nbsp;<span class="comment">   */</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;908</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">public</span> String getValue(String key) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;909</td>  <td class="nbHitsCovered">&nbsp;1375</td>  <td class="src"><pre class="src">&nbsp;    String value = getRawValue(key);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;910</td>  <td class="nbHitsCovered">&nbsp;1373</td>  <td class="src"><pre class="src">&nbsp;    ValueComputer computer = computeMap.get(key);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;911</td>  <td class="nbHitsCovered"><a title="Line 911: Conditional coverage 100% (2/2).">&nbsp;1373</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 911: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (computer != <span class="keyword">null</span>) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;909</td>  <td class="nbHitsCovered">&nbsp;1376</td>  <td class="src"><pre class="src">&nbsp;    String value = getRawValue(key);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;910</td>  <td class="nbHitsCovered">&nbsp;1374</td>  <td class="src"><pre class="src">&nbsp;    ValueComputer computer = computeMap.get(key);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;911</td>  <td class="nbHitsCovered"><a title="Line 911: Conditional coverage 100% (2/2).">&nbsp;1374</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 911: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (computer != <span class="keyword">null</span>) {</a></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;912</td>  <td class="nbHitsCovered">&nbsp;147</td>  <td class="src"><pre class="src">&nbsp;      value = computer.compute(value);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;913</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;914</td>  <td class="nbHitsCovered">&nbsp;1373</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> value;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;914</td>  <td class="nbHitsCovered">&nbsp;1374</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">return</span> value;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;915</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;916</td>  <td class="nbHits">&nbsp;</td>

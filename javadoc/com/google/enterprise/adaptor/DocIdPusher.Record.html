@@ -242,6 +242,7 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
 <h4>isToBeDeleted</h4>
 <pre>public&nbsp;boolean&nbsp;isToBeDeleted()</pre>
 <div class="block">Whether the GSA is being informed the document has been deleted.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>boolean indicating document should be deleted from index</dd></dl>
 </li>
 </ul>
 <a name="getLastModified()">
@@ -255,6 +256,7 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
  the GSA's version is older and that the GSA should recrawl soon (instead
  of natually discovering the modification). If <code>null</code>, then natural
  crawling is the primary method of detecting modifications.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Date document was last modified</dd></dl>
 </li>
 </ul>
 <a name="getResultLink()">
@@ -265,6 +267,7 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
 <h4>getResultLink</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</a>&nbsp;getResultLink()</pre>
 <div class="block">The URI that should be displayed to the user in search results. If <code>null</code>, then the crawl URI representing the <code>DocId</code> is used.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>URI link used in search results</dd></dl>
 </li>
 </ul>
 <a name="isToBeCrawledImmediately()">
@@ -276,6 +279,7 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
 <pre>public&nbsp;boolean&nbsp;isToBeCrawledImmediately()</pre>
 <div class="block">Informs the GSA that the document has been modified, and the GSA should
  give high priority to recrawling the document.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>boolean indicating file get crawl priority</dd></dl>
 </li>
 </ul>
 <a name="isToBeCrawledOnce()">
@@ -288,6 +292,7 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
 <div class="block">Informs the GSA that it should only crawl the document once. This
  disables automatic detection of modifications by the GSA for this
  document.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>boolean indicating file has should be crawled at most once</dd></dl>
 </li>
 </ul>
 <a name="isToBeLocked()">
@@ -300,6 +305,7 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
 <div class="block">Locks the document into the GSA's index. This informs the GSA that it
  should choose to evict other documents from its index when the document
  license limit is reached.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>boolean indicating file has priority to stay in index</dd></dl>
 </li>
 </ul>
 <a name="equals(java.lang.Object)">

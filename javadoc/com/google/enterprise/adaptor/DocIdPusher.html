@@ -217,7 +217,8 @@
  avoided.
 
  <p>Equivalent to <code>pushDocIds(docIds, null)</code> and <a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushRecords(java.lang.Iterable)"><code>pushRecords(Iterable)</code></a> with default values for each <code>Record</code>.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first DocId to fail</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>docIds</code> - are document ids to be pushed</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first DocId to fail</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no DocIds were sent</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushDocIds(java.lang.Iterable,%20com.google.enterprise.adaptor.ExceptionHandler)"><code>pushDocIds(Iterable, ExceptionHandler)</code></a></dd></dl>
 </li>
@@ -240,7 +241,8 @@
 
  <p>Equivalent to <a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushRecords(java.lang.Iterable,%20com.google.enterprise.adaptor.ExceptionHandler)"><code>pushRecords(Iterable, ExceptionHandler)</code></a>
  with default values for each <code>Record</code>.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first DocId to fail</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>docIds</code> - are document ids to be pushed</dd><dd><code>handler</code> - for dealing with errors pushing</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first DocId to fail</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no DocIds were sent</dd></dl>
 </li>
@@ -259,7 +261,8 @@
  avoided.
 
  <p>Equivalent to <code>pushRecords(records, null)</code>.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first Record to fail</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>records</code> - are document ids to be pushed</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first Record to fail</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no Records were sent</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushRecords(java.lang.Iterable,%20com.google.enterprise.adaptor.ExceptionHandler)"><code>pushRecords(Iterable, ExceptionHandler)</code></a></dd></dl>
 </li>
@@ -279,7 +282,8 @@
  avoided.
 
  <p>If handler is <code>null</code>, then a default error handler is used.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first Record to fail</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>records</code> - are document ids to be pushed</dd><dd><code>handler</code> - for dealing with errors pushing</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first Record to fail</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no Records were sent</dd></dl>
 </li>
@@ -305,7 +309,8 @@
  a predictable iteration order, like <a href="http://download.oracle.com/javase/6/docs/api/java/util/TreeMap.html?is-external=true" title="class or interface in java.util"><code>TreeMap</code></a>.
 
  <p>Equivalent to <code>pushNamedResources(resources, null)</code>.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first DocId to fail</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>resources</code> - are labeled access control lists</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first DocId to fail</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no resources were sent</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html#pushNamedResources(java.util.Map,%20com.google.enterprise.adaptor.ExceptionHandler)"><code>pushNamedResources(Map, ExceptionHandler)</code></a></dd></dl>
 </li>
@@ -332,7 +337,8 @@
  a predictable iteration order, like <a href="http://download.oracle.com/javase/6/docs/api/java/util/TreeMap.html?is-external=true" title="class or interface in java.util"><code>TreeMap</code></a>.
 
  <p>If handler is <code>null</code>, then a default error handler is used.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first DocId to fail</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>resources</code> - are labeled access control lists</dd><dd><code>handler</code> - for dealing with errors pushing</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first DocId to fail</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no resources were sent</dd></dl>
 </li>
@@ -355,7 +361,8 @@
 
  <p>If you plan on using the return code, then the provided map should have
  a predictable iteration order, like <a href="http://download.oracle.com/javase/6/docs/api/java/util/TreeMap.html?is-external=true" title="class or interface in java.util"><code>TreeMap</code></a>.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first GroupPrincipal to fail</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>defs</code> - map of group definitions</dd><dd><code>caseSensitive</code> - when comparing Principals</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first GroupPrincipal to fail</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no definitions were sent</dd></dl>
 </li>
@@ -381,7 +388,8 @@
  a predictable iteration order, like <a href="http://download.oracle.com/javase/6/docs/api/java/util/TreeMap.html?is-external=true" title="class or interface in java.util"><code>TreeMap</code></a>.
 
  <p>If handler is <code>null</code>, then a default error handler is used.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first GroupPrincipal to fail</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>defs</code> - map of group definitions</dd><dd><code>caseSensitive</code> - when comparing Principals</dd><dd><code>handler</code> - for dealing with errors pushing</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>null</code> on success, otherwise the first GroupPrincipal to fail</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if interrupted and no definitions were sent</dd></dl>
 </li>

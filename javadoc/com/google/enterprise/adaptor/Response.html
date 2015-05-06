@@ -260,7 +260,7 @@
  this method, for the rest of the processing, exceptions may no longer be
  communicated to clients cleanly.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if communicating with client fails</dd></dl>
 </li>
 </ul>
 <a name="respondNotFound()">
@@ -279,7 +279,7 @@
  this method, for the rest of the processing, exceptions may no longer be
  communicated to the clients cleanly.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if communicating with client fails</dd></dl>
 </li>
 </ul>
 <a name="respondNoContent()">
@@ -299,7 +299,7 @@
  this method, for the rest of the processing, exceptions may no longer be
  communicated to the clients cleanly.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if communicating with client fails</dd></dl>
 </li>
 </ul>
 <a name="getOutputStream()">
@@ -317,8 +317,9 @@
  convenience, you may call this method multiple times). Once you call this
  method, for the rest of the processing, exceptions may no longer be
  communicated to clients cleanly.</div>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dl><dt><span class="strong">Returns:</span></dt><dd>OutputStream for client to write content onto</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if connection's stream cannot be provided</dd></dl>
 </li>
 </ul>
 <a name="setContentType(java.lang.String)">
@@ -329,6 +330,7 @@
 <h4>setContentType</h4>
 <pre>void&nbsp;setContentType(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;contentType)</pre>
 <div class="block">Describe the content type of the document.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>contentType</code> - to set in response headers</dd></dl>
 </li>
 </ul>
 <a name="setLastModified(java.util.Date)">
@@ -339,6 +341,7 @@
 <h4>setLastModified</h4>
 <pre>void&nbsp;setLastModified(<a href="http://download.oracle.com/javase/6/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;lastModified)</pre>
 <div class="block">Provide the last modification time of the document.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>lastModified</code> - to send in response headers</dd></dl>
 </li>
 </ul>
 <a name="addMetadata(java.lang.String, java.lang.String)">
@@ -368,6 +371,7 @@
 <div class="block">Provide the document's ACLs for early-binding security on the GSA. By
  default, the document's ACL will be <code>null</code>, which means the document
  is public if the document isn't marked as secure via <a href="../../../../com/google/enterprise/adaptor/Response.html#setSecure(boolean)"><code>setSecure(boolean)</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>acl</code> - access controls for document being sent</dd></dl>
 </li>
 </ul>
 <a name="putNamedResource(java.lang.String, com.google.enterprise.adaptor.Acl)">
@@ -380,6 +384,7 @@
                     <a href="../../../../com/google/enterprise/adaptor/Acl.html" title="class in com.google.enterprise.adaptor">Acl</a>&nbsp;acl)</pre>
 <div class="block">Provide alternative ACLs for this document, uniquely identified by
  response document's <code>DocId</code> and <code>fragment</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>fragment</code> - disambiguating name when document has multiple ACLs</dd><dd><code>acl</code> - access controls for document being sent</dd></dl>
 </li>
 </ul>
 <a name="setSecure(boolean)">
@@ -396,6 +401,7 @@
  be correctly configured to issue a SAML request to the Adaptor.
  Setting ACLs to non-null will override setSecure and send secure indicator
  to GSA.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>secure</code> - controls whether access is controlled or public</dd></dl>
 </li>
 </ul>
 <a name="addAnchor(java.net.URI, java.lang.String)">

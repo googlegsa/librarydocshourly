@@ -234,6 +234,7 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
 <h4>DocIdPusher.Record.Builder</h4>
 <pre>public&nbsp;DocIdPusher.Record.Builder(<a href="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</a>&nbsp;startPoint)</pre>
 <div class="block">Create mutable builder initialized to values provided by <code>startPoint</code>. This is useful for making changes to an existing <code>Record</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>startPoint</code> - initial model for Builder to use</dd></dl>
 </li>
 </ul>
 </li>
@@ -267,7 +268,8 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
 <div class="block">Set whether the GSA is being informed the document has been deleted.
  When <code>false</code>, the GSA is being informed the document exists. The
  default is <code>false</code>.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>the same instance of the builder, for chaining calls</dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>b</code> - indicates whether GSA should delete doc from index</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the same instance of the builder, for chaining calls</dd></dl>
 </li>
 </ul>
 <a name="setLastModified(java.util.Date)">
@@ -282,7 +284,8 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
  retrieved the document's contents. When <code>null</code>, the GSA must use
  its natural crawling of content to discover changes. The default is
  <code>null</code>.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>the same instance of the builder, for chaining calls</dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>lastModified</code> - date and time this document last changed</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the same instance of the builder, for chaining calls</dd></dl>
 </li>
 </ul>
 <a name="setResultLink(java.net.URI)">
@@ -294,7 +297,8 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
 <pre>public&nbsp;<a href="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record.Builder</a>&nbsp;setResultLink(<a href="http://download.oracle.com/javase/6/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</a>&nbsp;link)</pre>
 <div class="block">Set the URI to be displayed to the user in search results. If <code>null</code>, then the crawl URI representing the <code>DocId</code> is used. The
  default is <code>null</code>.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>the same instance of the builder, for chaining calls</dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>link</code> - to provide to user to click on</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the same instance of the builder, for chaining calls</dd></dl>
 </li>
 </ul>
 <a name="setCrawlImmediately(boolean)">
@@ -307,7 +311,8 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
 <div class="block">Inform the GSA that the document has been modified, and that the GSA
  should give high priority to recrawling the document. The default is
  <code>false</code>.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>the same instance of the builder, for chaining calls</dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>crawlImmediately</code> - whether file is to be given crawl priority</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the same instance of the builder, for chaining calls</dd></dl>
 </li>
 </ul>
 <a name="setCrawlOnce(boolean)">
@@ -319,7 +324,8 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
 <pre>public&nbsp;<a href="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.Builder.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record.Builder</a>&nbsp;setCrawlOnce(boolean&nbsp;crawlOnce)</pre>
 <div class="block">Instruct the GSA to not recrawl the document after the initial
  retrieval. The default is <code>false</code>.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>the same instance of the builder, for chaining calls</dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>crawlOnce</code> - whether file is to be crawled at most once</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the same instance of the builder, for chaining calls</dd></dl>
 </li>
 </ul>
 <a name="setLock(boolean)">
@@ -332,7 +338,8 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
 <div class="block">Instruct the GSA to "lock" the document into its index. This causes
  other documents to be evicted from the index when the document license
  limit is reached. The default is <code>false</code>.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>the same instance of the builder, for chaining calls</dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>lock</code> - whether file is to be locked on GSA</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the same instance of the builder, for chaining calls</dd></dl>
 </li>
 </ul>
 <a name="build()">
@@ -343,6 +350,7 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
 <h4>build</h4>
 <pre>public&nbsp;<a href="../../../../com/google/enterprise/adaptor/DocIdPusher.Record.html" title="class in com.google.enterprise.adaptor">DocIdPusher.Record</a>&nbsp;build()</pre>
 <div class="block">Creates single instance of Record.  Does not reset builder.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>instance as specified by ctor and set methods</dd></dl>
 </li>
 </ul>
 </li>
