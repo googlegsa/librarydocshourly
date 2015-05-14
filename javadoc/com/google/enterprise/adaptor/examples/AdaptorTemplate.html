@@ -217,8 +217,9 @@ extends <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.ht
 <pre>public&nbsp;void&nbsp;getDocIds(<a href="../../../../../com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</a>&nbsp;pusher)
                throws <a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <div class="block">Gives list of document ids that you'd like on the GSA.</div>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>pusher</code> - used to send doc ids to GSA</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if an IO operations throws it</dd></dl>
 </li>
 </ul>
 <a name="getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)">
@@ -231,8 +232,9 @@ extends <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.ht
                  <a href="../../../../../com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</a>&nbsp;resp)
                    throws <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Gives the bytes of a document referenced with id.</div>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>req</code> - info about document being sought</dd><dd><code>resp</code> - place to put document data</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if getting data fails</dd></dl>
 </li>
 </ul>
 <a name="main(java.lang.String[])">

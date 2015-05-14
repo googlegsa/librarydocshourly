@@ -246,7 +246,7 @@ extends <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.ht
 <dd><code><a href="../../../../../com/google/enterprise/adaptor/Adaptor.html#initConfig(com.google.enterprise.adaptor.Config)">initConfig</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/google/enterprise/adaptor/Adaptor.html" title="interface in com.google.enterprise.adaptor">Adaptor</a></code></dd>
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#initConfig(com.google.enterprise.adaptor.Config)">initConfig</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html" title="class in com.google.enterprise.adaptor">AbstractAdaptor</a></code></dd>
-</dl>
+<dt><span class="strong">Parameters:</span></dt><dd><code>config</code> - to modify with additional keys</dd></dl>
 </li>
 </ul>
 <a name="init(com.google.enterprise.adaptor.AdaptorContext)">
@@ -276,8 +276,9 @@ extends <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.ht
 <dd><code><a href="../../../../../com/google/enterprise/adaptor/Adaptor.html#init(com.google.enterprise.adaptor.AdaptorContext)">init</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/google/enterprise/adaptor/Adaptor.html" title="interface in com.google.enterprise.adaptor">Adaptor</a></code></dd>
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#init(com.google.enterprise.adaptor.AdaptorContext)">init</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.html" title="class in com.google.enterprise.adaptor">AbstractAdaptor</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - for instance includes completed config</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code> - if things are not going well</dd></dl>
 </li>
 </ul>
 <a name="getDocIds(com.google.enterprise.adaptor.DocIdPusher)">
@@ -290,9 +291,10 @@ extends <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.ht
                throws <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                       <a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
 <div class="block">Get all doc ids from database.</div>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>pusher</code> - used to send doc ids to GSA</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if getting data fails</dd>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if an IO operations throws it</dd></dl>
 </li>
 </ul>
 <a name="getDocContent(com.google.enterprise.adaptor.Request, com.google.enterprise.adaptor.Response)">
@@ -305,8 +307,9 @@ extends <a href="../../../../../com/google/enterprise/adaptor/AbstractAdaptor.ht
                  <a href="../../../../../com/google/enterprise/adaptor/Response.html" title="interface in com.google.enterprise.adaptor">Response</a>&nbsp;resp)
                    throws <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Gives the bytes of a document referenced with id.</div>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>req</code> - info about document being sought</dd><dd><code>resp</code> - place to put document data</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if getting data fails</dd></dl>
 </li>
 </ul>
 <a name="main(java.lang.String[])">

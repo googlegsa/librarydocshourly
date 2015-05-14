@@ -165,6 +165,7 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
 <pre>public static&nbsp;<a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a>&nbsp;defaultHandler()</pre>
 <div class="block">The default exception handler. Currently it is equivalent to <code>exponentialBackoffHandler(12, 5, TimeUnit.SECONDS)</code>, but it is free to
  change in the future.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>ExceptionHandler that comes with library</dd></dl>
 </li>
 </ul>
 <a name="exponentialBackoffHandler(int, long, java.util.concurrent.TimeUnit)">
@@ -177,6 +178,8 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
                                          long&nbsp;initialSleepDuration,
                                          <a href="http://download.oracle.com/javase/6/docs/api/java/util/concurrent/TimeUnit.html?is-external=true" title="class or interface in java.util.concurrent">TimeUnit</a>&nbsp;initialSleepUnit)</pre>
 <div class="block">Create a handler that uses exponential backoff to sleep before retrying.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>maximumTries</code> - how many times to try before permanent failure</dd><dd><code>initialSleepDuration</code> - is countdown on first failure</dd><dd><code>initialSleepUnit</code> - are the units of countdown</dd>
+<dt><span class="strong">Returns:</span></dt><dd>ExceptionHandler specified by parameters</dd></dl>
 </li>
 </ul>
 <a name="noRetryHandler()">
@@ -187,6 +190,7 @@ extends <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.h
 <h4>noRetryHandler</h4>
 <pre>public static&nbsp;<a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a>&nbsp;noRetryHandler()</pre>
 <div class="block">Create a handler that always returns <code>false</code>, causing no retries.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>ExceptionHandler that does not retry</dd></dl>
 </li>
 </ul>
 </li>

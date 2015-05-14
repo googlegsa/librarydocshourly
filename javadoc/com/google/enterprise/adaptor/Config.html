@@ -416,6 +416,8 @@ adaptor.servers.derpy.hostname=hooves</code></pre>
   "port": "159",
   "name": "raindowDash",
 }]</code></pre></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>key</code> - whoese value specifies other keys</dd>
+<dt><span class="strong">Returns:</span></dt><dd>List of maps that are each these sub-configurations</dd></dl>
 </li>
 </ul>
 <a name="load(java.lang.String)">
@@ -427,8 +429,9 @@ adaptor.servers.derpy.hostname=hooves</code></pre>
 <pre>public&nbsp;void&nbsp;load(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;configFile)
           throws <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Load user-provided configuration file.</div>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>configFile</code> - to be loaded</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if fails reading config</dd></dl>
 </li>
 </ul>
 <a name="load(java.io.File)">
@@ -440,8 +443,9 @@ adaptor.servers.derpy.hostname=hooves</code></pre>
 <pre>public&nbsp;void&nbsp;load(<a href="http://download.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;configFile)
           throws <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Load user-provided configuration file.</div>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>configFile</code> - to be loaded</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if fails reading config</dd></dl>
 </li>
 </ul>
 <a name="ensureLatestConfigLoaded()">
@@ -452,9 +456,9 @@ adaptor.servers.derpy.hostname=hooves</code></pre>
 <h4>ensureLatestConfigLoaded</h4>
 <pre>public&nbsp;boolean&nbsp;ensureLatestConfigLoaded()
                                  throws <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Returns:</span></dt><dd><code>true</code> if configuration file was modified.</dd>
+<dl><dt><span class="strong">Returns:</span></dt><dd><code>true</code> if configuration file was modified</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if fails reading config</dd></dl>
 </li>
 </ul>
 <a name="validate()">
@@ -475,7 +479,8 @@ adaptor.servers.derpy.hostname=hooves</code></pre>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getRawValue(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</pre>
 <div class="block">Get a configuration value exactly as provided in configuration. Generally,
  <a href="../../../../com/google/enterprise/adaptor/Config.html#getValue(java.lang.String)"><code>getValue(java.lang.String)</code></a> should be used instead of this method.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>raw non-<code>null</code> value of <code>key</code></dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>key</code> - to lookup</dd>
+<dt><span class="strong">Returns:</span></dt><dd>raw non-<code>null</code> value of <code>key</code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if <code>key</code> has no value</dd></dl>
 </li>
@@ -491,7 +496,8 @@ adaptor.servers.derpy.hostname=hooves</code></pre>
  configuration values can be generated from other values. This method
  returns that computed configuration value instead of the raw value provided
  in configuration. This method should be preferred over <a href="../../../../com/google/enterprise/adaptor/Config.html#getRawValue(java.lang.String)"><code>getRawValue(java.lang.String)</code></a>.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>non-<code>null</code> value of <code>key</code></dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>key</code> - to lookup</dd>
+<dt><span class="strong">Returns:</span></dt><dd>non-<code>null</code> value of <code>key</code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if <code>key</code> has no value</dd></dl>
 </li>
@@ -505,6 +511,8 @@ adaptor.servers.derpy.hostname=hooves</code></pre>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;getValuesWithPrefix(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prefix)</pre>
 <div class="block">Gets all configuration values that begin with <code>prefix</code>, returning
  them as a map with the keys having <code>prefix</code> removed.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>prefix</code> - that is to begin each key</dd>
+<dt><span class="strong">Returns:</span></dt><dd>map of all endings of prefix split into key value pairs</dd></dl>
 </li>
 </ul>
 <a name="addKey(java.lang.String, java.lang.String)">
@@ -517,6 +525,7 @@ adaptor.servers.derpy.hostname=hooves</code></pre>
           <a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;defaultValue)</pre>
 <div class="block">Add configuration key. If <code>defaultValue</code> is <code>null</code>, then no
  default value is used and the user must provide one.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>key</code> - key</dd><dd><code>defaultValue</code> - value</dd></dl>
 </li>
 </ul>
 <a name="overrideKey(java.lang.String, java.lang.String)">
@@ -529,6 +538,7 @@ adaptor.servers.derpy.hostname=hooves</code></pre>
                <a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;defaultValue)</pre>
 <div class="block">Change the default value of a preexisting configuration key. If <code>defaultValue</code> is <code>null</code>, then no default is used and the user must
  provide one.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>key</code> - key</dd><dd><code>defaultValue</code> - value</dd></dl>
 </li>
 </ul>
 </li>

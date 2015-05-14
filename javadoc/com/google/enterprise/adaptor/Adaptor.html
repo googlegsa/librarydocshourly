@@ -186,9 +186,10 @@
 
  <p>If you experience a fatal error, feel free to throw an <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io"><code>IOException</code></a> or <a href="http://download.oracle.com/javase/6/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang"><code>RuntimeException</code></a>. In the case of an error, the GSA
  will determine if and when to retry.</div>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>request</code> - info about document being sought</dd><dd><code>response</code> - place to put document data</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if getting data fails</dd>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if an IO operation throws it</dd></dl>
 </li>
 </ul>
 <a name="getDocIds(com.google.enterprise.adaptor.DocIdPusher)">
@@ -213,9 +214,10 @@
  <p>If you experience a fatal error, feel free to throw an <a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io"><code>IOException</code></a> or <a href="http://download.oracle.com/javase/6/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang"><code>RuntimeException</code></a>. In the case of an error, the
  <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a> in use in <a href="../../../../com/google/enterprise/adaptor/AdaptorContext.html" title="interface in com.google.enterprise.adaptor"><code>AdaptorContext</code></a> will
  determine if and when to retry.</div>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>pusher</code> - used to send doc ids to GSA</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if getting data fails</dd>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if an IO operations throws it</dd></dl>
 </li>
 </ul>
 <a name="initConfig(com.google.enterprise.adaptor.Config)">
@@ -230,6 +232,7 @@
  called. The user's configuration will override any values set in this way.
  This method is called by <a href="../../../../com/google/enterprise/adaptor/AbstractAdaptor.html#main(com.google.enterprise.adaptor.Adaptor,%20java.lang.String[])"><code>AbstractAdaptor.main(com.google.enterprise.adaptor.Adaptor, java.lang.String[])</code></a> before <a href="../../../../com/google/enterprise/adaptor/Adaptor.html#init(com.google.enterprise.adaptor.AdaptorContext)"><code>init(com.google.enterprise.adaptor.AdaptorContext)</code></a>
  is called.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>config</code> - to modify with additional keys</dd></dl>
 </li>
 </ul>
 <a name="init(com.google.enterprise.adaptor.AdaptorContext)">
@@ -251,8 +254,9 @@
 
  <p>If you experience a fatal error during initialization, feel free to
  throw an <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang"><code>Exception</code></a> to cancel the startup process.</div>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - for instance includes completed config</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code> - if things are not going well</dd></dl>
 </li>
 </ul>
 <a name="destroy()">

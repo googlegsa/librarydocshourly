@@ -232,7 +232,7 @@ implements <a href="../../../../com/google/enterprise/adaptor/Adaptor.html" titl
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../com/google/enterprise/adaptor/Adaptor.html#initConfig(com.google.enterprise.adaptor.Config)">initConfig</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/google/enterprise/adaptor/Adaptor.html" title="interface in com.google.enterprise.adaptor">Adaptor</a></code></dd>
-</dl>
+<dt><span class="strong">Parameters:</span></dt><dd><code>config</code> - to modify with additional keys</dd></dl>
 </li>
 </ul>
 <a name="init(com.google.enterprise.adaptor.AdaptorContext)">
@@ -259,8 +259,9 @@ implements <a href="../../../../com/google/enterprise/adaptor/Adaptor.html" titl
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../com/google/enterprise/adaptor/Adaptor.html#init(com.google.enterprise.adaptor.AdaptorContext)">init</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/google/enterprise/adaptor/Adaptor.html" title="interface in com.google.enterprise.adaptor">Adaptor</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - for instance includes completed config</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code> - if things are not going well</dd></dl>
 </li>
 </ul>
 <a name="destroy()">
@@ -293,6 +294,8 @@ implements <a href="../../../../com/google/enterprise/adaptor/Adaptor.html" titl
  <p>This method starts the HTTP server for serving doc contents, schedules
  sending <code>DocId</code>s on a schedule, and optionally sends <code>DocId</code>s
  on startup.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>adaptor</code> - to be initialized</dd><dd><code>args</code> - command line params passed to config</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the application instance in use</dd></dl>
 </li>
 </ul>
 </li>

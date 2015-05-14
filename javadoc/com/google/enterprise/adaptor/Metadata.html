@@ -185,9 +185,7 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Itera
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Metadata.html#isEmpty()">isEmpty</a></strong>()</code>
-<div class="block">True with 0 entries.</div>
-</td>
+<td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Metadata.html#isEmpty()">isEmpty</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&gt;</code></td>
@@ -213,7 +211,7 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Itera
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/enterprise/adaptor/Metadata.html#set(java.lang.String,%20java.lang.String)">set</a></strong>(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;k,
    <a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;v)</code>
-<div class="block">Make v be only value associated with key.</div>
+<div class="block">Make value be only value associated with key.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -268,6 +266,7 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Itera
 <h4>Metadata</h4>
 <pre>public&nbsp;Metadata(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&gt;&nbsp;m)</pre>
 <div class="block">Duplicate.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>m</code> - all key value pairs that this instance should represent</dd></dl>
 </li>
 </ul>
 </li>
@@ -286,7 +285,8 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Itera
 <h4>set</h4>
 <pre>public&nbsp;void&nbsp;set(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;k,
        <a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;v)</pre>
-<div class="block">Make v be only value associated with key.</div>
+<div class="block">Make value be only value associated with key.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>k</code> - key</dd><dd><code>v</code> - value</dd></dl>
 </li>
 </ul>
 <a name="set(java.lang.String, java.util.Set)">
@@ -298,6 +298,7 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Itera
 <pre>public&nbsp;void&nbsp;set(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;k,
        <a href="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;v)</pre>
 <div class="block">Make copy of v be the values associated with key.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>k</code> - key</dd><dd><code>v</code> - set of values of which none are null</dd></dl>
 </li>
 </ul>
 <a name="add(java.lang.String, java.lang.String)">
@@ -309,6 +310,7 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Itera
 <pre>public&nbsp;void&nbsp;add(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;k,
        <a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;v)</pre>
 <div class="block">Increases values mapped to k with v.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>k</code> - key</dd><dd><code>v</code> - value that is also to be mapped from k</dd></dl>
 </li>
 </ul>
 <a name="set(java.lang.Iterable)">
@@ -319,6 +321,7 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Itera
 <h4>set</h4>
 <pre>public&nbsp;void&nbsp;set(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&gt;&nbsp;it)</pre>
 <div class="block">Replaces entries inside of this metadata with provided ones.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>it</code> - all key value pairs that this instance should represent</dd></dl>
 </li>
 </ul>
 <a name="getAllValues(java.lang.String)">
@@ -329,6 +332,8 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Itera
 <h4>getAllValues</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;getAllValues(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</pre>
 <div class="block">Gives unmodifiable reference to inserted values for key, empty if none.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>key</code> - to be looked up</dd>
+<dt><span class="strong">Returns:</span></dt><dd>all values under provided key</dd></dl>
 </li>
 </ul>
 <a name="getOneValue(java.lang.String)">
@@ -339,6 +344,8 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Itera
 <h4>getOneValue</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getOneValue(<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</pre>
 <div class="block">One of the inserted values, or null if none.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>key</code> - to be looked up</dd>
+<dt><span class="strong">Returns:</span></dt><dd>String one of the values under provided key</dd></dl>
 </li>
 </ul>
 <a name="getKeys()">
@@ -349,6 +356,7 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Itera
 <h4>getKeys</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;getKeys()</pre>
 <div class="block">Get modifiable set of all keys with at least one value.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>all keys in this instance</dd></dl>
 </li>
 </ul>
 <a name="iterator()">
@@ -405,7 +413,7 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Itera
 <li class="blockList">
 <h4>isEmpty</h4>
 <pre>public&nbsp;boolean&nbsp;isEmpty()</pre>
-<div class="block">True with 0 entries.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>boolean <code>true</code> when instance has 0 entries</dd></dl>
 </li>
 </ul>
 <a name="toString()">
@@ -430,6 +438,7 @@ implements <a href="http://download.oracle.com/javase/6/docs/api/java/lang/Itera
 <h4>unmodifiableView</h4>
 <pre>public&nbsp;<a href="../../../../com/google/enterprise/adaptor/Metadata.html" title="class in com.google.enterprise.adaptor">Metadata</a>&nbsp;unmodifiableView()</pre>
 <div class="block">Get a reference to an unmodifiable view of this object.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Metadata copy that cannot be changed</dd></dl>
 </li>
 </ul>
 </li>

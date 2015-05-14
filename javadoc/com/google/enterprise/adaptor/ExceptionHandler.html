@@ -139,9 +139,10 @@
 <div class="block">Determine how to proceed after an exception was thrown. The thrown
  exception is provided as well as the number of times the call has been
  attempted. It is fine to call <code>Thread.sleep()</code> before returning.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd><code>true</code> for immediate retry, <code>false</code> to abort</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>ex</code> - is describing a problem</dd><dd><code>ntries</code> - is number of consecutive failure for same operation</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> for immediate retry, <code>false</code> to abort</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/6/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if backoff throws it</dd></dl>
 </li>
 </ul>
 </li>

@@ -227,6 +227,7 @@
 <pre><a href="../../../../com/google/enterprise/adaptor/Config.html" title="class in com.google.enterprise.adaptor">Config</a>&nbsp;getConfig()</pre>
 <div class="block">Configuration instance for the adaptor and all things within the adaptor
  library.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Config of an instance</dd></dl>
 </li>
 </ul>
 <a name="getDocIdPusher()">
@@ -237,6 +238,7 @@
 <h4>getDocIdPusher</h4>
 <pre><a href="../../../../com/google/enterprise/adaptor/DocIdPusher.html" title="interface in com.google.enterprise.adaptor">DocIdPusher</a>&nbsp;getDocIdPusher()</pre>
 <div class="block">Callback object for pushing <code>DocId</code>s to the GSA at any time.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>DocIdPusher sends doc ids to GSA</dd></dl>
 </li>
 </ul>
 <a name="getAsyncDocIdPusher()">
@@ -248,6 +250,7 @@
 <pre><a href="../../../../com/google/enterprise/adaptor/AsyncDocIdPusher.html" title="interface in com.google.enterprise.adaptor">AsyncDocIdPusher</a>&nbsp;getAsyncDocIdPusher()</pre>
 <div class="block">Callback object for asynchronously pushing <code>DocId</code>s to the GSA
  at any time.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>AsyncDocIdPusher sends doc ids to GSA</dd></dl>
 </li>
 </ul>
 <a name="getDocIdEncoder()">
@@ -258,6 +261,7 @@
 <h4>getDocIdEncoder</h4>
 <pre><a href="../../../../com/google/enterprise/adaptor/DocIdEncoder.html" title="interface in com.google.enterprise.adaptor">DocIdEncoder</a>&nbsp;getDocIdEncoder()</pre>
 <div class="block">A way to construct URIs from DocIds.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>DocIdEncoder makes URLs to this adaptor per doc id</dd></dl>
 </li>
 </ul>
 <a name="addStatusSource(com.google.enterprise.adaptor.StatusSource)">
@@ -270,6 +274,7 @@
 <div class="block">Add a status source to the dashboard. The source will automatically be
  removed just before <a href="../../../../com/google/enterprise/adaptor/Adaptor.html#destroy()"><code>Adaptor.destroy()</code></a>. Source registration should
  occur during <a href="../../../../com/google/enterprise/adaptor/Adaptor.html#init(com.google.enterprise.adaptor.AdaptorContext)"><code>Adaptor.init(com.google.enterprise.adaptor.AdaptorContext)</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>source</code> - gives data to dashboard</dd></dl>
 </li>
 </ul>
 <a name="setGetDocIdsFullErrorHandler(com.google.enterprise.adaptor.ExceptionHandler)">
@@ -280,6 +285,7 @@
 <h4>setGetDocIdsFullErrorHandler</h4>
 <pre>void&nbsp;setGetDocIdsFullErrorHandler(<a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a>&nbsp;handler)</pre>
 <div class="block">Override the default <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a> for full push.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>handler</code> - for dealing with errors sending doc ids to GSA</dd></dl>
 </li>
 </ul>
 <a name="getGetDocIdsFullErrorHandler()">
@@ -290,6 +296,7 @@
 <h4>getGetDocIdsFullErrorHandler</h4>
 <pre><a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a>&nbsp;getGetDocIdsFullErrorHandler()</pre>
 <div class="block">Retrieve the current <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a> for full push.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>ExceptionHandler deals with errors sending doc ids to GSA</dd></dl>
 </li>
 </ul>
 <a name="setGetDocIdsIncrementalErrorHandler(com.google.enterprise.adaptor.ExceptionHandler)">
@@ -300,6 +307,7 @@
 <h4>setGetDocIdsIncrementalErrorHandler</h4>
 <pre>void&nbsp;setGetDocIdsIncrementalErrorHandler(<a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a>&nbsp;handler)</pre>
 <div class="block">Override the default <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a> for incremental push.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>handler</code> - for dealing with errors sending doc ids to GSA</dd></dl>
 </li>
 </ul>
 <a name="getGetDocIdsIncrementalErrorHandler()">
@@ -310,6 +318,7 @@
 <h4>getGetDocIdsIncrementalErrorHandler</h4>
 <pre><a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor">ExceptionHandler</a>&nbsp;getGetDocIdsIncrementalErrorHandler()</pre>
 <div class="block">Retrieve the current <a href="../../../../com/google/enterprise/adaptor/ExceptionHandler.html" title="interface in com.google.enterprise.adaptor"><code>ExceptionHandler</code></a> for incremental push.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>ExceptionHandler deals with errors sending doc ids to GSA</dd></dl>
 </li>
 </ul>
 <a name="getSensitiveValueDecoder()">
@@ -323,6 +332,7 @@
  values, the user should have previously encoded them using the Dashboard.
  However, a user is still allowed to choose to keep sensitive values in
  plain text.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>SensistiveValueDecoder to decode config values</dd></dl>
 </li>
 </ul>
 <a name="createHttpContext(java.lang.String, com.sun.net.httpserver.HttpHandler)">
@@ -342,6 +352,8 @@
  addition, the handler and context may be modified before being returned;
  this is primarily to allow adding commonly-needed filters for error
  handling and logging, but also available for implementation-specific needs.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>path</code> - on the server</dd><dd><code>handler</code> - of requests for path</dd>
+<dt><span class="strong">Returns:</span></dt><dd>HttpContext for path utility methods</dd></dl>
 </li>
 </ul>
 <a name="getUserSession(com.sun.net.httpserver.HttpExchange, boolean)">
@@ -370,6 +382,7 @@
 <pre>void&nbsp;setPollingIncrementalLister(<a href="../../../../com/google/enterprise/adaptor/PollingIncrementalLister.html" title="interface in com.google.enterprise.adaptor">PollingIncrementalLister</a>&nbsp;lister)</pre>
 <div class="block">Register a polling incremental lister, so that it can be called when
  appropriate. Registration may not occur after <a href="../../../../com/google/enterprise/adaptor/Adaptor.html#init(com.google.enterprise.adaptor.AdaptorContext)"><code>Adaptor.init(com.google.enterprise.adaptor.AdaptorContext)</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>lister</code> - provides updated ids</dd></dl>
 </li>
 </ul>
 <a name="setAuthnAuthority(com.google.enterprise.adaptor.AuthnAuthority)">
@@ -381,6 +394,7 @@
 <pre>void&nbsp;setAuthnAuthority(<a href="../../../../com/google/enterprise/adaptor/AuthnAuthority.html" title="interface in com.google.enterprise.adaptor">AuthnAuthority</a>&nbsp;authnAuthority)</pre>
 <div class="block">Register an authentication provider, so it can authenticate users for the
  GSA. Registration may not occur after <a href="../../../../com/google/enterprise/adaptor/Adaptor.html#init(com.google.enterprise.adaptor.AdaptorContext)"><code>Adaptor.init(com.google.enterprise.adaptor.AdaptorContext)</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>authnAuthority</code> - identifies users</dd></dl>
 </li>
 </ul>
 <a name="setAuthzAuthority(com.google.enterprise.adaptor.AuthzAuthority)">
@@ -392,6 +406,7 @@
 <pre>void&nbsp;setAuthzAuthority(<a href="../../../../com/google/enterprise/adaptor/AuthzAuthority.html" title="interface in com.google.enterprise.adaptor">AuthzAuthority</a>&nbsp;authzAuthority)</pre>
 <div class="block">Register an authorization provider, so it can check authorization of users
  for the GSA. Registration may not occur after <a href="../../../../com/google/enterprise/adaptor/Adaptor.html#init(com.google.enterprise.adaptor.AdaptorContext)"><code>Adaptor.init(com.google.enterprise.adaptor.AdaptorContext)</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>authzAuthority</code> - makes access decisions</dd></dl>
 </li>
 </ul>
 </li>
