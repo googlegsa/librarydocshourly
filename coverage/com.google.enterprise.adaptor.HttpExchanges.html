@@ -111,7 +111,7 @@
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;45</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="comment">/** Utility class for working with {@link HttpExchange}s. */</span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;46</td>  <td class="nbHitsCovered">&nbsp;8</td>  <td class="src"><pre class="src">&nbsp;<span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class</span> HttpExchanges {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;46</td>  <td class="nbHitsCovered">&nbsp;9</td>  <td class="src"><pre class="src">&nbsp;<span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class</span> HttpExchanges {</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;47</td>  <td class="nbHitsCovered">&nbsp;1</td>  <td class="src"><pre class="src">&nbsp;  <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger log</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;48</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      = Logger.getLogger(HttpExchanges.<span class="keyword">class</span>.getName());</pre></td></tr>
@@ -132,16 +132,16 @@
 <tr>  <td class="numLine">&nbsp;57</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;  <span class="comment">/** RFC 822 date format, as updated by RFC 1123. */</span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;58</td>  <td class="nbHitsCovered">&nbsp;1</td>  <td class="src"><pre class="src">&nbsp;  <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> ThreadLocal&lt;DateFormat&gt; dateFormatRfc1123</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;59</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;      = <span class="keyword">new</span> ThreadLocal&lt;DateFormat&gt;() {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;59</td>  <td class="nbHitsCovered">&nbsp;6</td>  <td class="src"><pre class="src">&nbsp;      = <span class="keyword">new</span> ThreadLocal&lt;DateFormat&gt;() {</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;60</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;        @Override</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;61</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;        <span class="keyword">protected</span> DateFormat initialValue() {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;62</td>  <td class="nbHitsCovered">&nbsp;4</td>  <td class="src"><pre class="src">&nbsp;          DateFormat df = <span class="keyword">new</span> SimpleDateFormat(</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;62</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;          DateFormat df = <span class="keyword">new</span> SimpleDateFormat(</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;63</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;              <span class="string">"EEE, dd MMM yyyy HH:mm:ss zzz"</span>, Locale.ENGLISH);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;64</td>  <td class="nbHitsCovered">&nbsp;4</td>  <td class="src"><pre class="src">&nbsp;          df.setTimeZone(GMT);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;65</td>  <td class="nbHitsCovered">&nbsp;4</td>  <td class="src"><pre class="src">&nbsp;          <span class="keyword">return</span> df;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;64</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;          df.setTimeZone(GMT);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;65</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;          <span class="keyword">return</span> df;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;66</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;        }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;67</td>  <td class="nbHits">&nbsp;</td>
@@ -372,12 +372,12 @@
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">static</span> <span class="keyword">void</span> startResponse(HttpExchange ex, <span class="keyword">int</span> code,</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;204</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      String contentType, <span class="keyword">boolean</span> hasBody) <span class="keyword">throws</span> IOException {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;205</td>  <td class="nbHitsCovered">&nbsp;187</td>  <td class="src"><pre class="src">&nbsp;    log.finest(<span class="string">"Starting response"</span>);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;206</td>  <td class="nbHitsCovered"><a title="Line 206: Conditional coverage 100% (2/2).">&nbsp;187</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 206: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (contentType != <span class="keyword">null</span>) {</a></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;207</td>  <td class="nbHitsCovered">&nbsp;119</td>  <td class="src"><pre class="src">&nbsp;      ex.getResponseHeaders().set(<span class="string">"Content-Type"</span>, contentType);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;205</td>  <td class="nbHitsCovered">&nbsp;186</td>  <td class="src"><pre class="src">&nbsp;    log.finest(<span class="string">"Starting response"</span>);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;206</td>  <td class="nbHitsCovered"><a title="Line 206: Conditional coverage 100% (2/2).">&nbsp;186</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 206: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (contentType != <span class="keyword">null</span>) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;207</td>  <td class="nbHitsCovered">&nbsp;118</td>  <td class="src"><pre class="src">&nbsp;      ex.getResponseHeaders().set(<span class="string">"Content-Type"</span>, contentType);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;208</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;209</td>  <td class="nbHitsCovered"><a title="Line 209: Conditional coverage 100% (2/2).">&nbsp;187</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 209: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (!hasBody) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;209</td>  <td class="nbHitsCovered"><a title="Line 209: Conditional coverage 100% (2/2).">&nbsp;186</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 209: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (!hasBody) {</a></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;210</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      <span class="comment">// No body. Required for HEAD requests</span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;211</td>  <td class="nbHitsCovered">&nbsp;23</td>  <td class="src"><pre class="src">&nbsp;      ex.sendResponseHeaders(code, -1);</pre></td></tr>
@@ -385,7 +385,7 @@
   <td class="src"><pre class="src">&nbsp;    } <span class="keyword">else</span> {</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;213</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      <span class="comment">// Chuncked encoding</span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;214</td>  <td class="nbHitsCovered">&nbsp;164</td>  <td class="src"><pre class="src">&nbsp;      ex.sendResponseHeaders(code, 0);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;214</td>  <td class="nbHitsCovered">&nbsp;163</td>  <td class="src"><pre class="src">&nbsp;      ex.sendResponseHeaders(code, 0);</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;215</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;216</td>  <td class="nbHitsCovered">&nbsp;186</td>  <td class="src"><pre class="src">&nbsp;  }</pre></td></tr>
@@ -403,7 +403,7 @@
   <td class="src"><pre class="src">&nbsp;  <span class="keyword">static</span> <span class="keyword">void</span> respond(HttpExchange ex, <span class="keyword">int</span> code, String contentType,</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;223</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;      <span class="keyword">byte</span> response[]) <span class="keyword">throws</span> IOException {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;224</td>  <td class="nbHitsCovered"><a title="Line 224: Conditional coverage 100% (2/2).">&nbsp;117</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 224: Conditional coverage 100% (2/2).">    startResponse(ex, code, contentType, response != <span class="keyword">null</span>);</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;224</td>  <td class="nbHitsCovered"><a title="Line 224: Conditional coverage 100% (2/2).">&nbsp;116</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 224: Conditional coverage 100% (2/2).">    startResponse(ex, code, contentType, response != <span class="keyword">null</span>);</a></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;225</td>  <td class="nbHitsCovered"><a title="Line 225: Conditional coverage 100% (2/2).">&nbsp;116</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 225: Conditional coverage 100% (2/2).">    <span class="keyword">if</span> (response != <span class="keyword">null</span>) {</a></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;226</td>  <td class="nbHitsCovered">&nbsp;106</td>  <td class="src"><pre class="src">&nbsp;      OutputStream responseBody = ex.getResponseBody();</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;227</td>  <td class="nbHitsCovered">&nbsp;106</td>  <td class="src"><pre class="src">&nbsp;      log.finest(<span class="string">"before writing response"</span>);</pre></td></tr>
